@@ -1,0 +1,544 @@
+[gd_scene format=3 uid="uid://das5ekc4tbr3h"]
+
+[node name="AudioSourcesManager" type="Node3D"]
+
+[node name="UnscaledAudioSources" type="Node3D" parent="."]
+transform = Transform3D(-0.0756706, 0, 0.997133, 0, 1, 0, -0.997133, 0, -0.0756706, -4.59242, -0.723357, -7.82465)
+
+[node name="AudioSource" type="Node" parent="UnscaledAudioSources"]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 24300002, "50e54c378ee86364882361051902fd11", 2],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3222882223627048797, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 1,
+"m_PlayOnAwake": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 1,
+"m_audioClip": [null, 8300000, "470cd534dbfbf7e4d997852196d889e4", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}
+
+[node name="AudioSource2" type="Node" parent="UnscaledAudioSources"]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 24300002, "50e54c378ee86364882361051902fd11", 2],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3222882223627048797, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 0.76,
+"m_PlayOnAwake": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 1,
+"m_audioClip": [null, 8300000, "8668c918c31859b4d8fbc6c88658fded", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}
+
+[node name="AudioSource3" type="Node" parent="UnscaledAudioSources"]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 24300002, "50e54c378ee86364882361051902fd11", 2],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3222882223627048797, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 1,
+"m_PlayOnAwake": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 0.65,
+"m_audioClip": [null, 8300000, "4162247006d680a4ca1151eb9f9deba4", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}
+
+[node name="UnaffectedAudioSources" type="Node3D" parent="."]
+transform = Transform3D(-0.0756706, 0, 0.997133, 0, 1, 0, -0.997133, 0, -0.0756706, -4.59242, -0.723357, -7.82465)
+
+[node name="AudioSource" type="Node" parent="UnaffectedAudioSources"]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 24300002, "50e54c378ee86364882361051902fd11", 2],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3222882225439050209, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 1,
+"m_PlayOnAwake": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 1,
+"m_audioClip": [null, 8300000, "e397b3ddcd21c8948a572e83b5a9c34c", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}
+
+[node name="AudioSource2" type="Node" parent="UnaffectedAudioSources"]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 0, null, null],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3222882225439050209, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 1,
+"m_PlayOnAwake": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 1,
+"m_audioClip": [null, 8300000, "6442e0c1247c25a48a77c8d81d0134f4", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}

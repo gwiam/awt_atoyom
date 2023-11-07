@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://yst5fvdj3nft"]
+
+[node name="VolumeManager" type="Node3D"]
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::a7286cc565bfb3244bafb8c954fc38c4:1245567772309080001]"
+metadata/unidot_keys = {
+"audioMixer": [null, 24100000, "50e54c378ee86364882361051902fd11", 2],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 2916519001250086476, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "28a3a91a9e7ac824aa1034a7db5b2ecf", 3]
+}

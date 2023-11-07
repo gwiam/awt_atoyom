@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhjmhf3rop1l5"]
+
+[ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_oaccr"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="LegsBot" parent="." instance=ExtResource("1_oaccr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.47484, 0, -15.9488)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.24604, 3.66404, 0)
+fov = 140.625
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.839136, 1.25041e-08, 0.543922, -0.211242, 0.921504, 0.325894, -0.501226, -0.388368, 0.773268, 0, 5.56117, -1.33422)

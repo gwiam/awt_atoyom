@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://drsdosbo4vqgy"]
+
+[node name="HealthManager" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -421.5, 247, 0)
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::2add58501c372ab4791f01f0d0e5a234:5036541386232855282]"
+metadata/unidot_keys = {
+"GameoverCanvas": [null, 0, null, null],
+"gameOver": 0,
+"gameOverSound": [null, 0, null, null],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 5036541386232855293, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "65c6992271ec3d44eacd75ce7f24966c", 3],
+"playeMaxHealth": 100
+}

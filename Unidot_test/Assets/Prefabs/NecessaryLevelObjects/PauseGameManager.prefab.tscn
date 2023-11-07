@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dwym3x6p6c6ou"]
+
+[node name="PauseGameManager" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -294.332, 0, -249.277)
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::a633f0900c80b1c41adab62b9d0f5ce0:678870377957644837]"
+metadata/unidot_keys = {
+"PauseCanvas": [null, 0, null, null],
+"canPause": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 678870377957644834, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "9082ce21ea5723e41833480bf963fed0", 3]
+}

@@ -1,0 +1,93 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=17 format=3 uid="uid://d1vcgysdwxlti"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vdib8"]
+animation = &"Armature_Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_inaih"]
+animation = &"legbotWalk2"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_amdb8"]
+metadata/scale = 2.5
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f43qy"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_inaih")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_amdb8")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0ucb"]
+animation = &"wakeUp"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_l3a18"]
+metadata/scale = 0.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_o8hrm"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_j0ucb")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_l3a18")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kc416"]
+animation = &"wakeUp"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_w55o5"]
+metadata/scale = 2.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y24lu"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_kc416")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_w55o5")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mfvs3"]
+advance_mode = 2
+advance_expression = "not Walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oe7w6"]
+advance_mode = 2
+advance_expression = "Walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cdubj"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "not Walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ruhl"]
+switch_mode = 2
+advance_mode = 2
+advance_expression = "Walking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6ksa"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8brbx"]
+resource_name = "LegBotAnimation"
+states/Armature_Idle/node = SubResource("AnimationNodeAnimation_vdib8")
+states/Armature_Idle/position = Vector2(830, 330)
+states/Armature_Walking/node = SubResource("AnimationNodeBlendTree_f43qy")
+states/Armature_Walking/position = Vector2(830, 120)
+states/End/position = Vector2(300, 100)
+states/Sleep/node = SubResource("AnimationNodeBlendTree_o8hrm")
+states/Sleep/position = Vector2(550, 150)
+states/Start/position = Vector2(300, 100)
+states/WakeUp/node = SubResource("AnimationNodeBlendTree_y24lu")
+states/WakeUp/position = Vector2(600, 220)
+transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_mfvs3"), "Armature_Idle", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_oe7w6"), "WakeUp", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_cdubj"), "WakeUp", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_8ruhl"), "Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_g6ksa")]
+
+[resource]
+"nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
+"nodes/Base Layer/position" = Vector2(100, 200)
+nodes/output/position = Vector2(600, 350)
+node_connections = [&"output", 0, &"Base Layer"]
+metadata/Walking = false
+metadata/guid_fileid_to_animation_name = {
+"3a7560ae25f67d54bb86276f0a94398a:7400000": "Armature_Idle",
+"65fc9e2c93652114ca38ced0f95f93a1:7400000": "wakeUp",
+"6e68f8db6d84e444e9dade90983efbb2:7400000": "legbotWalk2"
+}

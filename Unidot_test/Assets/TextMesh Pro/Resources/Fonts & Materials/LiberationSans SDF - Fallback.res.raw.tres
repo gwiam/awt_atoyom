@@ -1,0 +1,528 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://mln2w1fs07l1"]
+
+[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_7ivf7"]
+[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_30pmq"]
+
+[sub_resource type="Resource" id="Resource_8854i"]
+resource_name = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+script = ExtResource("1_7ivf7")
+path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.res"
+guid = "2e498d1c8094910479dc3e1b768306a4"
+importer_keys = {}
+importer_type = "NativeFormatImporter"
+internal_data = {}
+prefab_id_to_guid = {}
+prefab_gameobject_name_to_fileid_and_children = {}
+prefab_main_gameobject_id = 0
+prefab_main_transform_id = 0
+prefab_source_id_pair_to_stripped_id = {}
+transform_fileid_to_rotation_delta = {}
+transform_fileid_to_parent_fileid = {}
+fileid_to_nodepath = {}
+fileid_to_skeleton_bone = {}
+fileid_to_utype = {
+2180264: 21,
+11400000: 114,
+28268798066460806: 28
+}
+fileid_to_gameobject_fileid = {}
+type_to_fileids = {
+"Material": PackedInt64Array(2180264),
+"MonoBehaviour": PackedInt64Array(11400000),
+"Texture2D": PackedInt64Array(28268798066460806, 28268798066460806)
+}
+godot_resources = {}
+main_object_id = 11400000
+gameobject_name_to_fileid_and_children = {}
+transform_fileid_to_children = {}
+gameobject_fileid_to_components = {}
+transform_fileid_to_prefab_ids = {}
+gameobject_fileid_to_rename = {}
+dependency_guids = {
+"71c1514a6bd24e1e882cebbe1904ce04": 1,
+"e3265ab4bf004d28a9537516768c1c75": 1,
+"fe393ace9b354375a9cb14cdbbc28be4": 1
+}
+prefab_dependency_guids = {}
+meta_dependency_guids = {}
+autodetected_bone_map_dict = {}
+humanoid_bone_map_dict = {}
+humanoid_bone_map_crc32_dict = {}
+humanoid_skeleton_hip_position = Vector3(0, 1, 0)
+imported_animation_paths = {}
+imported_mesh_paths = {}
+imported_material_paths = {}
+
+[resource]
+script = ExtResource("2_30pmq")
+path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.res"
+guid = "2e498d1c8094910479dc3e1b768306a4"
+objects = {
+"11400000:MonoBehaviour": {
+"atlas": [null, 0, null, null],
+"boldSpacing": 7,
+"boldStyle": 0.75,
+"fallbackFontAssets": [],
+"fontWeights": [{
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}],
+"hashCode": -1699145518,
+"italicStyle": 35,
+"m_AtlasHeight": 512,
+"m_AtlasPadding": 9,
+"m_AtlasPopulationMode": 1,
+"m_AtlasRenderMode": 4169,
+"m_AtlasTextureIndex": 0,
+"m_AtlasTextures": [[null, 28268798066460806, null, null]],
+"m_AtlasWidth": 512,
+"m_CharacterTable": [],
+"m_ClearDynamicDataOnBuild": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CreationSettings": {
+"atlasHeight": 512,
+"atlasWidth": 512,
+"characterSequence": "32 - 126, 160 - 255, 8192 - 8303, 8364, 8482, 9633",
+"characterSetSelectionMode": 1,
+"fontStyle": 0,
+"fontStyleModifier": 0,
+"includeFontFeatures": 1,
+"packingMode": 4,
+"padding": 9,
+"pointSize": 86,
+"pointSizeSamplingMode": 0,
+"referencedFontAssetGUID": "8f586378b4e144a9851e7b34d9b748ee",
+"renderMode": 4169,
+"sourceFontFileGUID": "e3265ab4bf004d28a9537516768c1c75"
+},
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FaceInfo": {
+"m_AscentLine": 77.8535,
+"m_Baseline": 0,
+"m_CapLine": 59,
+"m_DescentLine": -18.2246,
+"m_FamilyName": "Liberation Sans",
+"m_LineHeight": 98.8916,
+"m_MeanLine": 45,
+"m_PointSize": 86,
+"m_Scale": 1,
+"m_StrikethroughOffset": 18,
+"m_StrikethroughThickness": 6.29883,
+"m_StyleName": "Regular",
+"m_SubscriptOffset": -18.2246,
+"m_SubscriptSize": 0.5,
+"m_SuperscriptOffset": 77.8535,
+"m_SuperscriptSize": 0.5,
+"m_TabWidth": 24,
+"m_UnderlineOffset": -12.2617,
+"m_UnderlineThickness": 6.29883
+},
+"m_FallbackFontAssetTable": [],
+"m_FontFeatureTable": {
+"m_GlyphPairAdjustmentRecords": []
+},
+"m_FontWeightTable": [{
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}, {
+"italicTypeface": [null, 0, null, null],
+"regularTypeface": [null, 0, null, null]
+}],
+"m_FreeGlyphRects": [{
+"m_Height": 511,
+"m_Width": 511,
+"m_X": 0,
+"m_Y": 0
+}],
+"m_GameObject": [null, 0, null, null],
+"m_GlyphTable": [],
+"m_IsMultiAtlasTexturesEnabled": 0,
+"m_KerningTable": {
+"kerningPairs": []
+},
+"m_Name": "LiberationSans SDF - Fallback",
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "71c1514a6bd24e1e882cebbe1904ce04", 3],
+"m_SourceFontFile": [null, 12800000, "e3265ab4bf004d28a9537516768c1c75", 3],
+"m_SourceFontFileGUID": "e3265ab4bf004d28a9537516768c1c75",
+"m_SourceFontFile_EditorRef": [null, 12800000, "e3265ab4bf004d28a9537516768c1c75", 3],
+"m_UsedGlyphRects": [],
+"m_Version": "1.1.0",
+"m_fontInfo": {
+"Ascender": 77.8438,
+"AtlasHeight": 1024,
+"AtlasWidth": 1024,
+"Baseline": 0,
+"CapHeight": 59.1875,
+"CenterLine": 0,
+"CharacterCount": 250,
+"Descender": -18.2188,
+"LineHeight": 98.9063,
+"Name": "Liberation Sans",
+"Padding": 9,
+"PointSize": 86,
+"Scale": 1,
+"SubSize": 0.5,
+"SubscriptOffset": -12.2617,
+"SuperscriptOffset": 77.8438,
+"TabWidth": 239.063,
+"Underline": -12.2617,
+"UnderlineThickness": 6.29883,
+"strikethrough": 23.675,
+"strikethroughThickness": 0
+},
+"m_glyphInfoList": [],
+"material": [null, 2180264, null, null],
+"materialHashCode": 462855346,
+"normalSpacingOffset": 0,
+"normalStyle": 0,
+"tabSize": 10
+},
+"2180264:Material": {
+"disabledShaderPasses": [],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CustomRenderQueue": -1,
+"m_DoubleSidedGI": 0,
+"m_EnableInstancingVariants": 0,
+"m_LightmapFlags": 1,
+"m_Name": "LiberationSans SDF Material",
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_SavedProperties": {
+"m_Colors": [{
+"_ClipRect": Color(-32767, -32767, 32767, 32767)
+}, {
+"_Color": Color(1, 1, 1, 1)
+}, {
+"_EmissionColor": Color(0, 0, 0, 1)
+}, {
+"_EnvMatrixRotation": Color(0, 0, 0, 0)
+}, {
+"_FaceColor": Color(1, 1, 1, 1)
+}, {
+"_GlowColor": Color(0, 1, 0, 0.5)
+}, {
+"_MaskCoord": Color(0, 0, 32767, 32767)
+}, {
+"_OutlineColor": Color(0, 0, 0, 1)
+}, {
+"_ReflectFaceColor": Color(0, 0, 0, 1)
+}, {
+"_ReflectOutlineColor": Color(0, 0, 0, 1)
+}, {
+"_SpecularColor": Color(1, 1, 1, 1)
+}, {
+"_UnderlayColor": Color(0, 0, 0, 0.5)
+}],
+"m_Floats": [{
+"_Ambient": 0.5
+}, {
+"_Bevel": 0.5
+}, {
+"_BevelClamp": 0
+}, {
+"_BevelOffset": 0
+}, {
+"_BevelRoundness": 0
+}, {
+"_BevelWidth": 0
+}, {
+"_BumpFace": 0
+}, {
+"_BumpOutline": 0
+}, {
+"_BumpScale": 1
+}, {
+"_ColorMask": 15
+}, {
+"_CullMode": 0
+}, {
+"_Cutoff": 0.5
+}, {
+"_DetailNormalMapScale": 1
+}, {
+"_Diffuse": 0.5
+}, {
+"_DstBlend": 0
+}, {
+"_FaceDilate": 0
+}, {
+"_FaceUVSpeedX": 0
+}, {
+"_FaceUVSpeedY": 0
+}, {
+"_GlossMapScale": 1
+}, {
+"_Glossiness": 0.5
+}, {
+"_GlossyReflections": 1
+}, {
+"_GlowInner": 0.05
+}, {
+"_GlowOffset": 0
+}, {
+"_GlowOuter": 0.05
+}, {
+"_GlowPower": 0.75
+}, {
+"_GradientScale": 10
+}, {
+"_LightAngle": 3.1416
+}, {
+"_MaskSoftnessX": 0
+}, {
+"_MaskSoftnessY": 0
+}, {
+"_Metallic": 0
+}, {
+"_Mode": 0
+}, {
+"_OcclusionStrength": 1
+}, {
+"_OutlineSoftness": 0
+}, {
+"_OutlineUVSpeedX": 0
+}, {
+"_OutlineUVSpeedY": 0
+}, {
+"_OutlineWidth": 0
+}, {
+"_Parallax": 0.02
+}, {
+"_PerspectiveFilter": 0.875
+}, {
+"_Reflectivity": 10
+}, {
+"_ScaleRatioA": 0.909091
+}, {
+"_ScaleRatioB": 0.73125
+}, {
+"_ScaleRatioC": 0.738636
+}, {
+"_ScaleX": 1
+}, {
+"_ScaleY": 1
+}, {
+"_ShaderFlags": 0
+}, {
+"_Sharpness": 0
+}, {
+"_SmoothnessTextureChannel": 0
+}, {
+"_SpecularHighlights": 1
+}, {
+"_SpecularPower": 2
+}, {
+"_SrcBlend": 1
+}, {
+"_Stencil": 0
+}, {
+"_StencilComp": 8
+}, {
+"_StencilOp": 0
+}, {
+"_StencilReadMask": 255
+}, {
+"_StencilWriteMask": 255
+}, {
+"_TextureHeight": 512
+}, {
+"_TextureWidth": 512
+}, {
+"_UVSec": 0
+}, {
+"_UnderlayDilate": 0
+}, {
+"_UnderlayOffsetX": 0
+}, {
+"_UnderlayOffsetY": 0
+}, {
+"_UnderlaySoftness": 0
+}, {
+"_VertexOffsetX": 0
+}, {
+"_VertexOffsetY": 0
+}, {
+"_WeightBold": 0.75
+}, {
+"_WeightNormal": 0
+}, {
+"_ZWrite": 1
+}],
+"m_TexEnvs": [{
+"_BumpMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_Cube": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_DetailAlbedoMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_DetailMask": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_DetailNormalMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_EmissionMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_FaceTex": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_MainTex": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 28268798066460806, null, null]
+}
+}, {
+"_MetallicGlossMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_OcclusionMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_OutlineTex": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}, {
+"_ParallaxMap": {
+"m_Offset": Vector2(0, 0),
+"m_Scale": Vector2(1, 1),
+"m_Texture": [null, 0, null, null]
+}
+}],
+"serializedVersion": 3
+},
+"m_Shader": [null, 4800000, "fe393ace9b354375a9cb14cdbbc28be4", 3],
+"serializedVersion": 6,
+"stringTagMap": []
+},
+"28268798066460806:Texture2D": {
+"image data": 0,
+"m_AlphaIsTransparency": 0,
+"m_ColorSpace": 0,
+"m_CompleteImageSize": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DownscaleFallback": 0,
+"m_ForcedFallbackFormat": 4,
+"m_Height": 0,
+"m_ImageContentsHash": {
+"Hash": "00000000000000000000000000000000",
+"serializedVersion": 2
+},
+"m_ImageCount": 1,
+"m_IsReadable": 1,
+"m_LightmapFormat": 0,
+"m_MipCount": 1,
+"m_Name": "LiberationSans SDF Atlas",
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_StreamData": {
+"offset": 0,
+"size": 0
+},
+"m_StreamingMipmaps": 0,
+"m_StreamingMipmapsPriority": 0,
+"m_TextureDimension": 2,
+"m_TextureFormat": 1,
+"m_TextureSettings": {
+"m_Aniso": 1,
+"m_FilterMode": 1,
+"m_MipBias": 0,
+"m_WrapU": 0,
+"m_WrapV": 0,
+"m_WrapW": 0,
+"serializedVersion": 2
+},
+"m_Width": 0,
+"serializedVersion": 2
+}
+}
+meta = SubResource("Resource_8854i")

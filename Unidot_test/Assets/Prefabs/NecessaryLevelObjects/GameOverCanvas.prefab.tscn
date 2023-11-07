@@ -1,0 +1,330 @@
+[gd_scene format=3 uid="uid://bvhagyjsoqvkr"]
+
+[node name="GameOverCanvas" type="Node3D"]
+transform = Transform3D(1e-07, 0, 0, 0, 1e-07, 0, 0, 0, 1e-07, 0, 0, 0)
+
+[node name="Canvas" type="Node" parent="."]
+metadata/unidot_keys = {
+"m_AdditionalShaderChannelsFlag": 25,
+"m_Camera": [null, 0, null, null],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 8989669540612516477, null, null],
+"m_ObjectHideFlags": 0,
+"m_OverridePixelPerfect": 0,
+"m_OverrideSorting": 0,
+"m_PixelPerfect": 0,
+"m_PlaneDistance": 100,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_ReceivesEvents": 1,
+"m_RenderMode": 0,
+"m_SortingBucketNormalizedSize": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_TargetDisplay": 0,
+"m_UpdateRectTransformForStandalone": 0,
+"serializedVersion": 3
+}
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::53d725ccdedf4a749972f47f513c4278:8989669540612516475]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DefaultSpriteDPI": 96,
+"m_DynamicPixelsPerUnit": 1,
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FallbackScreenDPI": 96,
+"m_GameObject": [null, 8989669540612516477, null, null],
+"m_MatchWidthOrHeight": 1,
+"m_ObjectHideFlags": 0,
+"m_PhysicalUnit": 3,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PresetInfoIsWorld": 0,
+"m_ReferencePixelsPerUnit": 100,
+"m_ReferenceResolution": Vector2(800, 600),
+"m_ScaleFactor": 1,
+"m_ScreenMatchMode": 0,
+"m_Script": [null, 11500000, "0cd44c1031e13a943bb63640046fad76", 3],
+"m_UiScaleMode": 1
+}
+
+[node name="MonoBehaviour2" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::53d725ccdedf4a749972f47f513c4278:8989669540612516476]"
+metadata/unidot_keys = {
+"m_BlockingMask": {
+"m_Bits": 4294967295,
+"serializedVersion": 2
+},
+"m_BlockingObjects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 8989669540612516477, null, null],
+"m_IgnoreReversedGraphics": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "dc42784cf147c0c48a680349fa168899", 3]
+}
+
+[node name="Panel" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="Panel"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 8989669540347440231, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Panel"]
+editor_description = "[MonoBehaviour 114::53d725ccdedf4a749972f47f513c4278:8989669540347440229]"
+metadata/unidot_keys = {
+"m_Color": Color(0, 0, 0, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 8989669540347440231, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="GameoverText" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="GameoverText"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 8989669540458124282, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="GameoverText"]
+editor_description = "[MonoBehaviour 114::53d725ccdedf4a749972f47f513c4278:8989669540458124280]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 8989669540458124282, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_baseMaterial": [null, 0, null, null],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(1, 1, 1, 1),
+"m_fontColor32": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 36,
+"m_fontSizeBase": 36,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0.633881, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "they got you",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}
+
+[node name="retryText" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="retryText"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 8989669538999971724, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="retryText"]
+editor_description = "[MonoBehaviour 114::53d725ccdedf4a749972f47f513c4278:8989669538999971722]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 8989669538999971724, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_baseMaterial": [null, 0, null, null],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(0.59434, 0.59434, 0.59434, 1),
+"m_fontColor32": {
+"rgba": 4288190616,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 18,
+"m_fontSizeBase": 18,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 8,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0.633881, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "press r to retry",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}

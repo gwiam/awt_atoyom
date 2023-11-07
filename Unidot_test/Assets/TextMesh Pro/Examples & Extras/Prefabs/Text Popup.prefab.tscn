@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://dleoj7vkjhdc0"]
+
+[node name="Text Popup" type="Node3D"]
+
+[node name="CanvasRenderer" type="Node" parent="."]
+metadata/unidot_keys = {
+"m_GameObject": [null, 188050, null, null],
+"m_ObjectHideFlags": 1,
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::b06f0e6c1dfa4356ac918da1bb32c603:11486278]"
+metadata/unidot_keys = {
+"m_Color": Color(0.105428, 0.215898, 0.477941, 0.941176),
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 188050, null, null],
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 1,
+"m_OnCullStateChanged": {
+"": {},
+"m_PersistentCalls": {
+"m_Calls": []
+},
+"m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,"
+},
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastTarget": 1,
+"m_Script": [null, -765806418, "f5f67c52d1564df4a8936ccd202a3bd8", 3],
+"m_Sprite": [null, 10905, "0000000000000000f000000000000000", 0],
+"m_Type": 1
+}
+
+[node name="MonoBehaviour2" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::b06f0e6c1dfa4356ac918da1bb32c603:11427010]"
+metadata/unidot_keys = {
+"m_ChildAlignment": 0,
+"m_ChildForceExpandHeight": 1,
+"m_ChildForceExpandWidth": 1,
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 188050, null, null],
+"m_ObjectHideFlags": 1,
+"m_Padding": {
+"m_Bottom": 10,
+"m_Left": 10,
+"m_Right": 10,
+"m_Top": 10
+},
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null],
+"m_Script": [null, 1297475563, "f5f67c52d1564df4a8936ccd202a3bd8", 3],
+"m_Spacing": 0
+}
+
+[node name="MonoBehaviour3" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::b06f0e6c1dfa4356ac918da1bb32c603:11405862]"
+metadata/unidot_keys = {
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 188050, null, null],
+"m_HorizontalFit": 2,
+"m_ObjectHideFlags": 1,
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null],
+"m_Script": [null, 1741964061, "f5f67c52d1564df4a8936ccd202a3bd8", 3],
+"m_VerticalFit": 2
+}
+
+[node name="CanvasGroup" type="Node" parent="."]
+metadata/unidot_keys = {
+"m_Alpha": 1,
+"m_BlocksRaycasts": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 188050, null, null],
+"m_IgnoreParentGroups": 0,
+"m_Interactable": 0,
+"m_ObjectHideFlags": 1,
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null]
+}
+
+[node name="Text Popup" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="Text Popup"]
+metadata/unidot_keys = {
+"m_GameObject": [null, 121924, null, null],
+"m_ObjectHideFlags": 1,
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Text Popup"]
+editor_description = "[MonoBehaviour 114::b06f0e6c1dfa4356ac918da1bb32c603:11487728]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 121924, null, null],
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 1,
+"m_OnCullStateChanged": {
+"": {},
+"m_PersistentCalls": {
+"m_Calls": []
+},
+"m_TypeName": "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,"
+},
+"m_PrefabInternal": [null, 100100000, null, null],
+"m_PrefabParentObject": [null, 0, null, null],
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_baseMaterial": [null, 2100000, "316f956b856b45c448987b5018ec3ef4", 2],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 0,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_firstOverflowCharacterIndex": -1,
+"m_firstVisibleCharacter": 0,
+"m_fontAsset": [null, 11400000, "8f586378b4e144a9851e7b34d9b748ee", 2],
+"m_fontColor": Color(1, 1, 1, 1),
+"m_fontColor32": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 36,
+"m_fontSizeBase": 36,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_havePropertiesChanged": 1,
+"m_horizontalMapping": 0,
+"m_ignoreCulling": 1,
+"m_ignoreRectMaskCulling": 0,
+"m_inputSource": 0,
+"m_isAlignmentEnumConverted": 1,
+"m_isCullingEnabled": 0,
+"m_isInputParsingRequired": 1,
+"m_isLinkedTextComponent": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_outlineColor": {
+"rgba": 4278190080,
+"serializedVersion": 2
+},
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, 2180264, "8f586378b4e144a9851e7b34d9b748ee", 2],
+"m_spriteAnimator": [null, 0, null, null],
+"m_spriteAsset": [null, 0, null, null],
+"m_subTextObjects": [[null, 0, null, null], [null, 0, null, null], [null, 0, null, null], [null, 0, null, null], [null, 0, null, null], [null, 0, null, null], [null, 0, null, null], [null, 0, null, null]],
+"m_text": "Sample",
+"m_textAlignment": 514,
+"m_textInfo": {
+"characterCount": 6,
+"lineCount": 1,
+"linkCount": 0,
+"materialCount": 1,
+"pageCount": 1,
+"spaceCount": 0,
+"spriteCount": 0,
+"textComponent": [null, 0, null, null],
+"wordCount": 1
+},
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4
+}

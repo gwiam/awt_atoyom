@@ -1,0 +1,71 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=13 format=3 uid="uid://baj8n6crkxen5"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_nru8s"]
+animation = &"Flick"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_3yntn"]
+metadata/scale = 0.3
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_26fdr"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_nru8s")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_3yntn")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ojhry"]
+animation = &"Flick"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_uprpi"]
+metadata/scale = 0.0
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1kpfr"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_ojhry")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_uprpi")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ls1ss"]
+animation = &"Indle"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_2yin4"]
+metadata/scale = 0.35
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_n67gn"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_ls1ss")
+nodes/Animation/position = Vector2(200, 200)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_2yin4")
+nodes/TimeScale/position = Vector2(500, 0)
+nodes/output/position = Vector2(700, 0)
+node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_d37ca"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g7ne7"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_m1ht4"]
+resource_name = "HandController"
+states/End/position = Vector2(300, 100)
+states/Flick/node = SubResource("AnimationNodeBlendTree_26fdr")
+states/Flick/position = Vector2(580, 260)
+states/Hold/node = SubResource("AnimationNodeBlendTree_1kpfr")
+states/Hold/position = Vector2(690, 190)
+states/Indle/node = SubResource("AnimationNodeBlendTree_n67gn")
+states/Indle/position = Vector2(580, 120)
+states/Start/position = Vector2(300, 100)
+transitions = ["Flick", "Indle", SubResource("AnimationNodeStateMachineTransition_d37ca"), "Start", "Indle", SubResource("AnimationNodeStateMachineTransition_g7ne7")]
+
+[resource]
+"nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_m1ht4")
+"nodes/Base Layer/position" = Vector2(100, 200)
+nodes/output/position = Vector2(600, 350)
+node_connections = [&"output", 0, &"Base Layer"]
+metadata/guid_fileid_to_animation_name = {
+"4a7c2ab0a19576c4cae938a59282a14d:7400000": "Flick",
+"8f569f77eb5dc794b91b06ed1cfc03f2:7400000": "Indle"
+}

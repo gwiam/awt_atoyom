@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ben70gwyyjdtu"]
+
+[node name="SaveGame" type="Node3D"]
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::2805a79463d58044f9f65011eda49e75:4633415267291104086]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 8647951084294017702, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "25b3c7409bdca3240816f033d5732045", 3]
+}

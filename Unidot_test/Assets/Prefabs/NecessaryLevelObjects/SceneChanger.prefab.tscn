@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbac0tmui8jsk"]
+
+[node name="SceneChanger" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.947, 4.33231, 1.5753)
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::924f9d30884240146acb8ad8a9f5b7e0:1799185985965409511]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 1799185985965409510, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "af4277602d46d4947a8dad376eb2a2df", 3]
+}

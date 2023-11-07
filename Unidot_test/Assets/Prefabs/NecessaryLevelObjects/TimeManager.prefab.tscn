@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dgopman7hy1bg"]
+
+[node name="TimeManager" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.790442, 1.27337, 8.67905)
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::3cdd78010cf20e34283c74f8e86455a5:382863225243235752]"
+metadata/unidot_keys = {
+"abilityDelay": 1.25,
+"abilityDuration": 6.5,
+"isPaused": 0,
+"isSlowed": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 382863225243235755, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "3b74674b90ca0f344b559a637e6a212a", 3],
+"slowFactor": 0.075,
+"timeContinueAudio": [null, 0, null, null],
+"timeStopAudio": [null, 0, null, null],
+"timerText": [null, 0, null, null],
+"volume": [null, 0, null, null]
+}

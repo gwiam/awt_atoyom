@@ -1,0 +1,836 @@
+[gd_scene format=3 uid="uid://cpyw0e6tgov5u"]
+
+[node name="PauseGameCanvas" type="Node3D"]
+transform = Transform3D(1e-07, 0, 0, 0, 1e-07, 0, 0, 0, 1e-07, 0, 0, 0)
+
+[node name="Canvas" type="Node" parent="."]
+metadata/unidot_keys = {
+"m_AdditionalShaderChannelsFlag": 25,
+"m_Camera": [null, 0, null, null],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 3319347557764830463, null, null],
+"m_ObjectHideFlags": 0,
+"m_OverridePixelPerfect": 0,
+"m_OverrideSorting": 0,
+"m_PixelPerfect": 0,
+"m_PlaneDistance": 100,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_ReceivesEvents": 1,
+"m_RenderMode": 0,
+"m_SortingBucketNormalizedSize": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 1,
+"m_TargetDisplay": 0,
+"m_UpdateRectTransformForStandalone": 0,
+"serializedVersion": 3
+}
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:4335001550833090074]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DefaultSpriteDPI": 96,
+"m_DynamicPixelsPerUnit": 1,
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FallbackScreenDPI": 96,
+"m_GameObject": [null, 3319347557764830463, null, null],
+"m_MatchWidthOrHeight": 1,
+"m_ObjectHideFlags": 0,
+"m_PhysicalUnit": 3,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PresetInfoIsWorld": 0,
+"m_ReferencePixelsPerUnit": 100,
+"m_ReferenceResolution": Vector2(800, 600),
+"m_ScaleFactor": 1,
+"m_ScreenMatchMode": 0,
+"m_Script": [null, 11500000, "0cd44c1031e13a943bb63640046fad76", 3],
+"m_UiScaleMode": 1
+}
+
+[node name="MonoBehaviour2" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:719094115679510087]"
+metadata/unidot_keys = {
+"m_BlockingMask": {
+"m_Bits": 4294967295,
+"serializedVersion": 2
+},
+"m_BlockingObjects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 3319347557764830463, null, null],
+"m_IgnoreReversedGraphics": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "dc42784cf147c0c48a680349fa168899", 3]
+}
+
+[node name="Panel" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="Panel"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833000406357830, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Panel"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000406357824]"
+metadata/unidot_keys = {
+"m_Color": Color(0, 0, 0, 0.823529),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 7811833000406357830, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="Image" type="Node3D" parent="."]
+
+[node name="CanvasRenderer" type="Node" parent="Image"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833000019842077, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000019842079]"
+metadata/unidot_keys = {
+"m_Color": Color(1, 1, 1, 0),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 7811833000019842077, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="MonoBehaviour2" type="Node" parent="Image"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000019842073]"
+metadata/unidot_keys = {
+"m_CellSize": Vector2(240, 70),
+"m_ChildAlignment": 4,
+"m_Constraint": 0,
+"m_ConstraintCount": 2,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833000019842077, null, null],
+"m_ObjectHideFlags": 0,
+"m_Padding": {
+"m_Bottom": 0,
+"m_Left": 0,
+"m_Right": 0,
+"m_Top": 0
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "8a8695521f0d02e499659fee002a26c2", 3],
+"m_Spacing": Vector2(0, 15),
+"m_StartAxis": 0,
+"m_StartCorner": 0
+}
+
+[node name="Button" type="Node3D" parent="Image"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833000317360152, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000317360155]"
+metadata/unidot_keys = {
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 7811833000317360152, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="MonoBehaviour2" type="Node" parent="Image/Button"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000317360154]"
+metadata/unidot_keys = {
+"m_AnimationTriggers": {
+"m_DisabledTrigger": "Disabled",
+"m_HighlightedTrigger": "Highlighted",
+"m_NormalTrigger": "Normal",
+"m_PressedTrigger": "Pressed",
+"m_SelectedTrigger": "Selected"
+},
+"m_Colors": {
+"m_ColorMultiplier": 1,
+"m_DisabledColor": Color(0.784314, 0.784314, 0.784314, 0.501961),
+"m_FadeDuration": 0.1,
+"m_HighlightedColor": Color(0.960784, 0.960784, 0.960784, 1),
+"m_NormalColor": Color(1, 1, 1, 1),
+"m_PressedColor": Color(0.784314, 0.784314, 0.784314, 1),
+"m_SelectedColor": Color(0.960784, 0.960784, 0.960784, 1)
+},
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833000317360152, null, null],
+"m_Interactable": 1,
+"m_Navigation": {
+"m_Mode": 3,
+"m_SelectOnDown": [null, 0, null, null],
+"m_SelectOnLeft": [null, 0, null, null],
+"m_SelectOnRight": [null, 0, null, null],
+"m_SelectOnUp": [null, 0, null, null],
+"m_WrapAround": 0
+},
+"m_ObjectHideFlags": 0,
+"m_OnClick": {
+"m_PersistentCalls": {
+"m_Calls": [{
+"m_Arguments": {
+"m_BoolArgument": 0,
+"m_FloatArgument": 0,
+"m_IntArgument": 0,
+"m_ObjectArgument": [null, 0, null, null],
+"m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine"
+},
+"m_CallState": 2,
+"m_MethodName": "Play",
+"m_Mode": 1,
+"m_Target": [null, 0, null, null],
+"m_TargetAssemblyTypeName": "UnityEngine.AudioSource, UnityEngine"
+}]
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "4e29b1a8efbd4b44bb3f3716e73f07ff", 3],
+"m_SpriteState": {
+"m_DisabledSprite": [null, 0, null, null],
+"m_HighlightedSprite": [null, 0, null, null],
+"m_PressedSprite": [null, 0, null, null],
+"m_SelectedSprite": [null, 0, null, null]
+},
+"m_TargetGraphic": [null, 7811833000317360155, null, null],
+"m_Transition": 1
+}
+
+[node name="Text (TMP)" type="Node3D" parent="Image/Button"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button/Text (TMP)"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833001337675867, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button/Text (TMP)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833001337677733]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833001337675867, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_baseMaterial": [null, 0, null, null],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(0.196078, 0.196078, 0.196078, 1),
+"m_fontColor32": {
+"rgba": 4281479730,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 24,
+"m_fontSizeBase": 24,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "continue
+'",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}
+
+[node name="Button (2)" type="Node3D" parent="Image"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button (2)"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833001902076471, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button (2)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833001902076466]"
+metadata/unidot_keys = {
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 7811833001902076471, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="MonoBehaviour2" type="Node" parent="Image/Button (2)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833001902076465]"
+metadata/unidot_keys = {
+"m_AnimationTriggers": {
+"m_DisabledTrigger": "Disabled",
+"m_HighlightedTrigger": "Highlighted",
+"m_NormalTrigger": "Normal",
+"m_PressedTrigger": "Pressed",
+"m_SelectedTrigger": "Selected"
+},
+"m_Colors": {
+"m_ColorMultiplier": 1,
+"m_DisabledColor": Color(0.784314, 0.784314, 0.784314, 0.501961),
+"m_FadeDuration": 0.1,
+"m_HighlightedColor": Color(0.960784, 0.960784, 0.960784, 1),
+"m_NormalColor": Color(1, 1, 1, 1),
+"m_PressedColor": Color(0.784314, 0.784314, 0.784314, 1),
+"m_SelectedColor": Color(0.960784, 0.960784, 0.960784, 1)
+},
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833001902076471, null, null],
+"m_Interactable": 1,
+"m_Navigation": {
+"m_Mode": 3,
+"m_SelectOnDown": [null, 0, null, null],
+"m_SelectOnLeft": [null, 0, null, null],
+"m_SelectOnRight": [null, 0, null, null],
+"m_SelectOnUp": [null, 0, null, null],
+"m_WrapAround": 0
+},
+"m_ObjectHideFlags": 0,
+"m_OnClick": {
+"m_PersistentCalls": {
+"m_Calls": [{
+"m_Arguments": {
+"m_BoolArgument": 0,
+"m_FloatArgument": 0,
+"m_IntArgument": 0,
+"m_ObjectArgument": [null, 0, null, null],
+"m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine"
+},
+"m_CallState": 2,
+"m_MethodName": "Play",
+"m_Mode": 1,
+"m_Target": [null, 0, null, null],
+"m_TargetAssemblyTypeName": "UnityEngine.AudioSource, UnityEngine"
+}]
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "4e29b1a8efbd4b44bb3f3716e73f07ff", 3],
+"m_SpriteState": {
+"m_DisabledSprite": [null, 0, null, null],
+"m_HighlightedSprite": [null, 0, null, null],
+"m_PressedSprite": [null, 0, null, null],
+"m_SelectedSprite": [null, 0, null, null]
+},
+"m_TargetGraphic": [null, 7811833001902076466, null, null],
+"m_Transition": 1
+}
+
+[node name="Text (TMP)" type="Node3D" parent="Image/Button (2)"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button (2)/Text (TMP)"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833002003191166, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button (2)/Text (TMP)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833002003191160]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833002003191166, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_baseMaterial": [null, 0, null, null],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(0.196078, 0.196078, 0.196078, 1),
+"m_fontColor32": {
+"rgba": 4281479730,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 24,
+"m_fontSizeBase": 24,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "restart",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}
+
+[node name="Button (1)" type="Node3D" parent="Image"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button (1)"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833000275196525, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button (1)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000275196520]"
+metadata/unidot_keys = {
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FillAmount": 1,
+"m_FillCenter": 1,
+"m_FillClockwise": 1,
+"m_FillMethod": 4,
+"m_FillOrigin": 0,
+"m_GameObject": [null, 7811833000275196525, null, null],
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PixelsPerUnitMultiplier": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveAspect": 0,
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "fe87c0e1cc204ed48ad3b37840f39efc", 3],
+"m_Sprite": [null, 0, null, null],
+"m_Type": 1,
+"m_UseSpriteMesh": 0
+}
+
+[node name="MonoBehaviour2" type="Node" parent="Image/Button (1)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000275196527]"
+metadata/unidot_keys = {
+"m_AnimationTriggers": {
+"m_DisabledTrigger": "Disabled",
+"m_HighlightedTrigger": "Highlighted",
+"m_NormalTrigger": "Normal",
+"m_PressedTrigger": "Pressed",
+"m_SelectedTrigger": "Selected"
+},
+"m_Colors": {
+"m_ColorMultiplier": 1,
+"m_DisabledColor": Color(0.784314, 0.784314, 0.784314, 0.501961),
+"m_FadeDuration": 0.1,
+"m_HighlightedColor": Color(0.960784, 0.960784, 0.960784, 1),
+"m_NormalColor": Color(1, 1, 1, 1),
+"m_PressedColor": Color(0.784314, 0.784314, 0.784314, 1),
+"m_SelectedColor": Color(0.960784, 0.960784, 0.960784, 1)
+},
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833000275196525, null, null],
+"m_Interactable": 1,
+"m_Navigation": {
+"m_Mode": 3,
+"m_SelectOnDown": [null, 0, null, null],
+"m_SelectOnLeft": [null, 0, null, null],
+"m_SelectOnRight": [null, 0, null, null],
+"m_SelectOnUp": [null, 0, null, null],
+"m_WrapAround": 0
+},
+"m_ObjectHideFlags": 0,
+"m_OnClick": {
+"m_PersistentCalls": {
+"m_Calls": [{
+"m_Arguments": {
+"m_BoolArgument": 0,
+"m_FloatArgument": 0,
+"m_IntArgument": 0,
+"m_ObjectArgument": [null, 0, null, null],
+"m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine"
+},
+"m_CallState": 2,
+"m_MethodName": "Play",
+"m_Mode": 1,
+"m_Target": [null, 0, null, null],
+"m_TargetAssemblyTypeName": "UnityEngine.AudioSource, UnityEngine"
+}]
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "4e29b1a8efbd4b44bb3f3716e73f07ff", 3],
+"m_SpriteState": {
+"m_DisabledSprite": [null, 0, null, null],
+"m_HighlightedSprite": [null, 0, null, null],
+"m_PressedSprite": [null, 0, null, null],
+"m_SelectedSprite": [null, 0, null, null]
+},
+"m_TargetGraphic": [null, 7811833000275196520, null, null],
+"m_Transition": 1
+}
+
+[node name="Text (TMP)" type="Node3D" parent="Image/Button (1)"]
+
+[node name="CanvasRenderer" type="Node" parent="Image/Button (1)/Text (TMP)"]
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullTransparentMesh": 1,
+"m_GameObject": [null, 7811833000626026099, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null]
+}
+
+[node name="MonoBehaviour" type="Node" parent="Image/Button (1)/Text (TMP)"]
+editor_description = "[MonoBehaviour 114::d2463f16640058f4c99aad1f5647588c:7811833000626026109]"
+metadata/unidot_keys = {
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7811833000626026099, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "f4688fdb7df04437aeb418b961361dc5", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_baseMaterial": [null, 0, null, null],
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(0.196078, 0.196078, 0.196078, 1),
+"m_fontColor32": {
+"rgba": 4281479730,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 24,
+"m_fontSizeBase": 24,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 1,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(0, 0, 0, 0),
+"m_maskOffset": Quaternion(0, 0, 0, 0),
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "menu",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}

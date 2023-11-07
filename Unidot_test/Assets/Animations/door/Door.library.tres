@@ -1,0 +1,12 @@
+[gd_resource type="AnimationLibrary" load_steps=2 format=3 uid="uid://d4g5whdswyjvx"]
+
+[ext_resource type="Animation" uid="uid://i2hqdvjwh7s7" path="res://Assets/Animations/door/open.anim.tres" id="1_dry40"]
+
+[resource]
+resource_name = "Door"
+_data = {
+"open": ExtResource("1_dry40")
+}
+metadata/animation_guid_fileid_to_name = {
+"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "open"
+}

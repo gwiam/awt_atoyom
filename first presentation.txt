@@ -1,0 +1,20 @@
+problembeschreibung
+	- Unity drama
+	- Spielvorstellung, welche Unity version
+	- Godot 3 web export mit C# funktioniert, Godot 4 nur mit GD script
+	- Unidot importer, funtkioniert nur mit Godot 4, funktioniert gut für szenen, schlecht für gegner und animationsrigs, keine skripte
+	- skripte müssen sowieso umgeschrieben werden
+	-> entschieden für in Godot 4 übersetzen weil Unidot
+schedule 
+	- spiel finden (geschafft)
+	- mit Unity und Godot vertraut machen (geschafft)
+	- unidot testen, import probleme festellen (geschafft)
+	- presentation 1
+	- animationen zum laufen bekommen (nächste schritte)
+	- hauptmenu importieren inkl skriptübersetzung (nächste schritte)
+	- legbot zum funktionieren bekommen
+	- erstes level vollständig importieren (nicht tutorial)
+	- präsentation 2
+	- import prozess dokumentieren
+	- nach und nach alle level und turret gegner importieren
+	- präsentation 3

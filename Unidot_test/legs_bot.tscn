@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfv3qes52am70"]
+
+[ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_rr5eo"]
+[ext_resource type="Material" uid="uid://bxplc5bvlh4kr" path="res://Assets/Materials/ShynyBlue.mat.tres" id="2_vhrij"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://d1vcgysdwxlti" path="res://Assets/Animations/LegBot/LegBotAnimation.controller.tres" id="3_gri2j"]
+[ext_resource type="ArrayMesh" uid="uid://dqpueed2ug835" path="res://Assets/Models/LegsBot.Gun.mesh" id="3_vxpvk"]
+[ext_resource type="Animation" uid="uid://blb3wb0cu3cyc" path="res://Assets/Models/LegsBot.ArmatureWalking.tres" id="4_wxs03"]
+[ext_resource type="AnimationLibrary" uid="uid://cy8uo4btnym0v" path="res://Assets/Animations/LegBot/LegBotAnimation.library.tres" id="5_eppfx"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vwbjs"]
+_data = {
+"Armature|Walking": ExtResource("4_wxs03")
+}
+
+[node name="LegsBot" instance=ExtResource("1_rr5eo")]
+
+[node name="Gun" parent="." index="0"]
+transform = Transform3D(38.6231, -1.09243e-15, -4.77514e-23, 0, -1.68827e-06, 38.6231, -1.09243e-15, -38.6231, -1.68827e-06, 1.24e-15, 1.79461, 0.378791)
+visible = false
+material_override = ExtResource("2_vhrij")
+
+[node name="Armature" parent="." index="1"]
+transform = Transform3D(204.837, 0, 0, 0, -8.95371e-06, 204.837, 0, -204.837, -8.95371e-06, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(-0.000290334, -0.000159498, -0.00147799)
+bones/0/rotation = Quaternion(0.715306, 0.0359859, -0.0359859, 0.696955)
+bones/1/rotation = Quaternion(0.669016, -0.227495, -0.642967, 0.295391)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/rotation = Quaternion(1.14426e-07, 1.45799e-08, -0.896473, 0.443099)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/rotation = Quaternion(-1.03002e-07, -1.66872e-08, 0.585457, 0.810703)
+bones/5/rotation = Quaternion(0.606975, 0.365209, 0.632746, 0.312789)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(1.04615e-07, -4.23577e-08, 0.748033, 0.663661)
+bones/7/rotation = Quaternion(-1.01776e-07, 8.80936e-09, -0.511149, 0.859492)
+bones/9/position = Vector3(0.00455525, -0.0176868, -0.00484617)
+bones/9/rotation = Quaternion(0.707107, -4.32978e-17, -0.707107, -4.32978e-17)
+bones/11/position = Vector3(0.00455525, 0.00749055, -0.0159469)
+bones/11/rotation = Quaternion(0.119953, -0.696855, -0.119953, 0.696861)
+bones/12/position = Vector3(-1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/12/rotation = Quaternion(-1.91635e-07, -1.22353e-10, 0.98829, 0.152585)
+bones/12/scale = Vector3(0.999999, 1, 1)
+bones/14/position = Vector3(-0.00455525, -0.0176868, -0.00484617)
+bones/14/rotation = Quaternion(0.707107, 4.32978e-17, 0.707107, -4.32978e-17)
+bones/16/position = Vector3(-0.00455525, -0.00321631, -0.0197675)
+bones/16/rotation = Quaternion(0, 0.707107, 0, 0.707107)
+bones/17/position = Vector3(1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/17/rotation = Quaternion(1.91635e-07, -1.22353e-10, 0.98829, -0.152585)
+bones/17/scale = Vector3(0.999999, 1, 1)
+
+[node name="legs" parent="Armature/Skeleton3D" index="0"]
+material_override = ExtResource("2_vhrij")
+
+[node name="body" parent="Armature/Skeleton3D" index="1"]
+material_override = ExtResource("2_vhrij")
+
+[node name="Node3D" type="Node3D" parent="Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.025, 0, 0, 0, 0.0246277, 0.00429823, 0, -0.00429823, 0.0246277, 0, 0.012, -0.001)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.99482, 0.101643, -0.00132075, 0.00132075, -0.0259163, -0.999663, -0.101643, 0.994483, -0.0259163, -0.000290334, -0.000159498, -0.00147799)
+bone_name = "Body"
+bone_idx = 0
+
+[node name="Gun" type="MeshInstance3D" parent="Armature/Skeleton3D/BoneAttachment3D" index="0"]
+transform = Transform3D(0.191325, -5.41151e-18, -2.36545e-25, -9.30396e-19, -0.0328944, 0.188476, -5.33093e-18, -0.188476, -0.0328944, 0, 0.0115389, 0.00159288)
+material_override = ExtResource("2_vhrij")
+mesh = ExtResource("3_vxpvk")
+skeleton = NodePath("")
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = ExtResource("3_gri2j")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+"parameters/Base Layer/Armature_Walking/TimeScale/scale" = 1.0
+"parameters/Base Layer/Sleep/TimeScale/scale" = 1.0
+"parameters/Base Layer/WakeUp/TimeScale/scale" = 1.0
+
+[node name="AnimationPlayer" parent="." index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_vwbjs"),
+"LegBotAnimation.library": ExtResource("5_eppfx")
+}

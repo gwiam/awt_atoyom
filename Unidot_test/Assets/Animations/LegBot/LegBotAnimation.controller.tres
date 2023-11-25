@@ -4,12 +4,13 @@
 animation = &"Armature_Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_inaih"]
-animation = &"legbotWalk2"
+animation = &"LegBotAnimation.library/legbotWalk2"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_amdb8"]
 metadata/scale = 2.5
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f43qy"]
+graph_offset = Vector2(-277.24, 142.74)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_inaih")
 nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_amdb8")
@@ -24,22 +25,24 @@ animation = &"wakeUp"
 metadata/scale = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_o8hrm"]
+graph_offset = Vector2(-148.288, 4.24527)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_j0ucb")
-nodes/Animation/position = Vector2(200, 200)
+nodes/Animation/position = Vector2(200, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_l3a18")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
 node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kc416"]
-animation = &"wakeUp"
+animation = &"LegBotAnimation.library/wakeUp"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_w55o5"]
 metadata/scale = 2.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y24lu"]
+graph_offset = Vector2(-86.4183, -60.2079)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_kc416")
-nodes/Animation/position = Vector2(200, 200)
+nodes/Animation/position = Vector2(80, 20)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_w55o5")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
@@ -79,6 +82,7 @@ states/Start/position = Vector2(300, 100)
 states/WakeUp/node = SubResource("AnimationNodeBlendTree_y24lu")
 states/WakeUp/position = Vector2(600, 220)
 transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_mfvs3"), "Armature_Idle", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_oe7w6"), "WakeUp", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_cdubj"), "WakeUp", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_8ruhl"), "Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_g6ksa")]
+graph_offset = Vector2(0, 63.3713)
 
 [resource]
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")

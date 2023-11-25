@@ -1,4 +1,33 @@
-[gd_scene format=3 uid="uid://ck6excleoes7i"]
+[gd_scene load_steps=6 format=3 uid="uid://ccu61p2v8nkn"]
+
+[sub_resource type="Gradient" id="Gradient_c4jqd"]
+offsets = PackedFloat32Array(0, 0.232558, 0.770349, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_uc1rg"]
+gradient = SubResource("Gradient_c4jqd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_aqid6"]
+emission_shape = 3
+emission_box_extents = Vector3(0.1, 5.5, 5.5)
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 0.01
+angular_velocity_max = 0.01
+angle_min = 50.7
+angle_max = 50.7
+color_ramp = SubResource("GradientTexture1D_uc1rg")
+turbulence_enabled = true
+turbulence_noise_strength = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1hq51"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tvuwo"]
+lightmap_size_hint = Vector2i(37, 7)
+material = SubResource("StandardMaterial3D_1hq51")
+flip_faces = true
+size = Vector2(7, 1)
+orientation = 2
 
 [node name="Window" type="Node3D"]
 transform = Transform3D(1.46573e-15, -3.3532e-08, -0.767123, -0.767123, -3.3532e-08, 0, -3.3532e-08, 0.767123, -3.3532e-08, 0, 0, 0)
@@ -546,7 +575,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -578,7 +606,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -618,7 +645,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 4,
 "m_NumColorKeys": 2,
@@ -650,7 +676,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -688,7 +713,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -720,7 +744,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -756,7 +779,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -788,7 +810,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -1834,7 +1855,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -1866,7 +1886,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -4167,7 +4186,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -4199,7 +4217,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -4235,7 +4252,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -4267,7 +4283,6 @@ metadata/unidot_keys = {
 "key5": Color(0, 0, 0, 0),
 "key6": Color(0, 0, 0, 0),
 "key7": Color(0, 0, 0, 0),
-"m_ColorSpace": -1,
 "m_Mode": 0,
 "m_NumAlphaKeys": 2,
 "m_NumColorKeys": 2,
@@ -5379,8 +5394,6 @@ metadata/unidot_keys = {
 "m_StaticBatchRoot": [null, 0, null, null],
 "m_StaticShadowCaster": 0,
 "m_StitchLightmapSeams": 1,
-"m_TrailVertexStreams": 10304,
-"m_UseCustomTrailVertexStreams": 0,
 "m_UseCustomVertexStreams": 0,
 "m_VelocityScale": 0,
 "m_VertexStreams": 10304,
@@ -5550,7 +5563,7 @@ metadata/unidot_keys = {
 "m_HardAngle": 88,
 "m_PackMargin": 20
 },
-"m_VersionIndex": 580
+"m_VersionIndex": 577
 }
 
 [node name="MonoBehaviour2" type="Node" parent="WindowMesh"]
@@ -5629,3 +5642,11 @@ metadata/unidot_keys = {
 "m_StaticShadowCaster": 0,
 "m_StitchLightmapSeams": 1
 }
+
+[node name="d" type="GPUParticles3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -2.11758e-22, 1, -4.37114e-08, 0, 0, -1.24694e-22, 0.999999, 0, 0, 0)
+cast_shadow = 0
+amount = 1
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_aqid6")
+draw_pass_1 = SubResource("PlaneMesh_tvuwo")

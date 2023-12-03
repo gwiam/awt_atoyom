@@ -82,9 +82,10 @@ states/Start/position = Vector2(300, 100)
 states/WakeUp/node = SubResource("AnimationNodeBlendTree_y24lu")
 states/WakeUp/position = Vector2(600, 220)
 transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_mfvs3"), "Armature_Idle", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_oe7w6"), "WakeUp", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_cdubj"), "WakeUp", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_8ruhl"), "Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_g6ksa")]
-graph_offset = Vector2(0, 59.4236)
+graph_offset = Vector2(0, 18.3506)
 
 [resource]
+graph_offset = Vector2(-62.2397, 104.987)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

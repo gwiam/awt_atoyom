@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://dcvrkakjmdkcs"]
 
-[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_l1ro8"]
-[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_lycev"]
+[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_spe8m"]
+[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_3jrso"]
 
-[sub_resource type="Resource" id="Resource_5gl35"]
+[sub_resource type="Resource" id="Resource_2pb57"]
 resource_name = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
-script = ExtResource("1_l1ro8")
+script = ExtResource("1_spe8m")
 path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.res"
 guid = "8f586378b4e144a9851e7b34d9b748ee"
 importer_keys = {}
@@ -39,10 +39,10 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"2e498d1c8094910479dc3e1b768306a4": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"e3265ab4bf004d28a9537516768c1c75": 1,
-"fe393ace9b354375a9cb14cdbbc28be4": 1
+"2e498d1c8094910479dc3e1b768306a4": 11400000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"e3265ab4bf004d28a9537516768c1c75": 12800000,
+"fe393ace9b354375a9cb14cdbbc28be4": 4800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -55,7 +55,7 @@ imported_mesh_paths = {}
 imported_material_paths = {}
 
 [resource]
-script = ExtResource("2_lycev")
+script = ExtResource("2_3jrso")
 path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.res"
 guid = "8f586378b4e144a9851e7b34d9b748ee"
 objects = {
@@ -9834,4 +9834,4 @@ objects = {
 "serializedVersion": 2
 }
 }
-meta = SubResource("Resource_5gl35")
+meta = SubResource("Resource_2pb57")

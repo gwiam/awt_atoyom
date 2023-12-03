@@ -26,7 +26,7 @@ skins/use_named_skins=true
 animation/import=true
 animation/fps=30
 animation/trimming=false
-animation/remove_immutable_tracks=true
+animation/remove_immutable_tracks=false
 import_script/path=""
 _subresources={
 "animations": {
@@ -41,7 +41,12 @@ _subresources={
 "save_to_file/path": "res://Assets/Models/hand.ArmatureIndle.tres"
 }
 },
-"materials": {},
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Models/hand.Material.material"
+}
+},
 "meshes": {
 "Mesh": {
 "save_to_file/enabled": true,
@@ -49,6 +54,11 @@ _subresources={
 "save_to_file/path": "res://Assets/Models/hand.Mesh.mesh"
 },
 "Root Scene_Mesh": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Assets/Models/hand.Mesh.mesh"

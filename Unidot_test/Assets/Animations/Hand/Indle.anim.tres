@@ -2,170 +2,171 @@
 
 [resource]
 length = 0.4125
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Armature")
+tracks/0/path = NodePath("Camera/HUDcamera/hand/Armature")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = PackedFloat32Array(0, 1, 0, 0, 0, 0.4125, 1, 0, 0, 0)
 tracks/1/type = "position_3d"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Armature/Bone")
+tracks/1/path = NodePath("Armature/Skeleton3D:Bone")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.000159382, -0.000403557, 0.0333333, 1, 0, -0.000170707, -0.000403246, 0.195833, 1, 0, -0.000317347, -0.000402842, 0.395833, 1, 0, -0.00016227, -0.00040352, 0.4125, 1, 0, -0.000159382, -0.000403557)
 tracks/2/type = "position_3d"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Armature/Bone/Bone.001")
+tracks/2/path = NodePath("Armature/Skeleton3D:Bone.001")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = PackedFloat32Array(0, 1, -2.10026e-28, 0.0109354, 4.65661e-12, 0.4125, 1, -2.10026e-28, 0.0109354, 4.65661e-12)
 tracks/3/type = "position_3d"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Armature/Bone/Bone.001/Bone.002")
+tracks/3/path = NodePath("Armature/Skeleton3D:Bone.002")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = PackedFloat32Array(0, 1, 0, 0.00897879, -2.98023e-10, 0.4125, 1, 0, 0.00897879, -2.98023e-10)
 tracks/4/type = "position_3d"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.003")
+tracks/4/path = NodePath("Armature/Skeleton3D:Bone.003")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = PackedFloat32Array(0, 1, -0.000453908, 0.00409274, 0.00014501, 0.4125, 1, -0.000453908, 0.00409274, 0.00014501)
 tracks/5/type = "position_3d"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004")
+tracks/5/path = NodePath("Armature/Skeleton3D:Bone.004")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = PackedFloat32Array(0, 1, -1.11759e-10, 0.00162248, -1.67638e-10, 0.4125, 1, -1.11759e-10, 0.00162248, -1.67638e-10)
 tracks/6/type = "position_3d"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.005")
+tracks/6/path = NodePath("Armature/Skeleton3D:Bone.005")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = PackedFloat32Array(0, 1, 0.000991266, 0.00415373, 0.000118028, 0.4125, 1, 0.000991266, 0.00415373, 0.000118028)
 tracks/7/type = "position_3d"
 tracks/7/imported = false
 tracks/7/enabled = true
-tracks/7/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.005/Bone.006")
+tracks/7/path = NodePath("Armature/Skeleton3D:Bone.006")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = PackedFloat32Array(0, 1, -1.49012e-10, 0.00158857, 1.67638e-10, 0.4125, 1, -1.49012e-10, 0.00158857, 1.67638e-10)
 tracks/8/type = "position_3d"
 tracks/8/imported = false
 tracks/8/enabled = true
-tracks/8/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007")
+tracks/8/path = NodePath("Armature/Skeleton3D:Bone.007")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = PackedFloat32Array(0, 1, 0.00135938, 0.00100969, 0.000195594, 0.4125, 1, 0.00135938, 0.00100969, 0.000195594)
 tracks/9/type = "position_3d"
 tracks/9/imported = false
 tracks/9/enabled = true
-tracks/9/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008")
+tracks/9/path = NodePath("Armature/Skeleton3D:Bone.008")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = PackedFloat32Array(0, 1, -5.96046e-10, 0.00175941, -3.72529e-11, 0.4125, 1, -5.96046e-10, 0.00175941, -3.72529e-11)
 tracks/10/type = "position_3d"
 tracks/10/imported = false
 tracks/10/enabled = true
-tracks/10/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009")
+tracks/10/path = NodePath("Armature/Skeleton3D:Bone.009")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = PackedFloat32Array(0, 1, -3.72529e-11, 0.00117238, -1.67638e-10, 0.4125, 1, -3.72529e-11, 0.00117238, -1.67638e-10)
 tracks/11/type = "rotation_3d"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("Armature")
+tracks/11/path = NodePath("Camera/HUDcamera/hand/Armature")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = PackedFloat32Array(0, 1, 2.18557e-08, 0, 0, 1, 0.4125, 1, 2.18557e-08, 0, 0, 1)
 tracks/12/type = "rotation_3d"
 tracks/12/imported = false
 tracks/12/enabled = true
-tracks/12/path = NodePath("Armature/Bone")
+tracks/12/path = NodePath("Armature/Skeleton3D:Bone")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = PackedFloat32Array(0, 1, 0.702972, 0, -1.82013e-18, 0.711217, 0.4125, 1, 0.702972, 0, -1.82013e-18, 0.711217)
 tracks/13/type = "rotation_3d"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("Armature/Bone/Bone.001")
+tracks/13/path = NodePath("Armature/Skeleton3D:Bone.001")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = PackedFloat32Array(0, 1, -0.30287, -1.12394e-07, -3.97303e-08, 0.953032, 0.4125, 1, -0.30287, -1.12394e-07, -3.97303e-08, 0.953032)
 tracks/14/type = "rotation_3d"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("Armature/Bone/Bone.001/Bone.002")
+tracks/14/path = NodePath("Armature/Skeleton3D:Bone.002")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = PackedFloat32Array(0, 1, -0.191716, 0.129729, -0.115968, 0.965902, 0.4125, 1, -0.191716, 0.129729, -0.115968, 0.965902)
 tracks/15/type = "rotation_3d"
 tracks/15/imported = false
 tracks/15/enabled = true
-tracks/15/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.003")
+tracks/15/path = NodePath("Armature/Skeleton3D:Bone.003")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = PackedFloat32Array(0, 1, 0.392163, 0.00383266, 0.0248196, 0.919553, 0.4125, 1, 0.392163, 0.00383266, 0.0248196, 0.919553)
 tracks/16/type = "rotation_3d"
 tracks/16/imported = false
 tracks/16/enabled = true
-tracks/16/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004")
+tracks/16/path = NodePath("Armature/Skeleton3D:Bone.004")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = PackedFloat32Array(0, 1, 0.118447, 0.000720391, -0.0114077, 0.992895, 0.4125, 1, 0.118447, 0.000720391, -0.0114077, 0.992895)
 tracks/17/type = "rotation_3d"
 tracks/17/imported = false
 tracks/17/enabled = true
-tracks/17/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.005")
+tracks/17/path = NodePath("Armature/Skeleton3D:Bone.005")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/keys = PackedFloat32Array(0, 1, 0.391875, 0.0019419, 0.0411063, 0.919098, 0.4125, 1, 0.391875, 0.0019419, 0.0411063, 0.919098)
 tracks/18/type = "rotation_3d"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.005/Bone.006")
+tracks/18/path = NodePath("Armature/Skeleton3D:Bone.006")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = PackedFloat32Array(0, 1, 0.111418, -0.0694376, 0.030427, 0.990878, 0.4125, 1, 0.111418, -0.0694376, 0.030427, 0.990878)
 tracks/19/type = "rotation_3d"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007")
+tracks/19/path = NodePath("Armature/Skeleton3D:Bone.007")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = PackedFloat32Array(0, 1, 0.251113, -0.0780299, -0.0962572, 0.959994, 0.4125, 1, 0.251113, -0.0780299, -0.0962572, 0.959994)
 tracks/20/type = "rotation_3d"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008")
+tracks/20/path = NodePath("Armature/Skeleton3D:Bone.008")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = PackedFloat32Array(0, 1, 0.160167, 0.0320135, 0.170899, 0.971656, 0.4125, 1, 0.160167, 0.0320135, 0.170899, 0.971656)
 tracks/21/type = "rotation_3d"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009")
+tracks/21/path = NodePath("Armature/Skeleton3D:Bone.009")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = PackedFloat32Array(0, 1, -0.0681881, 0.0289776, -0.0531556, 0.995834, 0.4125, 1, -0.0681881, 0.0289776, -0.0531556, 0.995834)
 metadata/resolved_to_default_paths = {
-"TArmature": ["Armature", "", 4],
-"TArmature/Bone": ["Armature/Bone", "", 4],
-"TArmature/Bone/Bone.001": ["Armature/Bone/Bone.001", "", 4],
-"TArmature/Bone/Bone.001/Bone.002": ["Armature/Bone/Bone.001/Bone.002", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.003": ["Armature/Bone/Bone.001/Bone.002/Bone.003", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.003/Bone.004": ["Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.005": ["Armature/Bone/Bone.001/Bone.002/Bone.005", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.005/Bone.006": ["Armature/Bone/Bone.001/Bone.002/Bone.005/Bone.006", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.007": ["Armature/Bone/Bone.001/Bone.002/Bone.007", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.007/Bone.008": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008", "", 4],
-"TArmature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009", "", 4]
+"TCamera/HUDcamera/hand/Armature": ["Armature", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone": ["Armature/Bone", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.001": ["Armature/Bone/Bone.001", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.002": ["Armature/Bone/Bone.001/Bone.002", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.003": ["Armature/Bone/Bone.001/Bone.002/Bone.003", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.004": ["Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.005": ["Armature/Bone/Bone.001/Bone.002/Bone.005", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.006": ["Armature/Bone/Bone.001/Bone.002/Bone.005/Bone.006", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.007": ["Armature/Bone/Bone.001/Bone.002/Bone.007", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.008": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008", "", 4],
+"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.009": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009", "", 4]
 }

@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_42huq"]
 [ext_resource type="Script" path="res://addons/unidot/asset_database.gd" id="2_jwrta"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_psq30"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bopws"]
 resource_name = "Default-Line"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fe4du"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aufds"]
 resource_name = "PINK"
 shading_mode = 0
 albedo_color = Color(1, 0, 1, 1)
 
-[sub_resource type="Resource" id="Resource_1vodg"]
+[sub_resource type="Resource" id="Resource_mdxe1"]
 resource_name = "Assets/Animations/Hand/Flick.anim"
 script = ExtResource("1_42huq")
 path = "Assets/Animations/Hand/Flick.anim.tres"
@@ -58,7 +58,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_ckkuv"]
+[sub_resource type="Resource" id="Resource_o8iln"]
 resource_name = "Assets/Animations/Hand/HandController.controller"
 script = ExtResource("1_42huq")
 path = "Assets/Animations/Hand/HandController.controller.tres"
@@ -105,8 +105,8 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"4a7c2ab0a19576c4cae938a59282a14d": 1,
-"8f569f77eb5dc794b91b06ed1cfc03f2": 1
+"4a7c2ab0a19576c4cae938a59282a14d": 7400000,
+"8f569f77eb5dc794b91b06ed1cfc03f2": 7400000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -118,7 +118,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_sn1hm"]
+[sub_resource type="Resource" id="Resource_emooc"]
 resource_name = "Assets/Animations/Hand/Indle.anim"
 script = ExtResource("1_42huq")
 path = "Assets/Animations/Hand/Indle.anim.tres"
@@ -882,7 +882,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_042hi"]
+[sub_resource type="Resource" id="Resource_3p5gi"]
 resource_name = "Assets/Materials/ShinyWhite.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/ShinyWhite.mat.tres"
@@ -919,7 +919,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -2361,7 +2361,7 @@ imported_mesh_paths = {
 }
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_prjkt"]
+[sub_resource type="Resource" id="Resource_nmyxd"]
 resource_name = "Assets/Models/hand.fbx"
 script = ExtResource("1_42huq")
 path = "Assets/Models/hand.gltf"
@@ -2509,6 +2509,7 @@ internal_data = {
 "material_to_texture_name": {},
 "meta_convert_units": true,
 "meta_scale_factor": 1.0,
+"original_rotations": {},
 "output_fbx_scale": 1.0,
 "scale_correction_factor": 1.0,
 "skinned_parents": {
@@ -2516,97 +2517,7 @@ internal_data = {
 }
 }
 prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {
--8445099417003748558: {
-1: -8445099417003748558,
-4: -6951621627052728501,
-137: -5611696202476303051
-},
--6522695966643703301: {
-1: -6522695966643703301,
-4: -5913172463669914825,
-"Bone.004": 2480909740878747892
-},
--2680121944677968522: {
-1: -2680121944677968522,
-4: -2558626680944270011,
-"Bone.006": -556239656618156157
-},
--1328230143343150466: {
-1: -1328230143343150466,
-4: 6627087315438279792,
-"Bone.008": 2700157433895878828
-},
--556239656618156157: {
-1: -556239656618156157,
-4: -8483229692389145983,
-"Bone.006_end": 1677235292417816644
-},
-0: {
-95: 5866666021909216657,
-"Mesh": -8445099417003748558
-},
-919132149155446097: {
-1: 919132149155446097,
-4: -8679921383154817045,
-"Armature": 7036213049465896255,
-"Mesh": 3743993344710040121
-},
-1300751944923389569: {
-1: 1300751944923389569,
-4: 517641222216594352
-},
-1677235292417816644: {
-1: 1677235292417816644,
-4: -206138069394656337
-},
-1790183945725220954: {
-1: 1790183945725220954,
-4: 2854563699051640978,
-"Bone.002": 4819001077394492298
-},
-2480909740878747892: {
-1: 2480909740878747892,
-4: 2917289242402929547,
-"Bone.004_end": 4398146065261190967
-},
-2700157433895878828: {
-1: 2700157433895878828,
-4: 4783906601490614784,
-"Bone.009": 3986254720366500211
-},
-3743993344710040121: {
-1: 3743993344710040121,
-4: 3748359892381204692,
-137: -1750197354950549132
-},
-3986254720366500211: {
-1: 3986254720366500211,
-4: -8080677036711480517,
-"Bone.009_end": 1300751944923389569
-},
-4398146065261190967: {
-1: 4398146065261190967,
-4: 5801802911123705514
-},
-4819001077394492298: {
-1: 4819001077394492298,
-4: -5234448375175369897,
-"Bone.003": -6522695966643703301,
-"Bone.005": -2680121944677968522,
-"Bone.007": -1328230143343150466
-},
-6905609870639353253: {
-1: 6905609870639353253,
-4: -2639638324218457063,
-"Bone.001": 1790183945725220954
-},
-7036213049465896255: {
-1: 7036213049465896255,
-4: 8879528566716807029,
-"Bone": 6905609870639353253
-}
-}
+prefab_gameobject_name_to_fileid_and_children = {}
 prefab_main_gameobject_id = 919132149155446097
 prefab_main_transform_id = -8679921383154817045
 prefab_source_id_pair_to_stripped_id = {}
@@ -2785,6 +2696,7 @@ godot_resources = {
 -6726269435135961394: "res://Assets/Models/hand.ArmatureIndle.tres",
 -5523277661179574252: "res://Assets/Models/hand.Mesh.mesh",
 -1436534410141906203: "res://Assets/Models/hand.ArmatureFingerFlick.tres",
+-876546973899608171: "res://Assets/Models/hand.Material.material",
 100100000: "Assets/Models/hand.gltf",
 5523277661179574252: "res://Assets/Models/hand.Mesh.skin.tres"
 }
@@ -2899,7 +2811,9 @@ imported_mesh_paths = {
 "Mesh": "res://Assets/Models/hand.Mesh.mesh",
 "Root Scene_Mesh": "res://Assets/Models/hand.Mesh.mesh"
 }
-imported_material_paths = {}
+imported_material_paths = {
+"Material": "res://Assets/Models/hand.Material.material"
+}
 
 [sub_resource type="Resource" id="Resource_svjda"]
 resource_name = "Assets/Models/warning.fbx"
@@ -3096,7 +3010,7 @@ imported_mesh_paths = {
 }
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_mlyoe"]
+[sub_resource type="Resource" id="Resource_ktlsk"]
 resource_name = "Assets/Physics/playerPhysics.physicMaterial"
 script = ExtResource("1_42huq")
 path = "Assets/Physics/playerPhysics.res"
@@ -5163,7 +5077,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_nwexe"]
+[sub_resource type="Resource" id="Resource_pxghj"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/player.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn"
@@ -5173,23 +5087,206 @@ importer_keys = {
 }
 importer_type = "PrefabImporter"
 internal_data = {}
-prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {}
-prefab_main_gameobject_id = 0
-prefab_main_transform_id = 0
-prefab_source_id_pair_to_stripped_id = {}
+prefab_id_to_guid = {
+4847663144444970294: "c55829d12a7248545b150fb762cfaa7d"
+}
+prefab_gameobject_name_to_fileid_and_children = {
+-7383633203663679424: {
+1: -7383633203663679424,
+4: -6972780152084258701,
+"Bone.006": -4971537445554267467
+},
+-5848075526933708984: {
+1: -5848075526933708984,
+4: 1783002411436562758,
+"Bone.008": 7367529533552706970
+},
+-4971537445554267467: {
+1: -4971537445554267467,
+4: -3962085235797260361,
+"Bone.006_end": 6053092361270639986
+},
+-3924146961526598140: {
+1: -3924146961526598140,
+4: -2539824563949397379,
+137: -1055781872579606525
+},
+-1856361137085254451: {
+1: -1856361137085254451,
+4: -1245690551459637759,
+"Bone.004": 7001881025484103106
+},
+119024335904542396: {
+1: 119024335904542396,
+4: -856287434350498207,
+"Bone.003": -1856361137085254451,
+"Bone.005": -7383633203663679424,
+"Bone.007": -5848075526933708984
+},
+2059266965956364435: {
+1: 2059266965956364435,
+4: -7487158377465327313,
+"Bone.001": 6601812108297002348
+},
+2514131807927318537: {
+1: 2514131807927318537,
+4: 4070189588439888451,
+"Bone": 2059266965956364435
+},
+4847663143894855739: {
+1: 4847663143894855739,
+4: 4847663143894855738,
+23: 4847663143894855737,
+33: 4847663143894855736
+},
+4847663144155778346: {
+1: 4847663144155778346,
+4: 4847663144155778345
+},
+4847663144444970294: {
+95: 1309648485530073255,
+"Mesh": -3924146961526598140
+},
+4847663145188287365: {
+1: 4847663145188287365,
+4: 4847663145188287364,
+20: 4847663145188287362,
+"ObjectHolder": 4847663144155778346,
+"hand": 5730604180103002215
+},
+5730604180103002215: {
+1: 5730604180103002215,
+4: 4957586395210719965,
+"Armature": 2514131807927318537,
+"Mesh": 8120849870739939087
+},
+5857891131893472183: {
+1: 5857891131893472183,
+4: 4929572425696605830
+},
+6053092361270639986: {
+1: 6053092361270639986,
+4: -4727093547446126951
+},
+6601812108297002348: {
+1: 6601812108297002348,
+4: 7267448041711861156,
+"Bone.002": 119024335904542396
+},
+6639354053334602501: {
+1: 6639354053334602501,
+4: 6639354053334602506
+},
+6639354053609104702: {
+1: 6639354053609104702,
+4: 6639354053609104703,
+20: 6639354053609104701,
+81: 6639354053609104700,
+"HUDcamera": 4847663145188287365,
+NodePath("58e05b12efcc6714d964d3fb9d82d619/11500000"): 6639354053609104698,
+NodePath("e05877a2df0c775479186bd37954ab88/11500000"): 6639354053609104699,
+NodePath("948f4100a11a5c24981795d21301da5c/11500000"): 6639354053609104697
+},
+6639354054144880037: {
+1: 6639354054144880037,
+4: 6639354054144880042
+},
+6639354054196359937: {
+1: 6639354054196359937,
+4: 6639354054196359946,
+54: 6639354054196359942,
+82: 3736223830505298979,
+136: 6639354054196359943,
+"Body": 4847663143894855739,
+"Camera": 6639354053609104702,
+"CameraPositioner": 6639354053334602501,
+"Orientation": 6639354054144880037,
+"secondDirection": 7323978245124050552,
+NodePath("a48cfd752120326429c9dbaa748b56ba/11500000"): 6639354054196359945,
+NodePath("cbd98585bcab4f64b80e09e27b5b91f0/11500000"): 6639354054196359944,
+NodePath("1a45311c553e025428a0b5ed59c5d3f1/11500000"): 6639354054196360055
+},
+7001881025484103106: {
+1: 7001881025484103106,
+4: 7726506725819023037,
+"Bone.004_end": 9101494992773945857
+},
+7323978245124050552: {
+1: 7323978245124050552,
+4: 7323978245124050555
+},
+7367529533552706970: {
+1: 7367529533552706970,
+4: 82615410018209590,
+"Bone.009": 8364414305018190917
+},
+8120849870739939087: {
+1: 8120849870739939087,
+4: 8593574543511078370,
+137: -6561648770050857918
+},
+8364414305018190917: {
+1: 8364414305018190917,
+4: -3702538343821429235,
+"Bone.009_end": 5857891131893472183
+},
+9101494992773945857: {
+1: 9101494992773945857,
+4: 1423840001547717532
+}
+}
+prefab_main_gameobject_id = 6639354054196359937
+prefab_main_transform_id = 6639354054196359946
+prefab_source_id_pair_to_stripped_id = {
+Vector4i(1128684530, 593839414, -2020951683, 2126342123): 4957586395210719965,
+Vector4i(1128684530, 593839414, 214002129, -468894383): 5730604180103002215
+}
 transform_fileid_to_rotation_delta = {}
 transform_fileid_to_parent_fileid = {
 4847663143894855738: 6639354054196359946,
 4847663144155778345: 4847663145188287364,
 4847663144444970294: 4847663145188287364,
 4847663145188287364: 6639354053609104703,
+4957586395210719965: 4847663145188287364,
 6639354053334602506: 6639354054196359946,
 6639354053609104703: 6639354054196359946,
 6639354054144880042: 6639354054196359946,
 7323978245124050555: 6639354054196359946
 }
-fileid_to_nodepath = {}
+fileid_to_nodepath = {
+3736223830505298979: NodePath("AudioSource"),
+4847663143894855736: NodePath("Body/MeshRenderer"),
+4847663143894855737: NodePath("Body/MeshRenderer"),
+4847663143894855738: NodePath("Body"),
+4847663143894855739: NodePath("Body"),
+4847663143896029960: NodePath("Camera/HUDcamera/hand/AnimationTree"),
+4847663144155778345: NodePath("Camera/HUDcamera/ObjectHolder"),
+4847663144155778346: NodePath("Camera/HUDcamera/ObjectHolder"),
+4847663144444970294: NodePath("Camera/HUDcamera/hand"),
+4847663145188287362: NodePath("Camera/HUDcamera/Camera"),
+4847663145188287364: NodePath("Camera/HUDcamera"),
+4847663145188287365: NodePath("Camera/HUDcamera"),
+6174495312195083454: NodePath("Camera/HUDcamera/hand/MonoBehaviour"),
+6639354053334602501: NodePath("CameraPositioner"),
+6639354053334602506: NodePath("CameraPositioner"),
+6639354053609104697: NodePath("Camera/MonoBehaviour3"),
+6639354053609104698: NodePath("Camera/MonoBehaviour"),
+6639354053609104699: NodePath("Camera/MonoBehaviour2"),
+6639354053609104701: NodePath("Camera/Camera"),
+6639354053609104702: NodePath("Camera"),
+6639354053609104703: NodePath("Camera"),
+6639354054144880037: NodePath("Orientation"),
+6639354054144880042: NodePath("Orientation"),
+6639354054196359937: NodePath("."),
+6639354054196359942: NodePath("."),
+6639354054196359943: NodePath("CapsuleCollider"),
+6639354054196359944: NodePath("MonoBehaviour2"),
+6639354054196359945: NodePath("MonoBehaviour"),
+6639354054196359946: NodePath("."),
+6639354054196360055: NodePath("MonoBehaviour3"),
+7323978245124050552: NodePath("secondDirection"),
+7323978245124050555: NodePath("secondDirection")
+}
 fileid_to_skeleton_bone = {}
 fileid_to_utype = {
 3736223830505298979: 82,
@@ -5197,6 +5294,7 @@ fileid_to_utype = {
 4847663143894855737: 23,
 4847663143894855738: 4,
 4847663143894855739: 1,
+4847663143896029960: 95,
 4847663144155778345: 4,
 4847663144155778346: 1,
 4847663144444970294: 1001,
@@ -5204,6 +5302,8 @@ fileid_to_utype = {
 4847663145188287364: 4,
 4847663145188287365: 1,
 4957586395210719965: 4,
+5730604180103002215: 1,
+6174495312195083454: 114,
 6639354053334602501: 1,
 6639354053334602506: 4,
 6639354053609104697: 114,
@@ -5230,9 +5330,11 @@ fileid_to_gameobject_fileid = {
 4847663143894855736: 4847663143894855739,
 4847663143894855737: 4847663143894855739,
 4847663143894855738: 4847663143894855739,
+4847663143896029960: 5730604180103002215,
 4847663144155778345: 4847663144155778346,
 4847663145188287362: 4847663145188287365,
 4847663145188287364: 4847663145188287365,
+6174495312195083454: 5730604180103002215,
 6639354053334602506: 6639354053334602501,
 6639354053609104697: 6639354053609104702,
 6639354053609104698: 6639354053609104702,
@@ -5250,42 +5352,111 @@ fileid_to_gameobject_fileid = {
 7323978245124050555: 7323978245124050552
 }
 type_to_fileids = {
+"Animator": PackedInt64Array(4847663143896029960),
 "AudioListener": PackedInt64Array(6639354053609104700),
 "AudioSource": PackedInt64Array(3736223830505298979),
 "Camera": PackedInt64Array(4847663145188287362, 6639354053609104701),
 "CapsuleCollider": PackedInt64Array(6639354054196359943),
-"GameObject": PackedInt64Array(4847663143894855739, 4847663144155778346, 4847663145188287365, 6639354053334602501, 6639354053609104702, 6639354054144880037, 6639354054196359937, 7323978245124050552),
+"GameObject": PackedInt64Array(4847663143894855739, 4847663144155778346, 4847663145188287365, 6639354053334602501, 6639354053609104702, 6639354054144880037, 6639354054196359937, 7323978245124050552, 5730604180103002215),
 "MeshFilter": PackedInt64Array(4847663143894855736),
 "MeshRenderer": PackedInt64Array(4847663143894855737),
-"MonoBehaviour": PackedInt64Array(6639354053609104698, 6639354053609104699, 6639354053609104697, 6639354054196359945, 6639354054196359944, 6639354054196360055),
+"MonoBehaviour": PackedInt64Array(6639354053609104698, 6639354053609104699, 6639354053609104697, 6639354054196359945, 6639354054196359944, 6639354054196360055, 6174495312195083454, 6174495312195083454),
 "PrefabInstance": PackedInt64Array(4847663144444970294),
 "Rigidbody": PackedInt64Array(6639354054196359942),
 "Transform": PackedInt64Array(4847663143894855738, 4847663144155778345, 4847663145188287364, 6639354053334602506, 6639354053609104703, 6639354054144880042, 6639354054196359946, 7323978245124050555, 4957586395210719965)
 }
-godot_resources = {}
+godot_resources = {
+100100000: "Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn"
+}
 main_object_id = 100100000
-gameobject_name_to_fileid_and_children = {}
+gameobject_name_to_fileid_and_children = {
+4847663143894855739: {
+1: 4847663143894855739,
+4: 4847663143894855738,
+23: 4847663143894855737,
+33: 4847663143894855736
+},
+4847663144155778346: {
+1: 4847663144155778346,
+4: 4847663144155778345
+},
+4847663145188287365: {
+1: 4847663145188287365,
+4: 4847663145188287364,
+20: 4847663145188287362,
+"ObjectHolder": 4847663144155778346,
+"hand": 5730604180103002215
+},
+6639354053334602501: {
+1: 6639354053334602501,
+4: 6639354053334602506
+},
+6639354053609104702: {
+1: 6639354053609104702,
+4: 6639354053609104703,
+20: 6639354053609104701,
+81: 6639354053609104700,
+"HUDcamera": 4847663145188287365,
+NodePath("58e05b12efcc6714d964d3fb9d82d619/11500000"): 6639354053609104698,
+NodePath("e05877a2df0c775479186bd37954ab88/11500000"): 6639354053609104699,
+NodePath("948f4100a11a5c24981795d21301da5c/11500000"): 6639354053609104697
+},
+6639354054144880037: {
+1: 6639354054144880037,
+4: 6639354054144880042
+},
+6639354054196359937: {
+1: 6639354054196359937,
+4: 6639354054196359946,
+54: 6639354054196359942,
+82: 3736223830505298979,
+136: 6639354054196359943,
+"Body": 4847663143894855739,
+"Camera": 6639354053609104702,
+"CameraPositioner": 6639354053334602501,
+"Orientation": 6639354054144880037,
+"secondDirection": 7323978245124050552,
+NodePath("a48cfd752120326429c9dbaa748b56ba/11500000"): 6639354054196359945,
+NodePath("cbd98585bcab4f64b80e09e27b5b91f0/11500000"): 6639354054196359944,
+NodePath("1a45311c553e025428a0b5ed59c5d3f1/11500000"): 6639354054196360055
+},
+7323978245124050552: {
+1: 7323978245124050552,
+4: 7323978245124050555
+}
+}
 transform_fileid_to_children = {}
-gameobject_fileid_to_components = {}
-transform_fileid_to_prefab_ids = {}
-gameobject_fileid_to_rename = {}
+gameobject_fileid_to_components = {
+5730604180103002215: {
+95: 4847663143896029960,
+NodePath("a1c5550b26f9069409acee64b8bb4308/11500000"): 6174495312195083454
+}
+}
+transform_fileid_to_prefab_ids = {
+4847663145188287364: PackedInt64Array(4847663144444970294)
+}
+gameobject_fileid_to_rename = {
+919132149155446097: "hand"
+}
 dependency_guids = {
-"0000000000000000e000000000000000": 1,
-"1a45311c553e025428a0b5ed59c5d3f1": 1,
-"50e54c378ee86364882361051902fd11": 1,
-"58e05b12efcc6714d964d3fb9d82d619": 1,
-"63efca66fd532c0439abc53ba522d6f2": 1,
-"668e3e619e14dda4ebee5d2c5e2b7152": 1,
-"948f4100a11a5c24981795d21301da5c": 1,
-"a48cfd752120326429c9dbaa748b56ba": 1,
-"b0a768d6226e90e448e813b27ba1e85e": 1,
-"c55829d12a7248545b150fb762cfaa7d": 1,
-"cbd98585bcab4f64b80e09e27b5b91f0": 1,
-"d82512f9c8e5d4a4d938b575d47f88d4": 1,
-"e05877a2df0c775479186bd37954ab88": 1
+"0000000000000000e000000000000000": 10208,
+"1a45311c553e025428a0b5ed59c5d3f1": 11500000,
+"50e54c378ee86364882361051902fd11": 24300002,
+"58e05b12efcc6714d964d3fb9d82d619": 11500000,
+"63efca66fd532c0439abc53ba522d6f2": 2100000,
+"668e3e619e14dda4ebee5d2c5e2b7152": 13400000,
+"8076f4ab82a3cec4ca2e0a0db22ba100": 9100000,
+"948f4100a11a5c24981795d21301da5c": 11500000,
+"a1c5550b26f9069409acee64b8bb4308": 11500000,
+"a48cfd752120326429c9dbaa748b56ba": 11500000,
+"b0a768d6226e90e448e813b27ba1e85e": 8300000,
+"c55829d12a7248545b150fb762cfaa7d": 919132149155446097,
+"cbd98585bcab4f64b80e09e27b5b91f0": 11500000,
+"d82512f9c8e5d4a4d938b575d47f88d4": 11400000,
+"e05877a2df0c775479186bd37954ab88": 11500000
 }
 prefab_dependency_guids = {
-"c55829d12a7248545b150fb762cfaa7d": 1
+"c55829d12a7248545b150fb762cfaa7d": 100100000
 }
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -8991,7 +9162,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_k6x2o"]
+[sub_resource type="Resource" id="Resource_af4n5"]
 resource_name = "Assets/Sounds/Master.mixer"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/Master.mixer"
@@ -9021,7 +9192,9 @@ transform_fileid_to_children = {}
 gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
-dependency_guids = {}
+dependency_guids = {
+"": 0
+}
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -9998,7 +10171,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_hg431"]
+[sub_resource type="Resource" id="Resource_ql6cm"]
 resource_name = "Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab.tscn"
@@ -10111,11 +10284,11 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1,
-"316f956b856b45c448987b5018ec3ef4": 1,
-"8f586378b4e144a9851e7b34d9b748ee": 1,
-"f4688fdb7df04437aeb418b961361dc5": 1,
-"f5f67c52d1564df4a8936ccd202a3bd8": 1
+"0000000000000000f000000000000000": 10905,
+"316f956b856b45c448987b5018ec3ef4": 2100000,
+"8f586378b4e144a9851e7b34d9b748ee": 2180264,
+"f4688fdb7df04437aeb418b961361dc5": 11500000,
+"f5f67c52d1564df4a8936ccd202a3bd8": -765806418
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -11606,7 +11779,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_poqep"]
+[sub_resource type="Resource" id="Resource_mcm80"]
 resource_name = "Assets/TextMesh Pro/Fonts/LiberationSans.ttf"
 script = ExtResource("1_42huq")
 path = "Assets/TextMesh Pro/Fonts/LiberationSans.ttf"
@@ -11655,7 +11828,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_1j1ay"]
+[sub_resource type="Resource" id="Resource_on1el"]
 resource_name = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
 script = ExtResource("1_42huq")
 path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.res"
@@ -11691,9 +11864,9 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"e3265ab4bf004d28a9537516768c1c75": 1,
-"fe393ace9b354375a9cb14cdbbc28be4": 1
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"e3265ab4bf004d28a9537516768c1c75": 12800000,
+"fe393ace9b354375a9cb14cdbbc28be4": 4800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -11705,7 +11878,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_mn4te"]
+[sub_resource type="Resource" id="Resource_s11jj"]
 resource_name = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset"
 script = ExtResource("1_42huq")
 path = "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.res"
@@ -11741,10 +11914,10 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"2e498d1c8094910479dc3e1b768306a4": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"e3265ab4bf004d28a9537516768c1c75": 1,
-"fe393ace9b354375a9cb14cdbbc28be4": 1
+"2e498d1c8094910479dc3e1b768306a4": 11400000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"e3265ab4bf004d28a9537516768c1c75": 12800000,
+"fe393ace9b354375a9cb14cdbbc28be4": 4800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -11924,36 +12097,36 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_35beo"]
+[sub_resource type="Resource" id="Resource_vxugu"]
 resource_name = "UISprite"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwwqj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q48a4"]
 resource_name = "Font Material"
 
-[sub_resource type="BoxMesh" id="BoxMesh_nssud"]
+[sub_resource type="BoxMesh" id="BoxMesh_twnx5"]
 resource_name = "Cube"
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_5i6ty"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_1okp7"]
 resource_name = "Cylinder"
 
-[sub_resource type="SphereMesh" id="SphereMesh_00p1n"]
+[sub_resource type="SphereMesh" id="SphereMesh_flk5q"]
 resource_name = "Sphere"
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_ogyr0"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q0yaw"]
 resource_name = "Capsule"
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_j5808"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_g66kh"]
 resource_name = "Plane"
 size = Vector2(10, 10)
 subdivide_width = 10
 subdivide_depth = 10
 
-[sub_resource type="QuadMesh" id="QuadMesh_w42bb"]
+[sub_resource type="QuadMesh" id="QuadMesh_cc7t1"]
 resource_name = "Quad"
 flip_faces = true
 size = Vector2(-1, 1)
 
-[sub_resource type="Resource" id="Resource_oriuj"]
+[sub_resource type="Resource" id="Resource_swihq"]
 resource_name = "Library/unity default resources"
 script = ExtResource("1_42huq")
 path = "Library/unity default resources"
@@ -11974,15 +12147,15 @@ fileid_to_utype = {}
 fileid_to_gameobject_fileid = {}
 type_to_fileids = {}
 godot_resources = {
-10001: SubResource("Resource_35beo"),
-10100: SubResource("StandardMaterial3D_iwwqj"),
-10102: SubResource("Resource_35beo"),
-10202: SubResource("BoxMesh_nssud"),
-10206: SubResource("CylinderMesh_5i6ty"),
-10207: SubResource("SphereMesh_00p1n"),
-10208: SubResource("CapsuleMesh_ogyr0"),
-10209: SubResource("PlaneMesh_j5808"),
-10210: SubResource("QuadMesh_w42bb")
+10001: SubResource("Resource_vxugu"),
+10100: SubResource("StandardMaterial3D_q48a4"),
+10102: SubResource("Resource_vxugu"),
+10202: SubResource("BoxMesh_twnx5"),
+10206: SubResource("CylinderMesh_1okp7"),
+10207: SubResource("SphereMesh_flk5q"),
+10208: SubResource("CapsuleMesh_q0yaw"),
+10209: SubResource("PlaneMesh_g66kh"),
+10210: SubResource("QuadMesh_cc7t1")
 }
 main_object_id = 0
 gameobject_name_to_fileid_and_children = {}
@@ -12001,7 +12174,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r2ccc"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rc1qg"]
 resource_name = "Default-Skybox"
 sky_top_color = Color(0.454902, 0.678431, 0.87451, 1)
 sky_horizon_color = Color(0.894118, 0.952941, 1, 1)
@@ -12009,16 +12182,16 @@ sky_curve = 0.0731028
 ground_bottom_color = Color(0.454902, 0.470588, 0.490196, 1)
 ground_horizon_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_18e54"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83iwa"]
 resource_name = "Default-ParticleSystem"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_smlse"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ggfk"]
 resource_name = "Sprites-Default"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_slup8"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwolt"]
 resource_name = "Sprites-Mask"
 
-[sub_resource type="Resource" id="Resource_ew877"]
+[sub_resource type="Resource" id="Resource_wcc8v"]
 resource_name = "Resources/unity_builtin_extra"
 script = ExtResource("1_42huq")
 path = "Resources/unity_builtin_extra"
@@ -12039,14 +12212,14 @@ fileid_to_utype = {}
 fileid_to_gameobject_fileid = {}
 type_to_fileids = {}
 godot_resources = {
-10302: SubResource("StandardMaterial3D_psq30"),
-10303: SubResource("StandardMaterial3D_psq30"),
-10304: SubResource("ProceduralSkyMaterial_r2ccc"),
-10306: SubResource("StandardMaterial3D_psq30"),
-10308: SubResource("StandardMaterial3D_18e54"),
-10754: SubResource("StandardMaterial3D_smlse"),
-10758: SubResource("StandardMaterial3D_slup8"),
-10905: SubResource("Resource_35beo")
+10302: SubResource("StandardMaterial3D_bopws"),
+10303: SubResource("StandardMaterial3D_bopws"),
+10304: SubResource("ProceduralSkyMaterial_rc1qg"),
+10306: SubResource("StandardMaterial3D_bopws"),
+10308: SubResource("StandardMaterial3D_83iwa"),
+10754: SubResource("StandardMaterial3D_4ggfk"),
+10758: SubResource("StandardMaterial3D_xwolt"),
+10905: SubResource("Resource_vxugu")
 }
 main_object_id = 0
 gameobject_name_to_fileid_and_children = {}
@@ -12065,18 +12238,18 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Shader" id="Shader_7kykv"]
+[sub_resource type="Shader" id="Shader_o6etu"]
 resource_name = "Unidot Hidden Shader"
 code = "shader_type spatial;render_mode unshaded;void vertex() {VERTEX=vec3(1.0);}"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_unacm"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3hun"]
 resource_name = "Unidot Hidden Material"
 render_priority = 0
-shader = SubResource("Shader_7kykv")
+shader = SubResource("Shader_o6etu")
 
 [resource]
 script = ExtResource("2_jwrta")
-global_log_count = 12668
+global_log_count = 13929
 guid_to_path = {
 "0000000000000000e000000000000000": "Library/unity default resources",
 "0000000000000000f000000000000000": "Resources/unity_builtin_extra",
@@ -12225,9 +12398,9 @@ guid_to_path = {
 "fe393ace9b354375a9cb14cdbbc28be4": "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader"
 }
 path_to_meta = {
-"Assets/Animations/Hand/Flick.anim.tres": SubResource("Resource_1vodg"),
-"Assets/Animations/Hand/HandController.controller.tres": SubResource("Resource_ckkuv"),
-"Assets/Animations/Hand/Indle.anim.tres": SubResource("Resource_sn1hm"),
+"Assets/Animations/Hand/Flick.anim.tres": SubResource("Resource_mdxe1"),
+"Assets/Animations/Hand/HandController.controller.tres": SubResource("Resource_o8iln"),
+"Assets/Animations/Hand/Indle.anim.tres": SubResource("Resource_emooc"),
 "Assets/Animations/LegBot/Armature_Idle.anim.tres": SubResource("Resource_qdmvg"),
 "Assets/Animations/LegBot/LegBotAnimation.controller.tres": SubResource("Resource_c603r"),
 "Assets/Animations/LegBot/legbotWalk2.anim.tres": SubResource("Resource_anw77"),
@@ -12242,16 +12415,16 @@ path_to_meta = {
 "Assets/Materials/GlowRed.mat.tres": SubResource("Resource_64gxk"),
 "Assets/Materials/MapDefault.mat.tres": SubResource("Resource_kp5k6"),
 "Assets/Materials/ShinyBlack.mat.tres": SubResource("Resource_ta7vi"),
-"Assets/Materials/ShinyWhite.mat.tres": SubResource("Resource_042hi"),
+"Assets/Materials/ShinyWhite.mat.tres": SubResource("Resource_3p5gi"),
 "Assets/Materials/ShynyBlue.mat.tres": SubResource("Resource_lauii"),
 "Assets/Materials/Skybox.mat.tres": SubResource("Resource_xxhbs"),
 "Assets/Materials/windows.mat.tres": SubResource("Resource_rrd76"),
 "Assets/Models/LegsBot.gltf": SubResource("Resource_kfm82"),
 "Assets/Models/bullet.gltf": SubResource("Resource_w56hc"),
 "Assets/Models/door.gltf": SubResource("Resource_avhu5"),
-"Assets/Models/hand.gltf": SubResource("Resource_prjkt"),
+"Assets/Models/hand.gltf": SubResource("Resource_nmyxd"),
 "Assets/Models/warning.gltf": SubResource("Resource_svjda"),
-"Assets/Physics/playerPhysics.res": SubResource("Resource_mlyoe"),
+"Assets/Physics/playerPhysics.res": SubResource("Resource_ktlsk"),
 "Assets/PostProcessProfiles/PostProcessVolume Profile.res": SubResource("Resource_ea4un"),
 "Assets/Prefabs/Enemies/LegBot.prefab.tscn": SubResource("Resource_d6tx1"),
 "Assets/Prefabs/Enemies/ScriptlessLegBot.prefab.tscn": SubResource("Resource_te8fe"),
@@ -12268,7 +12441,7 @@ path_to_meta = {
 "Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn": SubResource("Resource_fjdi6"),
 "Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn": SubResource("Resource_nphch"),
 "Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn": SubResource("Resource_m28ds"),
-"Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn": SubResource("Resource_nwexe"),
+"Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn": SubResource("Resource_pxghj"),
 "Assets/Prefabs/Objects/Bullet.prefab.tscn": SubResource("Resource_wdv15"),
 "Assets/Prefabs/Objects/Window.prefab.tscn": SubResource("Resource_hep4v"),
 "Assets/Scenes/Ambush.tscn": SubResource("Resource_hmxpd"),
@@ -12312,7 +12485,7 @@ path_to_meta = {
 "Assets/Scripts/Tutorial/TutorialWakeUp.cs": SubResource("Resource_i3jho"),
 "Assets/Scripts/WakeUpAndGo.cs": SubResource("Resource_knucx"),
 "Assets/Scripts/WinGameCollider.cs": SubResource("Resource_5uph2"),
-"Assets/Sounds/Master.mixer": SubResource("Resource_k6x2o"),
+"Assets/Sounds/Master.mixer": SubResource("Resource_af4n5"),
 "Assets/Sounds/UI/bop.wav": SubResource("Resource_hmgl3"),
 "Assets/Sounds/beeboobeepHigh.wav": SubResource("Resource_4b2sv"),
 "Assets/Sounds/bwoop.wav": SubResource("Resource_mi2k1"),
@@ -12326,7 +12499,7 @@ path_to_meta = {
 "Assets/Sounds/timeStop.wav": SubResource("Resource_msrvi"),
 "Assets/Sprites/Symbols/crosshair.png": SubResource("Resource_mr6ht"),
 "Assets/Sprites/Symbols/halfCircle.png": SubResource("Resource_voef6"),
-"Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab.tscn": SubResource("Resource_hg431"),
+"Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab.tscn": SubResource("Resource_ql6cm"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs": SubResource("Resource_mxkfw"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs": SubResource("Resource_h1g2t"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs": SubResource("Resource_xtsqy"),
@@ -12361,17 +12534,17 @@ path_to_meta = {
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs": SubResource("Resource_alnrv"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs": SubResource("Resource_6g7ve"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs": SubResource("Resource_m8bc2"),
-"Assets/TextMesh Pro/Fonts/LiberationSans.ttf": SubResource("Resource_poqep"),
-"Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.res": SubResource("Resource_1j1ay"),
-"Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.res": SubResource("Resource_mn4te"),
+"Assets/TextMesh Pro/Fonts/LiberationSans.ttf": SubResource("Resource_mcm80"),
+"Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.res": SubResource("Resource_on1el"),
+"Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.res": SubResource("Resource_s11jj"),
 "Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader": SubResource("Resource_tyjwq"),
 "Assets/TextMesh Pro/Shaders/TMP_SDF.shader": SubResource("Resource_mfxiu"),
 "Assets/TextMesh Pro/Shaders/TMPro.cginc": SubResource("Resource_b0tyd"),
 "Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc": SubResource("Resource_d3x87"),
-"Library/unity default resources": SubResource("Resource_oriuj"),
-"Resources/unity_builtin_extra": SubResource("Resource_ew877")
+"Library/unity default resources": SubResource("Resource_swihq"),
+"Resources/unity_builtin_extra": SubResource("Resource_wcc8v")
 }
-truncated_shader_reference = SubResource("Shader_7kykv")
-truncated_material_reference = SubResource("ShaderMaterial_unacm")
-null_material_reference = SubResource("StandardMaterial3D_fe4du")
-default_material_reference = SubResource("StandardMaterial3D_psq30")
+truncated_shader_reference = SubResource("Shader_o6etu")
+truncated_material_reference = SubResource("ShaderMaterial_p3hun")
+null_material_reference = SubResource("StandardMaterial3D_aufds")
+default_material_reference = SubResource("StandardMaterial3D_bopws")

@@ -1,0 +1,531 @@
+[gd_scene load_steps=8 format=3 uid="uid://dww81s5nnmsyh"]
+
+[ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_xxma3"]
+[ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_5nx5q"]
+[ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_ybxmc"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_3qqta"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_qywq4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j4jvl"]
+radius = 0.4
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_q0yaw"]
+resource_name = "Capsule"
+
+[node name="player" type="RigidBody3D"]
+freeze_mode = 1
+
+[node name="CapsuleCollider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_j4jvl")
+
+[node name="AudioSource" type="Node" parent="."]
+metadata/unidot_keys = {
+"BypassEffects": 0,
+"BypassListenerEffects": 0,
+"BypassReverbZones": 0,
+"DopplerLevel": 1,
+"Loop": 0,
+"MaxDistance": 500,
+"MinDistance": 1,
+"Mute": 0,
+"OutputAudioMixerGroup": [null, 24300002, "50e54c378ee86364882361051902fd11", 2],
+"Pan2D": 0,
+"Priority": 128,
+"Spatialize": 0,
+"SpatializePostEffects": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354054196359937, null, null],
+"m_ObjectHideFlags": 0,
+"m_Pitch": 1,
+"m_PlayOnAwake": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Volume": 0.7,
+"m_audioClip": [null, 8300000, "b0a768d6226e90e448e813b27ba1e85e", 3],
+"panLevelCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"reverbZoneMixCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "1",
+"weightedMode": 0
+}, {
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 1,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+},
+"rolloffMode": 0,
+"serializedVersion": 4,
+"spreadCustomCurve": {
+"m_Curve": [{
+"inSlope": 0,
+"inWeight": 0.333333,
+"outSlope": 0,
+"outWeight": 0.333333,
+"serializedVersion": 3,
+"tangentMode": 0,
+"time": 0,
+"value": "0",
+"weightedMode": 0
+}],
+"m_PostInfinity": 2,
+"m_PreInfinity": 2,
+"m_RotationOrder": 4,
+"serializedVersion": 2
+}
+}
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354054196359945]"
+metadata/unidot_keys = {
+"RideHeigh": 1.7,
+"RideSpringDamper": 300,
+"acceleration": 2000,
+"ground": {
+"m_Bits": 33,
+"serializedVersion": 2
+},
+"groundNormalDirection": [null, 7323978245124050555, null, null],
+"groundedRayDistance": 1.7,
+"jumpForce": 10000,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354054196359937, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "a48cfd752120326429c9dbaa748b56ba", 3],
+"maxSpeed": 7,
+"orientation": [null, 6639354054144880042, null, null],
+"rayLenght": 2,
+"rideSpringStrenght": 5000,
+"speed": 7
+}
+
+[node name="MonoBehaviour2" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354054196359944]"
+metadata/unidot_keys = {
+"fingerFlickSound": [null, 3736223830505298979, null, null],
+"handAnimator": [null, 4847663143896029960, null, null],
+"holdableLayer": {
+"m_Bits": 64,
+"serializedVersion": 2
+},
+"holdingPosition": [null, 4847663144155778345, null, null],
+"isPaused": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354054196359937, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "cbd98585bcab4f64b80e09e27b5b91f0", 3],
+"rayTransformOrigin": [null, 6639354053609104703, null, null],
+"shootableLayer": {
+"m_Bits": 10241,
+"serializedVersion": 2
+}
+}
+
+[node name="MonoBehaviour3" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354054196360055]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354054196359937, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "1a45311c553e025428a0b5ed59c5d3f1", 3]
+}
+
+[node name="Camera" type="Node3D" parent="."]
+
+[node name="Camera" type="Camera3D" parent="Camera"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+cull_mask = 8215
+fov = 90.0
+size = 5.0
+near = 0.01
+far = 1000.0
+metadata/unidot_keys = {
+"far clip plane": 1000,
+"field of view": 90,
+"m_AllowDynamicResolution": 0,
+"m_AllowMSAA": 1,
+"m_BackGroundColor": Color(0.192157, 0.301961, 0.47451, 0),
+"m_ClearFlags": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullingMask": {
+"m_Bits": 8215,
+"serializedVersion": 2
+},
+"m_Depth": 0,
+"m_Enabled": 1,
+"m_FOVAxisMode": 0,
+"m_FocalLength": 50,
+"m_ForceIntoRT": 0,
+"m_GameObject": [null, 6639354053609104702, null, null],
+"m_GateFitMode": 2,
+"m_HDR": 1,
+"m_LensShift": Vector2(0, 0),
+"m_NormalizedViewPortRect": {
+"height": 1,
+"serializedVersion": 2,
+"width": 1,
+"x": 0,
+"y": 0
+},
+"m_ObjectHideFlags": 0,
+"m_OcclusionCulling": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RenderingPath": -1,
+"m_SensorSize": Vector2(36, 24),
+"m_StereoConvergence": 10,
+"m_StereoSeparation": 0.022,
+"m_TargetDisplay": 0,
+"m_TargetEye": 3,
+"m_TargetTexture": [null, 0, null, null],
+"m_projectionMatrixMode": 1,
+"near clip plane": 0.01,
+"orthographic": 0,
+"orthographic size": 5,
+"serializedVersion": 2
+}
+
+[node name="MonoBehaviour" type="Node" parent="Camera"]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104698]"
+metadata/unidot_keys = {
+"isPaused": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354053609104702, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "58e05b12efcc6714d964d3fb9d82d619", 3],
+"orientation": [null, 6639354054144880042, null, null],
+"sensivity": 4
+}
+
+[node name="MonoBehaviour2" type="Node" parent="Camera"]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104699]"
+metadata/unidot_keys = {
+"cameraPositioner": [null, 6639354053334602506, null, null],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354053609104702, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "e05877a2df0c775479186bd37954ab88", 3]
+}
+
+[node name="MonoBehaviour3" type="Node" parent="Camera"]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104697]"
+metadata/unidot_keys = {
+"antialiasingMode": 0,
+"breakBeforeColorGrading": 0,
+"debugLayer": {
+"histogram": {
+"channel": 3,
+"height": 256,
+"width": 512
+},
+"lightMeter": {
+"height": 256,
+"showCurves": 1,
+"width": 512
+},
+"overlaySettings": {
+"colorBlindnessStrength": 1,
+"colorBlindnessType": 0,
+"linearDepth": 0,
+"motionColorIntensity": 4,
+"motionGridSize": 64
+},
+"vectorscope": {
+"exposure": 0.12,
+"size": 256
+},
+"waveform": {
+"exposure": 0.12,
+"height": 256
+}
+},
+"fastApproximateAntialiasing": {
+"fastMode": 0,
+"keepAlpha": 0
+},
+"finalBlitToCameraTarget": 0,
+"fog": {
+"enabled": 1,
+"excludeSkybox": 1
+},
+"m_AfterStackBundles": [],
+"m_BeforeStackBundles": [],
+"m_BeforeTransparentBundles": [],
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 6639354053609104702, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Resources": [null, 11400000, "d82512f9c8e5d4a4d938b575d47f88d4", 2],
+"m_Script": [null, 11500000, "948f4100a11a5c24981795d21301da5c", 3],
+"m_ShowCustomSorter": 0,
+"m_ShowToolkit": 0,
+"stopNaNPropagation": 1,
+"subpixelMorphologicalAntialiasing": {
+"quality": 2
+},
+"temporalAntialiasing": {
+"jitterSpread": 0.75,
+"motionBlending": 0.85,
+"sharpness": 0.25,
+"stationaryBlending": 0.95
+},
+"volumeLayer": {
+"m_Bits": 1,
+"serializedVersion": 2
+},
+"volumeTrigger": [null, 6639354053609104703, null, null]
+}
+
+[node name="HUDcamera" type="Node3D" parent="Camera"]
+
+[node name="Camera" type="Camera3D" parent="Camera/HUDcamera"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+cull_mask = 32
+fov = 90.0
+size = 5.0
+near = 0.01
+far = 1000.0
+metadata/unidot_keys = {
+"far clip plane": 1000,
+"field of view": 90,
+"m_AllowDynamicResolution": 0,
+"m_AllowMSAA": 1,
+"m_BackGroundColor": Color(0.192157, 0.301961, 0.47451, 0),
+"m_ClearFlags": 3,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullingMask": {
+"m_Bits": 32,
+"serializedVersion": 2
+},
+"m_Depth": 1,
+"m_Enabled": 1,
+"m_FOVAxisMode": 0,
+"m_FocalLength": 50,
+"m_ForceIntoRT": 0,
+"m_GameObject": [null, 4847663145188287365, null, null],
+"m_GateFitMode": 2,
+"m_HDR": 1,
+"m_LensShift": Vector2(0, 0),
+"m_NormalizedViewPortRect": {
+"height": 1,
+"serializedVersion": 2,
+"width": 1,
+"x": 0,
+"y": 0
+},
+"m_ObjectHideFlags": 0,
+"m_OcclusionCulling": 1,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RenderingPath": -1,
+"m_SensorSize": Vector2(36, 24),
+"m_StereoConvergence": 10,
+"m_StereoSeparation": 0.022,
+"m_TargetDisplay": 0,
+"m_TargetEye": 3,
+"m_TargetTexture": [null, 0, null, null],
+"m_projectionMatrixMode": 1,
+"near clip plane": 0.01,
+"orthographic": 0,
+"orthographic size": 5,
+"serializedVersion": 2
+}
+
+[node name="ObjectHolder" type="Node3D" parent="Camera/HUDcamera"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203, -0.349, 0.867)
+
+[node name="hand" parent="Camera/HUDcamera" instance=ExtResource("1_xxma3")]
+transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194, -0.35, -1.27, -1.02)
+
+[node name="Armature" parent="Camera/HUDcamera/hand" index="0"]
+transform = Transform3D(100, 0, 0, 0, 100, -4.37114e-06, 0, 4.37114e-06, 100, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Camera/HUDcamera/hand/Armature" index="0"]
+bones/0/position = Vector3(0, -0.000256015, -0.000403011)
+bones/0/rotation = Quaternion(0.702972, -1.03398e-25, -1.82013e-18, 0.711217)
+bones/1/position = Vector3(-2.10026e-28, 0.0109354, 4.65661e-12)
+bones/1/rotation = Quaternion(-0.30287, -1.12394e-07, -3.97303e-08, 0.953032)
+bones/2/position = Vector3(0, 0.00897879, -2.98023e-10)
+bones/2/rotation = Quaternion(-0.191716, 0.129729, -0.115968, 0.965902)
+bones/3/position = Vector3(-0.000453908, 0.00409274, 0.00014501)
+bones/3/rotation = Quaternion(0.392163, 0.00383266, 0.0248196, 0.919553)
+bones/4/position = Vector3(-1.11759e-10, 0.00162248, -1.67638e-10)
+bones/4/rotation = Quaternion(0.118447, 0.000720391, -0.0114077, 0.992895)
+bones/6/position = Vector3(0.000991266, 0.00415373, 0.000118028)
+bones/6/rotation = Quaternion(0.391875, 0.0019419, 0.0411063, 0.919098)
+bones/7/position = Vector3(-1.49012e-10, 0.00158857, 1.67638e-10)
+bones/7/rotation = Quaternion(0.111418, -0.0694376, 0.030427, 0.990878)
+bones/9/position = Vector3(0.00135938, 0.00100969, 0.000195594)
+bones/9/rotation = Quaternion(0.251113, -0.0780299, -0.0962572, 0.959994)
+bones/10/position = Vector3(-5.96046e-10, 0.00175941, -3.72529e-11)
+bones/10/rotation = Quaternion(0.160167, 0.0320135, 0.170899, 0.971656)
+bones/11/position = Vector3(-3.72529e-11, 0.00117238, -1.67638e-10)
+bones/11/rotation = Quaternion(-0.0681881, 0.0289776, -0.0531556, 0.995834)
+
+[node name="Mesh 1" parent="Camera/HUDcamera/hand/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_5nx5q")
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Camera/HUDcamera/hand"]
+libraries = {
+"": ExtResource("3_ybxmc")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Camera/HUDcamera/hand"]
+tree_root = ExtResource("4_3qqta")
+anim_player = NodePath("../AnimationPlayer2")
+active = true
+root_motion_track = NodePath("%GeneralSkeleton:Root")
+"parameters/Base Layer/Flick/TimeScale/scale" = 0.3
+"parameters/Base Layer/Hold/TimeScale/scale" = 0.0
+"parameters/Base Layer/Indle/TimeScale/scale" = 0.35
+script = ExtResource("5_qywq4")
+metadata/guid_fileid_to_animation_name = {
+"4a7c2ab0a19576c4cae938a59282a14d:7400000": "Flick",
+"8f569f77eb5dc794b91b06ed1cfc03f2:7400000": "Indle"
+}
+
+[node name="MonoBehaviour" type="Node" parent="Camera/HUDcamera/hand"]
+editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6174495312195083454]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 5730604180103002215, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "a1c5550b26f9069409acee64b8bb4308", 3],
+"particleSystemChoosen": [null, 0, null, null]
+}
+
+[node name="Body" type="Node3D" parent="."]
+transform = Transform3D(0.71, 0, 0, 0, 1.04, 0, 0, 0, 0.71, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Body"]
+editor_description = "[MeshRenderer 23::f1e7643930efb1a47b87257cf0420617:4847663143894855737]"
+mesh = SubResource("CapsuleMesh_q0yaw")
+surface_material_override/0 = ExtResource("2_5nx5q")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 4847663143894855739, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "63efca66fd532c0439abc53ba522d6f2", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="secondDirection" type="Node3D" parent="."]
+
+[node name="Orientation" type="Node3D" parent="."]
+
+[node name="CameraPositioner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 0)
+
+[editable path="Camera/HUDcamera/hand"]

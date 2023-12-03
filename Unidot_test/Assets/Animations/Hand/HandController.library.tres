@@ -1,13 +1,13 @@
 [gd_resource type="AnimationLibrary" load_steps=3 format=3 uid="uid://cd0bdwynnmojr"]
 
-[ext_resource type="Animation" uid="uid://2pn1lqtmddgm" path="res://Assets/Animations/Hand/Indle.anim.tres" id="1_y6l7y"]
-[ext_resource type="Animation" uid="uid://c41b1c6xo8yex" path="res://Assets/Animations/Hand/Flick.anim.tres" id="2_wpm6o"]
+[ext_resource type="Animation" uid="uid://2pn1lqtmddgm" path="res://Assets/Animations/Hand/Indle.anim.tres" id="1_1triq"]
+[ext_resource type="Animation" uid="uid://c41b1c6xo8yex" path="res://Assets/Animations/Hand/Flick.anim.tres" id="2_ylsap"]
 
 [resource]
 resource_name = "HandController"
 _data = {
-"Flick": ExtResource("2_wpm6o"),
-"Indle": ExtResource("1_y6l7y")
+"Flick": ExtResource("2_ylsap"),
+"Indle": ExtResource("1_1triq")
 }
 metadata/animation_guid_fileid_to_name = {
 "4a7c2ab0a19576c4cae938a59282a14d:7400000": "Flick",

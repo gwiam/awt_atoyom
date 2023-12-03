@@ -8,13 +8,13 @@ metadata/time = &""
 metadata/scale = 0.3
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7fmk3"]
-graph_offset = Vector2(-336.572, -72.9644)
+graph_offset = Vector2(-360.975, -5.62341)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_cgrbb")
 nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_klmyk")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
-node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xohmw"]
 animation = &"Flick"
@@ -30,7 +30,7 @@ nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_gvkhn")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
-node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_amubb"]
 animation = &"Indle"
@@ -44,7 +44,7 @@ nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_6pgxa")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
-node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_aykt1"]
 advance_mode = 2
@@ -66,7 +66,7 @@ transitions = ["Flick", "Indle", SubResource("AnimationNodeStateMachineTransitio
 graph_offset = Vector2(0, 82.4034)
 
 [resource]
-graph_offset = Vector2(-270.216, 114.146)
+graph_offset = Vector2(-136.892, 151.302)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_den38")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

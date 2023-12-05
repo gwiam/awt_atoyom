@@ -27,20 +27,9 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=false
-import_script/path=""
+import_script/path="res://addons/unidot/post_import_unity_model.gd"
 _subresources={
-"animations": {
-"Armature|FingerFlick": {
-"save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://Assets/Models/hand.ArmatureFingerFlick.tres"
-},
-"Armature|Indle": {
-"save_to_file/enabled": true,
-"save_to_file/keep_custom_tracks": true,
-"save_to_file/path": "res://Assets/Models/hand.ArmatureIndle.tres"
-}
-},
+"animations": {},
 "materials": {
 "Material": {
 "use_external/enabled": true,

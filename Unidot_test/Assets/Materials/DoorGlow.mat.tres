@@ -4,6 +4,9 @@
 resource_name = "DoorGlow"
 depth_draw_mode = 1
 roughness = 0.5
+emission_enabled = true
+emission = Color(0.17801, 0.575916, 1, 1)
+emission_energy_multiplier = 4.86714
 uv1_scale = Vector3(1, 1, 0)
 metadata/unidot_keys = {
 "disabledShaderPasses": [],

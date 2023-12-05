@@ -22,15 +22,27 @@ meshes/generate_lods=true
 meshes/create_shadow_meshes=false
 meshes/light_baking=1
 meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
 animation/trimming=false
-animation/remove_immutable_tracks=true
-import_script/path="res://addons/unidot/post_import_unity_model.gd"
+animation/remove_immutable_tracks=false
+import_script/path=""
 _subresources={
-"animations": {},
-"materials": {},
+"animations": {
+"Armature|Walking": {
+"save_to_file/enabled": true,
+"save_to_file/keep_custom_tracks": true,
+"save_to_file/path": "res://Assets/Models/LegsBot.animation.tres"
+}
+},
+"materials": {
+"No Name": {
+"use_external/enabled": true,
+"use_external/path": "res://Assets/Models/LegsBot.DefaultMaterial 1.material"
+}
+},
 "meshes": {
 "Gun": {
 "save_to_file/enabled": true,
@@ -38,16 +50,31 @@ _subresources={
 "save_to_file/path": "res://Assets/Models/LegsBot.Gun.mesh"
 },
 "Root Scene_Gun": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Assets/Models/LegsBot.Gun.mesh"
 },
 "Root Scene_body": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Assets/Models/LegsBot.body.mesh"
 },
 "Root Scene_legs": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://Assets/Models/LegsBot.legs.mesh"
@@ -71,4 +98,5 @@ _subresources={
 }
 }
 }
+gltf/naming_version=0
 gltf/embedded_image_handling=1

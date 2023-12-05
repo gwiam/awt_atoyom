@@ -6,17 +6,18 @@
 [ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_3qqta"]
 [ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_qywq4"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_j4jvl"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_unrh0"]
 radius = 0.4
+height = 1.2
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_q0yaw"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lca8y"]
 resource_name = "Capsule"
 
 [node name="player" type="RigidBody3D"]
 freeze_mode = 1
 
 [node name="CapsuleCollider" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_j4jvl")
+shape = SubResource("CapsuleShape3D_unrh0")
 
 [node name="AudioSource" type="Node" parent="."]
 metadata/unidot_keys = {
@@ -414,7 +415,7 @@ transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194
 transform = Transform3D(100, 0, 0, 0, 100, -4.37114e-06, 0, 4.37114e-06, 100, 0, 0, 0)
 
 [node name="Skeleton3D" parent="Camera/HUDcamera/hand/Armature" index="0"]
-bones/0/position = Vector3(0, -0.00024067, -0.000403177)
+bones/0/position = Vector3(0, -0.000227007, -0.000403091)
 bones/0/rotation = Quaternion(0.702972, -1.03398e-25, -1.82013e-18, 0.711217)
 bones/1/position = Vector3(-2.10026e-28, 0.0109354, 4.65661e-12)
 bones/1/rotation = Quaternion(-0.30287, -1.12394e-07, -3.97303e-08, 0.953032)
@@ -434,10 +435,8 @@ bones/9/position = Vector3(0.00135938, 0.00100969, 0.000195594)
 bones/9/rotation = Quaternion(0.251113, -0.0780299, -0.0962572, 0.959994)
 bones/10/position = Vector3(-5.96046e-10, 0.00175941, -3.72529e-11)
 bones/10/rotation = Quaternion(0.160167, 0.0320135, 0.170899, 0.971656)
-bones/10/scale = Vector3(1, 1, 1)
 bones/11/position = Vector3(-3.72529e-11, 0.00117238, -1.67638e-10)
 bones/11/rotation = Quaternion(-0.0681881, 0.0289776, -0.0531556, 0.995834)
-bones/11/scale = Vector3(1, 1, 1)
 
 [node name="Mesh 1" parent="Camera/HUDcamera/hand/Armature/Skeleton3D" index="0"]
 surface_material_override/0 = ExtResource("2_5nx5q")
@@ -446,9 +445,9 @@ surface_material_override/0 = ExtResource("2_5nx5q")
 libraries = {
 "": ExtResource("3_ybxmc")
 }
-speed_scale = 0.38
 
 [node name="AnimationTree" type="AnimationTree" parent="Camera/HUDcamera/hand"]
+deterministic = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
 "": ExtResource("3_ybxmc")
@@ -483,7 +482,7 @@ transform = Transform3D(0.71, 0, 0, 0, 1.04, 0, 0, 0, 0.71, 0, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Body"]
 editor_description = "[MeshRenderer 23::f1e7643930efb1a47b87257cf0420617:4847663143894855737]"
-mesh = SubResource("CapsuleMesh_q0yaw")
+mesh = SubResource("CapsuleMesh_lca8y")
 surface_material_override/0 = ExtResource("2_5nx5q")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],

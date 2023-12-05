@@ -1,0 +1,1507 @@
+[gd_scene load_steps=31 format=3 uid="uid://bs05d347np31o"]
+
+[ext_resource type="Material" uid="uid://b5niq23wfj2fn" path="res://Assets/Materials/Skybox.mat.tres" id="1_j421f"]
+[ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="2_226p5"]
+[ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_mxkdi"]
+[ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_he40p"]
+[ext_resource type="PackedScene" uid="uid://f3fk0neb3q2v" path="res://Assets/Prefabs/Enemies/LegBot.prefab.tscn" id="5_neuw4"]
+
+[sub_resource type="Sky" id="Sky_8obg7"]
+sky_material = ExtResource("1_j421f")
+
+[sub_resource type="Environment" id="Environment_6ia7t"]
+background_mode = 2
+sky = SubResource("Sky_8obg7")
+fog_light_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_kavxj"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hdoqn"]
+resource_name = "Plane"
+size = Vector2(10, 10)
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_lhte6"]
+data = PackedVector3Array(5, 0, 5, 4.0909, 0, 5, 5, 0, 4.0909, 4.0909, 0, 5, 4.0909, 0, 4.0909, 5, 0, 4.0909, 4.0909, 0, 5, 3.1818, 0, 5, 4.0909, 0, 4.0909, 3.1818, 0, 5, 3.1818, 0, 4.0909, 4.0909, 0, 4.0909, 3.1818, 0, 5, 2.2727, 0, 5, 3.1818, 0, 4.0909, 2.2727, 0, 5, 2.2727, 0, 4.0909, 3.1818, 0, 4.0909, 2.2727, 0, 5, 1.3636, 0, 5, 2.2727, 0, 4.0909, 1.3636, 0, 5, 1.3636, 0, 4.0909, 2.2727, 0, 4.0909, 1.3636, 0, 5, 0.4545, 0, 5, 1.3636, 0, 4.0909, 0.4545, 0, 5, 0.4545, 0, 4.0909, 1.3636, 0, 4.0909, 0.4545, 0, 5, -0.4545, 0, 5, 0.4545, 0, 4.0909, -0.4545, 0, 5, -0.4545, 0, 4.0909, 0.4545, 0, 4.0909, -0.4545, 0, 5, -1.3636, 0, 5, -0.4545, 0, 4.0909, -1.3636, 0, 5, -1.3636, 0, 4.0909, -0.4545, 0, 4.0909, -1.3636, 0, 5, -2.2727, 0, 5, -1.3636, 0, 4.0909, -2.2727, 0, 5, -2.2727, 0, 4.0909, -1.3636, 0, 4.0909, -2.2727, 0, 5, -3.1818, 0, 5, -2.2727, 0, 4.0909, -3.1818, 0, 5, -3.1818, 0, 4.0909, -2.2727, 0, 4.0909, -3.1818, 0, 5, -4.0909, 0, 5, -3.1818, 0, 4.0909, -4.0909, 0, 5, -4.0909, 0, 4.0909, -3.1818, 0, 4.0909, -4.0909, 0, 5, -5, 0, 5, -4.0909, 0, 4.0909, -5, 0, 5, -5, 0, 4.0909, -4.0909, 0, 4.0909, 5, 0, 4.0909, 4.0909, 0, 4.0909, 5, 0, 3.1818, 4.0909, 0, 4.0909, 4.0909, 0, 3.1818, 5, 0, 3.1818, 4.0909, 0, 4.0909, 3.1818, 0, 4.0909, 4.0909, 0, 3.1818, 3.1818, 0, 4.0909, 3.1818, 0, 3.1818, 4.0909, 0, 3.1818, 3.1818, 0, 4.0909, 2.2727, 0, 4.0909, 3.1818, 0, 3.1818, 2.2727, 0, 4.0909, 2.2727, 0, 3.1818, 3.1818, 0, 3.1818, 2.2727, 0, 4.0909, 1.3636, 0, 4.0909, 2.2727, 0, 3.1818, 1.3636, 0, 4.0909, 1.3636, 0, 3.1818, 2.2727, 0, 3.1818, 1.3636, 0, 4.0909, 0.4545, 0, 4.0909, 1.3636, 0, 3.1818, 0.4545, 0, 4.0909, 0.4545, 0, 3.1818, 1.3636, 0, 3.1818, 0.4545, 0, 4.0909, -0.4545, 0, 4.0909, 0.4545, 0, 3.1818, -0.4545, 0, 4.0909, -0.4545, 0, 3.1818, 0.4545, 0, 3.1818, -0.4545, 0, 4.0909, -1.3636, 0, 4.0909, -0.4545, 0, 3.1818, -1.3636, 0, 4.0909, -1.3636, 0, 3.1818, -0.4545, 0, 3.1818, -1.3636, 0, 4.0909, -2.2727, 0, 4.0909, -1.3636, 0, 3.1818, -2.2727, 0, 4.0909, -2.2727, 0, 3.1818, -1.3636, 0, 3.1818, -2.2727, 0, 4.0909, -3.1818, 0, 4.0909, -2.2727, 0, 3.1818, -3.1818, 0, 4.0909, -3.1818, 0, 3.1818, -2.2727, 0, 3.1818, -3.1818, 0, 4.0909, -4.0909, 0, 4.0909, -3.1818, 0, 3.1818, -4.0909, 0, 4.0909, -4.0909, 0, 3.1818, -3.1818, 0, 3.1818, -4.0909, 0, 4.0909, -5, 0, 4.0909, -4.0909, 0, 3.1818, -5, 0, 4.0909, -5, 0, 3.1818, -4.0909, 0, 3.1818, 5, 0, 3.1818, 4.0909, 0, 3.1818, 5, 0, 2.2727, 4.0909, 0, 3.1818, 4.0909, 0, 2.2727, 5, 0, 2.2727, 4.0909, 0, 3.1818, 3.1818, 0, 3.1818, 4.0909, 0, 2.2727, 3.1818, 0, 3.1818, 3.1818, 0, 2.2727, 4.0909, 0, 2.2727, 3.1818, 0, 3.1818, 2.2727, 0, 3.1818, 3.1818, 0, 2.2727, 2.2727, 0, 3.1818, 2.2727, 0, 2.2727, 3.1818, 0, 2.2727, 2.2727, 0, 3.1818, 1.3636, 0, 3.1818, 2.2727, 0, 2.2727, 1.3636, 0, 3.1818, 1.3636, 0, 2.2727, 2.2727, 0, 2.2727, 1.3636, 0, 3.1818, 0.4545, 0, 3.1818, 1.3636, 0, 2.2727, 0.4545, 0, 3.1818, 0.4545, 0, 2.2727, 1.3636, 0, 2.2727, 0.4545, 0, 3.1818, -0.4545, 0, 3.1818, 0.4545, 0, 2.2727, -0.4545, 0, 3.1818, -0.4545, 0, 2.2727, 0.4545, 0, 2.2727, -0.4545, 0, 3.1818, -1.3636, 0, 3.1818, -0.4545, 0, 2.2727, -1.3636, 0, 3.1818, -1.3636, 0, 2.2727, -0.4545, 0, 2.2727, -1.3636, 0, 3.1818, -2.2727, 0, 3.1818, -1.3636, 0, 2.2727, -2.2727, 0, 3.1818, -2.2727, 0, 2.2727, -1.3636, 0, 2.2727, -2.2727, 0, 3.1818, -3.1818, 0, 3.1818, -2.2727, 0, 2.2727, -3.1818, 0, 3.1818, -3.1818, 0, 2.2727, -2.2727, 0, 2.2727, -3.1818, 0, 3.1818, -4.0909, 0, 3.1818, -3.1818, 0, 2.2727, -4.0909, 0, 3.1818, -4.0909, 0, 2.2727, -3.1818, 0, 2.2727, -4.0909, 0, 3.1818, -5, 0, 3.1818, -4.0909, 0, 2.2727, -5, 0, 3.1818, -5, 0, 2.2727, -4.0909, 0, 2.2727, 5, 0, 2.2727, 4.0909, 0, 2.2727, 5, 0, 1.3636, 4.0909, 0, 2.2727, 4.0909, 0, 1.3636, 5, 0, 1.3636, 4.0909, 0, 2.2727, 3.1818, 0, 2.2727, 4.0909, 0, 1.3636, 3.1818, 0, 2.2727, 3.1818, 0, 1.3636, 4.0909, 0, 1.3636, 3.1818, 0, 2.2727, 2.2727, 0, 2.2727, 3.1818, 0, 1.3636, 2.2727, 0, 2.2727, 2.2727, 0, 1.3636, 3.1818, 0, 1.3636, 2.2727, 0, 2.2727, 1.3636, 0, 2.2727, 2.2727, 0, 1.3636, 1.3636, 0, 2.2727, 1.3636, 0, 1.3636, 2.2727, 0, 1.3636, 1.3636, 0, 2.2727, 0.4545, 0, 2.2727, 1.3636, 0, 1.3636, 0.4545, 0, 2.2727, 0.4545, 0, 1.3636, 1.3636, 0, 1.3636, 0.4545, 0, 2.2727, -0.4545, 0, 2.2727, 0.4545, 0, 1.3636, -0.4545, 0, 2.2727, -0.4545, 0, 1.3636, 0.4545, 0, 1.3636, -0.4545, 0, 2.2727, -1.3636, 0, 2.2727, -0.4545, 0, 1.3636, -1.3636, 0, 2.2727, -1.3636, 0, 1.3636, -0.4545, 0, 1.3636, -1.3636, 0, 2.2727, -2.2727, 0, 2.2727, -1.3636, 0, 1.3636, -2.2727, 0, 2.2727, -2.2727, 0, 1.3636, -1.3636, 0, 1.3636, -2.2727, 0, 2.2727, -3.1818, 0, 2.2727, -2.2727, 0, 1.3636, -3.1818, 0, 2.2727, -3.1818, 0, 1.3636, -2.2727, 0, 1.3636, -3.1818, 0, 2.2727, -4.0909, 0, 2.2727, -3.1818, 0, 1.3636, -4.0909, 0, 2.2727, -4.0909, 0, 1.3636, -3.1818, 0, 1.3636, -4.0909, 0, 2.2727, -5, 0, 2.2727, -4.0909, 0, 1.3636, -5, 0, 2.2727, -5, 0, 1.3636, -4.0909, 0, 1.3636, 5, 0, 1.3636, 4.0909, 0, 1.3636, 5, 0, 0.4545, 4.0909, 0, 1.3636, 4.0909, 0, 0.4545, 5, 0, 0.4545, 4.0909, 0, 1.3636, 3.1818, 0, 1.3636, 4.0909, 0, 0.4545, 3.1818, 0, 1.3636, 3.1818, 0, 0.4545, 4.0909, 0, 0.4545, 3.1818, 0, 1.3636, 2.2727, 0, 1.3636, 3.1818, 0, 0.4545, 2.2727, 0, 1.3636, 2.2727, 0, 0.4545, 3.1818, 0, 0.4545, 2.2727, 0, 1.3636, 1.3636, 0, 1.3636, 2.2727, 0, 0.4545, 1.3636, 0, 1.3636, 1.3636, 0, 0.4545, 2.2727, 0, 0.4545, 1.3636, 0, 1.3636, 0.4545, 0, 1.3636, 1.3636, 0, 0.4545, 0.4545, 0, 1.3636, 0.4545, 0, 0.4545, 1.3636, 0, 0.4545, 0.4545, 0, 1.3636, -0.4545, 0, 1.3636, 0.4545, 0, 0.4545, -0.4545, 0, 1.3636, -0.4545, 0, 0.4545, 0.4545, 0, 0.4545, -0.4545, 0, 1.3636, -1.3636, 0, 1.3636, -0.4545, 0, 0.4545, -1.3636, 0, 1.3636, -1.3636, 0, 0.4545, -0.4545, 0, 0.4545, -1.3636, 0, 1.3636, -2.2727, 0, 1.3636, -1.3636, 0, 0.4545, -2.2727, 0, 1.3636, -2.2727, 0, 0.4545, -1.3636, 0, 0.4545, -2.2727, 0, 1.3636, -3.1818, 0, 1.3636, -2.2727, 0, 0.4545, -3.1818, 0, 1.3636, -3.1818, 0, 0.4545, -2.2727, 0, 0.4545, -3.1818, 0, 1.3636, -4.0909, 0, 1.3636, -3.1818, 0, 0.4545, -4.0909, 0, 1.3636, -4.0909, 0, 0.4545, -3.1818, 0, 0.4545, -4.0909, 0, 1.3636, -5, 0, 1.3636, -4.0909, 0, 0.4545, -5, 0, 1.3636, -5, 0, 0.4545, -4.0909, 0, 0.4545, 5, 0, 0.4545, 4.0909, 0, 0.4545, 5, 0, -0.4545, 4.0909, 0, 0.4545, 4.0909, 0, -0.4545, 5, 0, -0.4545, 4.0909, 0, 0.4545, 3.1818, 0, 0.4545, 4.0909, 0, -0.4545, 3.1818, 0, 0.4545, 3.1818, 0, -0.4545, 4.0909, 0, -0.4545, 3.1818, 0, 0.4545, 2.2727, 0, 0.4545, 3.1818, 0, -0.4545, 2.2727, 0, 0.4545, 2.2727, 0, -0.4545, 3.1818, 0, -0.4545, 2.2727, 0, 0.4545, 1.3636, 0, 0.4545, 2.2727, 0, -0.4545, 1.3636, 0, 0.4545, 1.3636, 0, -0.4545, 2.2727, 0, -0.4545, 1.3636, 0, 0.4545, 0.4545, 0, 0.4545, 1.3636, 0, -0.4545, 0.4545, 0, 0.4545, 0.4545, 0, -0.4545, 1.3636, 0, -0.4545, 0.4545, 0, 0.4545, -0.4545, 0, 0.4545, 0.4545, 0, -0.4545, -0.4545, 0, 0.4545, -0.4545, 0, -0.4545, 0.4545, 0, -0.4545, -0.4545, 0, 0.4545, -1.3636, 0, 0.4545, -0.4545, 0, -0.4545, -1.3636, 0, 0.4545, -1.3636, 0, -0.4545, -0.4545, 0, -0.4545, -1.3636, 0, 0.4545, -2.2727, 0, 0.4545, -1.3636, 0, -0.4545, -2.2727, 0, 0.4545, -2.2727, 0, -0.4545, -1.3636, 0, -0.4545, -2.2727, 0, 0.4545, -3.1818, 0, 0.4545, -2.2727, 0, -0.4545, -3.1818, 0, 0.4545, -3.1818, 0, -0.4545, -2.2727, 0, -0.4545, -3.1818, 0, 0.4545, -4.0909, 0, 0.4545, -3.1818, 0, -0.4545, -4.0909, 0, 0.4545, -4.0909, 0, -0.4545, -3.1818, 0, -0.4545, -4.0909, 0, 0.4545, -5, 0, 0.4545, -4.0909, 0, -0.4545, -5, 0, 0.4545, -5, 0, -0.4545, -4.0909, 0, -0.4545, 5, 0, -0.4545, 4.0909, 0, -0.4545, 5, 0, -1.3636, 4.0909, 0, -0.4545, 4.0909, 0, -1.3636, 5, 0, -1.3636, 4.0909, 0, -0.4545, 3.1818, 0, -0.4545, 4.0909, 0, -1.3636, 3.1818, 0, -0.4545, 3.1818, 0, -1.3636, 4.0909, 0, -1.3636, 3.1818, 0, -0.4545, 2.2727, 0, -0.4545, 3.1818, 0, -1.3636, 2.2727, 0, -0.4545, 2.2727, 0, -1.3636, 3.1818, 0, -1.3636, 2.2727, 0, -0.4545, 1.3636, 0, -0.4545, 2.2727, 0, -1.3636, 1.3636, 0, -0.4545, 1.3636, 0, -1.3636, 2.2727, 0, -1.3636, 1.3636, 0, -0.4545, 0.4545, 0, -0.4545, 1.3636, 0, -1.3636, 0.4545, 0, -0.4545, 0.4545, 0, -1.3636, 1.3636, 0, -1.3636, 0.4545, 0, -0.4545, -0.4545, 0, -0.4545, 0.4545, 0, -1.3636, -0.4545, 0, -0.4545, -0.4545, 0, -1.3636, 0.4545, 0, -1.3636, -0.4545, 0, -0.4545, -1.3636, 0, -0.4545, -0.4545, 0, -1.3636, -1.3636, 0, -0.4545, -1.3636, 0, -1.3636, -0.4545, 0, -1.3636, -1.3636, 0, -0.4545, -2.2727, 0, -0.4545, -1.3636, 0, -1.3636, -2.2727, 0, -0.4545, -2.2727, 0, -1.3636, -1.3636, 0, -1.3636, -2.2727, 0, -0.4545, -3.1818, 0, -0.4545, -2.2727, 0, -1.3636, -3.1818, 0, -0.4545, -3.1818, 0, -1.3636, -2.2727, 0, -1.3636, -3.1818, 0, -0.4545, -4.0909, 0, -0.4545, -3.1818, 0, -1.3636, -4.0909, 0, -0.4545, -4.0909, 0, -1.3636, -3.1818, 0, -1.3636, -4.0909, 0, -0.4545, -5, 0, -0.4545, -4.0909, 0, -1.3636, -5, 0, -0.4545, -5, 0, -1.3636, -4.0909, 0, -1.3636, 5, 0, -1.3636, 4.0909, 0, -1.3636, 5, 0, -2.2727, 4.0909, 0, -1.3636, 4.0909, 0, -2.2727, 5, 0, -2.2727, 4.0909, 0, -1.3636, 3.1818, 0, -1.3636, 4.0909, 0, -2.2727, 3.1818, 0, -1.3636, 3.1818, 0, -2.2727, 4.0909, 0, -2.2727, 3.1818, 0, -1.3636, 2.2727, 0, -1.3636, 3.1818, 0, -2.2727, 2.2727, 0, -1.3636, 2.2727, 0, -2.2727, 3.1818, 0, -2.2727, 2.2727, 0, -1.3636, 1.3636, 0, -1.3636, 2.2727, 0, -2.2727, 1.3636, 0, -1.3636, 1.3636, 0, -2.2727, 2.2727, 0, -2.2727, 1.3636, 0, -1.3636, 0.4545, 0, -1.3636, 1.3636, 0, -2.2727, 0.4545, 0, -1.3636, 0.4545, 0, -2.2727, 1.3636, 0, -2.2727, 0.4545, 0, -1.3636, -0.4545, 0, -1.3636, 0.4545, 0, -2.2727, -0.4545, 0, -1.3636, -0.4545, 0, -2.2727, 0.4545, 0, -2.2727, -0.4545, 0, -1.3636, -1.3636, 0, -1.3636, -0.4545, 0, -2.2727, -1.3636, 0, -1.3636, -1.3636, 0, -2.2727, -0.4545, 0, -2.2727, -1.3636, 0, -1.3636, -2.2727, 0, -1.3636, -1.3636, 0, -2.2727, -2.2727, 0, -1.3636, -2.2727, 0, -2.2727, -1.3636, 0, -2.2727, -2.2727, 0, -1.3636, -3.1818, 0, -1.3636, -2.2727, 0, -2.2727, -3.1818, 0, -1.3636, -3.1818, 0, -2.2727, -2.2727, 0, -2.2727, -3.1818, 0, -1.3636, -4.0909, 0, -1.3636, -3.1818, 0, -2.2727, -4.0909, 0, -1.3636, -4.0909, 0, -2.2727, -3.1818, 0, -2.2727, -4.0909, 0, -1.3636, -5, 0, -1.3636, -4.0909, 0, -2.2727, -5, 0, -1.3636, -5, 0, -2.2727, -4.0909, 0, -2.2727, 5, 0, -2.2727, 4.0909, 0, -2.2727, 5, 0, -3.1818, 4.0909, 0, -2.2727, 4.0909, 0, -3.1818, 5, 0, -3.1818, 4.0909, 0, -2.2727, 3.1818, 0, -2.2727, 4.0909, 0, -3.1818, 3.1818, 0, -2.2727, 3.1818, 0, -3.1818, 4.0909, 0, -3.1818, 3.1818, 0, -2.2727, 2.2727, 0, -2.2727, 3.1818, 0, -3.1818, 2.2727, 0, -2.2727, 2.2727, 0, -3.1818, 3.1818, 0, -3.1818, 2.2727, 0, -2.2727, 1.3636, 0, -2.2727, 2.2727, 0, -3.1818, 1.3636, 0, -2.2727, 1.3636, 0, -3.1818, 2.2727, 0, -3.1818, 1.3636, 0, -2.2727, 0.4545, 0, -2.2727, 1.3636, 0, -3.1818, 0.4545, 0, -2.2727, 0.4545, 0, -3.1818, 1.3636, 0, -3.1818, 0.4545, 0, -2.2727, -0.4545, 0, -2.2727, 0.4545, 0, -3.1818, -0.4545, 0, -2.2727, -0.4545, 0, -3.1818, 0.4545, 0, -3.1818, -0.4545, 0, -2.2727, -1.3636, 0, -2.2727, -0.4545, 0, -3.1818, -1.3636, 0, -2.2727, -1.3636, 0, -3.1818, -0.4545, 0, -3.1818, -1.3636, 0, -2.2727, -2.2727, 0, -2.2727, -1.3636, 0, -3.1818, -2.2727, 0, -2.2727, -2.2727, 0, -3.1818, -1.3636, 0, -3.1818, -2.2727, 0, -2.2727, -3.1818, 0, -2.2727, -2.2727, 0, -3.1818, -3.1818, 0, -2.2727, -3.1818, 0, -3.1818, -2.2727, 0, -3.1818, -3.1818, 0, -2.2727, -4.0909, 0, -2.2727, -3.1818, 0, -3.1818, -4.0909, 0, -2.2727, -4.0909, 0, -3.1818, -3.1818, 0, -3.1818, -4.0909, 0, -2.2727, -5, 0, -2.2727, -4.0909, 0, -3.1818, -5, 0, -2.2727, -5, 0, -3.1818, -4.0909, 0, -3.1818, 5, 0, -3.1818, 4.0909, 0, -3.1818, 5, 0, -4.0909, 4.0909, 0, -3.1818, 4.0909, 0, -4.0909, 5, 0, -4.0909, 4.0909, 0, -3.1818, 3.1818, 0, -3.1818, 4.0909, 0, -4.0909, 3.1818, 0, -3.1818, 3.1818, 0, -4.0909, 4.0909, 0, -4.0909, 3.1818, 0, -3.1818, 2.2727, 0, -3.1818, 3.1818, 0, -4.0909, 2.2727, 0, -3.1818, 2.2727, 0, -4.0909, 3.1818, 0, -4.0909, 2.2727, 0, -3.1818, 1.3636, 0, -3.1818, 2.2727, 0, -4.0909, 1.3636, 0, -3.1818, 1.3636, 0, -4.0909, 2.2727, 0, -4.0909, 1.3636, 0, -3.1818, 0.4545, 0, -3.1818, 1.3636, 0, -4.0909, 0.4545, 0, -3.1818, 0.4545, 0, -4.0909, 1.3636, 0, -4.0909, 0.4545, 0, -3.1818, -0.4545, 0, -3.1818, 0.4545, 0, -4.0909, -0.4545, 0, -3.1818, -0.4545, 0, -4.0909, 0.4545, 0, -4.0909, -0.4545, 0, -3.1818, -1.3636, 0, -3.1818, -0.4545, 0, -4.0909, -1.3636, 0, -3.1818, -1.3636, 0, -4.0909, -0.4545, 0, -4.0909, -1.3636, 0, -3.1818, -2.2727, 0, -3.1818, -1.3636, 0, -4.0909, -2.2727, 0, -3.1818, -2.2727, 0, -4.0909, -1.3636, 0, -4.0909, -2.2727, 0, -3.1818, -3.1818, 0, -3.1818, -2.2727, 0, -4.0909, -3.1818, 0, -3.1818, -3.1818, 0, -4.0909, -2.2727, 0, -4.0909, -3.1818, 0, -3.1818, -4.0909, 0, -3.1818, -3.1818, 0, -4.0909, -4.0909, 0, -3.1818, -4.0909, 0, -4.0909, -3.1818, 0, -4.0909, -4.0909, 0, -3.1818, -5, 0, -3.1818, -4.0909, 0, -4.0909, -5, 0, -3.1818, -5, 0, -4.0909, -4.0909, 0, -4.0909, 5, 0, -4.0909, 4.0909, 0, -4.0909, 5, 0, -5, 4.0909, 0, -4.0909, 4.0909, 0, -5, 5, 0, -5, 4.0909, 0, -4.0909, 3.1818, 0, -4.0909, 4.0909, 0, -5, 3.1818, 0, -4.0909, 3.1818, 0, -5, 4.0909, 0, -5, 3.1818, 0, -4.0909, 2.2727, 0, -4.0909, 3.1818, 0, -5, 2.2727, 0, -4.0909, 2.2727, 0, -5, 3.1818, 0, -5, 2.2727, 0, -4.0909, 1.3636, 0, -4.0909, 2.2727, 0, -5, 1.3636, 0, -4.0909, 1.3636, 0, -5, 2.2727, 0, -5, 1.3636, 0, -4.0909, 0.4545, 0, -4.0909, 1.3636, 0, -5, 0.4545, 0, -4.0909, 0.4545, 0, -5, 1.3636, 0, -5, 0.4545, 0, -4.0909, -0.4545, 0, -4.0909, 0.4545, 0, -5, -0.4545, 0, -4.0909, -0.4545, 0, -5, 0.4545, 0, -5, -0.4545, 0, -4.0909, -1.3636, 0, -4.0909, -0.4545, 0, -5, -1.3636, 0, -4.0909, -1.3636, 0, -5, -0.4545, 0, -5, -1.3636, 0, -4.0909, -2.2727, 0, -4.0909, -1.3636, 0, -5, -2.2727, 0, -4.0909, -2.2727, 0, -5, -1.3636, 0, -5, -2.2727, 0, -4.0909, -3.1818, 0, -4.0909, -2.2727, 0, -5, -3.1818, 0, -4.0909, -3.1818, 0, -5, -2.2727, 0, -5, -3.1818, 0, -4.0909, -4.0909, 0, -4.0909, -3.1818, 0, -5, -4.0909, 0, -4.0909, -4.0909, 0, -5, -3.1818, 0, -5, -4.0909, 0, -4.0909, -5, 0, -4.0909, -4.0909, 0, -5, -5, 0, -4.0909, -5, 0, -5, -4.0909, 0, -5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qgudn"]
+resource_name = "Cube"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gx6ge"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vpv6k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_avfbv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qshe2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ia3xt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t62bc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_af005"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uf8rg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hf460"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g0y8t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kcons"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gr4i1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_efy8k"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e022y"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhhu6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5qgro"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ibmrv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upwwu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m8ujn"]
+
+[node name="RootNode3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6ia7t")
+
+[node name="LightmapGI" type="LightmapGI" parent="."]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_kavxj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+visible = false
+
+[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("2_226p5")]
+
+[node name="Map" type="Node3D" parent="."]
+
+[node name="Structures" type="Node3D" parent="Map"]
+
+[node name="Floor" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(2.68825, 0, 0, 0, 1, 0, 0, 0, 3.37085, 0, 0, 10.38)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Floor"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1861448254]"
+mesh = SubResource("PlaneMesh_hdoqn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1861448251, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="MeshCollider" type="StaticBody3D" parent="Map/Structures/Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Floor/MeshCollider"]
+shape = SubResource("ConcavePolygonShape3D_lhte6")
+
+[node name="Cube" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(23.29, 0, 0, 0, 15.188, 0, 0, 0, 1, 0, 7.42, -0.57)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:16496407]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 16496405, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube/BoxCollider"]
+shape = SubResource("BoxShape3D_gx6ge")
+
+[node name="Cube (1)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-08, -11.25, 7.42, 11.45)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (1)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1638920199]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1638920197, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (1)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (1)/BoxCollider"]
+shape = SubResource("BoxShape3D_vpv6k")
+
+[node name="Cube (2)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-08, 11.25, 7.42, 11.45)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (2)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1776335648]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1776335646, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (2)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (2)/BoxCollider"]
+shape = SubResource("BoxShape3D_avfbv")
+
+[node name="Cube (3)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(23.29, 0, 0, 0, 18.4808, 0, 0, 0, 1, 0, 7.42, 22.7)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (3)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1772174840]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1772174838, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (3)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (3)/BoxCollider"]
+shape = SubResource("BoxShape3D_qshe2")
+
+[node name="Cube (4)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 2.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (4)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1236622003]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1236622000, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (4)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (4)/BoxCollider"]
+shape = SubResource("BoxShape3D_ia3xt")
+
+[node name="Cube (5)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 2.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (5)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:36518610]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 36518607, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (5)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (5)/BoxCollider"]
+shape = SubResource("BoxShape3D_t62bc")
+
+[node name="Cube (6)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 5.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (6)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1418919239]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1418919236, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (6)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (6)/BoxCollider"]
+shape = SubResource("BoxShape3D_af005")
+
+[node name="Cube (7)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 5.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (7)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2071654544]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 2071654541, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (7)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (7)/BoxCollider"]
+shape = SubResource("BoxShape3D_uf8rg")
+
+[node name="Cube (8)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 8.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (8)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:814705564]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 814705561, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (8)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (8)/BoxCollider"]
+shape = SubResource("BoxShape3D_hf460")
+
+[node name="Cube (9)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 8.27)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (9)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:336092208]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 336092205, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (9)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (9)/BoxCollider"]
+shape = SubResource("BoxShape3D_g0y8t")
+
+[node name="Cube (10)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 10.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (10)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1839750630]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1839750627, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (10)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (10)/BoxCollider"]
+shape = SubResource("BoxShape3D_kcons")
+
+[node name="Cube (11)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 10.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (11)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1931940649]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1931940646, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (11)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (11)/BoxCollider"]
+shape = SubResource("BoxShape3D_gr4i1")
+
+[node name="Cube (12)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 13.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (12)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:282496678]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 282496675, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (12)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (12)/BoxCollider"]
+shape = SubResource("BoxShape3D_efy8k")
+
+[node name="Cube (13)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 13.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (13)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2096149825]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 2096149822, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (13)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (13)/BoxCollider"]
+shape = SubResource("BoxShape3D_e022y")
+
+[node name="Cube (14)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 16.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (14)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1755238899]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1755238896, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (14)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (14)/BoxCollider"]
+shape = SubResource("BoxShape3D_bhhu6")
+
+[node name="Cube (15)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 16.97)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (15)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:930778373]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 930778370, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (15)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (15)/BoxCollider"]
+shape = SubResource("BoxShape3D_5qgro")
+
+[node name="Cube (16)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 19.76)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (16)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:75306752]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 75306749, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (16)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (16)/BoxCollider"]
+shape = SubResource("BoxShape3D_ibmrv")
+
+[node name="Cube (17)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 19.76)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (17)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:929326033]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 929326030, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (17)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (17)/BoxCollider"]
+shape = SubResource("BoxShape3D_upwwu")
+
+[node name="Cube (18)" type="Node3D" parent="Map/Structures"]
+transform = Transform3D(24.7281, 0, 0, 0, 1, 0, 0, 0, 25.8101, 0, 15.08, 10.41)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (18)"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1898675810]"
+mesh = SubResource("BoxMesh_qgudn")
+surface_material_override/0 = ExtResource("3_mxkdi")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1898675807, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "97cc8b282f08e274eb7c5d08f96b3ece", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (18)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (18)/BoxCollider"]
+shape = SubResource("BoxShape3D_m8ujn")
+
+[node name="Details" type="Node3D" parent="Map"]
+
+[node name="Lighting" type="Node3D" parent="Map"]
+
+[node name="Window" parent="Map/Lighting" instance=ExtResource("4_he40p")]
+transform = Transform3D(-3.3532e-08, 0.767123, 0, -0.767123, -3.3532e-08, 0, 0, 0, 0.767123, -10.75, 3.81016, 11.12)
+
+[node name="WindowMesh" parent="Map/Lighting/Window" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="Window (1)" parent="Map/Lighting" instance=ExtResource("4_he40p")]
+transform = Transform3D(3.3532e-08, -0.767123, -6.7064e-08, -0.767123, -3.3532e-08, 0, -2.93146e-15, 6.7064e-08, -0.767123, 10.75, 3.81016, 11.12)
+
+[node name="WindowMesh" parent="Map/Lighting/Window (1)" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="Point Light" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 11.13)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (1)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 19.99)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (1)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (2)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 2.24)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (2)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (3)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 11.13)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (3)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (4)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1.0088, 0, 0, 0, 1.0088, 0, 0, 0, 1.0088, -9.14, 3.67, 19.99)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (4)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (5)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 2.24)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (5)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (6)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 6.82)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (6)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (7)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 6.82)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (7)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (8)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 15.66)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (8)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Point Light (9)" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 15.66)
+
+[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (9)"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+shadow_bias = 0.05
+editor_only = true
+omni_range = 10.0
+
+[node name="Reflection Probe" type="Node3D" parent="Map/Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.27, 10.85)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="Map/Lighting/Reflection Probe"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647199, 3.8103, 0.235488)
+max_distance = 1000.0
+size = Vector3(48.451, 35.2412, 51.1693)
+origin_offset = Vector3(0.647199, -3.8103, -0.235488)
+cull_mask = 4294967295
+metadata/unidot_keys = {
+"m_BackGroundColor": Color(0.192157, 0.301961, 0.47451, 0),
+"m_BlendDistance": 1,
+"m_BoxOffset": Vector3(-0.647199, 3.8103, 0.235488),
+"m_BoxProjection": 0,
+"m_BoxSize": Vector3(24.2255, 17.6206, 25.5847),
+"m_ClearFlags": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_CullingMask": {
+"m_Bits": 4294967295,
+"serializedVersion": 2
+},
+"m_CustomBakedTexture": [null, 0, null, null],
+"m_Enabled": 1,
+"m_FarClip": 1000,
+"m_GameObject": [null, 597712894, null, null],
+"m_HDR": 1,
+"m_Importance": 1,
+"m_IntensityMultiplier": 1,
+"m_Mode": 0,
+"m_NearClip": 0.3,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RefreshMode": 0,
+"m_RenderDynamicObjects": 0,
+"m_Resolution": 128,
+"m_ShadowDistance": 100,
+"m_TimeSlicingMode": 0,
+"m_Type": 0,
+"m_UpdateFrequency": 0,
+"m_UseOcclusionCulling": 1,
+"serializedVersion": 2
+}
+
+[node name="Enemies" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
+
+[node name="AIbody" parent="Enemies" instance=ExtResource("5_neuw4")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 91.634, 48.3934, 13.5566)
+
+[node name="Title" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.36)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Title"]
+editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:193378644]"
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 193378642, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 0,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="MonoBehaviour" type="Node" parent="Title"]
+editor_description = "[MonoBehaviour 114::12ffeae46c04f5a4ca41e7fded4c4ec2:193378643]"
+metadata/unidot_keys = {
+"_SortingLayer": 0,
+"_SortingLayerID": 0,
+"_SortingOrder": 0,
+"checkPaddingRequired": 0,
+"m_Color": Color(1, 1, 1, 1),
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 193378642, null, null],
+"m_HorizontalAlignment": 2,
+"m_IsTextObjectScaleStatic": 0,
+"m_Maskable": 1,
+"m_Material": [null, 0, null, null],
+"m_ObjectHideFlags": 0,
+"m_OnCullStateChanged": {
+"m_PersistentCalls": {
+"m_Calls": []
+}
+},
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RaycastPadding": Quaternion(0, 0, 0, 0),
+"m_RaycastTarget": 1,
+"m_Script": [null, 11500000, "9541d86e2fd84c1d9990edf0852d74ab", 3],
+"m_StyleSheet": [null, 0, null, null],
+"m_TextStyleHashCode": -1183493901,
+"m_VertexBufferAutoSizeReduction": 0,
+"m_VerticalAlignment": 512,
+"m_charWidthMaxAdj": 0,
+"m_characterSpacing": 0,
+"m_colorMode": 3,
+"m_enableAutoSizing": 0,
+"m_enableExtraPadding": 0,
+"m_enableKerning": 1,
+"m_enableVertexGradient": 0,
+"m_enableWordWrapping": 1,
+"m_faceColor": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontAsset": [null, 11400000, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_fontColor": Color(1, 1, 1, 1),
+"m_fontColor32": {
+"rgba": 4294967295,
+"serializedVersion": 2
+},
+"m_fontColorGradient": {
+"bottomLeft": Color(1, 1, 1, 1),
+"bottomRight": Color(1, 1, 1, 1),
+"topLeft": Color(1, 1, 1, 1),
+"topRight": Color(1, 1, 1, 1)
+},
+"m_fontColorGradientPreset": [null, 0, null, null],
+"m_fontMaterial": [null, 0, null, null],
+"m_fontMaterials": [],
+"m_fontSharedMaterials": [],
+"m_fontSize": 20,
+"m_fontSizeBase": 20,
+"m_fontSizeMax": 72,
+"m_fontSizeMin": 18,
+"m_fontStyle": 0,
+"m_fontWeight": 400,
+"m_geometrySortingOrder": 0,
+"m_hasFontAssetChanged": 0,
+"m_horizontalMapping": 0,
+"m_isCullingEnabled": 0,
+"m_isOrthographic": 0,
+"m_isRichText": 1,
+"m_isRightToLeft": 0,
+"m_isUsingLegacyAnimationComponent": 0,
+"m_isVolumetricText": 0,
+"m_lineSpacing": 0,
+"m_lineSpacingMax": 0,
+"m_linkedTextComponent": [null, 0, null, null],
+"m_margin": Quaternion(3, 0, 3, 0),
+"m_maskType": 0,
+"m_overflowMode": 0,
+"m_overrideHtmlColors": 0,
+"m_pageToDisplay": 1,
+"m_paragraphSpacing": 0,
+"m_parseCtrlCharacters": 1,
+"m_renderer": [null, 193378644, null, null],
+"m_sharedMaterial": [null, -935426421992229908, "c5a3584e9b23a8e469823e69e82d7ec7", 2],
+"m_spriteAsset": [null, 0, null, null],
+"m_text": "first steps",
+"m_textAlignment": 65535,
+"m_tintAllSprites": 0,
+"m_useMaxVisibleDescender": 1,
+"m_uvLineOffset": 0,
+"m_verticalMapping": 0,
+"m_wordSpacing": 0,
+"m_wordWrappingRatios": 0.4,
+"parentLinkedComponent": [null, 0, null, null]
+}
+
+[editable path="LevelMinimumPrefabs"]
+[editable path="LevelMinimumPrefabs/Canvas"]
+[editable path="LevelMinimumPrefabs/GameOverCanvas"]
+[editable path="LevelMinimumPrefabs/PauseGameCanvas"]
+[editable path="LevelMinimumPrefabs/PauseGameManager"]
+[editable path="LevelMinimumPrefabs/AudioSourcesManager"]
+[editable path="LevelMinimumPrefabs/TimeManager"]
+[editable path="LevelMinimumPrefabs/HealthManager"]
+[editable path="LevelMinimumPrefabs/SceneChanger"]
+[editable path="LevelMinimumPrefabs/Door"]
+[editable path="LevelMinimumPrefabs/VolumeManager"]
+[editable path="LevelMinimumPrefabs/SaveGame"]
+[editable path="LevelMinimumPrefabs/ConfigManager"]
+[editable path="Map/Lighting/Window"]
+[editable path="Map/Lighting/Window (1)"]
+[editable path="Enemies/AIbody"]
+[editable path="Enemies/AIbody/LegsBot"]
+[editable path="Enemies/AIbody/LegsBot/Armature/Skeleton3D/Body/GunPivot/warning"]

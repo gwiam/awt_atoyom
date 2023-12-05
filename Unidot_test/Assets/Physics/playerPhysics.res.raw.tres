@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cupbabryw284v"]
 
-[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_7ne0j"]
-[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_mokus"]
+[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_u314k"]
+[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_3408f"]
 
-[sub_resource type="Resource" id="Resource_ua2th"]
+[sub_resource type="Resource" id="Resource_ov54g"]
 resource_name = "Assets/Physics/playerPhysics.physicMaterial"
-script = ExtResource("1_7ne0j")
+script = ExtResource("1_u314k")
 path = "Assets/Physics/playerPhysics.res"
 guid = "668e3e619e14dda4ebee5d2c5e2b7152"
 importer_keys = {
@@ -49,7 +49,7 @@ imported_mesh_paths = {}
 imported_material_paths = {}
 
 [resource]
-script = ExtResource("2_mokus")
+script = ExtResource("2_3408f")
 path = "Assets/Physics/playerPhysics.res"
 guid = "668e3e619e14dda4ebee5d2c5e2b7152"
 objects = {
@@ -66,4 +66,4 @@ objects = {
 "staticFriction": 0
 }
 }
-meta = SubResource("Resource_ua2th")
+meta = SubResource("Resource_ov54g")

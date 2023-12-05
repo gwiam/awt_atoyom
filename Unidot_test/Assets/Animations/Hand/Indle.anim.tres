@@ -158,15 +158,5 @@ tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = PackedFloat32Array(0, 1, -0.0681881, 0.0289776, -0.0531556, 0.995834, 0.4125, 1, -0.0681881, 0.0289776, -0.0531556, 0.995834)
 metadata/resolved_to_default_paths = {
-"TCamera/HUDcamera/hand/Armature": ["Armature", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone": ["Armature/Bone", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.001": ["Armature/Bone/Bone.001", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.002": ["Armature/Bone/Bone.001/Bone.002", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.003": ["Armature/Bone/Bone.001/Bone.002/Bone.003", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.004": ["Armature/Bone/Bone.001/Bone.002/Bone.003/Bone.004", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.005": ["Armature/Bone/Bone.001/Bone.002/Bone.005", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.006": ["Armature/Bone/Bone.001/Bone.002/Bone.005/Bone.006", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.007": ["Armature/Bone/Bone.001/Bone.002/Bone.007", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.008": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008", "", 4],
-"TCamera/HUDcamera/hand/Armature/Skeleton3D:Bone.009": ["Armature/Bone/Bone.001/Bone.002/Bone.007/Bone.008/Bone.009", "", 4]
+"TCamera/HUDcamera/hand/Armature": ["Armature", "", 4]
 }

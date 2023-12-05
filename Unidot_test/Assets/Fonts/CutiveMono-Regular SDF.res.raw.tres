@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://b8j3o6uskpcds"]
 
-[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_mgjn1"]
-[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_7hk87"]
+[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_byivk"]
+[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_7ugc8"]
 
-[sub_resource type="Resource" id="Resource_kggyx"]
+[sub_resource type="Resource" id="Resource_cyh5g"]
 resource_name = "Assets/Fonts/CutiveMono-Regular SDF.asset"
-script = ExtResource("1_mgjn1")
+script = ExtResource("1_byivk")
 path = "Assets/Fonts/CutiveMono-Regular SDF.res"
 guid = "b8427e1c3be204e44b389bfd8bc6ab12"
 importer_keys = {
@@ -42,9 +42,9 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"68e6db2ebdc24f95958faec2be5558d6": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"ca3e357aeede26e439f22cfcc0758145": 1
+"68e6db2ebdc24f95958faec2be5558d6": 4800000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"ca3e357aeede26e439f22cfcc0758145": 12800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -57,7 +57,7 @@ imported_mesh_paths = {}
 imported_material_paths = {}
 
 [resource]
-script = ExtResource("2_7hk87")
+script = ExtResource("2_7ugc8")
 path = "Assets/Fonts/CutiveMono-Regular SDF.res"
 guid = "b8427e1c3be204e44b389bfd8bc6ab12"
 objects = {
@@ -3493,4 +3493,4 @@ objects = {
 "stringTagMap": []
 }
 }
-meta = SubResource("Resource_kggyx")
+meta = SubResource("Resource_cyh5g")

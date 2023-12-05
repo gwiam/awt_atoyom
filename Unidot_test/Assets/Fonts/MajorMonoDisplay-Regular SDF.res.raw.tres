@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cu7lu4rcl7vm6"]
 
-[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_6w7n2"]
-[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_vk467"]
+[ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_f0mna"]
+[ext_resource type="Script" path="res://addons/unidot/raw_parsed_asset.gd" id="2_tuei2"]
 
-[sub_resource type="Resource" id="Resource_aejbp"]
+[sub_resource type="Resource" id="Resource_ajtu1"]
 resource_name = "Assets/Fonts/MajorMonoDisplay-Regular SDF.asset"
-script = ExtResource("1_6w7n2")
+script = ExtResource("1_f0mna")
 path = "Assets/Fonts/MajorMonoDisplay-Regular SDF.res"
 guid = "c5a3584e9b23a8e469823e69e82d7ec7"
 importer_keys = {
@@ -42,9 +42,9 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"68e6db2ebdc24f95958faec2be5558d6": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"ca2573ab5d08059429109c6f23301c1c": 1
+"68e6db2ebdc24f95958faec2be5558d6": 4800000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"ca2573ab5d08059429109c6f23301c1c": 12800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -57,7 +57,7 @@ imported_mesh_paths = {}
 imported_material_paths = {}
 
 [resource]
-script = ExtResource("2_vk467")
+script = ExtResource("2_tuei2")
 path = "Assets/Fonts/MajorMonoDisplay-Regular SDF.res"
 guid = "c5a3584e9b23a8e469823e69e82d7ec7"
 objects = {
@@ -3488,4 +3488,4 @@ objects = {
 "tabSize": 10
 }
 }
-meta = SubResource("Resource_aejbp")
+meta = SubResource("Resource_ajtu1")

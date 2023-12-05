@@ -1,29 +1,29 @@
 [gd_scene load_steps=15 format=3 uid="uid://cbijx4ikfc2pv"]
 
-[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="1_cmkrk"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://br17l5fmtp6n2" path="res://Assets/Animations/door/Door.controller.tres" id="2_nss76"]
-[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="3_sgtec"]
-[ext_resource type="ArrayMesh" uid="uid://ddi7q63voo242" path="res://Assets/Models/door.Cube_002.mesh" id="4_w22ej"]
-[ext_resource type="Material" uid="uid://bxplc5bvlh4kr" path="res://Assets/Materials/ShynyBlue.mat.tres" id="5_gjjc8"]
-[ext_resource type="ArrayMesh" uid="uid://bu2vf7e4d5hvu" path="res://Assets/Models/door.Cube.mesh" id="6_6qht4"]
-[ext_resource type="ArrayMesh" uid="uid://denas7j5gyalc" path="res://Assets/Models/door.Cube_003.mesh" id="7_tgutl"]
-[ext_resource type="ArrayMesh" uid="uid://b8hl2tfcv1bb7" path="res://Assets/Models/door.Cube_001.mesh" id="8_p6v1x"]
-[ext_resource type="ArrayMesh" uid="uid://bemvufkq0ccp3" path="res://Assets/Models/door.Cube_004.mesh" id="9_v2yhi"]
-[ext_resource type="Material" uid="uid://n5v6n42xtmf3" path="res://Assets/Materials/DoorGlow.mat.tres" id="10_5urgg"]
+[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="1_x2og5"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://br17l5fmtp6n2" path="res://Assets/Animations/door/Door.controller.tres" id="2_ga20r"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="3_bjye5"]
+[ext_resource type="ArrayMesh" uid="uid://ddi7q63voo242" path="res://Assets/Models/door.Cube_002.mesh" id="4_kdfjs"]
+[ext_resource type="Material" uid="uid://bxplc5bvlh4kr" path="res://Assets/Materials/ShynyBlue.mat.tres" id="5_feu8m"]
+[ext_resource type="ArrayMesh" uid="uid://bu2vf7e4d5hvu" path="res://Assets/Models/door.Cube.mesh" id="6_1v2gs"]
+[ext_resource type="ArrayMesh" uid="uid://denas7j5gyalc" path="res://Assets/Models/door.Cube_003.mesh" id="7_n8qca"]
+[ext_resource type="ArrayMesh" uid="uid://b8hl2tfcv1bb7" path="res://Assets/Models/door.Cube_001.mesh" id="8_0q3i3"]
+[ext_resource type="ArrayMesh" uid="uid://bemvufkq0ccp3" path="res://Assets/Models/door.Cube_004.mesh" id="9_fh2xm"]
+[ext_resource type="Material" uid="uid://n5v6n42xtmf3" path="res://Assets/Materials/DoorGlow.mat.tres" id="10_a88k6"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_qhscg"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_xh6eu"]
 size = Vector3(0.02, 0.00482097, 0.04)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_q3oc2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmpc2"]
 size = Vector3(0.02, 0.00482097, 0.04)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_6ju48"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_hdoqn"]
 resource_name = "Plane"
 size = Vector2(10, 10)
 subdivide_width = 10
 subdivide_depth = 10
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bcxbs"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5k3cv"]
 size = Vector3(10, 0.18, 10)
 
 [node name="Door" type="Node3D"]
@@ -92,18 +92,19 @@ metadata/unidot_keys = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": ExtResource("1_cmkrk")
+"": ExtResource("1_x2og5")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = ExtResource("2_nss76")
+deterministic = false
+root_motion_track = NodePath("%GeneralSkeleton:Root")
+tree_root = ExtResource("2_ga20r")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 "parameters/Base Layer/closed/TimeScale/scale" = 0.0
-script = ExtResource("3_sgtec")
+script = ExtResource("3_bjye5")
 metadata/Open = false
 metadata/guid_fileid_to_animation_name = {
-"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "open"
+"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "closed"
 }
 
 [node name="poleL" type="Node3D" parent="."]
@@ -111,8 +112,8 @@ transform = Transform3D(4.27196, 0, 0, 0, 4.27196, 0, 0, 0, 4.27196, 0.0854392, 
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="poleL"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5728191443743277372]"
-mesh = ExtResource("4_w22ej")
-surface_material_override/0 = ExtResource("5_gjjc8")
+mesh = ExtResource("4_kdfjs")
+surface_material_override/0 = ExtResource("5_feu8m")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -156,13 +157,13 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="panelL" type="StaticBody3D" parent="poleL"]
+[node name="panelL" type="Node3D" parent="poleL"]
 transform = Transform3D(1, 0, 0, 0, 0.910241, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="poleL/panelL"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:498763821440282686]"
-mesh = ExtResource("6_6qht4")
-surface_material_override/0 = ExtResource("5_gjjc8")
+mesh = ExtResource("6_1v2gs")
+surface_material_override/0 = ExtResource("5_feu8m")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -206,17 +207,19 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="CollisionShape3D" parent="poleL/panelL"]
+[node name="BoxCollider" type="StaticBody3D" parent="poleL/panelL"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="poleL/panelL/BoxCollider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -1.74623e-09, 0.02)
-shape = SubResource("BoxShape3D_qhscg")
+shape = SubResource("BoxShape3D_xh6eu")
 
 [node name="poleR" type="Node3D" parent="."]
 transform = Transform3D(4.27196, 0, 0, 0, 4.27196, 0, 0, 0, 4.27196, -0.0854392, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="poleR"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5566079994622529423]"
-mesh = ExtResource("7_tgutl")
-surface_material_override/0 = ExtResource("5_gjjc8")
+mesh = ExtResource("7_n8qca")
+surface_material_override/0 = ExtResource("5_feu8m")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -260,13 +263,13 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="panelR" type="StaticBody3D" parent="poleR"]
+[node name="panelR" type="Node3D" parent="poleR"]
 transform = Transform3D(1, 0, 0, 0, 0.910241, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="poleR/panelR"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5932316307210683616]"
-mesh = ExtResource("8_p6v1x")
-surface_material_override/0 = ExtResource("5_gjjc8")
+mesh = ExtResource("8_0q3i3")
+surface_material_override/0 = ExtResource("5_feu8m")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -310,17 +313,19 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="CollisionShape3D" parent="poleR/panelR"]
+[node name="BoxCollider" type="StaticBody3D" parent="poleR/panelR"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="poleR/panelR/BoxCollider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -1.74623e-09, 0.02)
-shape = SubResource("BoxShape3D_q3oc2")
+shape = SubResource("BoxShape3D_tmpc2")
 
 [node name="upPart" type="Node3D" parent="."]
 transform = Transform3D(4.50411, 0, 0, 0, 3.98748, 0, 0, 0, 4.27196, 0, 0, 0.170716)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="upPart"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:1334333678572963511]"
-mesh = ExtResource("9_v2yhi")
-surface_material_override/0 = ExtResource("5_gjjc8")
+mesh = ExtResource("9_fh2xm")
+surface_material_override/0 = ExtResource("5_feu8m")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -364,13 +369,13 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="Plane" type="StaticBody3D" parent="."]
+[node name="Plane" type="Node3D" parent="."]
 transform = Transform3D(-0.0166532, 1.45587e-09, 0, -1.45587e-09, -0.0166532, 0, 0, 0, 0.0166532, 0, 0.0027, 0.0846)
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="Plane"]
 editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5062546471916097095]"
-mesh = SubResource("PlaneMesh_6ju48")
-surface_material_override/0 = ExtResource("10_5urgg")
+mesh = SubResource("PlaneMesh_hdoqn")
+surface_material_override/0 = ExtResource("10_a88k6")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -427,9 +432,11 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "b1bd256d66e52594aafef4be6b0c1e9b", 3]
 }
 
-[node name="BoxCollider" type="CollisionShape3D" parent="Plane"]
+[node name="BoxCollider" type="StaticBody3D" parent="Plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/BoxCollider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.76837e-07)
-shape = SubResource("BoxShape3D_bcxbs")
+shape = SubResource("BoxShape3D_5k3cv")
 
 [node name="SpawnPoint" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0688, 0.0854)

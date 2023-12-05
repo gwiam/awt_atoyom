@@ -1,12 +1,12 @@
-[gd_resource type="Resource" load_steps=164 format=3 uid="uid://d30wlwtth5k5"]
+[gd_resource type="Resource" load_steps=166 format=3 uid="uid://d30wlwtth5k5"]
 
 [ext_resource type="Script" path="res://addons/unidot/asset_meta.gd" id="1_42huq"]
 [ext_resource type="Script" path="res://addons/unidot/asset_database.gd" id="2_jwrta"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bopws"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dyli"]
 resource_name = "Default-Line"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aufds"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pa45v"]
 resource_name = "PINK"
 shading_mode = 0
 albedo_color = Color(1, 0, 1, 1)
@@ -372,7 +372,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_ueo8t"]
+[sub_resource type="Resource" id="Resource_ibpho"]
 resource_name = "Assets/Animations/door/Door.controller"
 script = ExtResource("1_42huq")
 path = "Assets/Animations/door/Door.controller.tres"
@@ -417,7 +417,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"038fa36b0a94e0a4fa8cc0b61f834322": 1
+"038fa36b0a94e0a4fa8cc0b61f834322": 7400000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -429,7 +429,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_oivln"]
+[sub_resource type="Resource" id="Resource_huwil"]
 resource_name = "Assets/Animations/door/open.anim"
 script = ExtResource("1_42huq")
 path = "Assets/Animations/door/open.anim.tres"
@@ -476,7 +476,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_b6r4j"]
+[sub_resource type="Resource" id="Resource_38bhd"]
 resource_name = "Assets/Fonts/CutiveMono-Regular SDF.asset"
 script = ExtResource("1_42huq")
 path = "Assets/Fonts/CutiveMono-Regular SDF.res"
@@ -515,9 +515,9 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"68e6db2ebdc24f95958faec2be5558d6": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"ca3e357aeede26e439f22cfcc0758145": 1
+"68e6db2ebdc24f95958faec2be5558d6": 4800000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"ca3e357aeede26e439f22cfcc0758145": 12800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -529,7 +529,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_4bdhg"]
+[sub_resource type="Resource" id="Resource_ww5qp"]
 resource_name = "Assets/Fonts/CutiveMono/CutiveMono-Regular.ttf"
 script = ExtResource("1_42huq")
 path = "Assets/Fonts/CutiveMono/CutiveMono-Regular.ttf"
@@ -581,7 +581,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_8ldah"]
+[sub_resource type="Resource" id="Resource_x4e7r"]
 resource_name = "Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf"
 script = ExtResource("1_42huq")
 path = "Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf"
@@ -633,7 +633,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_tlg54"]
+[sub_resource type="Resource" id="Resource_01q4j"]
 resource_name = "Assets/Fonts/MajorMonoDisplay-Regular SDF.asset"
 script = ExtResource("1_42huq")
 path = "Assets/Fonts/MajorMonoDisplay-Regular SDF.res"
@@ -672,9 +672,9 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"68e6db2ebdc24f95958faec2be5558d6": 1,
-"71c1514a6bd24e1e882cebbe1904ce04": 1,
-"ca2573ab5d08059429109c6f23301c1c": 1
+"68e6db2ebdc24f95958faec2be5558d6": 4800000,
+"71c1514a6bd24e1e882cebbe1904ce04": 11500000,
+"ca2573ab5d08059429109c6f23301c1c": 12800000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -686,7 +686,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_s17wl"]
+[sub_resource type="Resource" id="Resource_hvsmr"]
 resource_name = "Assets/Materials/DoorGlow.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/DoorGlow.mat.tres"
@@ -723,7 +723,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -735,7 +735,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_64gxk"]
+[sub_resource type="Resource" id="Resource_ktxh0"]
 resource_name = "Assets/Materials/GlowRed.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/GlowRed.mat.tres"
@@ -772,7 +772,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -784,7 +784,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_kp5k6"]
+[sub_resource type="Resource" id="Resource_jtv7m"]
 resource_name = "Assets/Materials/MapDefault.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/MapDefault.mat.tres"
@@ -821,7 +821,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -833,7 +833,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_ta7vi"]
+[sub_resource type="Resource" id="Resource_d83da"]
 resource_name = "Assets/Materials/ShinyBlack.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/ShinyBlack.mat.tres"
@@ -870,7 +870,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -882,7 +882,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_3p5gi"]
+[sub_resource type="Resource" id="Resource_1uixq"]
 resource_name = "Assets/Materials/ShinyWhite.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/ShinyWhite.mat.tres"
@@ -931,7 +931,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_lauii"]
+[sub_resource type="Resource" id="Resource_iu7lg"]
 resource_name = "Assets/Materials/ShynyBlue.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/ShynyBlue.mat.tres"
@@ -968,7 +968,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 46
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -980,7 +980,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_xxhbs"]
+[sub_resource type="Resource" id="Resource_6kiuk"]
 resource_name = "Assets/Materials/Skybox.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/Skybox.mat.tres"
@@ -1017,7 +1017,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000f000000000000000": 1
+"0000000000000000f000000000000000": 106
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -1029,7 +1029,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_rrd76"]
+[sub_resource type="Resource" id="Resource_wtrjh"]
 resource_name = "Assets/Materials/windows.mat"
 script = ExtResource("1_42huq")
 path = "Assets/Materials/windows.mat.tres"
@@ -1078,7 +1078,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_kfm82"]
+[sub_resource type="Resource" id="Resource_iuh62"]
 resource_name = "Assets/Models/LegsBot.fbx"
 script = ExtResource("1_42huq")
 path = "Assets/Models/LegsBot.gltf"
@@ -1204,6 +1204,7 @@ internal_data = {
 "material_to_texture_name": {},
 "meta_convert_units": true,
 "meta_scale_factor": 1.0,
+"original_rotations": {},
 "output_fbx_scale": 1.0,
 "scale_correction_factor": 1.0,
 "skinned_parents": {
@@ -1211,146 +1212,7 @@ internal_data = {
 }
 }
 prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {
--8219550845029980268: {
-1: -8219550845029980268,
-4: -2539259080009624755,
-"Leg3_L_end": -2816328014651316194
-},
--5278790987178626905: {
-1: -5278790987178626905,
-4: -5233573192589897307,
-"Leg4_L_end": 1424564284785103353
-},
--4819223349682164798: {
-1: -4819223349682164798,
-4: -5861409178561632961,
-137: -1206874426333947015
-},
--4749962960924321931: {
-1: -4749962960924321931,
-4: -878510904908309103
-},
--3621326931174147696: {
-1: -3621326931174147696,
-4: 6219454477140250162
-},
--2816328014651316194: {
-1: -2816328014651316194,
-4: 5190976034080518313
-},
--2739055267787656944: {
-1: -2739055267787656944,
-4: 1166568076548209468,
-"Leg2_R": -2244273249625865620
-},
--2337197405143627653: {
-1: -2337197405143627653,
-4: -2895212457231155139,
-"kneeIK_R_end": 2377181882302377355
-},
--2256547674417840206: {
-1: -2256547674417840206,
-4: 7824832834669223010
-},
--2244273249625865620: {
-1: -2244273249625865620,
-4: -8922494266267631446,
-"Leg3_R": 2364726259137709003
-},
--2142629290750556983: {
-1: -2142629290750556983,
-4: -3232237926644796131,
-"kneeIK_L_end": -4749962960924321931
-},
--1943454401567409144: {
-1: -1943454401567409144,
-4: 8635675604590385719,
-137: 4680424329109345127
-},
--752803836530894814: {
-1: -752803836530894814,
-4: 8673602795118209722,
-"Leg4_L": -5278790987178626905
-},
--242165637326713887: {
-1: -242165637326713887,
-4: -9006549272062162013,
-23: -5894111807915941141,
-33: -6228443723442606707
-},
-0: {
-95: 5866666021909216657,
-"body": -1943454401567409144,
-"legs": 1165196308878192351
-},
-919132149155446097: {
-1: 919132149155446097,
-4: -8679921383154817045,
-"Armature": 7036213049465896255,
-"Gun": -242165637326713887,
-"body": -4819223349682164798,
-"legs": 1131774471668849816
-},
-1131774471668849816: {
-1: 1131774471668849816,
-4: -7731033366477169445,
-137: -514521820524033739
-},
-1165196308878192351: {
-1: 1165196308878192351,
-4: -992225503972793037,
-137: 7071301694888318222
-},
-1424564284785103353: {
-1: 1424564284785103353,
-4: -6695887726372455478
-},
-2364726259137709003: {
-1: 2364726259137709003,
-4: -2833456157615496126,
-"Leg3_R_end": -3621326931174147696
-},
-2377181882302377355: {
-1: 2377181882302377355,
-4: -5331792140021173378
-},
-5701484630214923823: {
-1: 5701484630214923823,
-4: -959057830273905113,
-"Leg4_R": 8576027150998785572
-},
-5811282398515182444: {
-1: 5811282398515182444,
-4: -3066644288261549821,
-"Leg2_L": 6384412691832733792
-},
-6384412691832733792: {
-1: 6384412691832733792,
-4: -1123269236137760716,
-"Leg3_L": -8219550845029980268
-},
-7036213049465896255: {
-1: 7036213049465896255,
-4: 8879528566716807029,
-"Body": 7909848542033764120,
-"heelIK_L": -752803836530894814,
-"heelIK_R": 5701484630214923823,
-"kneeIK_L": -2142629290750556983,
-"kneeIK_R": -2337197405143627653
-},
-7909848542033764120: {
-1: 7909848542033764120,
-4: 4993247010217307183,
-"Leg1_L": 5811282398515182444,
-"Leg1_R": -2739055267787656944
-},
-8576027150998785572: {
-1: 8576027150998785572,
-4: -8802996837999449331,
-"Leg4_R_end": -2256547674417840206
-}
-}
+prefab_gameobject_name_to_fileid_and_children = {}
 prefab_main_gameobject_id = 919132149155446097
 prefab_main_transform_id = -8679921383154817045
 prefab_source_id_pair_to_stripped_id = {}
@@ -1617,8 +1479,9 @@ type_to_fileids = {
 godot_resources = {
 -8545447256379345787: "res://Assets/Models/LegsBot.body.mesh",
 -4650390976156102637: "res://Assets/Models/LegsBot.legs.mesh",
--4274770991410265338: "res://Assets/Models/LegsBot.ArmatureWalking.tres",
+-4274770991410265338: "res://Assets/Models/LegsBot.animation.tres",
 100100000: "Assets/Models/LegsBot.gltf",
+670224309865224971: "res://Assets/Models/LegsBot.DefaultMaterial 1.material",
 2941274158721294118: "res://Assets/Models/LegsBot.Gun.mesh",
 4650390976156102637: "res://Assets/Models/LegsBot.legs.skin.tres",
 8545447256379345787: "res://Assets/Models/LegsBot.body.skin.tres"
@@ -1776,7 +1639,7 @@ humanoid_bone_map_dict = {}
 humanoid_bone_map_crc32_dict = {}
 humanoid_skeleton_hip_position = Vector3(0, 1, 0)
 imported_animation_paths = {
-"Armature|Walking": "res://Assets/Models/LegsBot.ArmatureWalking.tres"
+"Armature|Walking": "res://Assets/Models/LegsBot.animation.tres"
 }
 imported_mesh_paths = {
 "Gun": "res://Assets/Models/LegsBot.Gun.mesh",
@@ -1786,9 +1649,11 @@ imported_mesh_paths = {
 "body": "res://Assets/Models/LegsBot.body.mesh",
 "legs": "res://Assets/Models/LegsBot.legs.mesh"
 }
-imported_material_paths = {}
+imported_material_paths = {
+"No Name": "res://Assets/Models/LegsBot.DefaultMaterial 1.material"
+}
 
-[sub_resource type="Resource" id="Resource_w56hc"]
+[sub_resource type="Resource" id="Resource_2fkan"]
 resource_name = "Assets/Models/bullet.fbx"
 script = ExtResource("1_42huq")
 path = "Assets/Models/bullet.gltf"
@@ -1910,19 +1775,13 @@ internal_data = {
 "material_to_texture_name": {},
 "meta_convert_units": true,
 "meta_scale_factor": 1.0,
+"original_rotations": {},
 "output_fbx_scale": 1.0,
 "scale_correction_factor": 1.0,
 "skinned_parents": {}
 }
 prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {
-919132149155446097: {
-1: 919132149155446097,
-4: -8679921383154817045,
-23: -7511558181221131132,
-33: -5754084199372789682
-}
-}
+prefab_gameobject_name_to_fileid_and_children = {}
 prefab_main_gameobject_id = 919132149155446097
 prefab_main_transform_id = -8679921383154817045
 prefab_source_id_pair_to_stripped_id = {}
@@ -1959,6 +1818,7 @@ type_to_fileids = {
 }
 godot_resources = {
 -7204647971529134275: "res://Assets/Models/bullet.Bullet.mesh",
+-876546973899608171: "res://Assets/Models/bullet.Material.material",
 100100000: "Assets/Models/bullet.gltf"
 }
 main_object_id = 100100000
@@ -1986,9 +1846,11 @@ imported_mesh_paths = {
 "Bullet": "res://Assets/Models/bullet.Bullet.mesh",
 "Root Scene_Bullet": "res://Assets/Models/bullet.Bullet.mesh"
 }
-imported_material_paths = {}
+imported_material_paths = {
+"Material": "res://Assets/Models/bullet.Material.material"
+}
 
-[sub_resource type="Resource" id="Resource_avhu5"]
+[sub_resource type="Resource" id="Resource_ye7df"]
 resource_name = "Assets/Models/door.fbx"
 script = ExtResource("1_42huq")
 path = "Assets/Models/door.gltf"
@@ -2123,6 +1985,7 @@ internal_data = {
 "material_to_texture_name": {},
 "meta_convert_units": true,
 "meta_scale_factor": 1.0,
+"original_rotations": {},
 "output_fbx_scale": 1.0,
 "scale_correction_factor": 1.0,
 "skinned_parents": {}
@@ -2286,6 +2149,7 @@ godot_resources = {
 -5053925668127403250: "res://Assets/Models/door.Cube_004.mesh",
 -1550514412580984892: "res://Assets/Models/door.Cube_002.mesh",
 100100000: "Assets/Models/door.gltf",
+670224309865224971: "res://Assets/Models/door.DefaultMaterial.material",
 4493585093827132993: "res://Assets/Models/door.Cube_001.mesh"
 }
 main_object_id = 100100000
@@ -2359,7 +2223,9 @@ imported_mesh_paths = {
 "Root Scene_Cube.003": "res://Assets/Models/door.Cube_003.mesh",
 "Root Scene_Cube.004": "res://Assets/Models/door.Cube_004.mesh"
 }
-imported_material_paths = {}
+imported_material_paths = {
+"No Name": "res://Assets/Models/door.DefaultMaterial.material"
+}
 
 [sub_resource type="Resource" id="Resource_nmyxd"]
 resource_name = "Assets/Models/hand.fbx"
@@ -2815,7 +2681,7 @@ imported_material_paths = {
 "Material": "res://Assets/Models/hand.Material.material"
 }
 
-[sub_resource type="Resource" id="Resource_svjda"]
+[sub_resource type="Resource" id="Resource_6pqhj"]
 resource_name = "Assets/Models/warning.fbx"
 script = ExtResource("1_42huq")
 path = "Assets/Models/warning.gltf"
@@ -2939,6 +2805,7 @@ internal_data = {
 "material_to_texture_name": {},
 "meta_convert_units": true,
 "meta_scale_factor": 1.0,
+"original_rotations": {},
 "output_fbx_scale": 1.0,
 "scale_correction_factor": 1.0,
 "skinned_parents": {}
@@ -2981,6 +2848,7 @@ type_to_fileids = {
 }
 godot_resources = {
 -5495902117074765545: "res://Assets/Models/warning.Cube.mesh",
+-876546973899608171: "res://Assets/Models/warning.Material.material",
 100100000: "Assets/Models/warning.gltf"
 }
 main_object_id = 100100000
@@ -3008,9 +2876,11 @@ imported_mesh_paths = {
 "Cube": "res://Assets/Models/warning.Cube.mesh",
 "Root Scene_Cube": "res://Assets/Models/warning.Cube.mesh"
 }
-imported_material_paths = {}
+imported_material_paths = {
+"Material": "res://Assets/Models/warning.Material.material"
+}
 
-[sub_resource type="Resource" id="Resource_ktlsk"]
+[sub_resource type="Resource" id="Resource_12pt1"]
 resource_name = "Assets/Physics/playerPhysics.physicMaterial"
 script = ExtResource("1_42huq")
 path = "Assets/Physics/playerPhysics.res"
@@ -3055,7 +2925,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_ea4un"]
+[sub_resource type="Resource" id="Resource_rvsrk"]
 resource_name = "Assets/PostProcessProfiles/PostProcessVolume Profile.asset"
 script = ExtResource("1_42huq")
 path = "Assets/PostProcessProfiles/PostProcessVolume Profile.res"
@@ -3097,12 +2967,12 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"40b924e2dad56384a8df2a1e111bb675": 1,
-"48a79b01ea5641d4aa6daa2e23605641": 1,
-"6050e2d5de785ce4d931e4dbdbf2d755": 1,
-"8e6292b2c06870d4495f009f912b9600": 1,
-"b94fcd11afffcb142908bfcb1e261fba": 1,
-"c1cb7e9e120078f43bce4f0b1be547a7": 1
+"40b924e2dad56384a8df2a1e111bb675": 11500000,
+"48a79b01ea5641d4aa6daa2e23605641": 11500000,
+"6050e2d5de785ce4d931e4dbdbf2d755": 11500000,
+"8e6292b2c06870d4495f009f912b9600": 11500000,
+"b94fcd11afffcb142908bfcb1e261fba": 11500000,
+"c1cb7e9e120078f43bce4f0b1be547a7": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -3114,7 +2984,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_d6tx1"]
+[sub_resource type="Resource" id="Resource_egx0h"]
 resource_name = "Assets/Prefabs/Enemies/LegBot.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/Enemies/LegBot.prefab.tscn"
@@ -3124,22 +2994,124 @@ importer_keys = {
 }
 importer_type = "PrefabImporter"
 internal_data = {}
-prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {}
-prefab_main_gameobject_id = 0
-prefab_main_transform_id = 0
-prefab_source_id_pair_to_stripped_id = {}
+prefab_id_to_guid = {
+764497982022691176: "a1d1d8cec41a0db4d87a487037cc0954",
+3745271504442292608: "e7941a296285f03428208359bcf9c3f9"
+}
+prefab_gameobject_name_to_fileid_and_children = {
+265633488230673954: {
+1: 265633488230673954,
+4: 341150378261856180,
+82: 4257117366354693381,
+198: 5692668602228435838,
+199: 4560182761518076454,
+"Extraparticles": 7712445885344216979,
+NodePath("591cd9924ee0a254380df5c671dfa1f5/11500000"): 305343886295148998
+},
+6309979733362433130: {
+1: 6309979733362433130,
+4: 758923036891240506
+},
+6392651687962265896: {
+1: 6392651687962265896,
+4: 6392651687962265897,
+"Gun": 7185784024091026673,
+"ShootOrigin": 6309979733362433130,
+"warning": 458631643976569913,
+NodePath("136d369e45445ec43873119799de06c4/11500000"): 3963536096291780681
+},
+6392651688832746020: {
+1: 6392651688832746020,
+4: 6392651688832746016,
+136: 6392651688832746021,
+195: 6392651688832746017,
+"Audio": 7385856882436849239,
+"DiesParticle": 265633488230673954,
+"LegsBot": 4555541960812774609,
+NodePath("77dba1d46c95ed34880883b776b14a24/11500000"): 3097231436176187216,
+NodePath("c8ba7b5b39a4dd54d876a7ccf7b13602/11500000"): 6392651688832746046,
+NodePath("de4a012e94a27e44b98245426163486d/11500000"): 6619560915614769845
+},
+7185784024091026673: {
+1: 7185784024091026673,
+4: 7438913682761775382,
+23: 9132668902589563250,
+33: 8944123985572963070
+},
+7385856882436849239: {
+1: 7385856882436849239,
+4: 699318479121299409,
+82: 1583588380090053635
+},
+7712445885344216979: {
+1: 7712445885344216979,
+4: 1330074192668131045,
+198: 5306185213096250398,
+199: 4305156740684525178
+}
+}
+prefab_main_gameobject_id = 6392651688832746020
+prefab_main_transform_id = 6392651688832746016
+prefab_source_id_pair_to_stripped_id = {
+Vector4i(177998557, 972499304, -2020951683, 2126342123): 943138672952888963,
+Vector4i(177998557, 972499304, -1748920927, -761095036): 2116022758807025132,
+Vector4i(872013975, 162331008, -2020951683, 2126342123): 3779463375848840811,
+Vector4i(872013975, 162331008, 214002129, -468894383): 4555541960812774609,
+Vector4i(872013975, 162331008, 1162580915, 1338551343): 8553025241966990767
+}
 transform_fileid_to_rotation_delta = {}
 transform_fileid_to_parent_fileid = {
 341150378261856180: 6392651688832746016,
 699318479121299409: 6392651688832746016,
 758923036891240506: 6392651687962265897,
 764497982022691176: 6392651687962265897,
+943138672952888963: 6392651687962265897,
 1330074192668131045: 341150378261856180,
+3745271504442292608: 6392651688832746016,
+3779463375848840811: 6392651688832746016,
 6392651687962265897: 8553025241966990767,
 7438913682761775382: 6392651687962265897
 }
-fileid_to_nodepath = {}
+fileid_to_nodepath = {
+265633488230673954: NodePath("DiesParticle"),
+305343886295148998: NodePath("DiesParticle/MonoBehaviour"),
+341150378261856180: NodePath("DiesParticle"),
+620902518309118857: NodePath("Audio/AudioSource2"),
+699318479121299409: NodePath("Audio"),
+758923036891240506: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/ShootOrigin"),
+764497982022691176: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/warning"),
+1330074192668131045: NodePath("DiesParticle/Extraparticles"),
+1479377097245576450: NodePath("Audio/AudioSource3"),
+1539090612543593334: NodePath("LegsBot/MonoBehaviour"),
+1583588380090053635: NodePath("Audio/AudioSource"),
+2473432753544971848: NodePath("Audio/AudioSource4"),
+3097231436176187216: NodePath("MonoBehaviour"),
+3745271504442292608: NodePath("LegsBot"),
+3963536096291780681: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/MonoBehaviour"),
+4257117366354693381: NodePath("DiesParticle/AudioSource"),
+4305156740684525178: NodePath("DiesParticle/Extraparticles/ParticleSystemRenderer"),
+4560182761518076454: NodePath("DiesParticle/ParticleSystemRenderer"),
+4919472140449155791: NodePath("LegsBot/MonoBehaviour2"),
+5306185213096250398: NodePath("DiesParticle/Extraparticles/ParticleSystem"),
+5692668602228435838: NodePath("DiesParticle/ParticleSystem"),
+6309979733362433130: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/ShootOrigin"),
+6392651687962265896: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot"),
+6392651687962265897: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot"),
+6392651688832746016: NodePath("."),
+6392651688832746017: NodePath("NavMeshAgent"),
+6392651688832746020: NodePath("."),
+6392651688832746021: NodePath("CapsuleCollider/CollisionShape3D"),
+6392651688832746046: NodePath("MonoBehaviour2"),
+6619560915614769845: NodePath("MonoBehaviour3"),
+7185784024091026673: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/Gun"),
+7385856882436849239: NodePath("Audio"),
+7438913682761775382: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/Gun"),
+7712445885344216979: NodePath("DiesParticle/Extraparticles"),
+7780667378850093378: NodePath("LegsBot/AnimationTree"),
+8553025241966990767: NodePath("LegsBot/Armature/Skeleton3D/Body"),
+8944123985572963070: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/Gun/MeshRenderer"),
+9132668902589563250: NodePath("LegsBot/Armature/Skeleton3D/Body/GunPivot/Gun/MeshRenderer")
+}
 fileid_to_skeleton_bone = {}
 fileid_to_utype = {
 265633488230673954: 1,
@@ -3152,13 +3124,19 @@ fileid_to_utype = {
 943138672952888963: 4,
 1330074192668131045: 4,
 1479377097245576450: 82,
+1539090612543593334: 114,
 1583588380090053635: 82,
+2116022758807025132: 23,
 2473432753544971848: 82,
 3097231436176187216: 114,
+3745271504442292608: 1001,
+3779463375848840811: 4,
 3963536096291780681: 114,
 4257117366354693381: 82,
 4305156740684525178: 199,
+4555541960812774609: 1,
 4560182761518076454: 199,
+4919472140449155791: 114,
 5306185213096250398: 198,
 5692668602228435838: 198,
 6309979733362433130: 1,
@@ -3174,6 +3152,8 @@ fileid_to_utype = {
 7385856882436849239: 1,
 7438913682761775382: 4,
 7712445885344216979: 1,
+7780667378850093378: 95,
+8553025241966990767: 4,
 8944123985572963070: 33,
 9132668902589563250: 23
 }
@@ -3185,6 +3165,7 @@ fileid_to_gameobject_fileid = {
 758923036891240506: 6309979733362433130,
 1330074192668131045: 7712445885344216979,
 1479377097245576450: 7385856882436849239,
+1539090612543593334: 4555541960812774609,
 1583588380090053635: 7385856882436849239,
 2473432753544971848: 7385856882436849239,
 3097231436176187216: 6392651688832746020,
@@ -3192,6 +3173,7 @@ fileid_to_gameobject_fileid = {
 4257117366354693381: 265633488230673954,
 4305156740684525178: 7712445885344216979,
 4560182761518076454: 265633488230673954,
+4919472140449155791: 4555541960812774609,
 5306185213096250398: 7712445885344216979,
 5692668602228435838: 265633488230673954,
 6392651687962265897: 6392651687962265896,
@@ -3201,50 +3183,124 @@ fileid_to_gameobject_fileid = {
 6392651688832746046: 6392651688832746020,
 6619560915614769845: 6392651688832746020,
 7438913682761775382: 7185784024091026673,
+7780667378850093378: 4555541960812774609,
 8944123985572963070: 7185784024091026673,
 9132668902589563250: 7185784024091026673
 }
 type_to_fileids = {
+"Animator": PackedInt64Array(7780667378850093378),
 "AudioSource": PackedInt64Array(4257117366354693381, 1583588380090053635, 620902518309118857, 1479377097245576450, 2473432753544971848),
 "CapsuleCollider": PackedInt64Array(6392651688832746021),
-"GameObject": PackedInt64Array(265633488230673954, 6309979733362433130, 6392651687962265896, 6392651688832746020, 7185784024091026673, 7385856882436849239, 7712445885344216979),
+"GameObject": PackedInt64Array(265633488230673954, 6309979733362433130, 6392651687962265896, 6392651688832746020, 7185784024091026673, 7385856882436849239, 7712445885344216979, 4555541960812774609),
 "MeshFilter": PackedInt64Array(8944123985572963070),
-"MeshRenderer": PackedInt64Array(9132668902589563250),
-"MonoBehaviour": PackedInt64Array(305343886295148998, 3963536096291780681, 3097231436176187216, 6392651688832746046, 6619560915614769845),
+"MeshRenderer": PackedInt64Array(9132668902589563250, 2116022758807025132),
+"MonoBehaviour": PackedInt64Array(305343886295148998, 3963536096291780681, 3097231436176187216, 6392651688832746046, 6619560915614769845, 1539090612543593334, 4919472140449155791),
 "NavMeshAgent": PackedInt64Array(6392651688832746017),
 "ParticleSystem": PackedInt64Array(5692668602228435838, 5306185213096250398),
 "ParticleSystemRenderer": PackedInt64Array(4560182761518076454, 4305156740684525178),
-"PrefabInstance": PackedInt64Array(764497982022691176),
-"Transform": PackedInt64Array(341150378261856180, 758923036891240506, 6392651687962265897, 6392651688832746016, 7438913682761775382, 699318479121299409, 1330074192668131045, 943138672952888963)
+"PrefabInstance": PackedInt64Array(764497982022691176, 3745271504442292608),
+"Transform": PackedInt64Array(341150378261856180, 758923036891240506, 6392651687962265897, 6392651688832746016, 7438913682761775382, 699318479121299409, 1330074192668131045, 943138672952888963, 3779463375848840811, 8553025241966990767, 8553025241966990767)
 }
-godot_resources = {}
+godot_resources = {
+100100000: "Assets/Prefabs/Enemies/LegBot.prefab.tscn"
+}
 main_object_id = 100100000
-gameobject_name_to_fileid_and_children = {}
-transform_fileid_to_children = {}
-gameobject_fileid_to_components = {}
-transform_fileid_to_prefab_ids = {}
-gameobject_fileid_to_rename = {}
+gameobject_name_to_fileid_and_children = {
+265633488230673954: {
+1: 265633488230673954,
+4: 341150378261856180,
+82: 4257117366354693381,
+198: 5692668602228435838,
+199: 4560182761518076454,
+"Extraparticles": 7712445885344216979,
+NodePath("591cd9924ee0a254380df5c671dfa1f5/11500000"): 305343886295148998
+},
+6309979733362433130: {
+1: 6309979733362433130,
+4: 758923036891240506
+},
+6392651687962265896: {
+1: 6392651687962265896,
+4: 6392651687962265897,
+"Gun": 7185784024091026673,
+"ShootOrigin": 6309979733362433130,
+"warning": 458631643976569913,
+NodePath("136d369e45445ec43873119799de06c4/11500000"): 3963536096291780681
+},
+6392651688832746020: {
+1: 6392651688832746020,
+4: 6392651688832746016,
+136: 6392651688832746021,
+195: 6392651688832746017,
+"Audio": 7385856882436849239,
+"DiesParticle": 265633488230673954,
+"LegsBot": 4555541960812774609,
+NodePath("77dba1d46c95ed34880883b776b14a24/11500000"): 3097231436176187216,
+NodePath("c8ba7b5b39a4dd54d876a7ccf7b13602/11500000"): 6392651688832746046,
+NodePath("de4a012e94a27e44b98245426163486d/11500000"): 6619560915614769845
+},
+7185784024091026673: {
+1: 7185784024091026673,
+4: 7438913682761775382,
+23: 9132668902589563250,
+33: 8944123985572963070
+},
+7385856882436849239: {
+1: 7385856882436849239,
+4: 699318479121299409,
+82: 1583588380090053635
+},
+7712445885344216979: {
+1: 7712445885344216979,
+4: 1330074192668131045,
+198: 5306185213096250398,
+199: 4305156740684525178
+}
+}
+transform_fileid_to_children = {
+8553025241966990767: {
+"GunPivot": 6392651687962265896
+}
+}
+gameobject_fileid_to_components = {
+4555541960812774609: {
+95: 7780667378850093378,
+NodePath("bd205d11349e35e4683354526fb82cb5/11500000"): 1539090612543593334,
+NodePath("c67a2033fe354cd4cb06d382fcf01c8b/11500000"): 4919472140449155791
+}
+}
+transform_fileid_to_prefab_ids = {
+6392651687962265897: PackedInt64Array(764497982022691176),
+6392651688832746016: PackedInt64Array(3745271504442292608)
+}
+gameobject_fileid_to_rename = {
+919132149155446097: "warning"
+}
 dependency_guids = {
-"0000000000000000e000000000000000": 1,
-"136d369e45445ec43873119799de06c4": 1,
-"2c3f0d63ebd36644184380fa43ef7765": 1,
-"3389d3861a5a887459259e8047e20532": 1,
-"50e54c378ee86364882361051902fd11": 1,
-"591cd9924ee0a254380df5c671dfa1f5": 1,
-"6dcb1b9069db3b447bd5a9ef9802e8a4": 1,
-"77dba1d46c95ed34880883b776b14a24": 1,
-"78d9bb7f7a86d8d4e9d85621665559dc": 1,
-"79ba28c571260c04d9ef7cc49f591a3d": 1,
-"7f10d14936e36f644a37430f2b7e5919": 1,
-"a1d1d8cec41a0db4d87a487037cc0954": 1,
-"bb2d6549a047db9469fd65b324fc66e3": 1,
-"c4c4640b7db901c4e96319ab0e6b49ba": 1,
-"c8ba7b5b39a4dd54d876a7ccf7b13602": 1,
-"de4a012e94a27e44b98245426163486d": 1,
-"e7941a296285f03428208359bcf9c3f9": 1
+"0000000000000000e000000000000000": 10202,
+"136d369e45445ec43873119799de06c4": 11500000,
+"2c3f0d63ebd36644184380fa43ef7765": 2100000,
+"3389d3861a5a887459259e8047e20532": 2100000,
+"50e54c378ee86364882361051902fd11": 24300002,
+"591cd9924ee0a254380df5c671dfa1f5": 11500000,
+"6dcb1b9069db3b447bd5a9ef9802e8a4": 8300000,
+"77dba1d46c95ed34880883b776b14a24": 11500000,
+"78d9bb7f7a86d8d4e9d85621665559dc": 8300000,
+"79ba28c571260c04d9ef7cc49f591a3d": 8839398422859701171,
+"7f10d14936e36f644a37430f2b7e5919": 8300000,
+"a1d1d8cec41a0db4d87a487037cc0954": -7511558181221131132,
+"bb2d6549a047db9469fd65b324fc66e3": 8300000,
+"bd205d11349e35e4683354526fb82cb5": 11500000,
+"c4c4640b7db901c4e96319ab0e6b49ba": 8300000,
+"c67a2033fe354cd4cb06d382fcf01c8b": 11500000,
+"c8ba7b5b39a4dd54d876a7ccf7b13602": 11500000,
+"de4a012e94a27e44b98245426163486d": 11500000,
+"e7941a296285f03428208359bcf9c3f9": 4993247010217307183,
+"eb0c23fe68bccef4b9498976b0308bfe": 9100000
 }
 prefab_dependency_guids = {
-"a1d1d8cec41a0db4d87a487037cc0954": 1
+"a1d1d8cec41a0db4d87a487037cc0954": 100100000,
+"e7941a296285f03428208359bcf9c3f9": 100100000
 }
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -3387,7 +3443,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_xv0ia"]
+[sub_resource type="Resource" id="Resource_esoeh"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn"
@@ -3476,12 +3532,12 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"4162247006d680a4ca1151eb9f9deba4": 1,
-"470cd534dbfbf7e4d997852196d889e4": 1,
-"50e54c378ee86364882361051902fd11": 1,
-"6442e0c1247c25a48a77c8d81d0134f4": 1,
-"8668c918c31859b4d8fbc6c88658fded": 1,
-"e397b3ddcd21c8948a572e83b5a9c34c": 1
+"4162247006d680a4ca1151eb9f9deba4": 8300000,
+"470cd534dbfbf7e4d997852196d889e4": 8300000,
+"50e54c378ee86364882361051902fd11": 24300002,
+"6442e0c1247c25a48a77c8d81d0134f4": 8300000,
+"8668c918c31859b4d8fbc6c88658fded": 8300000,
+"e397b3ddcd21c8948a572e83b5a9c34c": 8300000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -3493,7 +3549,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_tt8te"]
+[sub_resource type="Resource" id="Resource_ejs1m"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn"
@@ -3673,15 +3729,15 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0cd44c1031e13a943bb63640046fad76": 1,
-"1344c3c82d62a2a41a3576d8abb8e3ea": 1,
-"6391c181a01e9c641bc57e30b8451891": 1,
-"96f5df827be2fe941ad6540a416d5ab9": 1,
-"b8427e1c3be204e44b389bfd8bc6ab12": 1,
-"d5cd0b22fb428ed4e95df2bd77142d05": 1,
-"dc42784cf147c0c48a680349fa168899": 1,
-"f4688fdb7df04437aeb418b961361dc5": 1,
-"fe87c0e1cc204ed48ad3b37840f39efc": 1
+"0cd44c1031e13a943bb63640046fad76": 11500000,
+"1344c3c82d62a2a41a3576d8abb8e3ea": 11500000,
+"6391c181a01e9c641bc57e30b8451891": 2800000,
+"96f5df827be2fe941ad6540a416d5ab9": 11500000,
+"b8427e1c3be204e44b389bfd8bc6ab12": 6475633591956585252,
+"d5cd0b22fb428ed4e95df2bd77142d05": 21300000,
+"dc42784cf147c0c48a680349fa168899": 11500000,
+"f4688fdb7df04437aeb418b961361dc5": 11500000,
+"fe87c0e1cc204ed48ad3b37840f39efc": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -3693,7 +3749,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_gvqe8"]
+[sub_resource type="Resource" id="Resource_rgm0c"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn"
@@ -3746,7 +3802,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"68cc0db8e5e3e3543af97a04b9dd2c25": 1
+"68cc0db8e5e3e3543af97a04b9dd2c25": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -3758,7 +3814,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_edc37"]
+[sub_resource type="Resource" id="Resource_qcs2l"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/Door.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/Door.prefab.tscn"
@@ -3797,10 +3853,10 @@ fileid_to_nodepath = {
 3178693066326079123: NodePath("upPart"),
 3367800511785973735: NodePath("AnimationTree"),
 3632108112527283349: NodePath("poleL/panelL"),
-4701132523530725088: NodePath("poleR/panelR/BoxCollider"),
+4701132523530725088: NodePath("poleR/panelR/BoxCollider/CollisionShape3D"),
 4701132523530725089: NodePath("poleR/panelR"),
 4797156453747310155: NodePath("upPart/MeshRenderer"),
-4872021620457064121: NodePath("Plane/BoxCollider"),
+4872021620457064121: NodePath("Plane/BoxCollider/CollisionShape3D"),
 5062546471916097095: NodePath("Plane/MeshRenderer"),
 5502498864110141914: NodePath("poleR/MeshRenderer"),
 5559463209390319380: NodePath("poleL"),
@@ -3814,7 +3870,7 @@ fileid_to_nodepath = {
 6847394741124099906: NodePath("MeshRenderer"),
 7102548158670291771: NodePath("SpawnPoint"),
 7111564390851588385: NodePath("SpawnPoint"),
-8353608751346871520: NodePath("poleL/panelL/BoxCollider"),
+8353608751346871520: NodePath("poleL/panelL/BoxCollider/CollisionShape3D"),
 8353608751346871521: NodePath("poleL/panelL/MeshRenderer"),
 8435523851085133018: NodePath("Plane"),
 8592575976894424776: NodePath("poleL"),
@@ -3973,16 +4029,16 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0000000000000000e000000000000000": 1,
-"0000000000000000f000000000000000": 1,
-"36cddf4c64529e74fbc521b301a1d696": 1,
-"5438e1cae010b4b4891482ba5c99d3a5": 1,
-"7c66010181437e64a9454e9f6fd39a95": 1,
-"81596699078195647a846d21913517f0": 1,
-"b1bd256d66e52594aafef4be6b0c1e9b": 1,
-"c5298895632876247acbc1ffd2067239": 1,
-"df958aae3616b2c44a7ecc41d2b9e6a4": 1,
-"f1e7643930efb1a47b87257cf0420617": 1
+"0000000000000000e000000000000000": 10209,
+"0000000000000000f000000000000000": 10303,
+"36cddf4c64529e74fbc521b301a1d696": 2100000,
+"5438e1cae010b4b4891482ba5c99d3a5": 2100000,
+"7c66010181437e64a9454e9f6fd39a95": 11500000,
+"81596699078195647a846d21913517f0": 2212009239438826721,
+"b1bd256d66e52594aafef4be6b0c1e9b": 11500000,
+"c5298895632876247acbc1ffd2067239": 9100000,
+"df958aae3616b2c44a7ecc41d2b9e6a4": 11500000,
+"f1e7643930efb1a47b87257cf0420617": 6639354054196359937
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -3994,7 +4050,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_268v8"]
+[sub_resource type="Resource" id="Resource_lrhsi"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn"
@@ -4119,11 +4175,11 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0cd44c1031e13a943bb63640046fad76": 1,
-"c5a3584e9b23a8e469823e69e82d7ec7": 1,
-"dc42784cf147c0c48a680349fa168899": 1,
-"f4688fdb7df04437aeb418b961361dc5": 1,
-"fe87c0e1cc204ed48ad3b37840f39efc": 1
+"0cd44c1031e13a943bb63640046fad76": 11500000,
+"c5a3584e9b23a8e469823e69e82d7ec7": -935426421992229908,
+"dc42784cf147c0c48a680349fa168899": 11500000,
+"f4688fdb7df04437aeb418b961361dc5": 11500000,
+"fe87c0e1cc204ed48ad3b37840f39efc": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4135,7 +4191,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_n4hye"]
+[sub_resource type="Resource" id="Resource_v2ffi"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn"
@@ -4188,7 +4244,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"65c6992271ec3d44eacd75ce7f24966c": 1
+"65c6992271ec3d44eacd75ce7f24966c": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4200,7 +4256,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_pseys"]
+[sub_resource type="Resource" id="Resource_pkd6a"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn"
@@ -4448,40 +4504,40 @@ gameobject_fileid_to_rename = {
 8989669540612516477: "GameOverCanvas"
 }
 dependency_guids = {
-"1b7a7a6ec6a122b45854cd66ccccc252": 1,
-"2805a79463d58044f9f65011eda49e75": 1,
-"2add58501c372ab4791f01f0d0e5a234": 1,
-"31208a779dc25d24ab5e7d9678597f7d": 1,
-"3c620bbfc468cb5429ec054035a24aee": 1,
-"3cdd78010cf20e34283c74f8e86455a5": 1,
-"4a973373e90a16f438bf9e4a1d6861c9": 1,
-"4f231c4fb786f3946a6b90b886c48677": 1,
-"50e54c378ee86364882361051902fd11": 1,
-"53d725ccdedf4a749972f47f513c4278": 1,
-"76c392e42b5098c458856cdf6ecaaaa1": 1,
-"852fe6342126efc4f9a32958f706e5f9": 1,
-"8b9a305e18de0c04dbd257a21cd47087": 1,
-"9082ce21ea5723e41833480bf963fed0": 1,
-"924f9d30884240146acb8ad8a9f5b7e0": 1,
-"a633f0900c80b1c41adab62b9d0f5ce0": 1,
-"a7286cc565bfb3244bafb8c954fc38c4": 1,
-"af4277602d46d4947a8dad376eb2a2df": 1,
-"d2463f16640058f4c99aad1f5647588c": 1,
-"f4688fdb7df04437aeb418b961361dc5": 1
+"1b7a7a6ec6a122b45854cd66ccccc252": 1252114715897260125,
+"2805a79463d58044f9f65011eda49e75": 8702011593069698034,
+"2add58501c372ab4791f01f0d0e5a234": 5036541386232855283,
+"31208a779dc25d24ab5e7d9678597f7d": 157610273161825152,
+"3c620bbfc468cb5429ec054035a24aee": 11400000,
+"3cdd78010cf20e34283c74f8e86455a5": 382863225243235753,
+"4a973373e90a16f438bf9e4a1d6861c9": 3222882223627048795,
+"4f231c4fb786f3946a6b90b886c48677": 11500000,
+"50e54c378ee86364882361051902fd11": 24300002,
+"53d725ccdedf4a749972f47f513c4278": 8989669540612516477,
+"76c392e42b5098c458856cdf6ecaaaa1": 11500000,
+"852fe6342126efc4f9a32958f706e5f9": 883320089303309114,
+"8b9a305e18de0c04dbd257a21cd47087": 11500000,
+"9082ce21ea5723e41833480bf963fed0": 11500000,
+"924f9d30884240146acb8ad8a9f5b7e0": 1799185985965409511,
+"a633f0900c80b1c41adab62b9d0f5ce0": 678870377957644837,
+"a7286cc565bfb3244bafb8c954fc38c4": 2046167530272281004,
+"af4277602d46d4947a8dad376eb2a2df": 11500000,
+"d2463f16640058f4c99aad1f5647588c": 3319347557764830463,
+"f4688fdb7df04437aeb418b961361dc5": 11500000
 }
 prefab_dependency_guids = {
-"1b7a7a6ec6a122b45854cd66ccccc252": 1,
-"2805a79463d58044f9f65011eda49e75": 1,
-"2add58501c372ab4791f01f0d0e5a234": 1,
-"31208a779dc25d24ab5e7d9678597f7d": 1,
-"3cdd78010cf20e34283c74f8e86455a5": 1,
-"4a973373e90a16f438bf9e4a1d6861c9": 1,
-"53d725ccdedf4a749972f47f513c4278": 1,
-"852fe6342126efc4f9a32958f706e5f9": 1,
-"924f9d30884240146acb8ad8a9f5b7e0": 1,
-"a633f0900c80b1c41adab62b9d0f5ce0": 1,
-"a7286cc565bfb3244bafb8c954fc38c4": 1,
-"d2463f16640058f4c99aad1f5647588c": 1
+"1b7a7a6ec6a122b45854cd66ccccc252": 100100000,
+"2805a79463d58044f9f65011eda49e75": 100100000,
+"2add58501c372ab4791f01f0d0e5a234": 100100000,
+"31208a779dc25d24ab5e7d9678597f7d": 100100000,
+"3cdd78010cf20e34283c74f8e86455a5": 100100000,
+"4a973373e90a16f438bf9e4a1d6861c9": 100100000,
+"53d725ccdedf4a749972f47f513c4278": 100100000,
+"852fe6342126efc4f9a32958f706e5f9": 100100000,
+"924f9d30884240146acb8ad8a9f5b7e0": 100100000,
+"a633f0900c80b1c41adab62b9d0f5ce0": 100100000,
+"a7286cc565bfb3244bafb8c954fc38c4": 100100000,
+"d2463f16640058f4c99aad1f5647588c": 100100000
 }
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -4492,7 +4548,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_w724h"]
+[sub_resource type="Resource" id="Resource_05pix"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn"
@@ -4733,13 +4789,13 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"0cd44c1031e13a943bb63640046fad76": 1,
-"4e29b1a8efbd4b44bb3f3716e73f07ff": 1,
-"8a8695521f0d02e499659fee002a26c2": 1,
-"c5a3584e9b23a8e469823e69e82d7ec7": 1,
-"dc42784cf147c0c48a680349fa168899": 1,
-"f4688fdb7df04437aeb418b961361dc5": 1,
-"fe87c0e1cc204ed48ad3b37840f39efc": 1
+"0cd44c1031e13a943bb63640046fad76": 11500000,
+"4e29b1a8efbd4b44bb3f3716e73f07ff": 11500000,
+"8a8695521f0d02e499659fee002a26c2": 11500000,
+"c5a3584e9b23a8e469823e69e82d7ec7": -935426421992229908,
+"dc42784cf147c0c48a680349fa168899": 11500000,
+"f4688fdb7df04437aeb418b961361dc5": 11500000,
+"fe87c0e1cc204ed48ad3b37840f39efc": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4751,7 +4807,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_62hno"]
+[sub_resource type="Resource" id="Resource_43tcx"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn"
@@ -4804,7 +4860,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"9082ce21ea5723e41833480bf963fed0": 1
+"9082ce21ea5723e41833480bf963fed0": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4816,7 +4872,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_xn8st"]
+[sub_resource type="Resource" id="Resource_ww2dv"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn"
@@ -4869,7 +4925,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"25b3c7409bdca3240816f033d5732045": 1
+"25b3c7409bdca3240816f033d5732045": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4881,7 +4937,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_fjdi6"]
+[sub_resource type="Resource" id="Resource_8eioo"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn"
@@ -4934,7 +4990,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"af4277602d46d4947a8dad376eb2a2df": 1
+"af4277602d46d4947a8dad376eb2a2df": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -4946,7 +5002,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_nphch"]
+[sub_resource type="Resource" id="Resource_5c3yg"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn"
@@ -4999,7 +5055,7 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"3b74674b90ca0f344b559a637e6a212a": 1
+"3b74674b90ca0f344b559a637e6a212a": 11500000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -5011,7 +5067,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_m28ds"]
+[sub_resource type="Resource" id="Resource_023bi"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn"
@@ -5064,8 +5120,8 @@ gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
 dependency_guids = {
-"28a3a91a9e7ac824aa1034a7db5b2ecf": 1,
-"50e54c378ee86364882361051902fd11": 1
+"28a3a91a9e7ac824aa1034a7db5b2ecf": 11500000,
+"50e54c378ee86364882361051902fd11": 24100000
 }
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
@@ -5077,7 +5133,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_pxghj"]
+[sub_resource type="Resource" id="Resource_gl5wv"]
 resource_name = "Assets/Prefabs/NecessaryLevelObjects/player.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn"
@@ -5467,7 +5523,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_wdv15"]
+[sub_resource type="Resource" id="Resource_41vmh"]
 resource_name = "Assets/Prefabs/Objects/Bullet.prefab"
 script = ExtResource("1_42huq")
 path = "Assets/Prefabs/Objects/Bullet.prefab.tscn"
@@ -5477,20 +5533,91 @@ importer_keys = {
 }
 importer_type = "PrefabImporter"
 internal_data = {}
-prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {}
-prefab_main_gameobject_id = 0
-prefab_main_transform_id = 0
-prefab_source_id_pair_to_stripped_id = {}
+prefab_id_to_guid = {
+4645579900455433794: "a3db5b8056660ed4da4d826a761c3391"
+}
+prefab_gameobject_name_to_fileid_and_children = {
+1772907777445793052: {
+1: 1772907777445793052,
+4: 4140262915622715222,
+136: 3079596171856740256
+},
+2911802511068083244: {
+1: 2911802511068083244,
+4: 8405597833666928726,
+96: 386162130529415587,
+"Extraparticles": 3502913207171626392,
+"Extraparticles (1)": 8047689273990461328,
+NodePath("591cd9924ee0a254380df5c671dfa1f5/11500000"): 2369222753481234922
+},
+3502913207171626392: {
+1: 3502913207171626392,
+4: 3300666052038939130,
+198: 3997595704442905246,
+199: 3562691536521087430
+},
+5528454002135141139: {
+1: 5528454002135141139,
+4: 5184438337605882281,
+23: -2902007080536397114,
+33: -1126734820988854772
+},
+8047689273990461328: {
+1: 8047689273990461328,
+4: 6922744254748744816,
+198: 4144255580634393193,
+199: 4214190381270391729,
+NodePath("d9cc48b3648f26046bb53696911f5a41/11500000"): 2125078923626309430
+},
+8839398422859701171: {
+1: 8839398422859701171,
+4: 5555861053614110966,
+54: 7783086813668154506,
+136: 2213745897712565204,
+"HitBox": 1772907777445793052,
+"TrailRender": 2911802511068083244,
+"bullet": 5528454002135141139,
+NodePath("092592f254d37534d8b8ce49d6ab0be6/11500000"): 428917393713126250
+}
+}
+prefab_main_gameobject_id = 8839398422859701171
+prefab_main_transform_id = 5555861053614110966
+prefab_source_id_pair_to_stripped_id = {
+Vector4i(1081633358, 1582773826, -2020951683, 2126342123): 5184438337605882281
+}
 transform_fileid_to_rotation_delta = {}
 transform_fileid_to_parent_fileid = {
 3300666052038939130: 8405597833666928726,
 4140262915622715222: 5555861053614110966,
 4645579900455433794: 5555861053614110966,
+5184438337605882281: 5555861053614110966,
 6922744254748744816: 8405597833666928726,
 8405597833666928726: 5555861053614110966
 }
-fileid_to_nodepath = {}
+fileid_to_nodepath = {
+386162130529415587: NodePath("TrailRender/TrailRenderer"),
+428917393713126250: NodePath("MonoBehaviour"),
+1772907777445793052: NodePath("HitBox"),
+2125078923626309430: NodePath("TrailRender/Extraparticles (1)/MonoBehaviour"),
+2213745897712565204: NodePath("CapsuleCollider"),
+2369222753481234922: NodePath("TrailRender/MonoBehaviour"),
+2911802511068083244: NodePath("TrailRender"),
+3079596171856740256: NodePath("CapsuleCollider2"),
+3300666052038939130: NodePath("TrailRender/Extraparticles"),
+3502913207171626392: NodePath("TrailRender/Extraparticles"),
+3562691536521087430: NodePath("TrailRender/Extraparticles/ParticleSystemRenderer"),
+3997595704442905246: NodePath("TrailRender/Extraparticles/ParticleSystem"),
+4140262915622715222: NodePath("HitBox"),
+4144255580634393193: NodePath("TrailRender/Extraparticles (1)/ParticleSystem"),
+4214190381270391729: NodePath("TrailRender/Extraparticles (1)/ParticleSystemRenderer"),
+4645579900455433794: NodePath("bullet"),
+5555861053614110966: NodePath("."),
+6922744254748744816: NodePath("TrailRender/Extraparticles (1)"),
+7783086813668154506: NodePath("."),
+8047689273990461328: NodePath("TrailRender/Extraparticles (1)"),
+8405597833666928726: NodePath("TrailRender"),
+8839398422859701171: NodePath(".")
+}
 fileid_to_skeleton_bone = {}
 fileid_to_utype = {
 386162130529415587: 96,
@@ -5544,27 +5671,70 @@ type_to_fileids = {
 "PrefabInstance": PackedInt64Array(4645579900455433794),
 "Rigidbody": PackedInt64Array(7783086813668154506),
 "TrailRenderer": PackedInt64Array(386162130529415587),
-"Transform": PackedInt64Array(4140262915622715222, 8405597833666928726, 3300666052038939130, 6922744254748744816, 5555861053614110966, 5184438337605882281)
+"Transform": PackedInt64Array(4140262915622715222, 8405597833666928726, 3300666052038939130, 6922744254748744816, 5555861053614110966, 5184438337605882281, 5184438337605882281)
 }
-godot_resources = {}
+godot_resources = {
+100100000: "Assets/Prefabs/Objects/Bullet.prefab.tscn"
+}
 main_object_id = 100100000
-gameobject_name_to_fileid_and_children = {}
+gameobject_name_to_fileid_and_children = {
+1772907777445793052: {
+1: 1772907777445793052,
+4: 4140262915622715222,
+136: 3079596171856740256
+},
+2911802511068083244: {
+1: 2911802511068083244,
+4: 8405597833666928726,
+96: 386162130529415587,
+"Extraparticles": 3502913207171626392,
+"Extraparticles (1)": 8047689273990461328,
+NodePath("591cd9924ee0a254380df5c671dfa1f5/11500000"): 2369222753481234922
+},
+3502913207171626392: {
+1: 3502913207171626392,
+4: 3300666052038939130,
+198: 3997595704442905246,
+199: 3562691536521087430
+},
+8047689273990461328: {
+1: 8047689273990461328,
+4: 6922744254748744816,
+198: 4144255580634393193,
+199: 4214190381270391729,
+NodePath("d9cc48b3648f26046bb53696911f5a41/11500000"): 2125078923626309430
+},
+8839398422859701171: {
+1: 8839398422859701171,
+4: 5555861053614110966,
+54: 7783086813668154506,
+136: 2213745897712565204,
+"HitBox": 1772907777445793052,
+"TrailRender": 2911802511068083244,
+"bullet": 5528454002135141139,
+NodePath("092592f254d37534d8b8ce49d6ab0be6/11500000"): 428917393713126250
+}
+}
 transform_fileid_to_children = {}
 gameobject_fileid_to_components = {}
-transform_fileid_to_prefab_ids = {}
-gameobject_fileid_to_rename = {}
+transform_fileid_to_prefab_ids = {
+5555861053614110966: PackedInt64Array(4645579900455433794)
+}
+gameobject_fileid_to_rename = {
+919132149155446097: "bullet"
+}
 dependency_guids = {
-"0000000000000000e000000000000000": 1,
-"0000000000000000f000000000000000": 1,
-"092592f254d37534d8b8ce49d6ab0be6": 1,
-"2c3f0d63ebd36644184380fa43ef7765": 1,
-"3389d3861a5a887459259e8047e20532": 1,
-"591cd9924ee0a254380df5c671dfa1f5": 1,
-"a3db5b8056660ed4da4d826a761c3391": 1,
-"d9cc48b3648f26046bb53696911f5a41": 1
+"0000000000000000e000000000000000": 10202,
+"0000000000000000f000000000000000": 10306,
+"092592f254d37534d8b8ce49d6ab0be6": 11500000,
+"2c3f0d63ebd36644184380fa43ef7765": 2100000,
+"3389d3861a5a887459259e8047e20532": 2100000,
+"591cd9924ee0a254380df5c671dfa1f5": 11500000,
+"a3db5b8056660ed4da4d826a761c3391": -8679921383154817045,
+"d9cc48b3648f26046bb53696911f5a41": 11500000
 }
 prefab_dependency_guids = {
-"a3db5b8056660ed4da4d826a761c3391": 1
+"a3db5b8056660ed4da4d826a761c3391": 100100000
 }
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -5586,23 +5756,7 @@ importer_keys = {
 importer_type = "PrefabImporter"
 internal_data = {}
 prefab_id_to_guid = {}
-prefab_gameobject_name_to_fileid_and_children = {
-156236410911105081: {
-1: 156236410911105081,
-4: 1988034989096633139,
-23: 1992914673661442898,
-33: 3761822310354791224,
-NodePath("8233d90336aea43098adf6dbabd606a2/11500000"): 4960497663870504348,
-NodePath("1ca002da428252441b92f28d83c8a65f/11500000"): 4632066464597199433
-},
-5919770456178278740: {
-1: 5919770456178278740,
-4: 5919770456178278730,
-198: 1611976900755243955,
-199: 8430905865312223609,
-"WindowMesh": 156236410911105081
-}
-}
+prefab_gameobject_name_to_fileid_and_children = {}
 prefab_main_gameobject_id = 5919770456178278740
 prefab_main_transform_id = 5919770456178278730
 prefab_source_id_pair_to_stripped_id = {}
@@ -7402,7 +7556,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_ea3ul"]
+[sub_resource type="Resource" id="Resource_d7dld"]
 resource_name = "Assets/Scenes/DefaultBake.lighting"
 script = ExtResource("1_42huq")
 path = "Assets/Scenes/DefaultBake.lighting"
@@ -7432,7 +7586,9 @@ transform_fileid_to_children = {}
 gameobject_fileid_to_components = {}
 transform_fileid_to_prefab_ids = {}
 gameobject_fileid_to_rename = {}
-dependency_guids = {}
+dependency_guids = {
+"0000000000000000f000000000000000": 15204
+}
 prefab_dependency_guids = {}
 meta_dependency_guids = {}
 autodetected_bone_map_dict = {}
@@ -9162,7 +9318,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_af4n5"]
+[sub_resource type="Resource" id="Resource_g2sj0"]
 resource_name = "Assets/Sounds/Master.mixer"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/Master.mixer"
@@ -9205,7 +9361,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_hmgl3"]
+[sub_resource type="Resource" id="Resource_plg1d"]
 resource_name = "Assets/Sounds/UI/bop.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/UI/bop.wav"
@@ -9263,7 +9419,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_4b2sv"]
+[sub_resource type="Resource" id="Resource_iho0u"]
 resource_name = "Assets/Sounds/beeboobeepHigh.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/beeboobeepHigh.wav"
@@ -9321,7 +9477,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_mi2k1"]
+[sub_resource type="Resource" id="Resource_eoo18"]
 resource_name = "Assets/Sounds/bwoop.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/bwoop.wav"
@@ -9379,7 +9535,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_pwd2i"]
+[sub_resource type="Resource" id="Resource_c3arh"]
 resource_name = "Assets/Sounds/explodes.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/explodes.wav"
@@ -9495,7 +9651,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_wcmk5"]
+[sub_resource type="Resource" id="Resource_xi16n"]
 resource_name = "Assets/Sounds/gameOver.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/gameOver.wav"
@@ -9553,7 +9709,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_islxt"]
+[sub_resource type="Resource" id="Resource_f8yxn"]
 resource_name = "Assets/Sounds/grab.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/grab.wav"
@@ -9611,7 +9767,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_u8hqk"]
+[sub_resource type="Resource" id="Resource_l7lwb"]
 resource_name = "Assets/Sounds/shoot.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/shoot.wav"
@@ -9727,7 +9883,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_2uudf"]
+[sub_resource type="Resource" id="Resource_0y0lv"]
 resource_name = "Assets/Sounds/timeContinue.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/timeContinue.wav"
@@ -9785,7 +9941,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_msrvi"]
+[sub_resource type="Resource" id="Resource_2ygvf"]
 resource_name = "Assets/Sounds/timeStop.wav"
 script = ExtResource("1_42huq")
 path = "Assets/Sounds/timeStop.wav"
@@ -9843,7 +9999,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_mr6ht"]
+[sub_resource type="Resource" id="Resource_70ukr"]
 resource_name = "Assets/Sprites/Symbols/crosshair.png"
 script = ExtResource("1_42huq")
 path = "Assets/Sprites/Symbols/crosshair.png"
@@ -10007,7 +10163,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_voef6"]
+[sub_resource type="Resource" id="Resource_t7ycu"]
 resource_name = "Assets/Sprites/Symbols/halfCircle.png"
 script = ExtResource("1_42huq")
 path = "Assets/Sprites/Symbols/halfCircle.png"
@@ -12097,36 +12253,36 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Resource" id="Resource_vxugu"]
+[sub_resource type="Resource" id="Resource_7u43t"]
 resource_name = "UISprite"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q48a4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_konba"]
 resource_name = "Font Material"
 
-[sub_resource type="BoxMesh" id="BoxMesh_twnx5"]
+[sub_resource type="BoxMesh" id="BoxMesh_qgudn"]
 resource_name = "Cube"
 
-[sub_resource type="CylinderMesh" id="CylinderMesh_1okp7"]
+[sub_resource type="CylinderMesh" id="CylinderMesh_aiq0h"]
 resource_name = "Cylinder"
 
-[sub_resource type="SphereMesh" id="SphereMesh_flk5q"]
+[sub_resource type="SphereMesh" id="SphereMesh_sdsiq"]
 resource_name = "Sphere"
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_q0yaw"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_lca8y"]
 resource_name = "Capsule"
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_g66kh"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_hdoqn"]
 resource_name = "Plane"
 size = Vector2(10, 10)
 subdivide_width = 10
 subdivide_depth = 10
 
-[sub_resource type="QuadMesh" id="QuadMesh_cc7t1"]
+[sub_resource type="QuadMesh" id="QuadMesh_a4j3v"]
 resource_name = "Quad"
 flip_faces = true
 size = Vector2(-1, 1)
 
-[sub_resource type="Resource" id="Resource_swihq"]
+[sub_resource type="Resource" id="Resource_gav5a"]
 resource_name = "Library/unity default resources"
 script = ExtResource("1_42huq")
 path = "Library/unity default resources"
@@ -12147,15 +12303,15 @@ fileid_to_utype = {}
 fileid_to_gameobject_fileid = {}
 type_to_fileids = {}
 godot_resources = {
-10001: SubResource("Resource_vxugu"),
-10100: SubResource("StandardMaterial3D_q48a4"),
-10102: SubResource("Resource_vxugu"),
-10202: SubResource("BoxMesh_twnx5"),
-10206: SubResource("CylinderMesh_1okp7"),
-10207: SubResource("SphereMesh_flk5q"),
-10208: SubResource("CapsuleMesh_q0yaw"),
-10209: SubResource("PlaneMesh_g66kh"),
-10210: SubResource("QuadMesh_cc7t1")
+10001: SubResource("Resource_7u43t"),
+10100: SubResource("StandardMaterial3D_konba"),
+10102: SubResource("Resource_7u43t"),
+10202: SubResource("BoxMesh_qgudn"),
+10206: SubResource("CylinderMesh_aiq0h"),
+10207: SubResource("SphereMesh_sdsiq"),
+10208: SubResource("CapsuleMesh_lca8y"),
+10209: SubResource("PlaneMesh_hdoqn"),
+10210: SubResource("QuadMesh_a4j3v")
 }
 main_object_id = 0
 gameobject_name_to_fileid_and_children = {}
@@ -12174,7 +12330,7 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_rc1qg"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bnsbs"]
 resource_name = "Default-Skybox"
 sky_top_color = Color(0.454902, 0.678431, 0.87451, 1)
 sky_horizon_color = Color(0.894118, 0.952941, 1, 1)
@@ -12182,16 +12338,16 @@ sky_curve = 0.0731028
 ground_bottom_color = Color(0.454902, 0.470588, 0.490196, 1)
 ground_horizon_color = Color(1, 1, 1, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_83iwa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jjajf"]
 resource_name = "Default-ParticleSystem"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ggfk"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_srw57"]
 resource_name = "Sprites-Default"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xwolt"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hihde"]
 resource_name = "Sprites-Mask"
 
-[sub_resource type="Resource" id="Resource_wcc8v"]
+[sub_resource type="Resource" id="Resource_k6kj1"]
 resource_name = "Resources/unity_builtin_extra"
 script = ExtResource("1_42huq")
 path = "Resources/unity_builtin_extra"
@@ -12212,14 +12368,14 @@ fileid_to_utype = {}
 fileid_to_gameobject_fileid = {}
 type_to_fileids = {}
 godot_resources = {
-10302: SubResource("StandardMaterial3D_bopws"),
-10303: SubResource("StandardMaterial3D_bopws"),
-10304: SubResource("ProceduralSkyMaterial_rc1qg"),
-10306: SubResource("StandardMaterial3D_bopws"),
-10308: SubResource("StandardMaterial3D_83iwa"),
-10754: SubResource("StandardMaterial3D_4ggfk"),
-10758: SubResource("StandardMaterial3D_xwolt"),
-10905: SubResource("Resource_vxugu")
+10302: SubResource("StandardMaterial3D_5dyli"),
+10303: SubResource("StandardMaterial3D_5dyli"),
+10304: SubResource("ProceduralSkyMaterial_bnsbs"),
+10306: SubResource("StandardMaterial3D_5dyli"),
+10308: SubResource("StandardMaterial3D_jjajf"),
+10754: SubResource("StandardMaterial3D_srw57"),
+10758: SubResource("StandardMaterial3D_hihde"),
+10905: SubResource("Resource_7u43t")
 }
 main_object_id = 0
 gameobject_name_to_fileid_and_children = {}
@@ -12238,18 +12394,1253 @@ imported_animation_paths = {}
 imported_mesh_paths = {}
 imported_material_paths = {}
 
-[sub_resource type="Shader" id="Shader_o6etu"]
+[sub_resource type="Resource" id="Resource_hffw5"]
+resource_name = "Assets/Scenes/SceneSpecificFiles/FirstSteps/NavMesh.asset"
+script = ExtResource("1_42huq")
+path = "Assets/Scenes/SceneSpecificFiles/FirstSteps/NavMesh.res"
+guid = "c07375ff28e9b974a8b2eb23e59e3c8e"
+importer_keys = {
+"externalObjects": [],
+"mainObjectFileID": 23800000
+}
+importer_type = "NativeFormatImporter"
+internal_data = {}
+prefab_id_to_guid = {}
+prefab_gameobject_name_to_fileid_and_children = {}
+prefab_main_gameobject_id = 0
+prefab_main_transform_id = 0
+prefab_source_id_pair_to_stripped_id = {}
+transform_fileid_to_rotation_delta = {}
+transform_fileid_to_parent_fileid = {}
+fileid_to_nodepath = {}
+fileid_to_skeleton_bone = {}
+fileid_to_utype = {
+23800000: 238
+}
+fileid_to_gameobject_fileid = {}
+type_to_fileids = {
+"NavMeshData": PackedInt64Array(23800000)
+}
+godot_resources = {}
+main_object_id = 23800000
+gameobject_name_to_fileid_and_children = {}
+transform_fileid_to_children = {}
+gameobject_fileid_to_components = {}
+transform_fileid_to_prefab_ids = {}
+gameobject_fileid_to_rename = {}
+dependency_guids = {
+null: 0
+}
+prefab_dependency_guids = {}
+meta_dependency_guids = {}
+autodetected_bone_map_dict = {}
+humanoid_bone_map_dict = {}
+humanoid_bone_map_crc32_dict = {}
+humanoid_skeleton_hip_position = Vector3(0, 1, 0)
+imported_animation_paths = {}
+imported_mesh_paths = {}
+imported_material_paths = {}
+
+[sub_resource type="Resource" id="Resource_pcqw4"]
+resource_name = "Assets/Scenes/FirstSteps.unity"
+script = ExtResource("1_42huq")
+path = "Assets/Scenes/FirstSteps.tscn"
+guid = "12ffeae46c04f5a4ca41e7fded4c4ec2"
+importer_keys = {
+"externalObjects": []
+}
+importer_type = "DefaultImporter"
+internal_data = {}
+prefab_id_to_guid = {
+266673700: "dfed05359ad80a1498531fb205e77966",
+427978130: "e572b178a89f05249b203bde1506a15c",
+463886228: "6e1b56b99c23cb943a3977f1f6f3b78b",
+1758076741: "6e1b56b99c23cb943a3977f1f6f3b78b"
+}
+prefab_gameobject_name_to_fileid_and_children = {
+16496405: {
+1: 16496405,
+4: 16496409,
+23: 16496407,
+33: 16496408,
+65: 16496406
+},
+36518607: {
+1: 36518607,
+4: 36518608,
+23: 36518610,
+33: 36518611,
+65: 36518609
+},
+75306749: {
+1: 75306749,
+4: 75306750,
+23: 75306752,
+33: 75306753,
+65: 75306751
+},
+193378642: {
+1: 193378642,
+4: 193378645,
+23: 193378644,
+224: 193378645,
+NodePath("9541d86e2fd84c1d9990edf0852d74ab/11500000"): 193378643
+},
+198960301: {
+1: 198960301,
+4: 198960302,
+108: 198960303
+},
+240286304: {
+1: 240286304,
+4: 240286305,
+108: 240286306
+},
+268031984: {
+1: 268031984,
+4: 268031985,
+108: 268031986
+},
+282496675: {
+1: 282496675,
+4: 282496676,
+23: 282496678,
+33: 282496679,
+65: 282496677
+},
+336092205: {
+1: 336092205,
+4: 336092206,
+23: 336092208,
+33: 336092209,
+65: 336092207
+},
+354440529: {
+1: 354440529,
+4: 354440530
+},
+597712894: {
+1: 597712894,
+4: 597712896,
+215: 597712895
+},
+777733961: {
+1: 777733961,
+4: 777733962,
+"Point Light": 240286304,
+"Point Light (1)": 1330999853,
+"Point Light (2)": 1302268505,
+"Point Light (3)": 1680669631,
+"Point Light (4)": 268031984,
+"Point Light (5)": 1007143422,
+"Point Light (6)": 1078723237,
+"Point Light (7)": 1983763484,
+"Point Light (8)": 198960301,
+"Point Light (9)": 986794518,
+"Reflection Probe": 597712894,
+"Window": 5919770457658220049,
+"Window (1)": 5919770455836563136
+},
+814705561: {
+1: 814705561,
+4: 814705562,
+23: 814705564,
+33: 814705565,
+65: 814705563
+},
+929326030: {
+1: 929326030,
+4: 929326031,
+23: 929326033,
+33: 929326034,
+65: 929326032
+},
+930778370: {
+1: 930778370,
+4: 930778371,
+23: 930778373,
+33: 930778374,
+65: 930778372
+},
+986794518: {
+1: 986794518,
+4: 986794519,
+108: 986794520
+},
+1007143422: {
+1: 1007143422,
+4: 1007143423,
+108: 1007143424
+},
+1078723237: {
+1: 1078723237,
+4: 1078723238,
+108: 1078723239
+},
+1175575610: {
+1: 1175575610,
+4: 1175575611,
+"Details": 354440529,
+"Lighting": 777733961,
+"Structures": 1295605862
+},
+1236622000: {
+1: 1236622000,
+4: 1236622001,
+23: 1236622003,
+33: 1236622004,
+65: 1236622002
+},
+1295605862: {
+1: 1295605862,
+4: 1295605863,
+"Cube": 16496405,
+"Cube (1)": 1638920197,
+"Cube (10)": 1839750627,
+"Cube (11)": 1931940646,
+"Cube (12)": 282496675,
+"Cube (13)": 2096149822,
+"Cube (14)": 1755238896,
+"Cube (15)": 930778370,
+"Cube (16)": 75306749,
+"Cube (17)": 929326030,
+"Cube (18)": 1898675807,
+"Cube (2)": 1776335646,
+"Cube (3)": 1772174838,
+"Cube (4)": 1236622000,
+"Cube (5)": 36518607,
+"Cube (6)": 1418919236,
+"Cube (7)": 2071654541,
+"Cube (8)": 814705561,
+"Cube (9)": 336092205,
+"Floor": 1861448251
+},
+1302268505: {
+1: 1302268505,
+4: 1302268506,
+108: 1302268507
+},
+1330999853: {
+1: 1330999853,
+4: 1330999854,
+108: 1330999855
+},
+1418919236: {
+1: 1418919236,
+4: 1418919237,
+23: 1418919239,
+33: 1418919240,
+65: 1418919238
+},
+1638920197: {
+1: 1638920197,
+4: 1638920201,
+23: 1638920199,
+33: 1638920200,
+65: 1638920198
+},
+1658119691: {
+1: 1658119691,
+4: 1658119692,
+"AIbody": 6392651688641584128
+},
+1680669631: {
+1: 1680669631,
+4: 1680669632,
+108: 1680669633
+},
+1755238896: {
+1: 1755238896,
+4: 1755238897,
+23: 1755238899,
+33: 1755238900,
+65: 1755238898
+},
+1772174838: {
+1: 1772174838,
+4: 1772174842,
+23: 1772174840,
+33: 1772174841,
+65: 1772174839
+},
+1776335646: {
+1: 1776335646,
+4: 1776335650,
+23: 1776335648,
+33: 1776335649,
+65: 1776335647
+},
+1839750627: {
+1: 1839750627,
+4: 1839750628,
+23: 1839750630,
+33: 1839750631,
+65: 1839750629
+},
+1861448251: {
+1: 1861448251,
+4: 1861448252,
+23: 1861448254,
+33: 1861448255,
+64: 1861448253
+},
+1898675807: {
+1: 1898675807,
+4: 1898675808,
+23: 1898675810,
+33: 1898675811,
+65: 1898675809
+},
+1931940646: {
+1: 1931940646,
+4: 1931940647,
+23: 1931940649,
+33: 1931940650,
+65: 1931940648
+},
+1983763484: {
+1: 1983763484,
+4: 1983763485,
+108: 1983763486
+},
+2071654541: {
+1: 2071654541,
+4: 2071654542,
+23: 2071654544,
+33: 2071654545,
+65: 2071654543
+},
+2096149822: {
+1: 2096149822,
+4: 2096149823,
+23: 2096149825,
+33: 2096149826,
+65: 2096149824
+},
+156236410535344045: {
+1: 156236410535344045,
+4: 1988034988683121831,
+23: 1992914673487752390,
+33: 3761822310264241324,
+NodePath("8233d90336aea43098adf6dbabd606a2/11500000"): 4960497664061757960,
+NodePath("1ca002da428252441b92f28d83c8a65f/11500000"): 4632066464993943005
+},
+156236412392095612: {
+1: 156236412392095612,
+4: 1988034990586010742,
+23: 1992914674337375255,
+33: 3761822309939950717,
+NodePath("8233d90336aea43098adf6dbabd606a2/11500000"): 4960497662137864921,
+NodePath("1ca002da428252441b92f28d83c8a65f/11500000"): 4632066463125656844
+},
+265633488148557830: {
+1: 265633488148557830,
+4: 341150378285113744,
+82: 4257117366465516321,
+198: 5692668602369275226,
+199: 4560182761410792450,
+"Extraparticles": 7712445885568281015,
+NodePath("591cd9924ee0a254380df5c671dfa1f5/11500000"): 305343886397585378
+},
+5919770455836563136: {
+1: 5919770455836563136,
+4: 463886229,
+198: 1611976900291367975,
+199: 8430905865218234093,
+"WindowMesh": 156236410535344045
+},
+5919770457658220049: {
+1: 5919770457658220049,
+4: 1758076742,
+198: 1611976900080360694,
+199: 8430905865979780668,
+"WindowMesh": 156236412392095612
+},
+6309979733532492366: {
+1: 6309979733532492366,
+4: 758923036830615070
+},
+6392651687901779724: {
+1: 6392651687901779724,
+4: 6392651687901779725,
+"Gun": 7185784023937612501,
+"ShootOrigin": 6309979733532492366,
+"warning": 458631643777665565,
+NodePath("136d369e45445ec43873119799de06c4/11500000"): 3963536096495527533
+},
+6392651688641584128: {
+1: 6392651688641584128,
+4: 2069736207,
+136: 6392651688641584129,
+195: 6392651688641584133,
+"Audio": 7385856882182758515,
+"DiesParticle": 265633488148557830,
+"LegsBot": 4555541960622136053,
+NodePath("77dba1d46c95ed34880883b776b14a24/11500000"): 3097231436295520628,
+NodePath("c8ba7b5b39a4dd54d876a7ccf7b13602/11500000"): 6392651688641584154,
+NodePath("de4a012e94a27e44b98245426163486d/11500000"): 6619560915872398481
+},
+7185784023937612501: {
+1: 7185784023937612501,
+4: 7438913682767865650,
+23: 9132668902386343766,
+33: 8944123985466342618
+},
+7385856882182758515: {
+1: 7385856882182758515,
+4: 699318478955424245,
+82: 1583588380301666855
+},
+7712445885568281015: {
+1: 7712445885568281015,
+4: 1330074192837664961,
+198: 5306185213262254650,
+199: 4305156740720373854
+},
+7946419084664285674: {
+1: 7946419084664285674,
+4: 7946419084664285685,
+"AudioSourcesManager": 7946419083900032296,
+"Canvas": 7946419084587567886,
+"ConfigManager": 5221407126241798824,
+"Door": 543559112048645972,
+"EventSystem": 7946419084781614775,
+"GameOverCanvas": 7946419083970171479,
+"HealthManager": 7946419084268193698,
+"PauseGameCanvas": 3188231548606525278,
+"PauseGameManager": 7946419083826452222,
+"PostProcessVolume": 7946419085042710700,
+"SaveGame": 1393089708537347532,
+"SceneChanger": 7946419084215100959,
+"TimeManager": 7946419085653370540,
+"VolumeManager": 7285211118151695264
+},
+7946419084781614775: {
+1: 7946419084781614775,
+4: 7946419084781614768,
+NodePath("76c392e42b5098c458856cdf6ecaaaa1/11500000"): 7946419084781614769,
+NodePath("4f231c4fb786f3946a6b90b886c48677/11500000"): 7946419084781614774
+},
+7946419085042710700: {
+1: 7946419085042710700,
+4: 7946419085042710702,
+NodePath("8b9a305e18de0c04dbd257a21cd47087/11500000"): 7946419085042710703
+}
+}
+prefab_main_gameobject_id = 0
+prefab_main_transform_id = 0
+prefab_source_id_pair_to_stripped_id = {
+Vector4i(0, 266673700, 1488405207, 1571635744): 2069736207,
+Vector4i(0, 463886228, 1378303965, -1738817206): 463886229,
+Vector4i(0, 1758076741, 1378303965, -1738817206): 1758076742
+}
+transform_fileid_to_rotation_delta = {}
+transform_fileid_to_parent_fileid = {
+16496409: 1295605863,
+36518608: 1295605863,
+75306750: 1295605863,
+198960302: 777733962,
+240286305: 777733962,
+266673700: 1658119692,
+268031985: 777733962,
+282496676: 1295605863,
+336092206: 1295605863,
+354440530: 1175575611,
+427978130: 0,
+463886228: 777733962,
+463886229: 777733962,
+597712896: 777733962,
+777733962: 1175575611,
+814705562: 1295605863,
+929326031: 1295605863,
+930778371: 1295605863,
+986794519: 777733962,
+1007143423: 777733962,
+1078723238: 777733962,
+1236622001: 1295605863,
+1295605863: 1175575611,
+1302268506: 777733962,
+1330999854: 777733962,
+1418919237: 1295605863,
+1638920201: 1295605863,
+1680669632: 777733962,
+1755238897: 1295605863,
+1758076741: 777733962,
+1758076742: 777733962,
+1772174842: 1295605863,
+1776335650: 1295605863,
+1839750628: 1295605863,
+1861448252: 1295605863,
+1898675808: 1295605863,
+1931940647: 1295605863,
+1983763485: 777733962,
+2069736207: 1658119692,
+2071654542: 1295605863,
+2096149823: 1295605863,
+7946419084664285685: 0
+}
+fileid_to_nodepath = {
+16496405: NodePath("Map/Structures/Cube"),
+16496406: NodePath("Map/Structures/Cube/BoxCollider/CollisionShape3D"),
+16496407: NodePath("Map/Structures/Cube/MeshRenderer"),
+16496408: NodePath("Map/Structures/Cube/MeshRenderer"),
+16496409: NodePath("Map/Structures/Cube"),
+36518607: NodePath("Map/Structures/Cube (5)"),
+36518608: NodePath("Map/Structures/Cube (5)"),
+36518609: NodePath("Map/Structures/Cube (5)/BoxCollider/CollisionShape3D"),
+36518610: NodePath("Map/Structures/Cube (5)/MeshRenderer"),
+36518611: NodePath("Map/Structures/Cube (5)/MeshRenderer"),
+75306749: NodePath("Map/Structures/Cube (16)"),
+75306750: NodePath("Map/Structures/Cube (16)"),
+75306751: NodePath("Map/Structures/Cube (16)/BoxCollider/CollisionShape3D"),
+75306752: NodePath("Map/Structures/Cube (16)/MeshRenderer"),
+75306753: NodePath("Map/Structures/Cube (16)/MeshRenderer"),
+193378642: NodePath("Title"),
+193378643: NodePath("Title/MonoBehaviour"),
+193378644: NodePath("Title/MeshRenderer"),
+193378645: NodePath("Title"),
+198960301: NodePath("Map/Lighting/Point Light (8)"),
+198960302: NodePath("Map/Lighting/Point Light (8)"),
+198960303: NodePath("Map/Lighting/Point Light (8)/Light"),
+240286304: NodePath("Map/Lighting/Point Light"),
+240286305: NodePath("Map/Lighting/Point Light"),
+240286306: NodePath("Map/Lighting/Point Light/Light"),
+266673700: NodePath("Enemies/AIbody"),
+268031984: NodePath("Map/Lighting/Point Light (4)"),
+268031985: NodePath("Map/Lighting/Point Light (4)"),
+268031986: NodePath("Map/Lighting/Point Light (4)/Light"),
+282496675: NodePath("Map/Structures/Cube (12)"),
+282496676: NodePath("Map/Structures/Cube (12)"),
+282496677: NodePath("Map/Structures/Cube (12)/BoxCollider/CollisionShape3D"),
+282496678: NodePath("Map/Structures/Cube (12)/MeshRenderer"),
+282496679: NodePath("Map/Structures/Cube (12)/MeshRenderer"),
+336092205: NodePath("Map/Structures/Cube (9)"),
+336092206: NodePath("Map/Structures/Cube (9)"),
+336092207: NodePath("Map/Structures/Cube (9)/BoxCollider/CollisionShape3D"),
+336092208: NodePath("Map/Structures/Cube (9)/MeshRenderer"),
+336092209: NodePath("Map/Structures/Cube (9)/MeshRenderer"),
+354440529: NodePath("Map/Details"),
+354440530: NodePath("Map/Details"),
+427978130: NodePath("LevelMinimumPrefabs"),
+463886228: NodePath("Map/Lighting/Window (1)"),
+597712894: NodePath("Map/Lighting/Reflection Probe"),
+597712895: NodePath("Map/Lighting/Reflection Probe/ReflectionProbe"),
+597712896: NodePath("Map/Lighting/Reflection Probe"),
+777733961: NodePath("Map/Lighting"),
+777733962: NodePath("Map/Lighting"),
+814705561: NodePath("Map/Structures/Cube (8)"),
+814705562: NodePath("Map/Structures/Cube (8)"),
+814705563: NodePath("Map/Structures/Cube (8)/BoxCollider/CollisionShape3D"),
+814705564: NodePath("Map/Structures/Cube (8)/MeshRenderer"),
+814705565: NodePath("Map/Structures/Cube (8)/MeshRenderer"),
+929326030: NodePath("Map/Structures/Cube (17)"),
+929326031: NodePath("Map/Structures/Cube (17)"),
+929326032: NodePath("Map/Structures/Cube (17)/BoxCollider/CollisionShape3D"),
+929326033: NodePath("Map/Structures/Cube (17)/MeshRenderer"),
+929326034: NodePath("Map/Structures/Cube (17)/MeshRenderer"),
+930778370: NodePath("Map/Structures/Cube (15)"),
+930778371: NodePath("Map/Structures/Cube (15)"),
+930778372: NodePath("Map/Structures/Cube (15)/BoxCollider/CollisionShape3D"),
+930778373: NodePath("Map/Structures/Cube (15)/MeshRenderer"),
+930778374: NodePath("Map/Structures/Cube (15)/MeshRenderer"),
+986794518: NodePath("Map/Lighting/Point Light (9)"),
+986794519: NodePath("Map/Lighting/Point Light (9)"),
+986794520: NodePath("Map/Lighting/Point Light (9)/Light"),
+1007143422: NodePath("Map/Lighting/Point Light (5)"),
+1007143423: NodePath("Map/Lighting/Point Light (5)"),
+1007143424: NodePath("Map/Lighting/Point Light (5)/Light"),
+1078723237: NodePath("Map/Lighting/Point Light (6)"),
+1078723238: NodePath("Map/Lighting/Point Light (6)"),
+1078723239: NodePath("Map/Lighting/Point Light (6)/Light"),
+1175575610: NodePath("Map"),
+1175575611: NodePath("Map"),
+1236622000: NodePath("Map/Structures/Cube (4)"),
+1236622001: NodePath("Map/Structures/Cube (4)"),
+1236622002: NodePath("Map/Structures/Cube (4)/BoxCollider/CollisionShape3D"),
+1236622003: NodePath("Map/Structures/Cube (4)/MeshRenderer"),
+1236622004: NodePath("Map/Structures/Cube (4)/MeshRenderer"),
+1295605862: NodePath("Map/Structures"),
+1295605863: NodePath("Map/Structures"),
+1302268505: NodePath("Map/Lighting/Point Light (2)"),
+1302268506: NodePath("Map/Lighting/Point Light (2)"),
+1302268507: NodePath("Map/Lighting/Point Light (2)/Light"),
+1330999853: NodePath("Map/Lighting/Point Light (1)"),
+1330999854: NodePath("Map/Lighting/Point Light (1)"),
+1330999855: NodePath("Map/Lighting/Point Light (1)/Light"),
+1418919236: NodePath("Map/Structures/Cube (6)"),
+1418919237: NodePath("Map/Structures/Cube (6)"),
+1418919238: NodePath("Map/Structures/Cube (6)/BoxCollider/CollisionShape3D"),
+1418919239: NodePath("Map/Structures/Cube (6)/MeshRenderer"),
+1418919240: NodePath("Map/Structures/Cube (6)/MeshRenderer"),
+1638920197: NodePath("Map/Structures/Cube (1)"),
+1638920198: NodePath("Map/Structures/Cube (1)/BoxCollider/CollisionShape3D"),
+1638920199: NodePath("Map/Structures/Cube (1)/MeshRenderer"),
+1638920200: NodePath("Map/Structures/Cube (1)/MeshRenderer"),
+1638920201: NodePath("Map/Structures/Cube (1)"),
+1658119691: NodePath("Enemies"),
+1658119692: NodePath("Enemies"),
+1680669631: NodePath("Map/Lighting/Point Light (3)"),
+1680669632: NodePath("Map/Lighting/Point Light (3)"),
+1680669633: NodePath("Map/Lighting/Point Light (3)/Light"),
+1755238896: NodePath("Map/Structures/Cube (14)"),
+1755238897: NodePath("Map/Structures/Cube (14)"),
+1755238898: NodePath("Map/Structures/Cube (14)/BoxCollider/CollisionShape3D"),
+1755238899: NodePath("Map/Structures/Cube (14)/MeshRenderer"),
+1755238900: NodePath("Map/Structures/Cube (14)/MeshRenderer"),
+1758076741: NodePath("Map/Lighting/Window"),
+1772174838: NodePath("Map/Structures/Cube (3)"),
+1772174839: NodePath("Map/Structures/Cube (3)/BoxCollider/CollisionShape3D"),
+1772174840: NodePath("Map/Structures/Cube (3)/MeshRenderer"),
+1772174841: NodePath("Map/Structures/Cube (3)/MeshRenderer"),
+1772174842: NodePath("Map/Structures/Cube (3)"),
+1776335646: NodePath("Map/Structures/Cube (2)"),
+1776335647: NodePath("Map/Structures/Cube (2)/BoxCollider/CollisionShape3D"),
+1776335648: NodePath("Map/Structures/Cube (2)/MeshRenderer"),
+1776335649: NodePath("Map/Structures/Cube (2)/MeshRenderer"),
+1776335650: NodePath("Map/Structures/Cube (2)"),
+1839750627: NodePath("Map/Structures/Cube (10)"),
+1839750628: NodePath("Map/Structures/Cube (10)"),
+1839750629: NodePath("Map/Structures/Cube (10)/BoxCollider/CollisionShape3D"),
+1839750630: NodePath("Map/Structures/Cube (10)/MeshRenderer"),
+1839750631: NodePath("Map/Structures/Cube (10)/MeshRenderer"),
+1861448251: NodePath("Map/Structures/Floor"),
+1861448252: NodePath("Map/Structures/Floor"),
+1861448253: NodePath("Map/Structures/Floor/MeshCollider/CollisionShape3D"),
+1861448254: NodePath("Map/Structures/Floor/MeshRenderer"),
+1861448255: NodePath("Map/Structures/Floor/MeshRenderer"),
+1898675807: NodePath("Map/Structures/Cube (18)"),
+1898675808: NodePath("Map/Structures/Cube (18)"),
+1898675809: NodePath("Map/Structures/Cube (18)/BoxCollider/CollisionShape3D"),
+1898675810: NodePath("Map/Structures/Cube (18)/MeshRenderer"),
+1898675811: NodePath("Map/Structures/Cube (18)/MeshRenderer"),
+1931940646: NodePath("Map/Structures/Cube (11)"),
+1931940647: NodePath("Map/Structures/Cube (11)"),
+1931940648: NodePath("Map/Structures/Cube (11)/BoxCollider/CollisionShape3D"),
+1931940649: NodePath("Map/Structures/Cube (11)/MeshRenderer"),
+1931940650: NodePath("Map/Structures/Cube (11)/MeshRenderer"),
+1983763484: NodePath("Map/Lighting/Point Light (7)"),
+1983763485: NodePath("Map/Lighting/Point Light (7)"),
+1983763486: NodePath("Map/Lighting/Point Light (7)/Light"),
+2071654541: NodePath("Map/Structures/Cube (7)"),
+2071654542: NodePath("Map/Structures/Cube (7)"),
+2071654543: NodePath("Map/Structures/Cube (7)/BoxCollider/CollisionShape3D"),
+2071654544: NodePath("Map/Structures/Cube (7)/MeshRenderer"),
+2071654545: NodePath("Map/Structures/Cube (7)/MeshRenderer"),
+2096149822: NodePath("Map/Structures/Cube (13)"),
+2096149823: NodePath("Map/Structures/Cube (13)"),
+2096149824: NodePath("Map/Structures/Cube (13)/BoxCollider/CollisionShape3D"),
+2096149825: NodePath("Map/Structures/Cube (13)/MeshRenderer"),
+2096149826: NodePath("Map/Structures/Cube (13)/MeshRenderer")
+}
+fileid_to_skeleton_bone = {}
+fileid_to_utype = {
+1: 29,
+2: 104,
+3: 157,
+4: 196,
+16496405: 1,
+16496406: 65,
+16496407: 23,
+16496408: 33,
+16496409: 4,
+36518607: 1,
+36518608: 4,
+36518609: 65,
+36518610: 23,
+36518611: 33,
+75306749: 1,
+75306750: 4,
+75306751: 65,
+75306752: 23,
+75306753: 33,
+193378642: 1,
+193378643: 114,
+193378644: 23,
+193378645: 224,
+198960301: 1,
+198960302: 4,
+198960303: 108,
+220240150: 43,
+240286304: 1,
+240286305: 4,
+240286306: 108,
+266673700: 1001,
+268031984: 1,
+268031985: 4,
+268031986: 108,
+282496675: 1,
+282496676: 4,
+282496677: 65,
+282496678: 23,
+282496679: 33,
+336092205: 1,
+336092206: 4,
+336092207: 65,
+336092208: 23,
+336092209: 33,
+354440529: 1,
+354440530: 4,
+427978130: 1001,
+463886228: 1001,
+463886229: 4,
+597712894: 1,
+597712895: 215,
+597712896: 4,
+777733961: 1,
+777733962: 4,
+814705561: 1,
+814705562: 4,
+814705563: 65,
+814705564: 23,
+814705565: 33,
+929326030: 1,
+929326031: 4,
+929326032: 65,
+929326033: 23,
+929326034: 33,
+930778370: 1,
+930778371: 4,
+930778372: 65,
+930778373: 23,
+930778374: 33,
+986794518: 1,
+986794519: 4,
+986794520: 108,
+1007143422: 1,
+1007143423: 4,
+1007143424: 108,
+1073226525: 43,
+1078723237: 1,
+1078723238: 4,
+1078723239: 108,
+1175575610: 1,
+1175575611: 4,
+1236622000: 1,
+1236622001: 4,
+1236622002: 65,
+1236622003: 23,
+1236622004: 33,
+1295605862: 1,
+1295605863: 4,
+1302268505: 1,
+1302268506: 4,
+1302268507: 108,
+1330999853: 1,
+1330999854: 4,
+1330999855: 108,
+1418919236: 1,
+1418919237: 4,
+1418919238: 65,
+1418919239: 23,
+1418919240: 33,
+1638920197: 1,
+1638920198: 65,
+1638920199: 23,
+1638920200: 33,
+1638920201: 4,
+1658119691: 1,
+1658119692: 4,
+1680669631: 1,
+1680669632: 4,
+1680669633: 108,
+1755238896: 1,
+1755238897: 4,
+1755238898: 65,
+1755238899: 23,
+1755238900: 33,
+1758076741: 1001,
+1758076742: 4,
+1772174838: 1,
+1772174839: 65,
+1772174840: 23,
+1772174841: 33,
+1772174842: 4,
+1776335646: 1,
+1776335647: 65,
+1776335648: 23,
+1776335649: 33,
+1776335650: 4,
+1839750627: 1,
+1839750628: 4,
+1839750629: 65,
+1839750630: 23,
+1839750631: 33,
+1861448251: 1,
+1861448252: 4,
+1861448253: 64,
+1861448254: 23,
+1861448255: 33,
+1898675807: 1,
+1898675808: 4,
+1898675809: 65,
+1898675810: 23,
+1898675811: 33,
+1931940646: 1,
+1931940647: 4,
+1931940648: 65,
+1931940649: 23,
+1931940650: 33,
+1983763484: 1,
+1983763485: 4,
+1983763486: 108,
+2069736207: 4,
+2071654541: 1,
+2071654542: 4,
+2071654543: 65,
+2071654544: 23,
+2071654545: 33,
+2096149822: 1,
+2096149823: 4,
+2096149824: 65,
+2096149825: 23,
+2096149826: 33
+}
+fileid_to_gameobject_fileid = {
+16496406: 16496405,
+16496407: 16496405,
+16496408: 16496405,
+16496409: 16496405,
+36518608: 36518607,
+36518609: 36518607,
+36518610: 36518607,
+36518611: 36518607,
+75306750: 75306749,
+75306751: 75306749,
+75306752: 75306749,
+75306753: 75306749,
+193378643: 193378642,
+193378644: 193378642,
+193378645: 193378642,
+198960302: 198960301,
+198960303: 198960301,
+240286305: 240286304,
+240286306: 240286304,
+268031985: 268031984,
+268031986: 268031984,
+282496676: 282496675,
+282496677: 282496675,
+282496678: 282496675,
+282496679: 282496675,
+336092206: 336092205,
+336092207: 336092205,
+336092208: 336092205,
+336092209: 336092205,
+354440530: 354440529,
+597712895: 597712894,
+597712896: 597712894,
+777733962: 777733961,
+814705562: 814705561,
+814705563: 814705561,
+814705564: 814705561,
+814705565: 814705561,
+929326031: 929326030,
+929326032: 929326030,
+929326033: 929326030,
+929326034: 929326030,
+930778371: 930778370,
+930778372: 930778370,
+930778373: 930778370,
+930778374: 930778370,
+986794519: 986794518,
+986794520: 986794518,
+1007143423: 1007143422,
+1007143424: 1007143422,
+1078723238: 1078723237,
+1078723239: 1078723237,
+1175575611: 1175575610,
+1236622001: 1236622000,
+1236622002: 1236622000,
+1236622003: 1236622000,
+1236622004: 1236622000,
+1295605863: 1295605862,
+1302268506: 1302268505,
+1302268507: 1302268505,
+1330999854: 1330999853,
+1330999855: 1330999853,
+1418919237: 1418919236,
+1418919238: 1418919236,
+1418919239: 1418919236,
+1418919240: 1418919236,
+1638920198: 1638920197,
+1638920199: 1638920197,
+1638920200: 1638920197,
+1638920201: 1638920197,
+1658119692: 1658119691,
+1680669632: 1680669631,
+1680669633: 1680669631,
+1755238897: 1755238896,
+1755238898: 1755238896,
+1755238899: 1755238896,
+1755238900: 1755238896,
+1772174839: 1772174838,
+1772174840: 1772174838,
+1772174841: 1772174838,
+1772174842: 1772174838,
+1776335647: 1776335646,
+1776335648: 1776335646,
+1776335649: 1776335646,
+1776335650: 1776335646,
+1839750628: 1839750627,
+1839750629: 1839750627,
+1839750630: 1839750627,
+1839750631: 1839750627,
+1861448252: 1861448251,
+1861448253: 1861448251,
+1861448254: 1861448251,
+1861448255: 1861448251,
+1898675808: 1898675807,
+1898675809: 1898675807,
+1898675810: 1898675807,
+1898675811: 1898675807,
+1931940647: 1931940646,
+1931940648: 1931940646,
+1931940649: 1931940646,
+1931940650: 1931940646,
+1983763485: 1983763484,
+1983763486: 1983763484,
+2071654542: 2071654541,
+2071654543: 2071654541,
+2071654544: 2071654541,
+2071654545: 2071654541,
+2096149823: 2096149822,
+2096149824: 2096149822,
+2096149825: 2096149822,
+2096149826: 2096149822
+}
+type_to_fileids = {
+"BoxCollider": PackedInt64Array(16496406, 36518609, 75306751, 282496677, 336092207, 814705563, 929326032, 930778372, 1236622002, 1418919238, 1638920198, 1755238898, 1772174839, 1776335647, 1839750629, 1898675809, 1931940648, 2071654543, 2096149824),
+"GameObject": PackedInt64Array(16496405, 36518607, 75306749, 193378642, 198960301, 240286304, 268031984, 282496675, 336092205, 354440529, 597712894, 777733961, 814705561, 929326030, 930778370, 986794518, 1007143422, 1078723237, 1175575610, 1236622000, 1295605862, 1302268505, 1330999853, 1418919236, 1638920197, 1658119691, 1680669631, 1755238896, 1772174838, 1776335646, 1839750627, 1861448251, 1898675807, 1931940646, 1983763484, 2071654541, 2096149822),
+"Light": PackedInt64Array(198960303, 240286306, 268031986, 986794520, 1007143424, 1078723239, 1302268507, 1330999855, 1680669633, 1983763486),
+"LightmapSettings": PackedInt64Array(3),
+"Mesh": PackedInt64Array(220240150, 1073226525),
+"MeshCollider": PackedInt64Array(1861448253),
+"MeshFilter": PackedInt64Array(16496408, 36518611, 75306753, 282496679, 336092209, 814705565, 929326034, 930778374, 1236622004, 1418919240, 1638920200, 1755238900, 1772174841, 1776335649, 1839750631, 1861448255, 1898675811, 1931940650, 2071654545, 2096149826, 2096149826),
+"MeshRenderer": PackedInt64Array(16496407, 36518610, 75306752, 193378644, 282496678, 336092208, 814705564, 929326033, 930778373, 1236622003, 1418919239, 1638920199, 1755238899, 1772174840, 1776335648, 1839750630, 1861448254, 1898675810, 1931940649, 2071654544, 2096149825),
+"MonoBehaviour": PackedInt64Array(193378643),
+"NavMeshSettings": PackedInt64Array(4),
+"OcclusionCullingSettings": PackedInt64Array(1),
+"PrefabInstance": PackedInt64Array(266673700, 427978130, 463886228, 1758076741),
+"RectTransform": PackedInt64Array(193378645),
+"ReflectionProbe": PackedInt64Array(597712895),
+"RenderSettings": PackedInt64Array(2),
+"Transform": PackedInt64Array(16496409, 36518608, 75306750, 198960302, 240286305, 268031985, 282496676, 336092206, 354440530, 463886229, 597712896, 777733962, 814705562, 929326031, 930778371, 986794519, 1007143423, 1078723238, 1175575611, 1236622001, 1295605863, 1302268506, 1330999854, 1418919237, 1638920201, 1658119692, 1680669632, 1755238897, 1758076742, 1772174842, 1776335650, 1839750628, 1861448252, 1898675808, 1931940647, 1983763485, 2069736207, 2071654542, 2096149823)
+}
+godot_resources = {
+1: "Assets/Scenes/FirstSteps.tscn"
+}
+main_object_id = 1
+gameobject_name_to_fileid_and_children = {
+16496405: {
+1: 16496405,
+4: 16496409,
+23: 16496407,
+33: 16496408,
+65: 16496406
+},
+36518607: {
+1: 36518607,
+4: 36518608,
+23: 36518610,
+33: 36518611,
+65: 36518609
+},
+75306749: {
+1: 75306749,
+4: 75306750,
+23: 75306752,
+33: 75306753,
+65: 75306751
+},
+193378642: {
+1: 193378642,
+4: 193378645,
+23: 193378644,
+224: 193378645,
+NodePath("9541d86e2fd84c1d9990edf0852d74ab/11500000"): 193378643
+},
+198960301: {
+1: 198960301,
+4: 198960302,
+108: 198960303
+},
+240286304: {
+1: 240286304,
+4: 240286305,
+108: 240286306
+},
+268031984: {
+1: 268031984,
+4: 268031985,
+108: 268031986
+},
+282496675: {
+1: 282496675,
+4: 282496676,
+23: 282496678,
+33: 282496679,
+65: 282496677
+},
+336092205: {
+1: 336092205,
+4: 336092206,
+23: 336092208,
+33: 336092209,
+65: 336092207
+},
+354440529: {
+1: 354440529,
+4: 354440530
+},
+597712894: {
+1: 597712894,
+4: 597712896,
+215: 597712895
+},
+777733961: {
+1: 777733961,
+4: 777733962,
+"Point Light": 240286304,
+"Point Light (1)": 1330999853,
+"Point Light (2)": 1302268505,
+"Point Light (3)": 1680669631,
+"Point Light (4)": 268031984,
+"Point Light (5)": 1007143422,
+"Point Light (6)": 1078723237,
+"Point Light (7)": 1983763484,
+"Point Light (8)": 198960301,
+"Point Light (9)": 986794518,
+"Reflection Probe": 597712894,
+"Window": 5919770457658220049,
+"Window (1)": 5919770455836563136
+},
+814705561: {
+1: 814705561,
+4: 814705562,
+23: 814705564,
+33: 814705565,
+65: 814705563
+},
+929326030: {
+1: 929326030,
+4: 929326031,
+23: 929326033,
+33: 929326034,
+65: 929326032
+},
+930778370: {
+1: 930778370,
+4: 930778371,
+23: 930778373,
+33: 930778374,
+65: 930778372
+},
+986794518: {
+1: 986794518,
+4: 986794519,
+108: 986794520
+},
+1007143422: {
+1: 1007143422,
+4: 1007143423,
+108: 1007143424
+},
+1078723237: {
+1: 1078723237,
+4: 1078723238,
+108: 1078723239
+},
+1175575610: {
+1: 1175575610,
+4: 1175575611,
+"Details": 354440529,
+"Lighting": 777733961,
+"Structures": 1295605862
+},
+1236622000: {
+1: 1236622000,
+4: 1236622001,
+23: 1236622003,
+33: 1236622004,
+65: 1236622002
+},
+1295605862: {
+1: 1295605862,
+4: 1295605863,
+"Cube": 16496405,
+"Cube (1)": 1638920197,
+"Cube (10)": 1839750627,
+"Cube (11)": 1931940646,
+"Cube (12)": 282496675,
+"Cube (13)": 2096149822,
+"Cube (14)": 1755238896,
+"Cube (15)": 930778370,
+"Cube (16)": 75306749,
+"Cube (17)": 929326030,
+"Cube (18)": 1898675807,
+"Cube (2)": 1776335646,
+"Cube (3)": 1772174838,
+"Cube (4)": 1236622000,
+"Cube (5)": 36518607,
+"Cube (6)": 1418919236,
+"Cube (7)": 2071654541,
+"Cube (8)": 814705561,
+"Cube (9)": 336092205,
+"Floor": 1861448251
+},
+1302268505: {
+1: 1302268505,
+4: 1302268506,
+108: 1302268507
+},
+1330999853: {
+1: 1330999853,
+4: 1330999854,
+108: 1330999855
+},
+1418919236: {
+1: 1418919236,
+4: 1418919237,
+23: 1418919239,
+33: 1418919240,
+65: 1418919238
+},
+1638920197: {
+1: 1638920197,
+4: 1638920201,
+23: 1638920199,
+33: 1638920200,
+65: 1638920198
+},
+1658119691: {
+1: 1658119691,
+4: 1658119692,
+"AIbody": 6392651688641584128
+},
+1680669631: {
+1: 1680669631,
+4: 1680669632,
+108: 1680669633
+},
+1755238896: {
+1: 1755238896,
+4: 1755238897,
+23: 1755238899,
+33: 1755238900,
+65: 1755238898
+},
+1772174838: {
+1: 1772174838,
+4: 1772174842,
+23: 1772174840,
+33: 1772174841,
+65: 1772174839
+},
+1776335646: {
+1: 1776335646,
+4: 1776335650,
+23: 1776335648,
+33: 1776335649,
+65: 1776335647
+},
+1839750627: {
+1: 1839750627,
+4: 1839750628,
+23: 1839750630,
+33: 1839750631,
+65: 1839750629
+},
+1861448251: {
+1: 1861448251,
+4: 1861448252,
+23: 1861448254,
+33: 1861448255,
+64: 1861448253
+},
+1898675807: {
+1: 1898675807,
+4: 1898675808,
+23: 1898675810,
+33: 1898675811,
+65: 1898675809
+},
+1931940646: {
+1: 1931940646,
+4: 1931940647,
+23: 1931940649,
+33: 1931940650,
+65: 1931940648
+},
+1983763484: {
+1: 1983763484,
+4: 1983763485,
+108: 1983763486
+},
+2071654541: {
+1: 2071654541,
+4: 2071654542,
+23: 2071654544,
+33: 2071654545,
+65: 2071654543
+},
+2096149822: {
+1: 2096149822,
+4: 2096149823,
+23: 2096149825,
+33: 2096149826,
+65: 2096149824
+}
+}
+transform_fileid_to_children = {}
+gameobject_fileid_to_components = {}
+transform_fileid_to_prefab_ids = {
+0: PackedInt64Array(427978130),
+777733962: PackedInt64Array(1758076741, 463886228),
+1658119692: PackedInt64Array(266673700)
+}
+gameobject_fileid_to_rename = {
+5919770456178278740: "Window (1)",
+6392651688832746020: "AIbody",
+7946419084236604536: "LevelMinimumPrefabs"
+}
+dependency_guids = {
+"0000000000000000e000000000000000": 10202,
+"0c8ef4f5801c8b84c9d6d70018423cbc": 2100000,
+"6e1b56b99c23cb943a3977f1f6f3b78b": 5919770456178278730,
+"9541d86e2fd84c1d9990edf0852d74ab": 11500000,
+"95ac4f83d45632e46a7fd820737b0db7": 112000000,
+"97cc8b282f08e274eb7c5d08f96b3ece": 2100000,
+"c07375ff28e9b974a8b2eb23e59e3c8e": 23800000,
+"c5a3584e9b23a8e469823e69e82d7ec7": -935426421992229908,
+"dfed05359ad80a1498531fb205e77966": 6392651688832746016,
+"e572b178a89f05249b203bde1506a15c": 100100000,
+"eafc0e7c7a5914d4691d5eac404e99f9": 4890085278179872738
+}
+prefab_dependency_guids = {
+"6e1b56b99c23cb943a3977f1f6f3b78b": 100100000,
+"dfed05359ad80a1498531fb205e77966": 100100000,
+"e572b178a89f05249b203bde1506a15c": 100100000
+}
+meta_dependency_guids = {}
+autodetected_bone_map_dict = {}
+humanoid_bone_map_dict = {}
+humanoid_bone_map_crc32_dict = {}
+humanoid_skeleton_hip_position = Vector3(0, 1, 0)
+imported_animation_paths = {}
+imported_mesh_paths = {}
+imported_material_paths = {}
+
+[sub_resource type="Shader" id="Shader_niw66"]
 resource_name = "Unidot Hidden Shader"
 code = "shader_type spatial;render_mode unshaded;void vertex() {VERTEX=vec3(1.0);}"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_p3hun"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_01i2m"]
 resource_name = "Unidot Hidden Material"
 render_priority = 0
-shader = SubResource("Shader_o6etu")
+shader = SubResource("Shader_niw66")
 
 [resource]
 script = ExtResource("2_jwrta")
-global_log_count = 13929
+global_log_count = 20604
 guid_to_path = {
 "0000000000000000e000000000000000": "Library/unity default resources",
 "0000000000000000f000000000000000": "Resources/unity_builtin_extra",
@@ -12259,6 +13650,7 @@ guid_to_path = {
 "0c8ef4f5801c8b84c9d6d70018423cbc": "Assets/Materials/Skybox.mat.tres",
 "0ca6cd9d6e6c7494fb893a2374a3ac6a": "Assets/Scripts/Tutorial/DeleteText.cs",
 "103e0a6a1d404693b9fb1a5173e0e979": "Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextSelector_A.cs",
+"12ffeae46c04f5a4ca41e7fded4c4ec2": "Assets/Scenes/FirstSteps.tscn",
 "1312ae25639a4bae8e25ae223209cc50": "Assets/TextMesh Pro/Examples & Extras/Scripts/TMP_TextEventHandler.cs",
 "136d369e45445ec43873119799de06c4": "Assets/Scripts/EnemyShootBullet.cs",
 "1a45311c553e025428a0b5ed59c5d3f1": "Assets/Scripts/GotHit.cs",
@@ -12358,6 +13750,7 @@ guid_to_path = {
 "bd205d11349e35e4683354526fb82cb5": "Assets/Scripts/WakeUpAndGo.cs",
 "bee49a700bf0d3c4a9082b0474e8a5c3": "Assets/Prefabs/Enemies/ScriptlessLegBot.prefab.tscn",
 "bfcb0af1c15b3b44ba902a6f55eae22e": "Assets/Scenes/Ambush.tscn",
+"c07375ff28e9b974a8b2eb23e59e3c8e": "Assets/Scenes/SceneSpecificFiles/FirstSteps/NavMesh.res",
 "c2f0b4e31f72bc44c8d5df2f2acdd809": "Assets/Scripts/SettingsScreen.cs",
 "c3c1afeda5e545e0b19add5373896d2e": "Assets/TextMesh Pro/Examples & Extras/Scripts/TMPro_InstructionOverlay.cs",
 "c4c4640b7db901c4e96319ab0e6b49ba": "Assets/Sounds/explodes.wav",
@@ -12405,48 +13798,50 @@ path_to_meta = {
 "Assets/Animations/LegBot/LegBotAnimation.controller.tres": SubResource("Resource_c603r"),
 "Assets/Animations/LegBot/legbotWalk2.anim.tres": SubResource("Resource_anw77"),
 "Assets/Animations/LegBot/wakeUp.anim.tres": SubResource("Resource_pc6r4"),
-"Assets/Animations/door/Door.controller.tres": SubResource("Resource_ueo8t"),
-"Assets/Animations/door/open.anim.tres": SubResource("Resource_oivln"),
-"Assets/Fonts/CutiveMono-Regular SDF.res": SubResource("Resource_b6r4j"),
-"Assets/Fonts/CutiveMono/CutiveMono-Regular.ttf": SubResource("Resource_4bdhg"),
-"Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf": SubResource("Resource_8ldah"),
-"Assets/Fonts/MajorMonoDisplay-Regular SDF.res": SubResource("Resource_tlg54"),
-"Assets/Materials/DoorGlow.mat.tres": SubResource("Resource_s17wl"),
-"Assets/Materials/GlowRed.mat.tres": SubResource("Resource_64gxk"),
-"Assets/Materials/MapDefault.mat.tres": SubResource("Resource_kp5k6"),
-"Assets/Materials/ShinyBlack.mat.tres": SubResource("Resource_ta7vi"),
-"Assets/Materials/ShinyWhite.mat.tres": SubResource("Resource_3p5gi"),
-"Assets/Materials/ShynyBlue.mat.tres": SubResource("Resource_lauii"),
-"Assets/Materials/Skybox.mat.tres": SubResource("Resource_xxhbs"),
-"Assets/Materials/windows.mat.tres": SubResource("Resource_rrd76"),
-"Assets/Models/LegsBot.gltf": SubResource("Resource_kfm82"),
-"Assets/Models/bullet.gltf": SubResource("Resource_w56hc"),
-"Assets/Models/door.gltf": SubResource("Resource_avhu5"),
+"Assets/Animations/door/Door.controller.tres": SubResource("Resource_ibpho"),
+"Assets/Animations/door/open.anim.tres": SubResource("Resource_huwil"),
+"Assets/Fonts/CutiveMono-Regular SDF.res": SubResource("Resource_38bhd"),
+"Assets/Fonts/CutiveMono/CutiveMono-Regular.ttf": SubResource("Resource_ww5qp"),
+"Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf": SubResource("Resource_x4e7r"),
+"Assets/Fonts/MajorMonoDisplay-Regular SDF.res": SubResource("Resource_01q4j"),
+"Assets/Materials/DoorGlow.mat.tres": SubResource("Resource_hvsmr"),
+"Assets/Materials/GlowRed.mat.tres": SubResource("Resource_ktxh0"),
+"Assets/Materials/MapDefault.mat.tres": SubResource("Resource_jtv7m"),
+"Assets/Materials/ShinyBlack.mat.tres": SubResource("Resource_d83da"),
+"Assets/Materials/ShinyWhite.mat.tres": SubResource("Resource_1uixq"),
+"Assets/Materials/ShynyBlue.mat.tres": SubResource("Resource_iu7lg"),
+"Assets/Materials/Skybox.mat.tres": SubResource("Resource_6kiuk"),
+"Assets/Materials/windows.mat.tres": SubResource("Resource_wtrjh"),
+"Assets/Models/LegsBot.gltf": SubResource("Resource_iuh62"),
+"Assets/Models/bullet.gltf": SubResource("Resource_2fkan"),
+"Assets/Models/door.gltf": SubResource("Resource_ye7df"),
 "Assets/Models/hand.gltf": SubResource("Resource_nmyxd"),
-"Assets/Models/warning.gltf": SubResource("Resource_svjda"),
-"Assets/Physics/playerPhysics.res": SubResource("Resource_ktlsk"),
-"Assets/PostProcessProfiles/PostProcessVolume Profile.res": SubResource("Resource_ea4un"),
-"Assets/Prefabs/Enemies/LegBot.prefab.tscn": SubResource("Resource_d6tx1"),
+"Assets/Models/warning.gltf": SubResource("Resource_6pqhj"),
+"Assets/Physics/playerPhysics.res": SubResource("Resource_12pt1"),
+"Assets/PostProcessProfiles/PostProcessVolume Profile.res": SubResource("Resource_rvsrk"),
+"Assets/Prefabs/Enemies/LegBot.prefab.tscn": SubResource("Resource_egx0h"),
 "Assets/Prefabs/Enemies/ScriptlessLegBot.prefab.tscn": SubResource("Resource_te8fe"),
-"Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn": SubResource("Resource_xv0ia"),
-"Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn": SubResource("Resource_tt8te"),
-"Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn": SubResource("Resource_gvqe8"),
-"Assets/Prefabs/NecessaryLevelObjects/Door.prefab.tscn": SubResource("Resource_edc37"),
-"Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn": SubResource("Resource_268v8"),
-"Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn": SubResource("Resource_n4hye"),
-"Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn": SubResource("Resource_pseys"),
-"Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn": SubResource("Resource_w724h"),
-"Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn": SubResource("Resource_62hno"),
-"Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn": SubResource("Resource_xn8st"),
-"Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn": SubResource("Resource_fjdi6"),
-"Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn": SubResource("Resource_nphch"),
-"Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn": SubResource("Resource_m28ds"),
-"Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn": SubResource("Resource_pxghj"),
-"Assets/Prefabs/Objects/Bullet.prefab.tscn": SubResource("Resource_wdv15"),
+"Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn": SubResource("Resource_esoeh"),
+"Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn": SubResource("Resource_ejs1m"),
+"Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn": SubResource("Resource_rgm0c"),
+"Assets/Prefabs/NecessaryLevelObjects/Door.prefab.tscn": SubResource("Resource_qcs2l"),
+"Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn": SubResource("Resource_lrhsi"),
+"Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn": SubResource("Resource_v2ffi"),
+"Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn": SubResource("Resource_pkd6a"),
+"Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn": SubResource("Resource_05pix"),
+"Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn": SubResource("Resource_43tcx"),
+"Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn": SubResource("Resource_ww2dv"),
+"Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn": SubResource("Resource_8eioo"),
+"Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn": SubResource("Resource_5c3yg"),
+"Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn": SubResource("Resource_023bi"),
+"Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn": SubResource("Resource_gl5wv"),
+"Assets/Prefabs/Objects/Bullet.prefab.tscn": SubResource("Resource_41vmh"),
 "Assets/Prefabs/Objects/Window.prefab.tscn": SubResource("Resource_hep4v"),
 "Assets/Scenes/Ambush.tscn": SubResource("Resource_hmxpd"),
-"Assets/Scenes/DefaultBake.lighting": SubResource("Resource_ea3ul"),
+"Assets/Scenes/DefaultBake.lighting": SubResource("Resource_d7dld"),
+"Assets/Scenes/FirstSteps.tscn": SubResource("Resource_pcqw4"),
 "Assets/Scenes/SceneSpecificFiles/Ambush/NavMesh.res": SubResource("Resource_ur3kx"),
+"Assets/Scenes/SceneSpecificFiles/FirstSteps/NavMesh.res": SubResource("Resource_hffw5"),
 "Assets/Scripts/CameraFollow.cs": SubResource("Resource_g18j4"),
 "Assets/Scripts/CameraMovement.cs": SubResource("Resource_751r3"),
 "Assets/Scripts/ConsoleCommands.cs": SubResource("Resource_68pi8"),
@@ -12485,20 +13880,20 @@ path_to_meta = {
 "Assets/Scripts/Tutorial/TutorialWakeUp.cs": SubResource("Resource_i3jho"),
 "Assets/Scripts/WakeUpAndGo.cs": SubResource("Resource_knucx"),
 "Assets/Scripts/WinGameCollider.cs": SubResource("Resource_5uph2"),
-"Assets/Sounds/Master.mixer": SubResource("Resource_af4n5"),
-"Assets/Sounds/UI/bop.wav": SubResource("Resource_hmgl3"),
-"Assets/Sounds/beeboobeepHigh.wav": SubResource("Resource_4b2sv"),
-"Assets/Sounds/bwoop.wav": SubResource("Resource_mi2k1"),
-"Assets/Sounds/explodes.wav": SubResource("Resource_pwd2i"),
+"Assets/Sounds/Master.mixer": SubResource("Resource_g2sj0"),
+"Assets/Sounds/UI/bop.wav": SubResource("Resource_plg1d"),
+"Assets/Sounds/beeboobeepHigh.wav": SubResource("Resource_iho0u"),
+"Assets/Sounds/bwoop.wav": SubResource("Resource_eoo18"),
+"Assets/Sounds/explodes.wav": SubResource("Resource_c3arh"),
 "Assets/Sounds/flick.mp3": SubResource("Resource_el6ng"),
-"Assets/Sounds/gameOver.wav": SubResource("Resource_wcmk5"),
-"Assets/Sounds/grab.wav": SubResource("Resource_islxt"),
-"Assets/Sounds/shoot.wav": SubResource("Resource_u8hqk"),
+"Assets/Sounds/gameOver.wav": SubResource("Resource_xi16n"),
+"Assets/Sounds/grab.wav": SubResource("Resource_f8yxn"),
+"Assets/Sounds/shoot.wav": SubResource("Resource_l7lwb"),
 "Assets/Sounds/steps.mp3": SubResource("Resource_j4be2"),
-"Assets/Sounds/timeContinue.wav": SubResource("Resource_2uudf"),
-"Assets/Sounds/timeStop.wav": SubResource("Resource_msrvi"),
-"Assets/Sprites/Symbols/crosshair.png": SubResource("Resource_mr6ht"),
-"Assets/Sprites/Symbols/halfCircle.png": SubResource("Resource_voef6"),
+"Assets/Sounds/timeContinue.wav": SubResource("Resource_0y0lv"),
+"Assets/Sounds/timeStop.wav": SubResource("Resource_2ygvf"),
+"Assets/Sprites/Symbols/crosshair.png": SubResource("Resource_70ukr"),
+"Assets/Sprites/Symbols/halfCircle.png": SubResource("Resource_t7ycu"),
 "Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab.tscn": SubResource("Resource_ql6cm"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs": SubResource("Resource_mxkfw"),
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs": SubResource("Resource_h1g2t"),
@@ -12541,10 +13936,10 @@ path_to_meta = {
 "Assets/TextMesh Pro/Shaders/TMP_SDF.shader": SubResource("Resource_mfxiu"),
 "Assets/TextMesh Pro/Shaders/TMPro.cginc": SubResource("Resource_b0tyd"),
 "Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc": SubResource("Resource_d3x87"),
-"Library/unity default resources": SubResource("Resource_swihq"),
-"Resources/unity_builtin_extra": SubResource("Resource_wcc8v")
+"Library/unity default resources": SubResource("Resource_gav5a"),
+"Resources/unity_builtin_extra": SubResource("Resource_k6kj1")
 }
-truncated_shader_reference = SubResource("Shader_o6etu")
-truncated_material_reference = SubResource("ShaderMaterial_p3hun")
-null_material_reference = SubResource("StandardMaterial3D_aufds")
-default_material_reference = SubResource("StandardMaterial3D_bopws")
+truncated_shader_reference = SubResource("Shader_niw66")
+truncated_material_reference = SubResource("ShaderMaterial_01i2m")
+null_material_reference = SubResource("StandardMaterial3D_pa45v")
+default_material_reference = SubResource("StandardMaterial3D_5dyli")

@@ -1,45 +1,45 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=8 format=3 uid="uid://br17l5fmtp6n2"]
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_niqdn"]
-animation = &"open"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yjw6c"]
+animation = &"closed"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a8ssn"]
-animation = &"open"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m2a5l"]
+animation = &"closed"
 
-[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_vt6eu"]
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_c73y2"]
 metadata/scale = 0.0
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_molix"]
-nodes/Animation/node = SubResource("AnimationNodeAnimation_a8ssn")
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qql6i"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_m2a5l")
 nodes/Animation/position = Vector2(200, 200)
-nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_vt6eu")
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_c73y2")
 nodes/TimeScale/position = Vector2(500, 0)
 nodes/output/position = Vector2(700, 0)
-node_connections = [&"output", 0, &"TimeScale", &"TimeScale", 0, &"Animation"]
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7sjnx"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_adc00"]
 advance_mode = 2
 advance_expression = "Open"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f47oi"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ugah"]
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_sok0q"]
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_exvyv"]
 resource_name = "Door"
 states/End/position = Vector2(300, 100)
-states/Open/node = SubResource("AnimationNodeAnimation_niqdn")
+states/Open/node = SubResource("AnimationNodeAnimation_yjw6c")
 states/Open/position = Vector2(570, 240)
 states/Start/position = Vector2(300, 100)
-states/closed/node = SubResource("AnimationNodeBlendTree_molix")
+states/closed/node = SubResource("AnimationNodeBlendTree_qql6i")
 states/closed/position = Vector2(570, 140)
-transitions = ["closed", "Open", SubResource("AnimationNodeStateMachineTransition_7sjnx"), "Start", "closed", SubResource("AnimationNodeStateMachineTransition_f47oi")]
+transitions = ["closed", "Open", SubResource("AnimationNodeStateMachineTransition_adc00"), "Start", "closed", SubResource("AnimationNodeStateMachineTransition_5ugah")]
 
 [resource]
-"nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_sok0q")
+"nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_exvyv")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)
 node_connections = [&"output", 0, &"Base Layer"]
 metadata/Open = false
 metadata/guid_fileid_to_animation_name = {
-"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "open"
+"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "closed"
 }

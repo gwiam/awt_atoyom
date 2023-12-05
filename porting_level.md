@@ -18,4 +18,5 @@
 # Personal notes
 
     - I do not yet undestand how the unity scene is lit, even with lambert the godot scene looks off
+    - I don't know about the meshnav yet
 

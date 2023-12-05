@@ -1,6 +1,7 @@
 # Non-issues:
+
     - models are ported correctly
-    - again only one animation was proted correctly but that's better than nothing
+    - animations ported correctly
     - animation controller basically intact
     - prefab actually survived
 
@@ -8,9 +9,8 @@
     
     - all the controls are not working
     - the capsule colider is wrong, making you clip into the ground
-    - animations have a similar issue as legbot's
     - all the skripts are of cause not there
-
+    - audio sources couldn't be imported
 
 # Solutions:
 
@@ -20,5 +20,6 @@
 # Personal notes:
 
     - seems like the radius of the colider was imported correctly but not the height?
-    - the material looks better than on the legbot, turns out they're both supposed to use the "shiny white" material
     - it ported in 2 animation players, idk why...
+    - lol the animations got imported correctly now
+    - maybe removing all the stuff that wont work anways improves the import quality?

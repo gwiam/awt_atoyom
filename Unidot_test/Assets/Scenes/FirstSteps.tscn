@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://bs05d347np31o"]
+[gd_scene load_steps=32 format=3 uid="uid://bs05d347np31o"]
 
 [ext_resource type="Material" uid="uid://b5niq23wfj2fn" path="res://Assets/Materials/Skybox.mat.tres" id="1_j421f"]
 [ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="2_226p5"]
+[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="3_0k4gq"]
 [ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_mxkdi"]
 [ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_he40p"]
 [ext_resource type="PackedScene" uid="uid://f3fk0neb3q2v" path="res://Assets/Prefabs/Enemies/LegBot.prefab.tscn" id="5_neuw4"]
@@ -80,6 +81,11 @@ navigation_mesh = SubResource("NavigationMesh_kavxj")
 visible = false
 
 [node name="LevelMinimumPrefabs" parent="." instance=ExtResource("2_226p5")]
+
+[node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
+libraries = {
+"": ExtResource("3_0k4gq")
+}
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -1341,6 +1347,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
 [node name="AIbody" parent="Enemies" instance=ExtResource("5_neuw4")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 91.634, 48.3934, 13.5566)
 
+[node name="Body" parent="Enemies/AIbody/LegsBot/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, -0.172245, -0.985054, 0, 0.985054, -0.172245, 0, -0.000159498, -0.00277817)
+
 [node name="Title" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.36)
 
@@ -1486,6 +1495,15 @@ metadata/unidot_keys = {
 "m_wordWrappingRatios": 0.4,
 "parentLinkedComponent": [null, 0, null, null]
 }
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999121, 0, -0.0419281, 0, 1, 0, 0.0419281, 0, -0.999121, 0, 1.65948, 3.48692)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0623, 4.15438)
+light_energy = 8.596
+light_specular = 0.0
+omni_range = 118.88
 
 [editable path="LevelMinimumPrefabs"]
 [editable path="LevelMinimumPrefabs/Canvas"]

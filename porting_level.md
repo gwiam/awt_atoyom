@@ -2,12 +2,12 @@
 
     - level geometry was translated correctly
     - the door was translated correctly
+    - enemies are present
 
 # Issue:
 
     - window prefab completely broken
     - lighting completely broken
-    - all enemies are missing
     - of cause all the game logic is missing
 
 # Solution:

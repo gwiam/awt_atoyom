@@ -1,14 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://f3fk0neb3q2v"]
+[gd_scene load_steps=11 format=3 uid="uid://clnjtjssvuxe4"]
 
-[ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_x0i2j"]
-[ext_resource type="Material" uid="uid://nh1hequkio64" path="res://Assets/Models/LegsBot.DefaultMaterial 1.material" id="2_80oak"]
-[ext_resource type="Material" uid="uid://dmh6n6ualwuuj" path="res://Assets/Materials/ShinyBlack.mat.tres" id="3_7mgji"]
-[ext_resource type="ArrayMesh" uid="uid://dqpueed2ug835" path="res://Assets/Models/LegsBot.Gun.mesh" id="4_t5etq"]
-[ext_resource type="PackedScene" uid="uid://bsuf6rr6u55ni" path="res://Assets/Models/warning.gltf" id="5_xolqm"]
-[ext_resource type="Material" uid="uid://c1plpexp5jb6n" path="res://Assets/Materials/GlowRed.mat.tres" id="6_va4aj"]
-[ext_resource type="AnimationLibrary" uid="uid://cy8uo4btnym0v" path="res://Assets/Animations/LegBot/LegBotAnimation.library.tres" id="7_5q37g"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://d1vcgysdwxlti" path="res://Assets/Animations/LegBot/LegBotAnimation.controller.tres" id="8_l5nrh"]
-[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="9_hr4b4"]
+[ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_goes6"]
+[ext_resource type="Material" uid="uid://nh1hequkio64" path="res://Assets/Models/LegsBot.DefaultMaterial 1.material" id="2_os8jo"]
+[ext_resource type="Material" uid="uid://dmh6n6ualwuuj" path="res://Assets/Materials/ShinyBlack.mat.tres" id="3_qybnc"]
+[ext_resource type="ArrayMesh" uid="uid://dqpueed2ug835" path="res://Assets/Models/LegsBot.Gun.mesh" id="4_wya23"]
+[ext_resource type="PackedScene" uid="uid://bsuf6rr6u55ni" path="res://Assets/Models/warning.gltf" id="5_trwk3"]
+[ext_resource type="Material" uid="uid://c1plpexp5jb6n" path="res://Assets/Materials/GlowRed.mat.tres" id="6_8irf6"]
+[ext_resource type="AnimationLibrary" uid="uid://cy8uo4btnym0v" path="res://Assets/Animations/LegBot/LegBotAnimation.library.tres" id="7_5gjma"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://d1vcgysdwxlti" path="res://Assets/Animations/LegBot/LegBotAnimation.controller.tres" id="8_pkxmd"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="9_wrmp5"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c4tp2"]
 radius = 0.0
@@ -642,21 +642,54 @@ metadata/unidot_keys = {
 }
 }
 
-[node name="LegsBot" parent="." instance=ExtResource("1_x0i2j")]
+[node name="LegsBot" parent="." instance=ExtResource("1_goes6")]
 transform = Transform3D(0.198146, 0, 0, 0, 0.198146, 0, 0, 0, 0.198146, 0, 0.379, 0)
 
 [node name="Gun" parent="LegsBot" index="0"]
 visible = false
-surface_material_override/0 = ExtResource("2_80oak")
+surface_material_override/0 = ExtResource("2_os8jo")
+
+[node name="Skeleton3D" parent="LegsBot/Armature" index="0"]
+bones/0/position = Vector3(0, -0.000159498, -0.0209938)
+bones/0/rotation = Quaternion(0.707107, 0, 0, 0.707107)
+bones/1/position = Vector3(0.00455525, 0.0029719, -0.00309936)
+bones/1/rotation = Quaternion(0.13601, -0.693903, -0.13601, 0.693903)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(6.67921e-10, 0.011241, 1.00349e-10)
+bones/2/rotation = Quaternion(1.46651e-07, -6.30356e-09, -0.966862, -0.255301)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(1.08121e-09, 0.00958766, -1.09603e-10)
+bones/3/rotation = Quaternion(-1.46406e-07, -4.77281e-09, 0.747117, 0.664693)
+bones/5/position = Vector3(-0.00455525, 0.0029719, -0.00309936)
+bones/5/rotation = Quaternion(0.13601, 0.693903, 0.136011, 0.693903)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(-7.4443e-10, 0.011241, 3.37186e-10)
+bones/6/rotation = Quaternion(1.46651e-07, 6.30353e-09, 0.966862, -0.255301)
+bones/7/position = Vector3(-1.85963e-09, 0.00958766, -5.77104e-10)
+bones/7/rotation = Quaternion(-1.46406e-07, 4.77282e-09, -0.747117, 0.664693)
+bones/9/position = Vector3(0.00455525, -0.0176868, -0.00484617)
+bones/9/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/11/position = Vector3(0.00455525, 3.82802e-05, -0.0197522)
+bones/11/rotation = Quaternion(0, -0.707107, 0, 0.707107)
+bones/12/position = Vector3(-1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/12/rotation = Quaternion(-1.91635e-07, -1.22355e-10, 0.98829, 0.152585)
+bones/12/scale = Vector3(0.999999, 1, 1)
+bones/14/position = Vector3(-0.00455525, -0.0176868, -0.00484617)
+bones/14/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+bones/16/position = Vector3(-0.00455525, 3.82802e-05, -0.0197522)
+bones/16/rotation = Quaternion(0, 0.707107, 0, 0.707107)
+bones/17/position = Vector3(1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/17/rotation = Quaternion(1.91635e-07, -1.22355e-10, 0.98829, -0.152585)
+bones/17/scale = Vector3(0.999999, 1, 1)
 
 [node name="legs" parent="LegsBot/Armature/Skeleton3D" index="0"]
-surface_material_override/0 = ExtResource("3_7mgji")
+surface_material_override/0 = ExtResource("3_qybnc")
 
 [node name="body" parent="LegsBot/Armature/Skeleton3D" index="1"]
-surface_material_override/0 = ExtResource("3_7mgji")
+surface_material_override/0 = ExtResource("3_qybnc")
 
 [node name="Body" type="BoneAttachment3D" parent="LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, -0.172245, -0.985054, 0, 0.985054, -0.172245, 0, -0.000159498, -0.00277817)
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.0209938)
 bone_name = "Body"
 bone_idx = 0
 
@@ -690,8 +723,8 @@ transform = Transform3D(7.653, -6.36954e-17, -2.78422e-24, 0, -3.34523e-07, 7.65
 
 [node name="MeshRenderer" type="MeshInstance3D" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot/Gun"]
 editor_description = "[MeshRenderer 23::dfed05359ad80a1498531fb205e77966:9132668902589563250]"
-mesh = ExtResource("4_t5etq")
-surface_material_override/0 = ExtResource("3_7mgji")
+mesh = ExtResource("4_wya23")
+surface_material_override/0 = ExtResource("3_qybnc")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -738,30 +771,30 @@ metadata/unidot_keys = {
 [node name="ShootOrigin" type="Node3D" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0.452)
 
-[node name="warning" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot" instance=ExtResource("5_xolqm")]
+[node name="warning" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot" instance=ExtResource("5_trwk3")]
 transform = Transform3D(0, -1.68587e-07, -1, 0, 1, -1.68587e-07, 1, 0, 0, 0, 0.637, 0)
 
 [node name="Cube" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot/warning" index="0"]
 visible = false
-surface_material_override/0 = ExtResource("6_va4aj")
+surface_material_override/0 = ExtResource("6_8irf6")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="LegsBot"]
 libraries = {
-"": ExtResource("7_5q37g")
+"": ExtResource("7_5gjma")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="LegsBot"]
 deterministic = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
-"": ExtResource("7_5q37g")
+"": ExtResource("7_5gjma")
 }
-tree_root = ExtResource("8_l5nrh")
+tree_root = ExtResource("8_pkxmd")
 anim_player = NodePath("../AnimationPlayer2")
 "parameters/Base Layer/Armature_Walking/TimeScale/scale" = 2.5
 "parameters/Base Layer/Sleep/TimeScale/scale" = 0.0
 "parameters/Base Layer/WakeUp/TimeScale/scale" = 2.0
-script = ExtResource("9_hr4b4")
+script = ExtResource("9_wrmp5")
 metadata/Walking = false
 metadata/guid_fileid_to_animation_name = {
 "3a7560ae25f67d54bb86276f0a94398a:7400000": "Armature_Idle",

@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dww81s5nnmsyh"]
+[gd_scene load_steps=8 format=3 uid="uid://d0wt26xodhu8a"]
 
-[ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_xxma3"]
-[ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_5nx5q"]
-[ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_ybxmc"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_3qqta"]
-[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_qywq4"]
+[ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_i5hu8"]
+[ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_hvu37"]
+[ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_m750x"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_mxk43"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_rw3om"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_unrh0"]
 radius = 0.4
@@ -407,7 +407,7 @@ metadata/unidot_keys = {
 [node name="ObjectHolder" type="Node3D" parent="Camera/HUDcamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203, -0.349, 0.867)
 
-[node name="hand" parent="Camera/HUDcamera" instance=ExtResource("1_xxma3")]
+[node name="hand" parent="Camera/HUDcamera" instance=ExtResource("1_i5hu8")]
 transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194, -0.35, -1.27, -1.02)
 
 [node name="Armature" parent="Camera/HUDcamera/hand" index="0"]
@@ -439,11 +439,11 @@ bones/11/position = Vector3(4.47035e-10, 0.00117238, 7.07805e-10)
 bones/11/rotation = Quaternion(-0.0681881, 0.0289776, -0.0531556, 0.995834)
 
 [node name="Mesh 1" parent="Camera/HUDcamera/hand/Armature/Skeleton3D" index="0"]
-surface_material_override/0 = ExtResource("2_5nx5q")
+surface_material_override/0 = ExtResource("2_hvu37")
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Camera/HUDcamera/hand"]
 libraries = {
-"": ExtResource("3_ybxmc")
+"": ExtResource("3_m750x")
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="Camera/HUDcamera/hand"]
@@ -451,14 +451,14 @@ active = false
 deterministic = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
-"": ExtResource("3_ybxmc")
+"": ExtResource("3_m750x")
 }
-tree_root = ExtResource("4_3qqta")
+tree_root = ExtResource("4_mxk43")
 anim_player = NodePath("../AnimationPlayer2")
 "parameters/Base Layer/Flick/TimeScale/scale" = 0.3
 "parameters/Base Layer/Hold/TimeScale/scale" = 0.0
 "parameters/Base Layer/Indle/TimeScale/scale" = 0.35
-script = ExtResource("5_qywq4")
+script = ExtResource("5_rw3om")
 
 [node name="MonoBehaviour" type="Node" parent="Camera/HUDcamera/hand"]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6174495312195083454]"
@@ -480,7 +480,7 @@ transform = Transform3D(0.71, 0, 0, 0, 1.04, 0, 0, 0, 0.71, 0, 0, 0)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Body"]
 editor_description = "[MeshRenderer 23::f1e7643930efb1a47b87257cf0420617:4847663143894855737]"
 mesh = SubResource("CapsuleMesh_lca8y")
-surface_material_override/0 = ExtResource("2_5nx5q")
+surface_material_override/0 = ExtResource("2_hvu37")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,

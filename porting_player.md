@@ -16,6 +16,7 @@
 
     - for capsule colider: adjust height to the values in unity
     - delete "Camera/HUDcamera/hand/" from the path to fix animations
+    - Godot has special CharacterBody3D type that makes player physics easier
 
 # Personal notes:
 

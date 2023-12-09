@@ -1,24 +1,40 @@
-[gd_scene load_steps=32 format=3 uid="uid://bs05d347np31o"]
+[gd_scene load_steps=35 format=3 uid="uid://bs05d347np31o"]
 
-[ext_resource type="Material" uid="uid://b5niq23wfj2fn" path="res://Assets/Materials/Skybox.mat.tres" id="1_j421f"]
 [ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="2_226p5"]
 [ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="3_0k4gq"]
 [ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_mxkdi"]
 [ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_he40p"]
 [ext_resource type="PackedScene" uid="uid://f3fk0neb3q2v" path="res://Assets/Prefabs/Enemies/LegBot.prefab.tscn" id="5_neuw4"]
+[ext_resource type="PackedScene" uid="uid://ccu61p2v8nkn" path="res://Assets/Prefabs/Objects/Window_fixed.prefab.tscn" id="5_uwyp6"]
+
+[sub_resource type="Curve" id="Curve_wab10"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8cu8p"]
+curve = SubResource("Curve_wab10")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mdsvq"]
+sky_top_color = Color(0.419608, 0.478431, 0.627451, 1)
+sky_cover = SubResource("CurveTexture_8cu8p")
 
 [sub_resource type="Sky" id="Sky_8obg7"]
-sky_material = ExtResource("1_j421f")
+sky_material = SubResource("ProceduralSkyMaterial_mdsvq")
 
 [sub_resource type="Environment" id="Environment_6ia7t"]
 background_mode = 2
 sky = SubResource("Sky_8obg7")
+ssao_enabled = true
+ssao_power = 2.19613
+sdfgi_enabled = true
+glow_enabled = true
 fog_light_color = Color(0.5, 0.5, 0.5, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_kavxj"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hdoqn"]
 resource_name = "Plane"
+lightmap_size_hint = Vector2i(52, 52)
 size = Vector2(10, 10)
 subdivide_width = 10
 subdivide_depth = 10
@@ -73,12 +89,11 @@ resource_name = "Cube"
 environment = SubResource("Environment_6ia7t")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+quality = 2
+interior = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_kavxj")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-visible = false
 
 [node name="LevelMinimumPrefabs" parent="." instance=ExtResource("2_226p5")]
 
@@ -1197,12 +1212,15 @@ shape = SubResource("BoxShape3D_m8ujn")
 
 [node name="Window" parent="Map/Lighting" instance=ExtResource("4_he40p")]
 transform = Transform3D(-3.3532e-08, 0.767123, 0, -0.767123, -3.3532e-08, 0, 0, 0, 0.767123, -10.75, 3.81016, 11.12)
+visible = false
 
 [node name="WindowMesh" parent="Map/Lighting/Window" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
+visible = false
 
 [node name="Window (1)" parent="Map/Lighting" instance=ExtResource("4_he40p")]
 transform = Transform3D(3.3532e-08, -0.767123, -6.7064e-08, -0.767123, -3.3532e-08, 0, -2.93146e-15, 6.7064e-08, -0.767123, 10.75, 3.81016, 11.12)
+visible = false
 
 [node name="WindowMesh" parent="Map/Lighting/Window (1)" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
@@ -1340,6 +1358,12 @@ metadata/unidot_keys = {
 "m_UseOcclusionCulling": 1,
 "serializedVersion": 2
 }
+
+[node name="Window2" parent="Map/Lighting" instance=ExtResource("5_uwyp6")]
+transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, 10.7987, 4.1159, 10.6084)
+
+[node name="Window3" parent="Map/Lighting" instance=ExtResource("5_uwyp6")]
+transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, -10.7187, 4.1159, 10.6084)
 
 [node name="Enemies" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
@@ -1497,10 +1521,11 @@ metadata/unidot_keys = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999121, 0, -0.0419281, 0, 1, 0, 0.0419281, 0, -0.999121, 0, 1.65948, 3.48692)
+transform = Transform3D(0.100605, 0, 0.994927, 0, 1, 0, -0.994927, 0, 0.100605, 4.65181, 3.11482, 0.740932)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0623, 4.15438)
+visible = false
 light_energy = 8.596
 light_specular = 0.0
 omni_range = 118.88

@@ -10,10 +10,11 @@
     - the gun pivot is controlled by the "EnemyShootBullet" script to always look at the player
     - enemy behavior is completely missing (as expected)
     - audio sources couldn't be imported
+    - particles couldn't be imported
 
 # Solutions:
 
-    - uhhh...
+    - rebuild the particle effect
 
 # Personal notes:
     

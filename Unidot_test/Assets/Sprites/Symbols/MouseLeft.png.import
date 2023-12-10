@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://26khwmfvbvyv"
-path.s3tc="res://.godot/imported/halfCircle.png-a5f0b20db0c7a67c757a25c55111881b.s3tc.ctex"
+uid="uid://breqviepoe2tq"
+path.s3tc="res://.godot/imported/MouseLeft.png-7506e9456bf7a7a02266fda6445d9c53.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Sprites/Symbols/halfCircle.png"
-dest_files=["res://.godot/imported/halfCircle.png-a5f0b20db0c7a67c757a25c55111881b.s3tc.ctex"]
+source_file="res://Assets/Sprites/Symbols/MouseLeft.png"
+dest_files=["res://.godot/imported/MouseLeft.png-7506e9456bf7a7a02266fda6445d9c53.s3tc.ctex"]
 
 [params]
 

@@ -1530,6 +1530,10 @@ light_energy = 8.596
 light_specular = 0.0
 omni_range = 118.88
 
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5.16648, 17.9594)
+text = "FIRST STEPS"
+
 [editable path="LevelMinimumPrefabs"]
 [editable path="LevelMinimumPrefabs/Canvas"]
 [editable path="LevelMinimumPrefabs/GameOverCanvas"]

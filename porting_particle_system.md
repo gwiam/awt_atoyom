@@ -6,7 +6,7 @@
 
     - imported particle node seems completely broken
     - there are pro builder scripts in the Unity version that reshape the window from a cube into a plane, this is probably done to dynamically scale the windows size together with the particle emitter
-    - seems like Godot has no particle shaders at all
+    - seems like Godot has no particle shader materials at all
 
 # Solutions:
 

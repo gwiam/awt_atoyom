@@ -1,6 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://clnjtjssvuxe4"]
+[gd_scene load_steps=13 format=3 uid="uid://clnjtjssvuxe4"]
 
+[ext_resource type="Script" path="res://Assets/Prefabs/Enemies/SetDelayToWakeUp.gd" id="1_6wuou"]
 [ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_goes6"]
+[ext_resource type="Script" path="res://Assets/Models/WakeUpAndGo.gd" id="2_l2lnm"]
 [ext_resource type="Material" uid="uid://nh1hequkio64" path="res://Assets/Models/LegsBot.DefaultMaterial 1.material" id="2_os8jo"]
 [ext_resource type="Material" uid="uid://dmh6n6ualwuuj" path="res://Assets/Materials/ShinyBlack.mat.tres" id="3_qybnc"]
 [ext_resource type="ArrayMesh" uid="uid://dqpueed2ug835" path="res://Assets/Models/LegsBot.Gun.mesh" id="4_wya23"]
@@ -15,6 +17,7 @@ radius = 0.0
 height = 0.0
 
 [node name="LegBot" type="Node3D"]
+script = ExtResource("1_6wuou")
 
 [node name="MonoBehaviour" type="Node" parent="."]
 editor_description = "[MonoBehaviour 114::dfed05359ad80a1498531fb205e77966:3097231436176187216]"
@@ -644,6 +647,7 @@ metadata/unidot_keys = {
 
 [node name="LegsBot" parent="." instance=ExtResource("1_goes6")]
 transform = Transform3D(0.198146, 0, 0, 0, 0.198146, 0, 0, 0, 0.198146, 0, 0.379, 0)
+script = ExtResource("2_l2lnm")
 
 [node name="Gun" parent="LegsBot" index="0"]
 visible = false
@@ -784,7 +788,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="LegsBot"]
-deterministic = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
 "": ExtResource("7_5gjma")

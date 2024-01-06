@@ -1,11 +1,10 @@
-[gd_scene load_steps=44 format=3 uid="uid://c2mp1bhxtyb7n"]
+[gd_scene load_steps=43 format=3 uid="uid://c2mp1bhxtyb7n"]
 
 [ext_resource type="Material" uid="uid://b5niq23wfj2fn" path="res://Assets/Materials/Skybox.mat.tres" id="1_ypm0d"]
 [ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="2_cbukb"]
 [ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_dy8iy"]
+[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="3_hbk6s"]
 [ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_gi4vw"]
-[ext_resource type="PackedScene" uid="uid://dww81s5nnmsyh" path="res://Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn" id="5_t3oc3"]
-[ext_resource type="PackedScene" uid="uid://dfv3qes52am70" path="res://legs_bot.tscn" id="6_dn7up"]
 
 [sub_resource type="Sky" id="Sky_2ak0n"]
 sky_material = ExtResource("1_ypm0d")
@@ -108,6 +107,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.35044, 0.689541)
 visible = false
 
 [node name="LevelMinimumPrefabs" parent="." instance=ExtResource("2_cbukb")]
+
+[node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
+libraries = {
+"": ExtResource("3_hbk6s")
+}
 
 [node name="Map" type="Node3D" parent="."]
 
@@ -2031,9 +2035,6 @@ omni_range = 10.0
 
 [node name="Enemies" type="Node3D" parent="."]
 
-[node name="LegsBot" parent="Enemies" instance=ExtResource("6_dn7up")]
-transform = Transform3D(0.198, 0, 0, 0, 0.198, 0, 0, 0, 0.198, 1.41015, 1.50634, 3.39882)
-
 [node name="Title" type="Node3D" parent="."]
 transform = Transform3D(0.74367, 0, 0, 0, 0.74367, 0, 0, 0, 0.74367, 0, 0, 8.25)
 
@@ -2182,16 +2183,17 @@ metadata/unidot_keys = {
 }
 
 [node name="Window" parent="." instance=ExtResource("4_gi4vw")]
-transform = Transform3D(1.46573e-15, -3.3532e-08, -0.767123, -0.767123, -3.3532e-08, 0, -3.3532e-08, 0.767123, -3.3532e-08, -7.08501, 0, -2.72225)
+transform = Transform3D(1.46573e-15, -3.3532e-08, -0.767123, -0.767123, -3.3532e-08, 0, -3.3532e-08, 0.767123, -3.3532e-08, -8.02568, 0, -2.72225)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0623, 4.15438)
+visible = false
 light_energy = 8.596
 light_specular = 0.0
 omni_range = 118.88
 
-[node name="player" parent="." instance=ExtResource("5_t3oc3")]
-transform = Transform3D(-0.0422768, 0, 0.999106, 0, 1, 0, -0.999106, 0, -0.0422768, -0.924686, 1.31542, 5.05978)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.74527, 4.77633)
 
 [editable path="LevelMinimumPrefabs"]
 [editable path="LevelMinimumPrefabs/Canvas"]

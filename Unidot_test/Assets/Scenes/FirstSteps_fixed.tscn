@@ -1,11 +1,13 @@
-[gd_scene load_steps=35 format=3 uid="uid://bs05d347np31o"]
+[gd_scene load_steps=37 format=3 uid="uid://bljecan6cdid5"]
 
-[ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="2_226p5"]
-[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="3_0k4gq"]
-[ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_mxkdi"]
-[ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_he40p"]
-[ext_resource type="PackedScene" uid="uid://f3fk0neb3q2v" path="res://Assets/Prefabs/Enemies/LegBot.prefab.tscn" id="5_neuw4"]
-[ext_resource type="PackedScene" uid="uid://ccu61p2v8nkn" path="res://Assets/Prefabs/Objects/Window_fixed.prefab.tscn" id="5_uwyp6"]
+[ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="1_axfpk"]
+[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="2_xvbb7"]
+[ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_5v2wm"]
+[ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_tyfy5"]
+[ext_resource type="PackedScene" uid="uid://ccu61p2v8nkn" path="res://Assets/Prefabs/Objects/Window_fixed.prefab.tscn" id="5_1bmy0"]
+[ext_resource type="PackedScene" uid="uid://f3fk0neb3q2v" path="res://Assets/Prefabs/Enemies/LegBot.prefab.tscn" id="6_7fvu2"]
+[ext_resource type="Script" path="res://Assets/Prefabs/Enemies/SetDelayToWakeUp.gd" id="7_y036q"]
+[ext_resource type="Script" path="res://Assets/Models/WakeUpAndGo.gd" id="8_8j0t7"]
 
 [sub_resource type="Curve" id="Curve_wab10"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -95,11 +97,11 @@ interior = true
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_kavxj")
 
-[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("2_226p5")]
+[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("1_axfpk")]
 
 [node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
 libraries = {
-"": ExtResource("3_0k4gq")
+"": ExtResource("2_xvbb7")
 }
 
 [node name="Map" type="Node3D" parent="."]
@@ -112,7 +114,7 @@ transform = Transform3D(2.68825, 0, 0, 0, 1, 0, 0, 0, 3.37085, 0, 0, 10.38)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Floor"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1861448254]"
 mesh = SubResource("PlaneMesh_hdoqn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -167,7 +169,7 @@ transform = Transform3D(23.29, 0, 0, 0, 15.188, 0, 0, 0, 1, 0, 7.42, -0.57)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:16496407]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -222,7 +224,7 @@ transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-0
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (1)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1638920199]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -277,7 +279,7 @@ transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-0
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (2)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1776335648]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -332,7 +334,7 @@ transform = Transform3D(23.29, 0, 0, 0, 18.4808, 0, 0, 0, 1, 0, 7.42, 22.7)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (3)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1772174840]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -387,7 +389,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (4)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1236622003]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -442,7 +444,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (5)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:36518610]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -497,7 +499,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (6)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1418919239]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -552,7 +554,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (7)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2071654544]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -607,7 +609,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (8)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:814705564]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -662,7 +664,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (9)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:336092208]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -717,7 +719,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (10)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1839750630]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -772,7 +774,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (11)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1931940649]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -827,7 +829,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (12)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:282496678]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -882,7 +884,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (13)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2096149825]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -937,7 +939,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (14)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1755238899]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -992,7 +994,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (15)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:930778373]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -1047,7 +1049,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (16)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:75306752]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -1102,7 +1104,7 @@ transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (17)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:929326033]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -1157,7 +1159,7 @@ transform = Transform3D(24.7281, 0, 0, 0, 1, 0, 0, 0, 25.8101, 0, 15.08, 10.41)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (18)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1898675810]"
 mesh = SubResource("BoxMesh_qgudn")
-surface_material_override/0 = ExtResource("3_mxkdi")
+surface_material_override/0 = ExtResource("3_5v2wm")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -1210,7 +1212,7 @@ shape = SubResource("BoxShape3D_m8ujn")
 
 [node name="Lighting" type="Node3D" parent="Map"]
 
-[node name="Window" parent="Map/Lighting" instance=ExtResource("4_he40p")]
+[node name="Window" parent="Map/Lighting" instance=ExtResource("4_tyfy5")]
 transform = Transform3D(-3.3532e-08, 0.767123, 0, -0.767123, -3.3532e-08, 0, 0, 0, 0.767123, -10.75, 3.81016, 11.12)
 visible = false
 
@@ -1218,7 +1220,7 @@ visible = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
 visible = false
 
-[node name="Window (1)" parent="Map/Lighting" instance=ExtResource("4_he40p")]
+[node name="Window (1)" parent="Map/Lighting" instance=ExtResource("4_tyfy5")]
 transform = Transform3D(3.3532e-08, -0.767123, -6.7064e-08, -0.767123, -3.3532e-08, 0, -2.93146e-15, 6.7064e-08, -0.767123, 10.75, 3.81016, 11.12)
 visible = false
 
@@ -1359,20 +1361,60 @@ metadata/unidot_keys = {
 "serializedVersion": 2
 }
 
-[node name="Window2" parent="Map/Lighting" instance=ExtResource("5_uwyp6")]
+[node name="Window2" parent="Map/Lighting" instance=ExtResource("5_1bmy0")]
 transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, 10.7987, 4.1159, 10.6084)
 
-[node name="Window3" parent="Map/Lighting" instance=ExtResource("5_uwyp6")]
+[node name="Window3" parent="Map/Lighting" instance=ExtResource("5_1bmy0")]
 transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, -10.7187, 4.1159, 10.6084)
 
 [node name="Enemies" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
 
-[node name="AIbody" parent="Enemies" instance=ExtResource("5_neuw4")]
+[node name="AIbody" parent="Enemies" instance=ExtResource("6_7fvu2")]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 91.634, 48.3934, 13.5566)
+script = ExtResource("7_y036q")
+
+[node name="LegsBot" parent="Enemies/AIbody" index="6"]
+script = ExtResource("8_8j0t7")
+
+[node name="Skeleton3D" parent="Enemies/AIbody/LegsBot/Armature" index="0"]
+bones/0/position = Vector3(0, -0.000159498, -0.00514855)
+bones/0/rotation = Quaternion(0.707107, 0, 0, 0.707107)
+bones/1/position = Vector3(0.00455525, 0.0029719, -0.00309936)
+bones/1/rotation = Quaternion(0.594442, -0.382935, -0.594442, 0.382935)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(7.65635e-11, 0.011241, 2.65948e-10)
+bones/2/rotation = Quaternion(1.30247e-07, 2.98691e-08, -0.903491, 0.428607)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(4.31345e-10, 0.00958766, -4.13552e-11)
+bones/3/rotation = Quaternion(-1.19174e-07, -7.08406e-09, 0.587221, 0.809427)
+bones/3/scale = Vector3(1, 1, 1)
+bones/5/position = Vector3(-0.00455525, 0.0029719, -0.00309936)
+bones/5/rotation = Quaternion(0.594442, 0.382935, 0.594442, 0.382935)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(-9.09266e-11, 0.011241, 6.49299e-10)
+bones/6/rotation = Quaternion(1.30247e-07, -2.98691e-08, 0.903491, 0.428607)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/position = Vector3(-2.82566e-10, 0.00958766, -8.86092e-11)
+bones/7/rotation = Quaternion(-1.19174e-07, 7.08406e-09, -0.587221, 0.809427)
+bones/7/scale = Vector3(1, 1, 1)
+bones/9/position = Vector3(0.00455525, -0.0176868, -0.00484617)
+bones/9/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/11/position = Vector3(0.00455525, 3.82802e-05, -0.0197522)
+bones/11/rotation = Quaternion(0, -0.707107, 0, 0.707107)
+bones/12/position = Vector3(-1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/12/rotation = Quaternion(-1.91635e-07, -1.22355e-10, 0.98829, 0.152585)
+bones/12/scale = Vector3(0.999999, 1, 1)
+bones/14/position = Vector3(-0.00455525, -0.0176868, -0.00484617)
+bones/14/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+bones/16/position = Vector3(-0.00455525, 3.82802e-05, -0.0197522)
+bones/16/rotation = Quaternion(0, 0.707107, 0, 0.707107)
+bones/17/position = Vector3(1.49725e-09, 7.31088e-10, -2.69613e-10)
+bones/17/rotation = Quaternion(1.91635e-07, -1.22355e-10, 0.98829, -0.152585)
+bones/17/scale = Vector3(0.999999, 1, 1)
 
 [node name="Body" parent="Enemies/AIbody/LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, -0.172245, -0.985054, 0, 0.985054, -0.172245, 0, -0.000159498, -0.00277817)
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.00514855)
 
 [node name="Title" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.36)

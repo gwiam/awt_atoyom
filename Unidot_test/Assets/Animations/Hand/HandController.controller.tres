@@ -66,6 +66,7 @@ transitions = ["Flick", "Indle", SubResource("AnimationNodeStateMachineTransitio
 graph_offset = Vector2(0, 82.4034)
 
 [resource]
+graph_offset = Vector2(-51.2893, 50.5643)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_den38")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

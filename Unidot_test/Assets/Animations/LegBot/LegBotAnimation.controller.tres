@@ -4,13 +4,14 @@
 animation = &"LegBotAnimation.library/Armature_Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_inaih"]
-animation = &"LegBotAnimation.library/legbotWalk2"
+animation = &"legbotWalk2"
+metadata/time = &""
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_amdb8"]
 metadata/scale = 2.5
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f43qy"]
-graph_offset = Vector2(-277.24, 142.74)
+graph_offset = Vector2(-277.24, 81.9616)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_inaih")
 nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_amdb8")
@@ -40,7 +41,7 @@ animation = &"LegBotAnimation.library/wakeUp"
 metadata/scale = 2.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y24lu"]
-graph_offset = Vector2(43.4544, -23.2883)
+graph_offset = Vector2(-170.414, -48.5157)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_kc416")
 nodes/Animation/position = Vector2(80, 20)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_w55o5")
@@ -82,10 +83,10 @@ states/Start/position = Vector2(300, 100)
 states/WakeUp/node = SubResource("AnimationNodeBlendTree_y24lu")
 states/WakeUp/position = Vector2(600, 220)
 transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_mfvs3"), "Armature_Idle", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_oe7w6"), "WakeUp", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_cdubj"), "WakeUp", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_8ruhl"), "Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_g6ksa")]
-graph_offset = Vector2(0, 46.8424)
+graph_offset = Vector2(0, 150.779)
 
 [resource]
-graph_offset = Vector2(-62.2397, 104.987)
+graph_offset = Vector2(-229.358, 86.6348)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

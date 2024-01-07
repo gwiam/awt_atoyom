@@ -22,5 +22,4 @@
 
     - seems like the radius of the colider was imported correctly but not the height?
     - it ported in 2 animation players, idk why...
-    - lol the animations got imported correctly now
     - maybe removing all the stuff that wont work anways improves the import quality?

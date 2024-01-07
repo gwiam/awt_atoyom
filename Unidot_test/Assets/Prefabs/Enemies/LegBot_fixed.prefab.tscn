@@ -64,6 +64,8 @@ metadata/unidot_keys = {
 "m_WalkableMask": 4294967295
 }
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
 [node name="MonoBehaviour2" type="Node" parent="."]
 editor_description = "[MonoBehaviour 114::dfed05359ad80a1498531fb205e77966:6392651688832746046]"
 metadata/unidot_keys = {

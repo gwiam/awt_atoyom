@@ -20,6 +20,7 @@
         - "SetDelayToWakeUp" is part of LegBot and AIbody
             - "SetDelayToWakeUp" calls Awake() when LegBot is loaded
         - more details under "porting_scripts"
+    - reimplement navigation by adding characterbody3d to legbot and navigationsagend3d
         
 
 # Personal notes:
@@ -41,7 +42,10 @@
                     - moving the new legbot below (not under) the old one fixes it again
         - how do I get the reference to WakeUpAndGo?
             - like this get_node(nodePath) as WakeUpAndGo
+        - commenting out "TurnNavmeshAndGunOn" aparently does nothing?
     - legbot is still clipping into the ground
-        - maybe moving the colider in Unity moves the whole legbot?
+        - it's the navmesh offset
+    - there is a navmesh agent but unidot can't take care of it
+    - is the npc class necessary for the navmesh to work?
 
             

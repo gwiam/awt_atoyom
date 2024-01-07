@@ -19,6 +19,7 @@
     - enabling SDFGI and SSAO
     - enabling glow
     - this needs further tweaking but it's ok for now
+    - for navigation to work the entire "map" needs to be a child of navigation region
 
 # Personal notes
 

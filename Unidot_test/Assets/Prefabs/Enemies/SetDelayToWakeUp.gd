@@ -16,5 +16,3 @@ func SetScriptsActive():
 	
 	node.delayToWakeUp = delayToWakeUp
 	node.StartWakeUp()
-		
-	

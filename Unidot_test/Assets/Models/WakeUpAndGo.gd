@@ -13,8 +13,10 @@ func SetWakingUp():
 	# TODO activate navmesh
 	StartWakeUp()
 	
+func Turn
+	
 func StartWakeUp():
-	$AnimationPlayer2.play("legbotWalk2")
+	$AnimationPlayer2.play("wakeUp")
 	
 	var node = get_node("../CapsuleCollider/CollisionShape3D") as CollisionShape3D
 	node.shape.height = 1.5

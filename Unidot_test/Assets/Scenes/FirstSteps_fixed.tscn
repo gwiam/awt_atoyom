@@ -97,21 +97,14 @@ interior = true
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_kavxj")
 
-[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("1_axfpk")]
+[node name="Map" type="Node3D" parent="NavigationRegion3D"]
 
-[node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
-libraries = {
-"": ExtResource("2_xvbb7")
-}
+[node name="Structures" type="Node3D" parent="NavigationRegion3D/Map"]
 
-[node name="Map" type="Node3D" parent="."]
-
-[node name="Structures" type="Node3D" parent="Map"]
-
-[node name="Floor" type="Node3D" parent="Map/Structures"]
+[node name="Floor" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(2.68825, 0, 0, 0, 1, 0, 0, 0, 3.37085, 0, 0, 10.38)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Floor"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Floor"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1861448254]"
 mesh = SubResource("PlaneMesh_hdoqn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -158,15 +151,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="MeshCollider" type="StaticBody3D" parent="Map/Structures/Floor"]
+[node name="MeshCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Floor"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Floor/MeshCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Floor/MeshCollider"]
 shape = SubResource("ConcavePolygonShape3D_lhte6")
 
-[node name="Cube" type="Node3D" parent="Map/Structures"]
+[node name="Cube" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(23.29, 0, 0, 0, 15.188, 0, 0, 0, 1, 0, 7.42, -0.57)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:16496407]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -213,15 +206,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube/BoxCollider"]
 shape = SubResource("BoxShape3D_gx6ge")
 
-[node name="Cube (1)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (1)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-08, -11.25, 7.42, 11.45)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (1)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (1)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1638920199]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -268,15 +261,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (1)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (1)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (1)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (1)/BoxCollider"]
 shape = SubResource("BoxShape3D_vpv6k")
 
-[node name="Cube (2)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (2)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-1.01804e-06, 0, -1, 0, 15.188, 0, 23.29, 0, -4.37114e-08, 11.25, 7.42, 11.45)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (2)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (2)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1776335648]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -323,15 +316,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (2)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (2)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (2)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (2)/BoxCollider"]
 shape = SubResource("BoxShape3D_avfbv")
 
-[node name="Cube (3)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (3)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(23.29, 0, 0, 0, 18.4808, 0, 0, 0, 1, 0, 7.42, 22.7)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (3)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (3)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1772174840]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -378,15 +371,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (3)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (3)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (3)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (3)/BoxCollider"]
 shape = SubResource("BoxShape3D_qshe2")
 
-[node name="Cube (4)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (4)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 2.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (4)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (4)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1236622003]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -433,15 +426,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (4)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (4)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (4)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (4)/BoxCollider"]
 shape = SubResource("BoxShape3D_ia3xt")
 
-[node name="Cube (5)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (5)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 2.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (5)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (5)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:36518610]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -488,15 +481,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (5)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (5)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (5)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (5)/BoxCollider"]
 shape = SubResource("BoxShape3D_t62bc")
 
-[node name="Cube (6)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (6)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 5.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (6)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (6)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1418919239]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -543,15 +536,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (6)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (6)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (6)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (6)/BoxCollider"]
 shape = SubResource("BoxShape3D_af005")
 
-[node name="Cube (7)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (7)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 5.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (7)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (7)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2071654544]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -598,15 +591,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (7)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (7)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (7)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (7)/BoxCollider"]
 shape = SubResource("BoxShape3D_uf8rg")
 
-[node name="Cube (8)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (8)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.8025, 7.28, 8.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (8)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (8)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:814705564]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -653,15 +646,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (8)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (8)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (8)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (8)/BoxCollider"]
 shape = SubResource("BoxShape3D_hf460")
 
-[node name="Cube (9)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (9)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8074, 7.28, 8.27)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (9)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (9)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:336092208]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -708,15 +701,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (9)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (9)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (9)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (9)/BoxCollider"]
 shape = SubResource("BoxShape3D_g0y8t")
 
-[node name="Cube (10)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (10)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 10.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (10)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (10)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1839750630]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -763,15 +756,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (10)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (10)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (10)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (10)/BoxCollider"]
 shape = SubResource("BoxShape3D_kcons")
 
-[node name="Cube (11)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (11)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 10.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (11)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (11)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1931940649]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -818,15 +811,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (11)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (11)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (11)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (11)/BoxCollider"]
 shape = SubResource("BoxShape3D_gr4i1")
 
-[node name="Cube (12)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (12)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 13.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (12)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (12)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:282496678]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -873,15 +866,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (12)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (12)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (12)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (12)/BoxCollider"]
 shape = SubResource("BoxShape3D_efy8k")
 
-[node name="Cube (13)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (13)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 13.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (13)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (13)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:2096149825]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -928,15 +921,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (13)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (13)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (13)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (13)/BoxCollider"]
 shape = SubResource("BoxShape3D_e022y")
 
-[node name="Cube (14)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (14)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 16.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (14)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (14)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1755238899]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -983,15 +976,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (14)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (14)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (14)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (14)/BoxCollider"]
 shape = SubResource("BoxShape3D_bhhu6")
 
-[node name="Cube (15)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (15)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 16.97)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (15)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (15)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:930778373]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -1038,15 +1031,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (15)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (15)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (15)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (15)/BoxCollider"]
 shape = SubResource("BoxShape3D_5qgro")
 
-[node name="Cube (16)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (16)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, -6.7874, 7.28, 19.76)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (16)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (16)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:75306752]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -1093,15 +1086,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (16)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (16)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (16)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (16)/BoxCollider"]
 shape = SubResource("BoxShape3D_ibmrv")
 
-[node name="Cube (17)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (17)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(-4.37114e-08, 0, -0.75443, 0, 17.3385, 0, 1, 0, -3.29772e-08, 6.8225, 7.28, 19.76)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (17)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (17)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:929326033]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -1148,15 +1141,15 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (17)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (17)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (17)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (17)/BoxCollider"]
 shape = SubResource("BoxShape3D_upwwu")
 
-[node name="Cube (18)" type="Node3D" parent="Map/Structures"]
+[node name="Cube (18)" type="Node3D" parent="NavigationRegion3D/Map/Structures"]
 transform = Transform3D(24.7281, 0, 0, 0, 1, 0, 0, 0, 25.8101, 0, 15.08, 10.41)
 
-[node name="MeshRenderer" type="MeshInstance3D" parent="Map/Structures/Cube (18)"]
+[node name="MeshRenderer" type="MeshInstance3D" parent="NavigationRegion3D/Map/Structures/Cube (18)"]
 editor_description = "[MeshRenderer 23::12ffeae46c04f5a4ca41e7fded4c4ec2:1898675810]"
 mesh = SubResource("BoxMesh_qgudn")
 surface_material_override/0 = ExtResource("3_5v2wm")
@@ -1203,124 +1196,124 @@ metadata/unidot_keys = {
 "m_StitchLightmapSeams": 1
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Map/Structures/Cube (18)"]
+[node name="BoxCollider" type="StaticBody3D" parent="NavigationRegion3D/Map/Structures/Cube (18)"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Map/Structures/Cube (18)/BoxCollider"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Map/Structures/Cube (18)/BoxCollider"]
 shape = SubResource("BoxShape3D_m8ujn")
 
-[node name="Details" type="Node3D" parent="Map"]
+[node name="Details" type="Node3D" parent="NavigationRegion3D/Map"]
 
-[node name="Lighting" type="Node3D" parent="Map"]
+[node name="Lighting" type="Node3D" parent="NavigationRegion3D/Map"]
 
-[node name="Window" parent="Map/Lighting" instance=ExtResource("4_tyfy5")]
+[node name="Window" parent="NavigationRegion3D/Map/Lighting" instance=ExtResource("4_tyfy5")]
 transform = Transform3D(-3.3532e-08, 0.767123, 0, -0.767123, -3.3532e-08, 0, 0, 0, 0.767123, -10.75, 3.81016, 11.12)
 visible = false
 
-[node name="WindowMesh" parent="Map/Lighting/Window" index="2"]
+[node name="WindowMesh" parent="NavigationRegion3D/Map/Lighting/Window" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
 visible = false
 
-[node name="Window (1)" parent="Map/Lighting" instance=ExtResource("4_tyfy5")]
+[node name="Window (1)" parent="NavigationRegion3D/Map/Lighting" instance=ExtResource("4_tyfy5")]
 transform = Transform3D(3.3532e-08, -0.767123, -6.7064e-08, -0.767123, -3.3532e-08, 0, -2.93146e-15, 6.7064e-08, -0.767123, 10.75, 3.81016, 11.12)
 visible = false
 
-[node name="WindowMesh" parent="Map/Lighting/Window (1)" index="2"]
+[node name="WindowMesh" parent="NavigationRegion3D/Map/Lighting/Window (1)" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
 
-[node name="Point Light" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 11.13)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (1)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (1)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 19.99)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (1)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (1)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (2)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (2)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 2.24)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (2)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (2)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (3)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (3)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 11.13)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (3)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (3)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (4)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (4)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1.0088, 0, 0, 0, 1.0088, 0, 0, 0, 1.0088, -9.14, 3.67, 19.99)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (4)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (4)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (5)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (5)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 2.24)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (5)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (5)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (6)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (6)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 6.82)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (6)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (6)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (7)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (7)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 6.82)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (7)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (7)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (8)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (8)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14, 3.67, 15.66)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (8)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (8)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Point Light (9)" type="Node3D" parent="Map/Lighting"]
+[node name="Point Light (9)" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14, 3.67, 15.66)
 
-[node name="Light" type="OmniLight3D" parent="Map/Lighting/Point Light (9)"]
+[node name="Light" type="OmniLight3D" parent="NavigationRegion3D/Map/Lighting/Point Light (9)"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 shadow_bias = 0.05
 editor_only = true
 omni_range = 10.0
 
-[node name="Reflection Probe" type="Node3D" parent="Map/Lighting"]
+[node name="Reflection Probe" type="Node3D" parent="NavigationRegion3D/Map/Lighting"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.27, 10.85)
 
-[node name="ReflectionProbe" type="ReflectionProbe" parent="Map/Lighting/Reflection Probe"]
+[node name="ReflectionProbe" type="ReflectionProbe" parent="NavigationRegion3D/Map/Lighting/Reflection Probe"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647199, 3.8103, 0.235488)
 max_distance = 1000.0
 size = Vector3(48.451, 35.2412, 51.1693)
@@ -1361,11 +1354,18 @@ metadata/unidot_keys = {
 "serializedVersion": 2
 }
 
-[node name="Window2" parent="Map/Lighting" instance=ExtResource("5_1bmy0")]
+[node name="Window2" parent="NavigationRegion3D/Map/Lighting" instance=ExtResource("5_1bmy0")]
 transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, 10.7987, 4.1159, 10.6084)
 
-[node name="Window3" parent="Map/Lighting" instance=ExtResource("5_1bmy0")]
+[node name="Window3" parent="NavigationRegion3D/Map/Lighting" instance=ExtResource("5_1bmy0")]
 transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, -10.7187, 4.1159, 10.6084)
+
+[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("1_axfpk")]
+
+[node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
+libraries = {
+"": ExtResource("2_xvbb7")
+}
 
 [node name="Enemies" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
@@ -1577,6 +1577,8 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5.1
 visible = false
 text = "FIRST STEPS"
 
+[editable path="NavigationRegion3D/Map/Lighting/Window"]
+[editable path="NavigationRegion3D/Map/Lighting/Window (1)"]
 [editable path="LevelMinimumPrefabs"]
 [editable path="LevelMinimumPrefabs/Canvas"]
 [editable path="LevelMinimumPrefabs/GameOverCanvas"]
@@ -1590,8 +1592,6 @@ text = "FIRST STEPS"
 [editable path="LevelMinimumPrefabs/VolumeManager"]
 [editable path="LevelMinimumPrefabs/SaveGame"]
 [editable path="LevelMinimumPrefabs/ConfigManager"]
-[editable path="Map/Lighting/Window"]
-[editable path="Map/Lighting/Window (1)"]
 [editable path="Enemies/AIbody"]
 [editable path="Enemies/AIbody/LegsBot"]
 [editable path="Enemies/AIbody/LegsBot/Armature/Skeleton3D/Body/GunPivot/warning"]

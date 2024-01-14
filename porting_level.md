@@ -28,3 +28,4 @@
     - 1-1 translation of the lighting is obviously not possible
     - baking lighting in unity looks a bit different than the current lighting (in unity)
     - aparently the lighting was fine when translating the tutorial, maybe the player camera does something diffent?
+    - Godot baked a navmesh on top of the level...

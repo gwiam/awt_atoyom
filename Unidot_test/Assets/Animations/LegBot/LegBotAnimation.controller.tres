@@ -1,7 +1,7 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=17 format=3 uid="uid://d1vcgysdwxlti"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vdib8"]
-animation = &"LegBotAnimation.library/Armature_Idle"
+animation = &"Armature_Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_inaih"]
 animation = &"legbotWalk2"
@@ -20,7 +20,8 @@ nodes/output/position = Vector2(700, 0)
 node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0ucb"]
-animation = &"LegBotAnimation.library/wakeUp"
+animation = &"wakeUp"
+metadata/time = &""
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_l3a18"]
 metadata/scale = 0.0
@@ -35,7 +36,8 @@ nodes/output/position = Vector2(700, 0)
 node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kc416"]
-animation = &"LegBotAnimation.library/wakeUp"
+animation = &"wakeUp"
+metadata/time = &""
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_w55o5"]
 metadata/scale = 2.0
@@ -83,10 +85,10 @@ states/Start/position = Vector2(300, 100)
 states/WakeUp/node = SubResource("AnimationNodeBlendTree_y24lu")
 states/WakeUp/position = Vector2(600, 220)
 transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_mfvs3"), "Armature_Idle", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_oe7w6"), "WakeUp", "Armature_Idle", SubResource("AnimationNodeStateMachineTransition_cdubj"), "WakeUp", "Armature_Walking", SubResource("AnimationNodeStateMachineTransition_8ruhl"), "Start", "Sleep", SubResource("AnimationNodeStateMachineTransition_g6ksa")]
-graph_offset = Vector2(0, 150.779)
+graph_offset = Vector2(0, 90.783)
 
 [resource]
-graph_offset = Vector2(-229.358, 86.6348)
+graph_offset = Vector2(-185.416, 80.9249)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

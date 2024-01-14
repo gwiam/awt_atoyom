@@ -20,14 +20,21 @@
         - "SetDelayToWakeUp" is part of LegBot and AIbody
             - "SetDelayToWakeUp" calls Awake() when LegBot is loaded
         - more details under "porting_scripts"
-    - reimplement navigation by adding characterbody3d to legbot and navigationsagend3d
+    - reimplement navigation
+        - adding navigationsagend3d 
+        - changing main legbot node to characterbody3d
+        - moving collision shape out of the collider, so that it's under characterbody3d
+    - to "enable the navmesh" setup a signal
         
 
 # Personal notes:
     
     - something is super fucked in the animations, there are 140 errors but the animation player still works?
+        - just delete all the leftover armature paths
     - how do I call animation nodes like in Unity?
         - by calling the animationplayer and then play(<animation>) 
+            - this causes the animation to loop though, maybe it's better to call the animationtree instead?
+            - enabling the animation tree stops the animation player
     - there is a "SetWakingUp" method but idk when it's called
         - there seems to be an enemy trigger that the player can walk into
         - that one is activating the scripts in "SetDelayToWakeUp" which activates the enemies
@@ -47,5 +54,8 @@
         - it's the navmesh offset
     - there is a navmesh agent but unidot can't take care of it
     - is the npc class necessary for the navmesh to work?
+        - yes... to be exact it needs velocity and move_and_slide
+        - but then it needs a shape or else it cannot collide
+    - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
 
             

@@ -1,8 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://bljecan6cdid5"]
+[gd_scene load_steps=34 format=3 uid="uid://bljecan6cdid5"]
 
-[ext_resource type="PackedScene" uid="uid://psnwlmnwl4d2" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs.prefab.tscn" id="1_axfpk"]
-[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="2_xvbb7"]
 [ext_resource type="Material" uid="uid://cyxdmu30gqus4" path="res://Assets/Materials/MapDefault.mat.tres" id="3_5v2wm"]
+[ext_resource type="PackedScene" uid="uid://bfxviiibs4iy7" path="res://Assets/Prefabs/NecessaryLevelObjects/LevelMinimumPrefabs_fixed.prefab.tscn" id="4_irw2o"]
 [ext_resource type="PackedScene" uid="uid://ck6excleoes7i" path="res://Assets/Prefabs/Objects/Window.prefab.tscn" id="4_tyfy5"]
 [ext_resource type="PackedScene" uid="uid://ccu61p2v8nkn" path="res://Assets/Prefabs/Objects/Window_fixed.prefab.tscn" id="5_1bmy0"]
 [ext_resource type="PackedScene" uid="uid://clnjtjssvuxe4" path="res://Assets/Prefabs/Enemies/LegBot_fixed.prefab.tscn" id="10_6ubmf"]
@@ -1360,18 +1359,13 @@ transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.0031434
 [node name="Window3" parent="NavigationRegion3D/Map/Lighting" instance=ExtResource("5_1bmy0")]
 transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.00314345, 0.001189, 0.000267389, -0.000286887, 3.22537, -10.7187, 4.1159, 10.6084)
 
-[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("1_axfpk")]
-
-[node name="AnimationTree" parent="LevelMinimumPrefabs/Door" index="3"]
-libraries = {
-"": ExtResource("2_xvbb7")
-}
+[node name="LevelMinimumPrefabs" parent="." instance=ExtResource("4_irw2o")]
 
 [node name="Enemies" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
 
 [node name="LegBot" parent="Enemies" instance=ExtResource("10_6ubmf")]
-transform = Transform3D(-0.991086, 0, -0.133225, 0, 1, 0, 0.133225, 0, -0.991086, 88.789, 49.1631, 11.9834)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 88.789, 49.1631, 11.9834)
 
 [node name="Title" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.36)
@@ -1519,36 +1513,10 @@ metadata/unidot_keys = {
 "parentLinkedComponent": [null, 0, null, null]
 }
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.999956, 0, 0.00933757, 0, 1, 0, -0.00933757, 0, -0.999956, 1.21478, 3.11482, 5.59964)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0623, 4.15438)
-visible = false
-light_energy = 8.596
-light_specular = 0.0
-omni_range = 118.88
-
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5.16648, 17.9594)
 visible = false
 text = "FIRST STEPS"
 
-[node name="Marker3D" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.805)
-
 [editable path="NavigationRegion3D/Map/Lighting/Window"]
 [editable path="NavigationRegion3D/Map/Lighting/Window (1)"]
-[editable path="LevelMinimumPrefabs"]
-[editable path="LevelMinimumPrefabs/Canvas"]
-[editable path="LevelMinimumPrefabs/GameOverCanvas"]
-[editable path="LevelMinimumPrefabs/PauseGameCanvas"]
-[editable path="LevelMinimumPrefabs/PauseGameManager"]
-[editable path="LevelMinimumPrefabs/AudioSourcesManager"]
-[editable path="LevelMinimumPrefabs/TimeManager"]
-[editable path="LevelMinimumPrefabs/HealthManager"]
-[editable path="LevelMinimumPrefabs/SceneChanger"]
-[editable path="LevelMinimumPrefabs/Door"]
-[editable path="LevelMinimumPrefabs/VolumeManager"]
-[editable path="LevelMinimumPrefabs/SaveGame"]
-[editable path="LevelMinimumPrefabs/ConfigManager"]

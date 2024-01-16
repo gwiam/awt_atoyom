@@ -661,23 +661,23 @@ visible = false
 surface_material_override/0 = ExtResource("2_os8jo")
 
 [node name="Skeleton3D" parent="LegsBot/Armature" index="0"]
-bones/0/position = Vector3(0, -0.000159498, -0.0209938)
+bones/0/position = Vector3(0, -0.000159498, -0.0117735)
 bones/0/rotation = Quaternion(0.707107, 0, 0, 0.707107)
 bones/1/position = Vector3(0.00455525, 0.0029719, -0.00309936)
-bones/1/rotation = Quaternion(0.13601, -0.693903, -0.13601, 0.693903)
+bones/1/rotation = Quaternion(0.464065, -0.53352, -0.464065, 0.53352)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/position = Vector3(6.67921e-10, 0.011241, 1.00349e-10)
-bones/2/rotation = Quaternion(1.46651e-07, -6.30356e-09, -0.966862, -0.255301)
+bones/2/rotation = Quaternion(1.36469e-07, 1.35802e-08, -0.993953, 0.109809)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/position = Vector3(1.08121e-09, 0.00958766, -1.09603e-10)
-bones/3/rotation = Quaternion(-1.46406e-07, -4.77281e-09, 0.747117, 0.664693)
+bones/3/rotation = Quaternion(-1.31297e-07, -4.41419e-09, 0.660992, 0.750393)
 bones/5/position = Vector3(-0.00455525, 0.0029719, -0.00309936)
-bones/5/rotation = Quaternion(0.13601, 0.693903, 0.136011, 0.693903)
+bones/5/rotation = Quaternion(0.464065, 0.53352, 0.464065, 0.53352)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/position = Vector3(-7.4443e-10, 0.011241, 3.37186e-10)
-bones/6/rotation = Quaternion(1.46651e-07, 6.30353e-09, 0.966862, -0.255301)
+bones/6/rotation = Quaternion(1.36469e-07, -1.35802e-08, 0.993953, 0.109809)
 bones/7/position = Vector3(-1.85963e-09, 0.00958766, -5.77104e-10)
-bones/7/rotation = Quaternion(-1.46406e-07, 4.77282e-09, -0.747117, 0.664693)
+bones/7/rotation = Quaternion(-1.31297e-07, 4.41419e-09, -0.660992, 0.750393)
 bones/9/position = Vector3(0.00455525, -0.0176868, -0.00484617)
 bones/9/rotation = Quaternion(0.707107, 0, -0.707107, 0)
 bones/11/position = Vector3(0.00455525, 3.82802e-05, -0.0197522)
@@ -698,7 +698,7 @@ surface_material_override/0 = ExtResource("3_qybnc")
 surface_material_override/0 = ExtResource("3_qybnc")
 
 [node name="Body" type="BoneAttachment3D" parent="LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.000159498, -0.0209938)
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.0117735)
 bone_name = "Body"
 bone_idx = 0
 
@@ -793,7 +793,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="LegsBot"]
-active = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
 "": ExtResource("7_5gjma")
@@ -804,6 +803,12 @@ anim_player = NodePath("../AnimationPlayer2")
 "parameters/Base Layer/Sleep/TimeScale/scale" = 0.0
 "parameters/Base Layer/WakeUp/TimeScale/scale" = 2.0
 script = ExtResource("9_wrmp5")
+metadata/Walking = false
+metadata/guid_fileid_to_animation_name = {
+"3a7560ae25f67d54bb86276f0a94398a:7400000": "Armature_Idle",
+"65fc9e2c93652114ca38ced0f95f93a1:7400000": "wakeUp",
+"6e68f8db6d84e444e9dade90983efbb2:7400000": "legbotWalk2"
+}
 
 [node name="MonoBehaviour" type="Node" parent="LegsBot"]
 editor_description = "[MonoBehaviour 114::dfed05359ad80a1498531fb205e77966:1539090612543593334]"

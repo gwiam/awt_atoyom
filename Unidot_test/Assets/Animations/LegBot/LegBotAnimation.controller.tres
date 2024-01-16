@@ -11,7 +11,7 @@ metadata/time = &""
 metadata/scale = 2.5
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_f43qy"]
-graph_offset = Vector2(-277.24, 81.9616)
+graph_offset = Vector2(-376.158, 20.4025)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_inaih")
 nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_amdb8")
@@ -43,7 +43,7 @@ metadata/time = &""
 metadata/scale = 2.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_y24lu"]
-graph_offset = Vector2(-170.414, -48.5157)
+graph_offset = Vector2(-149.812, -15.923)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_kc416")
 nodes/Animation/position = Vector2(80, 20)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_w55o5")
@@ -88,7 +88,7 @@ transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeSt
 graph_offset = Vector2(0, 90.783)
 
 [resource]
-graph_offset = Vector2(-185.416, 80.9249)
+graph_offset = Vector2(-160.476, 27.8329)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

@@ -1,14 +1,10 @@
 extends Node3D
 
-var objPlayer : PackedScene = preload("res://Assets/Prefabs/NecessaryLevelObjects/player.prefab.tscn")
+var objPlayer : PackedScene = preload("res://Assets/Prefabs/NecessaryLevelObjects/player_fixed.prefab.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	objPlayer.resource_name = "ActivePlayer"
 	var playerInstance = objPlayer.instantiate()
-	add_child(playerInstance)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	playerInstance.position = global_position
+	get_node("/root").add_child.call_deferred(playerInstance)

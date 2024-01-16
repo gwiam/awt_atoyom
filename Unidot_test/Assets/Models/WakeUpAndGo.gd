@@ -7,14 +7,21 @@ class_name WakeUpAndGo
 signal enable_navmesh
 
 var delayToWakeUp: float = 0
+var animationDuration: float = 2.2
+
+var awake = false
 
 func SetWakingUp():
 	var timer:Timer = $"../Timer"
 	timer.start(delayToWakeUp)
 	
 func _on_timer_timeout():
-	StartWakeUp()
-	TurnNavMeshAndGunOn()
+	if !awake: 
+		StartWakeUp()
+		var timer:Timer = $"../Timer"
+		timer.start(animationDuration)
+	else:
+		TurnNavMeshAndGunOn()
 
 func TurnNavMeshAndGunOn():
 	# TODO activate gun
@@ -22,9 +29,10 @@ func TurnNavMeshAndGunOn():
 	emit_signal("enable_navmesh")
 	
 func StartWakeUp():
-	#$AnimationTree.play("WakeUp")
 	print("waking up bot")
-	$AnimationPlayer2.play("wakeUp")
+	awake = true
+	var stateMachine = $AnimationTree.get("parameters/Base Layer/playback")
+	stateMachine.travel("WakeUp")
 	var node = get_node("../CollisionShape3D") as CollisionShape3D
 	node.shape.height = 1.5
 	node.position = Vector3.UP * 0.27

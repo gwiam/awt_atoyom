@@ -17,14 +17,15 @@
     - rebuild the particle effect
     - rebuild the "Wake up and go" of child and "Set Delay To Wake Up" script of parent node
         - "SetDelayToWakeUp" can also wake up all the enemies after a certain time or using a trigger
-        - "SetDelayToWakeUp" is part of LegBot and AIbody
+        - "SetDelayToWakeUp" is part of LegBot (called AIbody in the level for some reason) 
             - "SetDelayToWakeUp" calls Awake() when LegBot is loaded
+            - implement time delays for execution of StartWakeUp and TurnNavMeshAndGunOn
         - more details under "porting_scripts"
     - reimplement navigation
         - adding navigationsagend3d 
         - changing main legbot node to characterbody3d
         - moving collision shape out of the collider, so that it's under characterbody3d
-    - to "enable the navmesh" setup a signal
+    - use a signal to "enable the navmesh"
         
 
 # Personal notes:
@@ -32,9 +33,13 @@
     - something is super fucked in the animations, there are 140 errors but the animation player still works?
         - just delete all the leftover armature paths
     - how do I call animation nodes like in Unity?
-        - by calling the animationplayer and then play(<animation>) 
+        - (bad idea) by calling the animation player and then play(<animation>) 
             - this causes the animation to loop though, maybe it's better to call the animationtree instead?
+                - still loops with animation tree
+                - looks like I still need to switch to walk or idle by myself
             - enabling the animation tree stops the animation player
+        - use the animation tree with some string parameter bs like get("parameters/Base Layer/playback") to get the state machine
+        - "travel" to the desired node, works even when not connected 
     - there is a "SetWakingUp" method but idk when it's called
         - there seems to be an enemy trigger that the player can walk into
         - that one is activating the scripts in "SetDelayToWakeUp" which activates the enemies

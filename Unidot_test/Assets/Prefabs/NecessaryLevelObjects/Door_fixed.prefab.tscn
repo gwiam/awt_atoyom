@@ -1,0 +1,461 @@
+[gd_scene load_steps=16 format=3 uid="uid://5wqhmq6x3vfm"]
+
+[ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="1_6y25e"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://br17l5fmtp6n2" path="res://Assets/Animations/door/Door.controller.tres" id="2_24dyg"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="3_0463n"]
+[ext_resource type="ArrayMesh" uid="uid://ddi7q63voo242" path="res://Assets/Models/door.Cube_002.mesh" id="4_7xvbn"]
+[ext_resource type="Material" uid="uid://bxplc5bvlh4kr" path="res://Assets/Materials/ShynyBlue.mat.tres" id="5_ni37f"]
+[ext_resource type="ArrayMesh" uid="uid://bu2vf7e4d5hvu" path="res://Assets/Models/door.Cube.mesh" id="6_vxall"]
+[ext_resource type="ArrayMesh" uid="uid://denas7j5gyalc" path="res://Assets/Models/door.Cube_003.mesh" id="7_mcxva"]
+[ext_resource type="ArrayMesh" uid="uid://b8hl2tfcv1bb7" path="res://Assets/Models/door.Cube_001.mesh" id="8_vcnho"]
+[ext_resource type="ArrayMesh" uid="uid://bemvufkq0ccp3" path="res://Assets/Models/door.Cube_004.mesh" id="9_om4mh"]
+[ext_resource type="Material" uid="uid://n5v6n42xtmf3" path="res://Assets/Materials/DoorGlow.mat.tres" id="10_olmg4"]
+[ext_resource type="Script" path="res://Assets/Scenes/SpawnPlayer.gd" id="11_ayur6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xh6eu"]
+size = Vector3(0.02, 0.00482097, 0.04)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tmpc2"]
+size = Vector3(0.02, 0.00482097, 0.04)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hdoqn"]
+resource_name = "Plane"
+size = Vector2(10, 10)
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5k3cv"]
+size = Vector3(10, 0.18, 10)
+
+[node name="Door" type="Node3D"]
+transform = Transform3D(23.4084, 0, 0, 0, -8.64588e-07, 23.4084, 0, -19.7795, -1.02322e-06, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="."]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:6847394741124099906]"
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 5775851912055458318, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 10303, "0000000000000000f000000000000000", 0]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="MonoBehaviour" type="Node" parent="."]
+editor_description = "[MonoBehaviour 114::31208a779dc25d24ab5e7d9678597f7d:8831129255109134922]"
+metadata/unidot_keys = {
+"animator": [null, 3367800511785973735, null, null],
+"enemyQuantity": 0,
+"kills": 0,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 5775851912055458318, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "7c66010181437e64a9454e9f6fd39a95", 3]
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": ExtResource("1_6y25e")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+deterministic = false
+root_motion_track = NodePath("%GeneralSkeleton:Root")
+libraries = {
+"": ExtResource("1_6y25e")
+}
+tree_root = ExtResource("2_24dyg")
+anim_player = NodePath("../AnimationPlayer")
+"parameters/Base Layer/closed/TimeScale/scale" = 0.0
+script = ExtResource("3_0463n")
+metadata/Open = false
+metadata/guid_fileid_to_animation_name = {
+"038fa36b0a94e0a4fa8cc0b61f834322:7400000": "closed"
+}
+
+[node name="poleL" type="Node3D" parent="."]
+transform = Transform3D(4.27196, 0, 0, 0, 4.27196, 0, 0, 0, 4.27196, 0.0854392, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="poleL"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5728191443743277372]"
+mesh = ExtResource("4_7xvbn")
+surface_material_override/0 = ExtResource("5_ni37f")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 5559463209390319380, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "5438e1cae010b4b4891482ba5c99d3a5", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="panelL" type="Node3D" parent="poleL"]
+transform = Transform3D(1, 0, 0, 0, 0.910241, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="poleL/panelL"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:498763821440282686]"
+mesh = ExtResource("6_vxall")
+surface_material_override/0 = ExtResource("5_ni37f")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 3632108112527283349, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "5438e1cae010b4b4891482ba5c99d3a5", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="poleL/panelL"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="poleL/panelL/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -1.74623e-09, 0.02)
+shape = SubResource("BoxShape3D_xh6eu")
+
+[node name="poleR" type="Node3D" parent="."]
+transform = Transform3D(4.27196, 0, 0, 0, 4.27196, 0, 0, 0, 4.27196, -0.0854392, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="poleR"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5566079994622529423]"
+mesh = ExtResource("7_mcxva")
+surface_material_override/0 = ExtResource("5_ni37f")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 2682386419781683840, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "5438e1cae010b4b4891482ba5c99d3a5", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="panelR" type="Node3D" parent="poleR"]
+transform = Transform3D(1, 0, 0, 0, 0.910241, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="poleR/panelR"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5932316307210683616]"
+mesh = ExtResource("8_vcnho")
+surface_material_override/0 = ExtResource("5_ni37f")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 4701132523530725089, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "5438e1cae010b4b4891482ba5c99d3a5", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="poleR/panelR"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="poleR/panelR/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -1.74623e-09, 0.02)
+shape = SubResource("BoxShape3D_tmpc2")
+
+[node name="upPart" type="Node3D" parent="."]
+transform = Transform3D(4.50411, 0, 0, 0, 3.98748, 0, 0, 0, 4.27196, 0, 0, 0.170716)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="upPart"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:1334333678572963511]"
+mesh = ExtResource("9_om4mh")
+surface_material_override/0 = ExtResource("5_ni37f")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 3178693066326079123, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "5438e1cae010b4b4891482ba5c99d3a5", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="Plane" type="Node3D" parent="."]
+transform = Transform3D(-0.0166532, 1.45587e-09, 0, -1.45587e-09, -0.0166532, 0, 0, 0, 0.0166532, 0, 0.0027, 0.0846)
+
+[node name="MeshRenderer" type="MeshInstance3D" parent="Plane"]
+editor_description = "[MeshRenderer 23::31208a779dc25d24ab5e7d9678597f7d:5062546471916097095]"
+mesh = SubResource("PlaneMesh_hdoqn")
+surface_material_override/0 = ExtResource("10_olmg4")
+metadata/unidot_keys = {
+"m_AdditionalVertexStreams": [null, 0, null, null],
+"m_AutoUVMaxAngle": 89,
+"m_AutoUVMaxDistance": 0.5,
+"m_CastShadows": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DynamicOccludee": 1,
+"m_Enabled": 1,
+"m_GameObject": [null, 1518886775186529215, null, null],
+"m_IgnoreNormalsForChartDetection": 0,
+"m_ImportantGI": 0,
+"m_LightProbeUsage": 1,
+"m_LightProbeVolumeOverride": [null, 0, null, null],
+"m_LightmapParameters": [null, 0, null, null],
+"m_Materials": [[null, 2100000, "36cddf4c64529e74fbc521b301a1d696", 2]],
+"m_MinimumChartSize": 4,
+"m_MotionVectors": 1,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_PreserveUVs": 0,
+"m_ProbeAnchor": [null, 0, null, null],
+"m_RayTraceProcedural": 0,
+"m_RayTracingMode": 2,
+"m_ReceiveGI": 1,
+"m_ReceiveShadows": 1,
+"m_ReflectionProbeUsage": 1,
+"m_RendererPriority": 0,
+"m_RenderingLayerMask": 1,
+"m_ScaleInLightmap": 1,
+"m_SelectedEditorRenderState": 3,
+"m_SortingLayer": 0,
+"m_SortingLayerID": 0,
+"m_SortingOrder": 0,
+"m_StaticBatchInfo": {
+"firstSubMesh": 0,
+"subMeshCount": 0
+},
+"m_StaticBatchRoot": [null, 0, null, null],
+"m_StaticShadowCaster": 0,
+"m_StitchLightmapSeams": 1
+}
+
+[node name="MonoBehaviour" type="Node" parent="Plane"]
+editor_description = "[MonoBehaviour 114::31208a779dc25d24ab5e7d9678597f7d:2417159256175637978]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 1518886775186529215, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "b1bd256d66e52594aafef4be6b0c1e9b", 3]
+}
+
+[node name="BoxCollider" type="StaticBody3D" parent="Plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/BoxCollider"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.76837e-07)
+shape = SubResource("BoxShape3D_5k3cv")
+
+[node name="SpawnPoint" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0688, 0.0854)
+script = ExtResource("11_ayur6")
+
+[node name="MonoBehaviour" type="Node" parent="SpawnPoint"]
+editor_description = "[MonoBehaviour 114::31208a779dc25d24ab5e7d9678597f7d:6171967393862357490]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7102548158670291771, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "df958aae3616b2c44a7ecc41d2b9e6a4", 3],
+"prefabPlayer": [null, 6639354054196359937, "f1e7643930efb1a47b87257cf0420617", 3]
+}

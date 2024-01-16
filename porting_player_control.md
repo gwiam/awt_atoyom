@@ -13,3 +13,4 @@
 
 - GDScript very straight forward, similar to Python
 - player movement and input capture is much more intuitive to implement in Godot than in Unity
+- how to stop the mouse from existing the screen?

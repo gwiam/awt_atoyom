@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc3mf7mfn8sr1"]
+[gd_scene load_steps=8 format=3 uid="uid://d0wt26xodhu8a"]
 
-[ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_i5hu8"]
-[ext_resource type="Script" path="res://Assets/Scripts/PlayerControl.gd" id="1_n67c6"]
-[ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_hvu37"]
-[ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_m750x"]
-[ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_mxk43"]
-[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_rw3om"]
+[ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_vi6ep"]
+[ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_k84b2"]
+[ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_yjbam"]
+[ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_4u4fh"]
+[ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_c4mk3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_unrh0"]
 radius = 0.4
@@ -13,9 +12,8 @@ radius = 0.4
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_lca8y"]
 resource_name = "Capsule"
 
-[node name="player" type="CharacterBody3D"]
-script = ExtResource("1_n67c6")
-movementSpeed = 6
+[node name="player" type="RigidBody3D"]
+freeze_mode = 1
 
 [node name="CapsuleCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_unrh0")
@@ -194,10 +192,9 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "1a45311c553e025428a0b5ed59c5d3f1", 3]
 }
 
-[node name="CameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622147, 0)
+[node name="Camera" type="Node3D" parent="."]
 
-[node name="Camera" type="Camera3D" parent="CameraPivot"]
+[node name="Camera" type="Camera3D" parent="Camera"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 cull_mask = 8215
 fov = 90.0
@@ -250,7 +247,7 @@ metadata/unidot_keys = {
 "serializedVersion": 2
 }
 
-[node name="MonoBehaviour" type="Node" parent="CameraPivot"]
+[node name="MonoBehaviour" type="Node" parent="Camera"]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104698]"
 metadata/unidot_keys = {
 "isPaused": 0,
@@ -266,7 +263,7 @@ metadata/unidot_keys = {
 "sensivity": 4
 }
 
-[node name="MonoBehaviour2" type="Node" parent="CameraPivot"]
+[node name="MonoBehaviour2" type="Node" parent="Camera"]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104699]"
 metadata/unidot_keys = {
 "cameraPositioner": [null, 6639354053334602506, null, null],
@@ -280,7 +277,7 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "e05877a2df0c775479186bd37954ab88", 3]
 }
 
-[node name="MonoBehaviour3" type="Node" parent="CameraPivot"]
+[node name="MonoBehaviour3" type="Node" parent="Camera"]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354053609104697]"
 metadata/unidot_keys = {
 "antialiasingMode": 0,
@@ -352,9 +349,9 @@ metadata/unidot_keys = {
 "volumeTrigger": [null, 6639354053609104703, null, null]
 }
 
-[node name="HUDcamera" type="Node3D" parent="CameraPivot"]
+[node name="HUDcamera" type="Node3D" parent="Camera"]
 
-[node name="Camera" type="Camera3D" parent="CameraPivot/HUDcamera"]
+[node name="Camera" type="Camera3D" parent="Camera/HUDcamera"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 cull_mask = 32
 fov = 90.0
@@ -407,63 +404,63 @@ metadata/unidot_keys = {
 "serializedVersion": 2
 }
 
-[node name="ObjectHolder" type="Node3D" parent="CameraPivot/HUDcamera"]
+[node name="ObjectHolder" type="Node3D" parent="Camera/HUDcamera"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.203, -0.349, 0.867)
 
-[node name="hand" parent="CameraPivot/HUDcamera" instance=ExtResource("1_i5hu8")]
+[node name="hand" parent="Camera/HUDcamera" instance=ExtResource("1_vi6ep")]
 transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194, -0.35, -1.27, -1.02)
 
-[node name="Armature" parent="CameraPivot/HUDcamera/hand" index="0"]
+[node name="Armature" parent="Camera/HUDcamera/hand" index="0"]
 transform = Transform3D(100, 0, 0, 0, 100, -4.37114e-06, 0, 4.37114e-06, 100, 0, 0, 0)
 
-[node name="Skeleton3D" parent="CameraPivot/HUDcamera/hand/Armature" index="0"]
+[node name="Skeleton3D" parent="Camera/HUDcamera/hand/Armature" index="0"]
 bones/0/position = Vector3(0, -0.000159382, -0.000403557)
 bones/0/rotation = Quaternion(0.702972, -1.03398e-25, -1.82013e-18, 0.711217)
 bones/1/position = Vector3(-2.10026e-28, 0.0109354, 4.65661e-12)
 bones/1/rotation = Quaternion(-0.30287, -1.12394e-07, -3.97303e-08, 0.953032)
 bones/2/position = Vector3(0, 0.00897879, -2.98023e-10)
-bones/2/rotation = Quaternion(-0.186505, 0.129102, -0.116665, 0.966922)
-bones/3/position = Vector3(-0.000453965, 0.00409274, 0.00014501)
-bones/3/rotation = Quaternion(0.442389, 0.00519862, 0.0245699, 0.896472)
+bones/2/rotation = Quaternion(-0.191716, 0.129729, -0.115968, 0.965902)
+bones/3/position = Vector3(-0.000453908, 0.00409274, 0.00014501)
+bones/3/rotation = Quaternion(0.392163, 0.00383265, 0.0248196, 0.919553)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/position = Vector3(-8.75443e-10, 0.00162249, -6.14673e-10)
-bones/4/rotation = Quaternion(0.118447, 0.000720391, -0.0114077, 0.992895)
+bones/4/rotation = Quaternion(0.118447, 0.000720393, -0.0114077, 0.992895)
 bones/4/scale = Vector3(1, 1, 1)
-bones/6/position = Vector3(0.000991417, 0.00415373, 0.000118028)
-bones/6/rotation = Quaternion(0.413603, 0.00291805, 0.0410485, 0.909527)
+bones/6/position = Vector3(0.000991266, 0.00415373, 0.000118028)
+bones/6/rotation = Quaternion(0.391875, 0.0019419, 0.0411063, 0.919098)
 bones/7/position = Vector3(-4.47035e-10, 0.00158857, 5.58794e-11)
 bones/7/rotation = Quaternion(0.111418, -0.0694376, 0.030427, 0.990878)
 bones/9/position = Vector3(0.00135938, 0.00100969, 0.000195596)
-bones/9/rotation = Quaternion(0.279901, -0.157882, -0.109635, 0.94059)
+bones/9/rotation = Quaternion(0.251113, -0.0780299, -0.0962572, 0.959994)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/position = Vector3(-1.49012e-10, 0.00175941, -4.28408e-10)
 bones/10/rotation = Quaternion(0.160167, 0.0320135, 0.170899, 0.971656)
 bones/11/position = Vector3(4.47035e-10, 0.00117238, 7.07805e-10)
 bones/11/rotation = Quaternion(-0.0681881, 0.0289776, -0.0531556, 0.995834)
 
-[node name="Mesh 1" parent="CameraPivot/HUDcamera/hand/Armature/Skeleton3D" index="0"]
-surface_material_override/0 = ExtResource("2_hvu37")
+[node name="Mesh 1" parent="Camera/HUDcamera/hand/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = ExtResource("2_k84b2")
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="CameraPivot/HUDcamera/hand"]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Camera/HUDcamera/hand"]
 libraries = {
-"": ExtResource("3_m750x")
+"": ExtResource("3_yjbam")
 }
 
-[node name="AnimationTree" type="AnimationTree" parent="CameraPivot/HUDcamera/hand"]
+[node name="AnimationTree" type="AnimationTree" parent="Camera/HUDcamera/hand"]
 active = false
 deterministic = false
 root_motion_track = NodePath("%GeneralSkeleton:Root")
 libraries = {
-"": ExtResource("3_m750x")
+"": ExtResource("3_yjbam")
 }
-tree_root = ExtResource("4_mxk43")
+tree_root = ExtResource("4_4u4fh")
 anim_player = NodePath("../AnimationPlayer2")
 "parameters/Base Layer/Flick/TimeScale/scale" = 0.3
 "parameters/Base Layer/Hold/TimeScale/scale" = 0.0
 "parameters/Base Layer/Indle/TimeScale/scale" = 0.35
-script = ExtResource("5_rw3om")
+script = ExtResource("5_c4mk3")
 
-[node name="MonoBehaviour" type="Node" parent="CameraPivot/HUDcamera/hand"]
+[node name="MonoBehaviour" type="Node" parent="Camera/HUDcamera/hand"]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6174495312195083454]"
 metadata/unidot_keys = {
 "m_CorrespondingSourceObject": [null, 0, null, null],
@@ -483,7 +480,7 @@ transform = Transform3D(0.71, 0, 0, 0, 1.04, 0, 0, 0, 0.71, 0, 0, 0)
 [node name="MeshRenderer" type="MeshInstance3D" parent="Body"]
 editor_description = "[MeshRenderer 23::f1e7643930efb1a47b87257cf0420617:4847663143894855737]"
 mesh = SubResource("CapsuleMesh_lca8y")
-surface_material_override/0 = ExtResource("2_hvu37")
+surface_material_override/0 = ExtResource("2_k84b2")
 metadata/unidot_keys = {
 "m_AdditionalVertexStreams": [null, 0, null, null],
 "m_AutoUVMaxAngle": 89,
@@ -534,4 +531,4 @@ metadata/unidot_keys = {
 [node name="CameraPositioner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 0)
 
-[editable path="CameraPivot/HUDcamera/hand"]
+[editable path="Camera/HUDcamera/hand"]

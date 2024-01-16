@@ -8,6 +8,8 @@
     - looks like nodes are intended to only have one script
     - referencing components in Godot doesn't work because there are none
     - cannot add more than one script to a node
+    - animation state changes don't work anymore (dunno where to put this)
+    - instatiating objects works differently
 
 # Solutions:
 
@@ -17,6 +19,16 @@
     - instead of referencing components you reference nodes, do not forget to cast those to the right type
     - delaying execution has to be done with a timer and signals
     - on_enable is going to be done with signals
+    - instead of adding multiple scripts to one node just reuse the "Monobehavior" nodes
+    - calling animations in code can be done by 
+        - getting the state machine from the animation tree
+        - traveling to a node
+        - OR call the animation player and play an animation (don't think this is such a good idea though it would work)
+    - to instantiate an object
+        - (pre)load the object
+        - then instantiate
+        - then append it somewhere
+            - when adding to root you can call_deferred to "delay" the add child until scene loads
 
 # personal nodes
 

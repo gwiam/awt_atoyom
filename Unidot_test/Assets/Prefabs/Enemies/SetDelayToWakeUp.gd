@@ -1,6 +1,6 @@
 extends Node
 
-const delayToWakeUp: float = 10
+const delayToWakeUp: float = 2
 const haveTrigger = false
 
 # Called when the node enters the scene tree for the first time.

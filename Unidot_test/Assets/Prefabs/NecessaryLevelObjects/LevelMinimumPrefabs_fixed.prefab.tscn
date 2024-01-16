@@ -1,0 +1,120 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfxviiibs4iy7"]
+
+[ext_resource type="PackedScene" uid="uid://bu6h3xifuqtjn" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn" id="1_xpbea"]
+[ext_resource type="PackedScene" uid="uid://bvhagyjsoqvkr" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn" id="2_toq01"]
+[ext_resource type="PackedScene" uid="uid://cpyw0e6tgov5u" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn" id="3_rdsn0"]
+[ext_resource type="PackedScene" uid="uid://dwym3x6p6c6ou" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn" id="4_qjbhr"]
+[ext_resource type="PackedScene" uid="uid://das5ekc4tbr3h" path="res://Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn" id="5_v4i6h"]
+[ext_resource type="PackedScene" uid="uid://dgopman7hy1bg" path="res://Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn" id="6_s67al"]
+[ext_resource type="PackedScene" uid="uid://drsdosbo4vqgy" path="res://Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn" id="7_tf0ki"]
+[ext_resource type="PackedScene" uid="uid://dbac0tmui8jsk" path="res://Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn" id="8_7nece"]
+[ext_resource type="PackedScene" uid="uid://5wqhmq6x3vfm" path="res://Assets/Prefabs/NecessaryLevelObjects/Door_fixed.prefab.tscn" id="9_kuntq"]
+[ext_resource type="PackedScene" uid="uid://yst5fvdj3nft" path="res://Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn" id="10_t4igf"]
+[ext_resource type="PackedScene" uid="uid://ben70gwyyjdtu" path="res://Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn" id="11_t0erb"]
+[ext_resource type="PackedScene" uid="uid://x3xs2egwe573" path="res://Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn" id="12_sj3ga"]
+
+[node name="LevelMinimumPrefabs" type="Node3D"]
+
+[node name="Canvas" parent="." instance=ExtResource("1_xpbea")]
+
+[node name="GameOverCanvas" parent="." instance=ExtResource("2_toq01")]
+
+[node name="PauseGameCanvas" parent="." instance=ExtResource("3_rdsn0")]
+
+[node name="PauseGameManager" parent="." instance=ExtResource("4_qjbhr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="AudioSourcesManager" parent="." instance=ExtResource("5_v4i6h")]
+
+[node name="UnscaledAudioSources" parent="AudioSourcesManager" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="UnaffectedAudioSources" parent="AudioSourcesManager" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="TimeManager" parent="." instance=ExtResource("6_s67al")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="HealthManager" parent="." instance=ExtResource("7_tf0ki")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="SceneChanger" parent="." instance=ExtResource("8_7nece")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="Door" parent="." instance=ExtResource("9_kuntq")]
+
+[node name="EventSystem" type="Node3D" parent="."]
+
+[node name="MonoBehaviour" type="Node" parent="EventSystem"]
+editor_description = "[MonoBehaviour 114::e572b178a89f05249b203bde1506a15c:7946419085192502051]"
+metadata/unidot_keys = {
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_DragThreshold": 10,
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_FirstSelected": [null, 0, null, null],
+"m_GameObject": [null, 7946419085192502053, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "76c392e42b5098c458856cdf6ecaaaa1", 3],
+"m_sendNavigationEvents": 1
+}
+
+[node name="MonoBehaviour2" type="Node" parent="EventSystem"]
+editor_description = "[MonoBehaviour 114::e572b178a89f05249b203bde1506a15c:7946419085192502052]"
+metadata/unidot_keys = {
+"m_CancelButton": "Cancel",
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_ForceModuleActive": 0,
+"m_GameObject": [null, 7946419085192502053, null, null],
+"m_HorizontalAxis": "Horizontal",
+"m_InputActionsPerSecond": 10,
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_RepeatDelay": 0.5,
+"m_Script": [null, 11500000, "4f231c4fb786f3946a6b90b886c48677", 3],
+"m_SubmitButton": "Submit",
+"m_VerticalAxis": "Vertical"
+}
+
+[node name="PostProcessVolume" type="Node3D" parent="."]
+
+[node name="MonoBehaviour" type="Node" parent="PostProcessVolume"]
+editor_description = "[MonoBehaviour 114::e572b178a89f05249b203bde1506a15c:7946419084933502269]"
+metadata/unidot_keys = {
+"blendDistance": 0,
+"isGlobal": 1,
+"m_CorrespondingSourceObject": [null, 0, null, null],
+"m_EditorHideFlags": 0,
+"m_Enabled": 1,
+"m_GameObject": [null, 7946419084933502270, null, null],
+"m_ObjectHideFlags": 0,
+"m_PrefabAsset": [null, 0, null, null],
+"m_PrefabInstance": [null, 0, null, null],
+"m_Script": [null, 11500000, "8b9a305e18de0c04dbd257a21cd47087", 3],
+"priority": 0,
+"sharedProfile": [null, 11400000, "3c620bbfc468cb5429ec054035a24aee", 2],
+"weight": 1
+}
+
+[node name="VolumeManager" parent="." instance=ExtResource("10_t4igf")]
+
+[node name="SaveGame" parent="." instance=ExtResource("11_t0erb")]
+
+[node name="ConfigManager" parent="." instance=ExtResource("12_sj3ga")]
+
+[editable path="Canvas"]
+[editable path="GameOverCanvas"]
+[editable path="PauseGameCanvas"]
+[editable path="PauseGameManager"]
+[editable path="AudioSourcesManager"]
+[editable path="TimeManager"]
+[editable path="HealthManager"]
+[editable path="SceneChanger"]
+[editable path="VolumeManager"]
+[editable path="SaveGame"]
+[editable path="ConfigManager"]

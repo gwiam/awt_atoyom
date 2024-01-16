@@ -19,8 +19,8 @@ func _physics_process(delta):
 	
 	var movementDir = Vector3.ZERO
 	
-	movementDir.z = Input.get_axis("leftMove", "rightMove")
-	movementDir.x = Input.get_axis("backwardMove", "forwardMove")
+	movementDir.x = Input.get_axis("rightMove","leftMove")
+	movementDir.z = Input.get_axis("backwardMove", "forwardMove")
 	if (is_on_floor() && Input.is_action_pressed("jump")):
 		# call floaty function
 		movementDir.y += 2 * rawIncrement

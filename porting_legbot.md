@@ -26,7 +26,10 @@
         - changing main legbot node to characterbody3d
         - moving collision shape out of the collider, so that it's under characterbody3d
     - use a signal to "enable the navmesh"
-        
+    - setting up expression based transitions
+        - changing animation expression base node of animation tree to LegBot
+        - creating enum to represent expressions (Walking, NotWalking)
+            - also changing the expression conditions to be like "state = <state>"
 
 # Personal notes:
     
@@ -37,6 +40,8 @@
             - this causes the animation to loop though, maybe it's better to call the animationtree instead?
                 - still loops with animation tree
                 - looks like I still need to switch to walk or idle by myself
+                - can be stopped by disabling looping in the animation player with the button next to the animation time
+                    - make idle loop with this method
             - enabling the animation tree stops the animation player
         - use the animation tree with some string parameter bs like get("parameters/Base Layer/playback") to get the state machine
         - "travel" to the desired node, works even when not connected 
@@ -62,5 +67,7 @@
         - yes... to be exact it needs velocity and move_and_slide
         - but then it needs a shape or else it cannot collide
     - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
+    - maybe I could change the expressions to nav.target_position = global_position
+    - now the damn animation state is stuck of idle....
 
             

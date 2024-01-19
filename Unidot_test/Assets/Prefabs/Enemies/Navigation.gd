@@ -6,14 +6,13 @@ var accel = 40
 @onready var nav:NavigationAgent3D = $NavigationAgent3D
 @onready var animationTree = $LegsBot/AnimationTree
 
-
 func _ready():
-	#av.target_position = global_position
 	StopNavigationAgent()
 
 func _on_legs_bot_enable_navmesh():
 	print("turned on navmesh")
 	if is_instance_valid(nav):
+		animationTree.changeStateWalking()
 		nav.target_position = Vector3(0,0,16)
 
 func _physics_process(_delta):
@@ -27,6 +26,6 @@ func _physics_process(_delta):
 	move_and_slide()
 	
 func StopNavigationAgent():
-	var stateMachine = animationTree.get("parameters/condition/")
+	animationTree.changeStateWalking() # TODO undo to now walking
 	nav.target_position = global_position
 

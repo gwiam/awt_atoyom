@@ -2,6 +2,7 @@
 
 [resource]
 length = 1.625
+loop_mode = 1
 tracks/0/type = "position_3d"
 tracks/0/imported = false
 tracks/0/enabled = true

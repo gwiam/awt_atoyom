@@ -7,7 +7,7 @@ class_name WakeUpAndGo
 signal enable_navmesh
 
 var delayToWakeUp: float = 0
-var animationDuration: float = 2.2
+const animationDuration: float = 2.2
 
 var awake = false
 

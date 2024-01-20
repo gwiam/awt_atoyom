@@ -53,21 +53,21 @@ node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_mfvs3"]
 advance_mode = 2
-advance_expression = "not Walking"
+advance_expression = "state == NotWalking"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_oe7w6"]
 advance_mode = 2
-advance_expression = "Walking"
+advance_expression = "state == Walking"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cdubj"]
 switch_mode = 2
 advance_mode = 2
-advance_expression = "not Walking"
+advance_expression = "state == NotWalking"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8ruhl"]
 switch_mode = 2
 advance_mode = 2
-advance_expression = "Walking"
+advance_expression = "state == Walking"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_g6ksa"]
 advance_mode = 2
@@ -88,7 +88,7 @@ transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeSt
 graph_offset = Vector2(0, 90.783)
 
 [resource]
-graph_offset = Vector2(-160.476, 27.8329)
+graph_offset = Vector2(-148.231, 52.6021)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

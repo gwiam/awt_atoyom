@@ -25,11 +25,14 @@
         - adding navigationsagend3d 
         - changing main legbot node to characterbody3d
         - moving collision shape out of the collider, so that it's under characterbody3d
+        - writing a whole script for movement inside _physics_process
+            - getting next and current position
+            - calculating and setting velocity (built into CharacterBody3D)
     - use a signal to "enable the navmesh"
     - setting up expression based transitions
         - changing animation expression base node of animation tree to LegBot
         - creating enum to represent expressions (Walking, NotWalking)
-            - also changing the expression conditions to be like "state = <state>"
+        - also changing the expression conditions to be like "state = <state>"
 
 # Personal notes:
     
@@ -69,5 +72,10 @@
     - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
     - maybe I could change the expressions to nav.target_position = global_position
     - now the damn animation state is stuck of idle....
+        - nvm Godot is actually retarded and didn't "save" the expressions
+        - after restarting 
+    - calculating velocity is a little strange
+        - right now I am doing velocity.move_toward(new_velocity*speed,accel)
+        - but if the syntax of move_toward is <direction> and <amount> then this is bullshit
 
             

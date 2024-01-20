@@ -6,9 +6,10 @@ var accel = 40
 @onready var nav:NavigationAgent3D = $NavigationAgent3D
 @onready var animationTree = $LegsBot/AnimationTree
 
-var DistanceFromTargetToStop = 1
+var DistanceFromTargetToStop = 1 # may need adjustment from the unity value
 
 func _ready():
+	
 	StopNavigationAgent()
 
 func _on_legs_bot_enable_navmesh():
@@ -23,11 +24,10 @@ func _physics_process(_delta):
 	var new_velocity = current.direction_to(next)
 	# in Godot you need to implement your own movement
 	# some stuff from a youtube video, I might need to change it
-	velocity = velocity.move_toward(new_velocity,.25)
+	velocity = velocity.move_toward(new_velocity*speed,accel)
 	
 	move_and_slide()
 	if(nav.target_position.distance_to(global_position) < DistanceFromTargetToStop):
-		print("reached target")
 		StopNavigationAgent()
 	
 func StopNavigationAgent():

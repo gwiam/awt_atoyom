@@ -29,6 +29,12 @@
         - then instantiate
         - then append it somewhere
             - when adding to root you can call_deferred to "delay" the add child until scene loads
+    - finding nodes is way harder, it's easier to do "get_node("root/<path to node>")"
+        - find_node is a lie
+    - to cast ray you need to:
+        - create RaycastQuery
+        - get world state
+        - call intersect_ray on world state with raycast query as parameter
 
 # personal nodes
 
@@ -42,3 +48,4 @@
         - this is where signals come in handy
     - seems like navmesh navigation in Unity is a lot easier since you don't need to write a physics process for it
     - you cannot stop navigation by stopping the physics process
+    - raycasting seems to be more complicated too

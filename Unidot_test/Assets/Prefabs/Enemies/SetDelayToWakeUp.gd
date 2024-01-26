@@ -7,7 +7,6 @@ extends Node
 func _ready():
 	if(!haveTrigger):
 		SetScriptsActive()
-	
 
 func SetScriptsActive():
 	var nodePath:NodePath = "../LegsBot"

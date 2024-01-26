@@ -1,15 +1,19 @@
 extends CharacterBody3D
 
-# values taken from Unity navmesh agent
-@export var speed = 5
-var current_speed = 0
-@export var accel = 40
-@export var angular_speed = 900
-@export var DistanceFromTargetToStop = 6 # may need adjustment from the unity value
+
 @onready var nav:NavigationAgent3D = $NavigationAgent3D
 @onready var animationTree = $LegsBot/AnimationTree
+@onready var BulletSpawnLocation = $LegsBot/Armature/Skeleton3D/Body/GunPivot/ShootOrigin
+@onready var debugLabel = $DebugLabel # TODO remove
+@export var speed = 5
+var currentSpeed = 0
+@export var accel = 40
+@export var angularSpeed = 10
+@export var DistanceFromTargetToStop = 6 # may need adjustment from the unity value
 var positionToGo
-
+var cam
+var playerHeadInSight
+var playerBodyInSight
 func _ready():
 	StopNavigationAgent()
 
@@ -17,31 +21,58 @@ func _on_legs_bot_enable_navmesh():
 	print("turned on navmesh")
 	if is_instance_valid(nav):
 		animationTree.changeStateWalking()
-		current_speed = speed
+		currentSpeed = speed
 		positionToGo = get_node("/root/player")
-
+		cam = get_node("/root/player/CameraPivot")
 
 func _physics_process(delta):
-	if is_instance_valid(positionToGo):
+	if is_instance_valid(positionToGo) && is_instance_valid(cam):
+		isPlayerInSight()
 		nav.target_position = positionToGo.position
-	var next = nav.get_next_path_position()
-	var current = global_position
-	var new_velocity = current.direction_to(next)*current_speed
-	# in Godot you need to implement your own movement
-	# some stuff from a youtube video, I might need to change it
-	velocity = velocity.move_toward(new_velocity,accel) 
-	look_at(next,Vector3.UP, true) # TODO smooth turning
-	#rotation.y = lerp_angle(atan2(next.x,next.z),atan2(new_velocity.x,new_velocity.z), delta * 1)
+		var isPlayerCloseEnough = nav.distance_to_target() < DistanceFromTargetToStop
+		if((playerHeadInSight || playerBodyInSight) && isPlayerCloseEnough):
+			# TODO adjust this so that the bot stops a bit later
+			StopNavigationAgent()
+		elif(!nav.is_target_reachable() && nav.distance_to_target() < 1):
+			StopNavigationAgent()
+		else:
+			animationTree.changeStateWalking()
+			currentSpeed = speed
+		
+	if currentSpeed != 0:
+		var next = nav.get_next_path_position()
+		var current = global_position
+		var new_velocity = current.direction_to(next)*currentSpeed
+		
+		velocity = velocity.move_toward(new_velocity,accel) 
+		if currentSpeed != 0: # TODO turns smoothly but the behavior at spawn is weird
+			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
+			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
+		
+		move_and_slide()
 	
-	move_and_slide()
-	if(nav.distance_to_target() < DistanceFromTargetToStop):
-		StopNavigationAgent()
-	else:
-		animationTree.changeStateWalking()
-		current_speed = speed
 	
 func StopNavigationAgent():
 	animationTree.changeStateNotWalking()
-	#nav.target_position = global_position
-	current_speed = 0
+	currentSpeed = 0
 
+func isPlayerInSight(): 
+	var space_state = get_world_3d().direct_space_state
+	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.position, positionToGo.position)
+	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.position, cam.position)
+	bodyQuery.collide_with_areas = true # don't know if this helps
+	headQuery.collide_with_areas = true
+	bodyQuery.exclude = [self]
+	headQuery.exclude = [self]
+	var resultBody = space_state.intersect_ray(bodyQuery) 
+	var resultHead = space_state.intersect_ray(headQuery)
+	if resultBody.collider == positionToGo:
+		playerBodyInSight = true
+	else:
+		playerBodyInSight = false
+	if resultHead.collider == cam:
+		playerHeadInSight = true
+	else:
+		playerHeadInSight = false
+	#debugLabel.text = "head: " + str(playerBodyInSight) + "; body: " + str(playerHeadInSight)
+	debugLabel.text = "body: " + str(resultBody.collider)

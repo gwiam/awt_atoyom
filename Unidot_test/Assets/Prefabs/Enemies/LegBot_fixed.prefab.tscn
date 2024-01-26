@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://clnjtjssvuxe4"]
+[gd_scene load_steps=15 format=3 uid="uid://clnjtjssvuxe4"]
 
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/SetDelayToWakeUp.gd" id="1_6wuou"]
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyNavMesh.gd" id="1_ek2hd"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bsuf6rr6u55ni" path="res://Assets/Models/warning.gltf" id="5_trwk3"]
 [ext_resource type="Material" uid="uid://c1plpexp5jb6n" path="res://Assets/Materials/GlowRed.mat.tres" id="6_8irf6"]
 [ext_resource type="AnimationLibrary" uid="uid://cy8uo4btnym0v" path="res://Assets/Animations/LegBot/LegBotAnimation.library.tres" id="7_5gjma"]
+[ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyShootBullet.gd" id="7_qjq3g"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://d1vcgysdwxlti" path="res://Assets/Animations/LegBot/LegBotAnimation.controller.tres" id="8_pkxmd"]
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/AnimationState.gd" id="12_tgny7"]
 
@@ -704,6 +705,7 @@ bone_idx = 0
 
 [node name="GunPivot" type="Node3D" parent="LegsBot/Armature/Skeleton3D/Body"]
 transform = Transform3D(0.0246381, 0, 0, 0, 0.0242698, 0.00424378, 0, -0.00424378, 0.0242698, 0, 0.0118515, -0.00113372)
+script = ExtResource("7_qjq3g")
 
 [node name="MonoBehaviour" type="Node" parent="LegsBot/Armature/Skeleton3D/Body/GunPivot"]
 editor_description = "[MonoBehaviour 114::dfed05359ad80a1498531fb205e77966:3963536096291780681]"
@@ -11864,7 +11866,11 @@ metadata/unidot_keys = {
 "serializedVersion": 6
 }
 
+[node name="DebugLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22068, 0)
+
 [connection signal="timeout" from="Timer" to="LegsBot" method="_on_timer_timeout"]
+[connection signal="enable_gun" from="LegsBot" to="LegsBot/Armature/Skeleton3D/Body/GunPivot" method="_on_legs_bot_enable_gun"]
 [connection signal="enable_navmesh" from="LegsBot" to="." method="_on_legs_bot_enable_navmesh"]
 
 [editable path="LegsBot"]

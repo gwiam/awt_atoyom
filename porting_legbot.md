@@ -28,7 +28,8 @@
         - writing a whole script for movement inside _physics_process
             - getting next and current position
             - calculating and setting velocity (built into CharacterBody3D)
-    - use a signal to "enable the navmesh"
+    - use a signal to enable the navigation and the gun
+    - to stop navigation created a global var "currentSpeed" and set that to 0 to stop and to const "speed" to the orginial speed
     - setting up expression based transitions
         - changing animation expression base node of animation tree to LegBot
         - creating enum to represent expressions (Walking, NotWalking)
@@ -64,18 +65,22 @@
             - like this get_node(nodePath) as WakeUpAndGo
         - commenting out "TurnNavmeshAndGunOn" aparently does nothing?
     - legbot is still clipping into the ground
-        - it's the navmesh offset
+        - it's the navmesh offset in unity
+        - doesn't work in Godot though, at least not imediately
     - there is a navmesh agent but unidot can't take care of it
     - is the npc class necessary for the navmesh to work?
-        - yes... to be exact it needs velocity and move_and_slide
+        - yes and no... to be exact it needs velocity and move_and_slide
         - but then it needs a shape or else it cannot collide
     - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
     - maybe I could change the expressions to nav.target_position = global_position
     - now the damn animation state is stuck of idle....
         - nvm Godot is actually retarded and didn't "save" the expressions
-        - after restarting 
     - calculating velocity is a little strange
         - right now I am doing velocity.move_toward(new_velocity*speed,accel)
         - but if the syntax of move_toward is <direction> and <amount> then this is bullshit
+    - onto coroutines...
+        - in EnemyShootBullet a coroutine is started to start firing
+        - maybe Await is a fitting equivalent? yield for sure isn't
+            - a tutorial shows a timeout which is perfect for what I need
 
             

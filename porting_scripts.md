@@ -49,3 +49,4 @@
     - seems like navmesh navigation in Unity is a lot easier since you don't need to write a physics process for it
     - you cannot stop navigation by stopping the physics process
     - raycasting seems to be more complicated too
+        - always remember to use global position, especially when using subnodes

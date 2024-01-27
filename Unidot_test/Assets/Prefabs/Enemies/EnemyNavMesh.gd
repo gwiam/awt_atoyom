@@ -28,7 +28,7 @@ func _on_legs_bot_enable_navmesh():
 func _physics_process(delta):
 	if is_instance_valid(positionToGo) && is_instance_valid(cam):
 		isPlayerInSight()
-		nav.target_position = positionToGo.position
+		nav.target_position = positionToGo.global_position
 		var isPlayerCloseEnough = nav.distance_to_target() < DistanceFromTargetToStop
 		if((playerHeadInSight || playerBodyInSight) && isPlayerCloseEnough):
 			# TODO adjust this so that the bot stops a bit later
@@ -38,6 +38,9 @@ func _physics_process(delta):
 		else:
 			animationTree.changeStateWalking()
 			currentSpeed = speed
+	else:
+		animationTree.changeStateWalking()
+		currentSpeed = speed
 		
 	if currentSpeed != 0:
 		var next = nav.get_next_path_position()
@@ -58,21 +61,20 @@ func StopNavigationAgent():
 
 func isPlayerInSight(): 
 	var space_state = get_world_3d().direct_space_state
-	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.position, positionToGo.position)
-	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.position, cam.position)
-	bodyQuery.collide_with_areas = true # don't know if this helps
-	headQuery.collide_with_areas = true
+	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, positionToGo.global_position)
+	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, cam.global_position)
 	bodyQuery.exclude = [self]
 	headQuery.exclude = [self]
 	var resultBody = space_state.intersect_ray(bodyQuery) 
 	var resultHead = space_state.intersect_ray(headQuery)
-	if resultBody.collider == positionToGo:
+	if resultBody && resultBody.collider == positionToGo:
 		playerBodyInSight = true
 	else:
 		playerBodyInSight = false
-	if resultHead.collider == cam:
+	if resultHead && resultHead.collider == cam:
 		playerHeadInSight = true
 	else:
 		playerHeadInSight = false
-	#debugLabel.text = "head: " + str(playerBodyInSight) + "; body: " + str(playerHeadInSight)
-	debugLabel.text = "body: " + str(resultBody.collider)
+	if resultBody && resultHead:
+		debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
+	#debugLabel.text = "distance: " + str()

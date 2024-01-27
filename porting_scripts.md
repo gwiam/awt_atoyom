@@ -35,6 +35,10 @@
         - create RaycastQuery
         - get world state
         - call intersect_ray on world state with raycast query as parameter
+    - referencing scripts from other nodes done by
+        - giving the reference script a classname
+        - referencing node by get_node(<nodepath>) as <classname>
+        
 
 # personal nodes
 

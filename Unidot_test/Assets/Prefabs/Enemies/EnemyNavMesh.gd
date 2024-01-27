@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+class_name EnemyNavMesh
 
 @onready var nav:NavigationAgent3D = $NavigationAgent3D
 @onready var animationTree = $LegsBot/AnimationTree
@@ -75,6 +76,6 @@ func isPlayerInSight():
 		playerHeadInSight = true
 	else:
 		playerHeadInSight = false
-	if resultBody && resultHead:
-		debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
-	#debugLabel.text = "distance: " + str()
+	#if resultBody && resultHead:
+	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
+	

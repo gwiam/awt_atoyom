@@ -5,6 +5,7 @@ var playerHeadTarget
 var isPreparingShoot
 
 @onready var warningObject = $warning/Cube
+@onready var enemyNavMesh = $"../../../../.." as EnemyNavMesh
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -19,8 +20,15 @@ func _process(delta):
 	if is_instance_valid(playerBodyTarget):
 		look_at(playerBodyTarget.position, Vector3.UP, true)
 		
-	#isPlayerInSight()
+	if(!isPreparingShoot && (enemyNavMesh.playerHeadInSight || enemyNavMesh.playerBodyInSight)):
+		await shootingProcedures()
+	elif(isPreparingShoot && (!enemyNavMesh.playerHeadInSight && !enemyNavMesh.playerBodyInSight) && !warningObject.visible):
+		StopBeforeWarning()
 		
+func StopBeforeWarning():
+	# TODO stop all coroutines
+	isPreparingShoot = false
+	
 func startPreparation():
 	isPreparingShoot = true
 		

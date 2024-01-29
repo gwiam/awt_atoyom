@@ -49,7 +49,7 @@ func _physics_process(delta):
 		var new_velocity = current.direction_to(next)*currentSpeed
 		
 		velocity = velocity.move_toward(new_velocity,accel) 
-		if currentSpeed != 0: # TODO turns smoothly but the behavior at spawn is weird
+		if currentSpeed != 0: # TODO turns smoothly but it spawns the wrong way around
 			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
 			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
 		

@@ -34,6 +34,12 @@
         - changing animation expression base node of animation tree to LegBot
         - creating enum to represent expressions (Walking, NotWalking)
         - also changing the expression conditions to be like "state = <state>"
+    - reimplement gun
+        - recreate "EnemyShootBullet" of GunPivot
+            - use await for coroutines but I can't stop it
+            - maybe there is another way
+        - recreate "DestroyOnImpact" 
+
 
 # Personal notes:
     
@@ -82,5 +88,7 @@
         - in EnemyShootBullet a coroutine is started to start firing
         - maybe Await is a fitting equivalent? yield for sure isn't
             - a tutorial shows a timeout which is perfect for what I need
+        - there is no "StopAllCoroutines", how do I stop the bot from shooting wildly?
+    
 
             

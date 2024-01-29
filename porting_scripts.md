@@ -34,10 +34,16 @@
     - to cast ray you need to:
         - create RaycastQuery
         - get world state
-        - call intersect_ray on world state with raycast query as parameter
+        - call intersect_ray on world state with raycast query as paramete
+        - don't forget to use global coordinates
     - referencing scripts from other nodes done by
         - giving the reference script a classname
         - referencing node by get_node(<nodepath>) as <classname>
+    - to destroy a node call queue_free()
+    - for detecting collision you need to 
+        - set contact_monitor to true
+        - set max_contacts_reported to a value greater than 0
+        - connect the body_entered signal
         
 
 # personal nodes

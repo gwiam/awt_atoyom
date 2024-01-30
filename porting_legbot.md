@@ -34,12 +34,19 @@
         - changing animation expression base node of animation tree to LegBot
         - creating enum to represent expressions (Walking, NotWalking)
         - also changing the expression conditions to be like "state = <state>"
+    - also make animation transition smoothly by setting a crossfade
+        - transition times are taken from the original but there seems to be no way of saying when the fade should start
     - reimplement gun
         - recreate "EnemyShootBullet" of GunPivot
             - use await for coroutines but I can't stop it
             - maybe there is another way
         - recreate "DestroyOnImpact"
     - recreate audio source, thankfully the sounds themselves have been imported
+        - most audio can just be played through a script
+        - step sounds are played by the legbotWalk2 animation
+            - just like in Unity add a new track
+            - add keyframes for each step
+            - add step sound to each keyframe
 
 
 # Personal notes:
@@ -80,6 +87,7 @@
         - but then it needs a shape or else it cannot collide
     - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
     - animations aren't blending smoothly
+        - I can add a crossfade time
     - maybe I could change the expressions to nav.target_position = global_position
     - now the damn animation state is stuck of idle....
         - nvm Godot is actually retarded and didn't "save" the expressions
@@ -90,7 +98,14 @@
         - in EnemyShootBullet a coroutine is started to start firing
         - maybe Await is a fitting equivalent? yield for sure isn't
             - a tutorial shows a timeout which is perfect for what I need
+            - it keeps piling on so I am not using it correctly
         - there is no "StopAllCoroutines", how do I stop the bot from shooting wildly?
+    - I don't know where the walk sound effect is played in the original version
+        - apparently it's played by the "PlaySomeAudio" script but the only function inside of it "PlayAudio" is not referenced anywhere?!
+        - found it: it's those little tampon marker thingies at the top of the animation timeline
+        - million dollar question: can godot do something similar?
+            - yes and it works!
+        
     
 
             

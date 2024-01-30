@@ -38,7 +38,8 @@
         - recreate "EnemyShootBullet" of GunPivot
             - use await for coroutines but I can't stop it
             - maybe there is another way
-        - recreate "DestroyOnImpact" 
+        - recreate "DestroyOnImpact"
+    - recreate audio source, thankfully the sounds themselves have been imported
 
 
 # Personal notes:
@@ -78,6 +79,7 @@
         - yes and no... to be exact it needs velocity and move_and_slide
         - but then it needs a shape or else it cannot collide
     - to change animation of animation node choose an animation from the inspector it's not a state machine, the reason you don't have a pen icon!
+    - animations aren't blending smoothly
     - maybe I could change the expressions to nav.target_position = global_position
     - now the damn animation state is stuck of idle....
         - nvm Godot is actually retarded and didn't "save" the expressions

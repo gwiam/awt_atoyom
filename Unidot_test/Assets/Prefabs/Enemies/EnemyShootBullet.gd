@@ -9,6 +9,8 @@ var isPreparingShoot
 # WTF does balas even mean? is that "bullets" in another language?
 var balas : PackedScene = preload("res://Assets/Prefabs/Objects/Bullet_fixed.prefab.tscn")
 @onready var shootOrigin = $ShootOrigin
+@onready var alert = $"../../../../../Audio/alert"
+@onready var shoot = $"../../../../../Audio/shoot"
 
 func _ready():
 	pass
@@ -29,18 +31,16 @@ func _process(delta):
 		
 func StopBeforeWarning():
 	# TODO stop all coroutines
-	# I bet this is how I keep it from firing more and more bullets
 	isPreparingShoot = false
 	
 func startPreparation():
 	isPreparingShoot = true
 		
 func showWarnings():
-	# TODO play sound
+	alert.play()
 	warningObject.visible = true
 		
 func shootBullet():
-	# it keeps spawning more and more bullets
 	var bala = balas.instantiate()
 	bala.global_position = shootOrigin.global_position
 	bala.rotation = shootOrigin.rotation
@@ -53,11 +53,12 @@ func shootBullet():
 		bala.look_at(playerHeadTarget.global_position)
 	
 	bala.apply_central_force(global_transform.basis.z * 2700)
-	# TODO play sound
+	shoot.play()
 	isPreparingShoot = false
 	warningObject.visible = false
 		
 func shootingProcedures():
+	# it keeps running more instances of this function
 	startPreparation()
 	# https://gdscript.com/solutions/coroutines-and-yield/
 	await get_tree().create_timer(1.0).timeout

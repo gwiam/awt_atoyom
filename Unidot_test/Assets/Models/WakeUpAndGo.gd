@@ -10,6 +10,7 @@ var delayToWakeUp: float = 0
 const animationDuration: float = 1.0 # different from Unity
 
 var awake = false
+@onready var wakeUpBeep = $"../Audio/wakeUpBeep"
 
 func SetWakingUp():
 	var timer:Timer = $"../Timer"
@@ -33,7 +34,7 @@ func StartWakeUp():
 	awake = true
 	var stateMachine = $AnimationTree.get("parameters/Base Layer/playback")
 	stateMachine.travel("WakeUp")
-	# TODO play sound
+	wakeUpBeep.play()
 	var node = get_node("../CollisionShape3D") as CollisionShape3D
 	node.shape.height = 1.5
 	node.position = Vector3.UP * 0.27

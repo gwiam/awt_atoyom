@@ -28,16 +28,17 @@ func _on_legs_bot_enable_gun():
 	playerHeadTarget = get_node("/root/player/CameraPivot")
 
 func _process(delta):
-	debug_label.text = "stop coroutines: " + str(stopCoroutine) # TODO remove
+	# debug_label.text = "stop coroutines: " + str(stopCoroutine) # TODO remove
 	if is_instance_valid(playerBodyTarget):
 		look_at(playerBodyTarget.global_position, Vector3.UP, true)
 		
 	if(!isPreparingShoot && (enemyNavMesh.playerHeadInSight || enemyNavMesh.playerBodyInSight)):
 		if !coroutineRunning:
 			coroutineRunning = true
+			stopCoroutine = false
 			await shootingProcedures()
 			coroutineRunning = false
-			stopCoroutine = false
+
 	elif(isPreparingShoot && (!enemyNavMesh.playerHeadInSight && !enemyNavMesh.playerBodyInSight) && !warningObject.visible):
 		StopBeforeWarning()
 		
@@ -64,7 +65,7 @@ func shootBullet():
 	elif enemyNavMesh.playerHeadInSight:
 		bala.look_at(playerHeadTarget.global_position)
 	
-	bala.apply_central_force(global_transform.basis.z * 2700)
+	#bala.apply_central_force(global_transform.basis.z * 2700)
 	shoot.play()
 	isPreparingShoot = false
 	warningObject.visible = false

@@ -62,10 +62,10 @@ func StopNavigationAgent():
 
 func isPlayerInSight(): 
 	var space_state = get_world_3d().direct_space_state
-	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, positionToGo.global_position)
-	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, cam.global_position)
-	bodyQuery.exclude = [self]
-	headQuery.exclude = [self]
+	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, positionToGo.global_position, collision_mask,[self])
+	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, cam.global_position, collision_mask,[self])
+	#bodyQuery.exclude = [self]
+	#headQuery.exclude = [self]
 	var resultBody = space_state.intersect_ray(bodyQuery) 
 	var resultHead = space_state.intersect_ray(headQuery)
 	if resultBody && resultBody.collider == positionToGo:
@@ -76,6 +76,6 @@ func isPlayerInSight():
 		playerHeadInSight = true
 	else:
 		playerHeadInSight = false
-	#if resultBody && resultHead:
-	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
+	if resultBody && resultHead:
+		debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
 	

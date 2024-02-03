@@ -28,6 +28,9 @@
         - writing a whole script for movement inside _physics_process
             - getting next and current position
             - calculating and setting velocity (built into CharacterBody3D)
+        - implementing the isPlayerInSight function with raycasting (see porting_scripts)
+            - important for "EnemyShootBullet"
+            - imortant that the sight check works regardless of bullets or effects blocking the sight
     - use a signal to enable the navigation and the gun
     - to stop navigation created a global var "currentSpeed" and set that to 0 to stop and to const "speed" to the orginial speed
     - setting up expression based transitions
@@ -38,7 +41,7 @@
         - transition times are taken from the original but there seems to be no way of saying when the fade should start
     - reimplement gun
         - recreate "EnemyShootBullet" of GunPivot
-            - unclear how to do coroutines like in Unity
+            - coroutines cannot be done like in Unity because they cannot be interrupted
         - recreate "DestroyOnImpact"
     - recreate audio source, thankfully the sounds themselves have been imported
         - most audio can just be played through a script
@@ -95,6 +98,9 @@
         - but if the syntax of move_toward is <direction> and <amount> then this is bullshit
     - onto coroutines...
         - in EnemyShootBullet a coroutine is started to do the firing routine
+        - StopBeforeWarning interrupts coroutine between preparing to shoot and flashing the warning
+            - if you keep breaking line of sight the bot will just follow you around without warning or shooting
+            - alternatively I could check if player is still in line of sight after the preparation timer runs out
         - maybe Await is a fitting equivalent? yield for sure isn't
             - a tutorial shows a timeout which is perfect for what I need
             - it keeps piling on so I am not using it correctly

@@ -15,6 +15,9 @@ var balas : PackedScene = preload("res://Assets/Prefabs/Objects/Bullet_fixed.pre
 @onready var debug_label = $"../../../../../DebugLabel"
 
 var coroutineRunning = false
+var stopCoroutine = false
+@export var reloadTime = 1.5
+@export var alertTime = 0.4 # TODO set this back to 0.4
 
 func _ready():
 	pass
@@ -25,18 +28,21 @@ func _on_legs_bot_enable_gun():
 	playerHeadTarget = get_node("/root/player/CameraPivot")
 
 func _process(delta):
-	debug_label.text = "isPreparingShoot: " + str(isPreparingShoot) # TODO remove
+	debug_label.text = "stop coroutines: " + str(stopCoroutine) # TODO remove
 	if is_instance_valid(playerBodyTarget):
 		look_at(playerBodyTarget.global_position, Vector3.UP, true)
 		
 	if(!isPreparingShoot && (enemyNavMesh.playerHeadInSight || enemyNavMesh.playerBodyInSight)):
 		if !coroutineRunning:
+			coroutineRunning = true
 			await shootingProcedures()
+			coroutineRunning = false
+			stopCoroutine = false
 	elif(isPreparingShoot && (!enemyNavMesh.playerHeadInSight && !enemyNavMesh.playerBodyInSight) && !warningObject.visible):
 		StopBeforeWarning()
 		
 func StopBeforeWarning():
-	# TODO stop all coroutines
+	stopCoroutine = true
 	isPreparingShoot = false
 	
 func startPreparation():
@@ -65,17 +71,12 @@ func shootBullet():
 		
 func shootingProcedures():
 	# it keeps running more instances of this function
-	coroutineRunning = true
 	startPreparation()
 	# https://gdscript.com/solutions/coroutines-and-yield/
-	await get_tree().create_timer(1.0).timeout
-	showWarnings()
-	await get_tree().create_timer(1.0).timeout
-	shootBullet()
-	coroutineRunning = false
-	
-	
-	
-	
+	await get_tree().create_timer(reloadTime).timeout
+	if !stopCoroutine:
+		showWarnings()
+		await get_tree().create_timer(alertTime).timeout
+		shootBullet()
 
 

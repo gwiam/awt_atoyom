@@ -52,8 +52,8 @@
 
     - finding members or attributes is a pain
     - so aparently $<node> is the same as get_node(<node>) but I haven't tested that yet
-    - Awake() and _ready() seem to do the same in both engines
-    
+    - Awake() and _enter_tree() seem to do the same in both engines
+    - Start() and _ready() are the same thing
     - how do I find objects in the game world when they are not inside they world yet?
     - on_enable doesn't exist in Godot? Am I supposed to poll if the bot is set to active?
         - this is where signals come in handy

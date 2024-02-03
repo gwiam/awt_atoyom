@@ -38,8 +38,7 @@
         - transition times are taken from the original but there seems to be no way of saying when the fade should start
     - reimplement gun
         - recreate "EnemyShootBullet" of GunPivot
-            - use await for coroutines but I can't stop it
-            - maybe there is another way
+            - unclear how to do coroutines like in Unity
         - recreate "DestroyOnImpact"
     - recreate audio source, thankfully the sounds themselves have been imported
         - most audio can just be played through a script
@@ -95,11 +94,24 @@
         - right now I am doing velocity.move_toward(new_velocity*speed,accel)
         - but if the syntax of move_toward is <direction> and <amount> then this is bullshit
     - onto coroutines...
-        - in EnemyShootBullet a coroutine is started to start firing
+        - in EnemyShootBullet a coroutine is started to do the firing routine
         - maybe Await is a fitting equivalent? yield for sure isn't
             - a tutorial shows a timeout which is perfect for what I need
             - it keeps piling on so I am not using it correctly
+            - seems like yield isn't used in Godot 4 anymore
         - there is no "StopAllCoroutines", how do I stop the bot from shooting wildly?
+            - await waits for a signal, maybe that's why it keeps piling on?
+                - try and not await for shootingProcedures
+                    - that didn't seem to change anything
+            - original code has StartCoroutine in the update function
+                - but if that is the problem why doesn't unity pile on coroutines?
+            - changing process to physics_process doesn't help either
+            - maybe it's because of the two await statements and the timers "confusing" the awaits
+                - nope
+            - for now I am preventing await from being called multiple times by setting a condition
+            - to imitate the "StopCoroutine" thing I could maybe make a signal that is either emitted by the end of the coroutine or the "StopBeforeWarning" function
+                - I have a feeling that this won't cancel the function
+            
     - I don't know where the walk sound effect is played in the original version
         - apparently it's played by the "PlaySomeAudio" script but the only function inside of it "PlayAudio" is not referenced anywhere?!
         - found it: it's those little tampon marker thingies at the top of the animation timeline

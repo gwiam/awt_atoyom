@@ -7,10 +7,14 @@ var isPreparingShoot
 @onready var warningObject = $warning/Cube
 @onready var enemyNavMesh = $"../../../../.." as EnemyNavMesh
 # WTF does balas even mean? is that "bullets" in another language?
+# bala means bullet in Spanish lol
 var balas : PackedScene = preload("res://Assets/Prefabs/Objects/Bullet_fixed.prefab.tscn")
 @onready var shootOrigin = $ShootOrigin
 @onready var alert = $"../../../../../Audio/alert"
 @onready var shoot = $"../../../../../Audio/shoot"
+@onready var debug_label = $"../../../../../DebugLabel"
+
+var coroutineRunning = false
 
 func _ready():
 	pass
@@ -21,11 +25,13 @@ func _on_legs_bot_enable_gun():
 	playerHeadTarget = get_node("/root/player/CameraPivot")
 
 func _process(delta):
+	debug_label.text = "isPreparingShoot: " + str(isPreparingShoot) # TODO remove
 	if is_instance_valid(playerBodyTarget):
 		look_at(playerBodyTarget.global_position, Vector3.UP, true)
 		
 	if(!isPreparingShoot && (enemyNavMesh.playerHeadInSight || enemyNavMesh.playerBodyInSight)):
-		await shootingProcedures()
+		if !coroutineRunning:
+			await shootingProcedures()
 	elif(isPreparingShoot && (!enemyNavMesh.playerHeadInSight && !enemyNavMesh.playerBodyInSight) && !warningObject.visible):
 		StopBeforeWarning()
 		
@@ -59,12 +65,14 @@ func shootBullet():
 		
 func shootingProcedures():
 	# it keeps running more instances of this function
+	coroutineRunning = true
 	startPreparation()
 	# https://gdscript.com/solutions/coroutines-and-yield/
 	await get_tree().create_timer(1.0).timeout
 	showWarnings()
 	await get_tree().create_timer(1.0).timeout
 	shootBullet()
+	coroutineRunning = false
 	
 	
 	

@@ -18,6 +18,7 @@
         - though it's not the first thing that gets executed aparently
     - instead of referencing components you reference nodes, do not forget to cast those to the right type
     - delaying execution has to be done with a timer and signals
+        - can also be done in one line using "await get_tree().create_timer(<time>).timeout"
     - on_enable is going to be done with signals
     - instead of adding multiple scripts to one node just reuse the "Monobehavior" nodes
     - calling animations in code can be done by 
@@ -46,6 +47,10 @@
         - connect the body_entered signal
     - references can be drag'n'dropped into a file from the scene view
         - to automatically add the @onready press and hold CTRL
+    - coroutines are done with await (in Godot 4, Godot 3 uses yield)
+        - await waits for a signal
+        - not way to interrupt unlike in Unity
+            - the first major thing that is not possible under Godot
         
 
 # personal nodes

@@ -28,6 +28,8 @@
         - writing a whole script for movement inside _physics_process
             - getting next and current position
             - calculating and setting velocity (built into CharacterBody3D)
+            - implemting smooth turning with lerp_angle
+                - angular velocity had to be changed
         - implementing the isPlayerInSight function with raycasting (see porting_scripts)
             - important for "EnemyShootBullet"
             - imortant that the sight check works regardless of bullets or effects blocking the sight
@@ -117,12 +119,13 @@
             - for now I am preventing await from being called multiple times by setting a condition
             - to imitate the "StopCoroutine" thing I could maybe make a signal that is either emitted by the end of the coroutine or the "StopBeforeWarning" function
                 - I have a feeling that this won't cancel the function
-            
+                - just use a bool instead, this will actually cancel the coroutine
     - I don't know where the walk sound effect is played in the original version
         - apparently it's played by the "PlaySomeAudio" script but the only function inside of it "PlayAudio" is not referenced anywhere?!
         - found it: it's those little tampon marker thingies at the top of the animation timeline
         - million dollar question: can godot do something similar?
             - yes and it works!
+    - smooth turning works but the bot spawns facing the wrong direction
         
     
 

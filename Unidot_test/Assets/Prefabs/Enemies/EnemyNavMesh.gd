@@ -27,13 +27,13 @@ func _on_legs_bot_enable_navmesh():
 		cam = get_node("/root/player/CameraPivot")
 
 func _physics_process(delta):
+	debugLabel.text = "currentSpeed " + str(currentSpeed)
 	if is_instance_valid(positionToGo) && is_instance_valid(cam):
 		isPlayerInSight()
 		nav.target_position = positionToGo.global_position
 		var isPlayerCloseEnough = nav.distance_to_target() < DistanceFromTargetToStop
 		if((playerHeadInSight || playerBodyInSight) && isPlayerCloseEnough):
-			# TODO adjust this so that the bot stops a bit later
-			StopNavigationAgent()
+			StopWithDelay()
 		elif(!nav.is_target_reachable() && nav.distance_to_target() < 1):
 			StopNavigationAgent()
 		else:
@@ -55,6 +55,9 @@ func _physics_process(delta):
 		
 		move_and_slide()
 	
+func StopWithDelay():
+	await get_tree().create_timer(0.2).timeout
+	StopNavigationAgent()
 	
 func StopNavigationAgent():
 	animationTree.changeStateNotWalking()
@@ -76,6 +79,6 @@ func isPlayerInSight():
 		playerHeadInSight = true
 	else:
 		playerHeadInSight = false
-	if resultBody && resultHead:
-		debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
+	#if resultBody && resultHead:
+	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
 	

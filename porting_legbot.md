@@ -44,6 +44,7 @@
     - reimplement gun
         - recreate "EnemyShootBullet" of GunPivot
             - coroutines cannot be done like in Unity because they cannot be interrupted
+            - instead done with a simple bool and if statement to abort coroutine indirectly
         - recreate "DestroyOnImpact"
     - recreate audio source, thankfully the sounds themselves have been imported
         - most audio can just be played through a script

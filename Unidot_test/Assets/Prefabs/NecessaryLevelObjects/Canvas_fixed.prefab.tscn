@@ -4,8 +4,6 @@
 font_size = 200
 
 [node name="Canvas" type="CanvasLayer"]
-scale = Vector2(1e-07, 1e-07)
-transform = Transform2D(1e-07, 0, 0, 1e-07, 0, 0)
 
 [node name="Canvas" type="Node" parent="."]
 metadata/unidot_keys = {

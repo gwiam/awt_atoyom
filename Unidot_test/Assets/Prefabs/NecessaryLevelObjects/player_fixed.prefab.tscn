@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc3mf7mfn8sr1"]
+[gd_scene load_steps=10 format=3 uid="uid://bc3mf7mfn8sr1"]
 
 [ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_i5hu8"]
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerControl.gd" id="1_n67c6"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/CameraMovement.gd" id="2_15ifm"]
 [ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_hvu37"]
 [ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_m750x"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_mxk43"]
@@ -196,6 +197,7 @@ metadata/unidot_keys = {
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622147, 0)
+script = ExtResource("2_15ifm")
 
 [node name="Camera" type="Camera3D" parent="CameraPivot"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

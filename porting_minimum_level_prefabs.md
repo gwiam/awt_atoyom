@@ -6,6 +6,7 @@
 # Issues:
 
     - most things are scripts and they all broke
+    - even the canvas element broke
     
 # Solutions:
 
@@ -15,9 +16,14 @@
             - give it the position of the spawn point
             - append to root with "get_node("/root").add_child.call_deferred(playerInstance)"
         - reimplement enemy counter script that opens the door
+        - reimplement pause menu
+    - reimplement "TimeManager"
+        - this has the slowmo functionality (not part of player prefab)
+        - more info in porting_scripts
+    - recreate the canvas
+
 
 # Personal notes
 
-    - player is stuck in the ground
-    - in unity the instantiation also receives some extra parameters "transform.position" and "Quaternion.LookRotation(-transform.up)"
-        - presumably position and rotation
+    - canvas stuff is really confusing all tutorials so far suck
+    - 

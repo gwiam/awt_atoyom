@@ -9,7 +9,7 @@ signal enable_gun
 var delayToWakeUp: float = 0
 const animationDuration: float = 1.0 # different from Unity
 
-var awake = false
+var awake = false # bool used to recycle timer
 @onready var wakeUpBeep = $"../Audio/wakeUpBeep"
 
 func SetWakingUp():

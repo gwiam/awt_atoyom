@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://bfxviiibs4iy7"]
+[gd_scene load_steps=15 format=3 uid="uid://bfxviiibs4iy7"]
 
+[ext_resource type="PackedScene" uid="uid://dgt7824vg88ai" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas_fixed.prefab.tscn" id="1_n2mvv"]
 [ext_resource type="PackedScene" uid="uid://bu6h3xifuqtjn" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn" id="1_xpbea"]
 [ext_resource type="PackedScene" uid="uid://bvhagyjsoqvkr" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn" id="2_toq01"]
 [ext_resource type="PackedScene" uid="uid://cpyw0e6tgov5u" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn" id="3_rdsn0"]
 [ext_resource type="PackedScene" uid="uid://dwym3x6p6c6ou" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn" id="4_qjbhr"]
 [ext_resource type="PackedScene" uid="uid://das5ekc4tbr3h" path="res://Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn" id="5_v4i6h"]
 [ext_resource type="PackedScene" uid="uid://dgopman7hy1bg" path="res://Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn" id="6_s67al"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/TimeManager.gd" id="7_8aepd"]
 [ext_resource type="PackedScene" uid="uid://drsdosbo4vqgy" path="res://Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn" id="7_tf0ki"]
 [ext_resource type="PackedScene" uid="uid://dbac0tmui8jsk" path="res://Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn" id="8_7nece"]
 [ext_resource type="PackedScene" uid="uid://5wqhmq6x3vfm" path="res://Assets/Prefabs/NecessaryLevelObjects/Door_fixed.prefab.tscn" id="9_kuntq"]
@@ -15,7 +17,10 @@
 
 [node name="LevelMinimumPrefabs" type="Node3D"]
 
+[node name="Canvas2" parent="." instance=ExtResource("1_n2mvv")]
+
 [node name="Canvas" parent="." instance=ExtResource("1_xpbea")]
+visible = false
 
 [node name="GameOverCanvas" parent="." instance=ExtResource("2_toq01")]
 
@@ -34,6 +39,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="TimeManager" parent="." instance=ExtResource("6_s67al")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("7_8aepd")
 
 [node name="HealthManager" parent="." instance=ExtResource("7_tf0ki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

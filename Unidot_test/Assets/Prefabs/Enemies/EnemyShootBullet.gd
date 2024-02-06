@@ -65,7 +65,7 @@ func shootBullet():
 	elif enemyNavMesh.playerHeadInSight:
 		bala.look_at(playerHeadTarget.global_position)
 	
-	#bala.apply_central_force(global_transform.basis.z * 2700)
+	bala.apply_central_force(global_transform.basis.z * 2700)
 	shoot.play()
 	isPreparingShoot = false
 	warningObject.visible = false

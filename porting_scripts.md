@@ -10,6 +10,8 @@
     - cannot add more than one script to a node
     - animation state changes don't work anymore (dunno where to put this)
     - instatiating objects works differently
+    - coroutines are not interruptable
+    - no unscaled time
 
 # Solutions:
 
@@ -17,7 +19,7 @@
     - use _ready() to supliment Awake
         - though it's not the first thing that gets executed aparently
     - instead of referencing components you reference nodes, do not forget to cast those to the right type
-    - delaying execution has to be done with a timer and signals
+    - delaying execution has to be done by starting a timer and connecting the timeout signal
         - can also be done in one line using "await get_tree().create_timer(<time>).timeout"
     - on_enable is going to be done with signals
     - instead of adding multiple scripts to one node just reuse the "Monobehavior" nodes
@@ -28,6 +30,7 @@
     - to instantiate an object
         - (pre)load the object
         - then instantiate
+        - set the position and rotation
         - then append it somewhere
             - when adding to root you can call_deferred to "delay" the add child until scene loads
     - finding nodes is way harder, it's easier to do "get_node("root/<path to node>")"
@@ -51,6 +54,11 @@
         - await waits for a signal
         - not way to interrupt unlike in Unity
             - the first major thing that is not possible under Godot
+    - workaround for unscaled time: var unscaled = (Engine.TimeScale == 0) ? deltaTime : ((float)(deltaTime / Engine.TimeScale))
+        - https://github.com/godotengine/godot-proposals/issues/7775
+    - scaling time works pretty much like unity
+        - just set Engine.time_scale to whatever you want
+
         
 
 # personal nodes
@@ -66,3 +74,6 @@
     - you cannot stop navigation by stopping the physics process
     - raycasting seems to be more complicated too
         - always remember to use global position, especially when using subnodes
+    - in unity the instantiation also receives some extra parameters "transform.position" and "Quaternion.LookRotation(-transform.up)"
+        - presumably position and rotation
+    - there is no true unscaled time

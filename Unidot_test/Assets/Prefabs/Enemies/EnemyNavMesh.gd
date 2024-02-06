@@ -15,6 +15,7 @@ var positionToGo
 var cam
 var playerHeadInSight
 var playerBodyInSight
+
 func _ready():
 	StopNavigationAgent()
 
@@ -27,7 +28,7 @@ func _on_legs_bot_enable_navmesh():
 		cam = get_node("/root/player/CameraPivot")
 
 func _physics_process(delta):
-	debugLabel.text = "currentSpeed " + str(currentSpeed)
+	#debugLabel.text = "currentSpeed " + str(currentSpeed)
 	if is_instance_valid(positionToGo) && is_instance_valid(cam):
 		isPlayerInSight()
 		nav.target_position = positionToGo.global_position
@@ -67,8 +68,7 @@ func isPlayerInSight():
 	var space_state = get_world_3d().direct_space_state
 	var bodyQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, positionToGo.global_position, collision_mask,[self])
 	var headQuery = PhysicsRayQueryParameters3D.create(BulletSpawnLocation.global_position, cam.global_position, collision_mask,[self])
-	#bodyQuery.exclude = [self]
-	#headQuery.exclude = [self]
+
 	var resultBody = space_state.intersect_ray(bodyQuery) 
 	var resultHead = space_state.intersect_ray(headQuery)
 	if resultBody && resultBody.collider == positionToGo:

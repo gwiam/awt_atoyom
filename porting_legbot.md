@@ -18,8 +18,8 @@
     - rebuild the "Wake up and go" of child and "Set Delay To Wake Up" script of parent node
         - "SetDelayToWakeUp" can also wake up all the enemies after a certain time or using a trigger
         - "SetDelayToWakeUp" is part of LegBot (called AIbody in the level for some reason) 
-            - "SetDelayToWakeUp" calls Awake() when LegBot is loaded
             - implement time delays for execution of StartWakeUp and TurnNavMeshAndGunOn
+            - although _enter_tree is the true equivalent of Awake, _ready works better
         - more details under "porting_scripts"
     - reimplement navigation
         - adding navigationsagend3d 

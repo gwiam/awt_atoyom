@@ -26,4 +26,4 @@
 # Personal notes
 
     - canvas stuff is really confusing all tutorials so far suck
-    - 
+    - effects like chromatic aberration have to be created by hand

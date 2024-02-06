@@ -3,12 +3,13 @@ extends Node3D
 var isPaused = false
 var isSlowed = false
 var canSlow = true
-@export var abilityDelay = 0
-@export var abilityDuration = 0
+@export var abilityDelay = 1.25
+@export var abilityDuration = 6.5
 @export var slowFactor = 0.05
 var timeLeft = 0
 var timerForDelayOn
 var timerForDurationOn
+@onready var timerText = $"../Canvas/TimerText"
 
 func _ready():
 	# TODO init ChromaticAberration
@@ -22,7 +23,6 @@ func _process(delta):
 			EndSlowMotion()
 		elif canSlow:
 			DoSlowMotion()
-	
 	updateTimer(delta)
 	
 
@@ -62,8 +62,9 @@ func updateTimer(deltaTime):
 			elif(timerForDurationOn):
 				timerForDurationOn = false
 				EndSlowMotion()
+			timerText.text = ""
 			return
-		# TODO set timer text with two digits after comma
-		
+		timerText.text = str(snapped(timeLeft,0.01))
+
 func StartTimer(time):
 	timeLeft = time

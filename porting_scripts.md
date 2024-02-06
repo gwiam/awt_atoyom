@@ -58,6 +58,7 @@
         - https://github.com/godotengine/godot-proposals/issues/7775
     - scaling time works pretty much like unity
         - just set Engine.time_scale to whatever you want
+    - rounding numbers can be done with snapped
 
         
 

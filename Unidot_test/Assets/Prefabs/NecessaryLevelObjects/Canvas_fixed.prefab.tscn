@@ -1,7 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgt7824vg88ai"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_hwvy4"]
-font_size = 200
+[gd_scene format=3 uid="uid://dgt7824vg88ai"]
 
 [node name="Canvas" type="CanvasLayer"]
 
@@ -209,10 +206,18 @@ metadata/unidot_keys = {
 }
 
 [node name="TimerText" type="Label" parent="."]
-offset_right = 1.5e+08
-offset_bottom = 4e+07
-text = "Test"
-label_settings = SubResource("LabelSettings_hwvy4")
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.5
+offset_top = -23.0
+offset_right = 48.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "test"
 
 [node name="CanvasRenderer" type="Node" parent="TimerText"]
 metadata/unidot_keys = {

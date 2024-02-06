@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bfxviiibs4iy7"]
+[gd_scene load_steps=14 format=3 uid="uid://bfxviiibs4iy7"]
 
 [ext_resource type="PackedScene" uid="uid://dgt7824vg88ai" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas_fixed.prefab.tscn" id="1_n2mvv"]
-[ext_resource type="PackedScene" uid="uid://bu6h3xifuqtjn" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas.prefab.tscn" id="1_xpbea"]
 [ext_resource type="PackedScene" uid="uid://bvhagyjsoqvkr" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas.prefab.tscn" id="2_toq01"]
 [ext_resource type="PackedScene" uid="uid://cpyw0e6tgov5u" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn" id="3_rdsn0"]
 [ext_resource type="PackedScene" uid="uid://dwym3x6p6c6ou" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn" id="4_qjbhr"]
@@ -17,10 +16,7 @@
 
 [node name="LevelMinimumPrefabs" type="Node3D"]
 
-[node name="Canvas2" parent="." instance=ExtResource("1_n2mvv")]
-
-[node name="Canvas" parent="." instance=ExtResource("1_xpbea")]
-visible = false
+[node name="Canvas" parent="." instance=ExtResource("1_n2mvv")]
 
 [node name="GameOverCanvas" parent="." instance=ExtResource("2_toq01")]
 
@@ -113,7 +109,6 @@ metadata/unidot_keys = {
 
 [node name="ConfigManager" parent="." instance=ExtResource("12_sj3ga")]
 
-[editable path="Canvas"]
 [editable path="GameOverCanvas"]
 [editable path="PauseGameCanvas"]
 [editable path="PauseGameManager"]

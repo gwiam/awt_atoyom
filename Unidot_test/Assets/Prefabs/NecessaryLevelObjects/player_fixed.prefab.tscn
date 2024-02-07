@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc3mf7mfn8sr1"]
+[gd_scene load_steps=11 format=3 uid="uid://bc3mf7mfn8sr1"]
 
 [ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_i5hu8"]
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerControl.gd" id="1_n67c6"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/CameraMovement.gd" id="2_15ifm"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/HoldAndShoot.gd" id="2_b24ht"]
 [ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_hvu37"]
 [ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_m750x"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_mxk43"]
@@ -158,6 +159,7 @@ metadata/unidot_keys = {
 
 [node name="MonoBehaviour2" type="Node" parent="."]
 editor_description = "[MonoBehaviour 114::f1e7643930efb1a47b87257cf0420617:6639354054196359944]"
+script = ExtResource("2_b24ht")
 metadata/unidot_keys = {
 "fingerFlickSound": [null, 3736223830505298979, null, null],
 "handAnimator": [null, 4847663143896029960, null, null],

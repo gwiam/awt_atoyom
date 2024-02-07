@@ -60,7 +60,10 @@
     - scaling time works pretty much like unity
         - just set Engine.time_scale to whatever you want
     - rounding numbers can be done with snapped
-    - layers can be named in the project settings
+    - layers can be named in the project settings, just like in Unity
+        - but there is no function to get a specific layer by name unlike Unity
+            - you need to iterate over all layers from the project file until you find the layer with the specific name
+
 
         
 

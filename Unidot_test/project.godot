@@ -54,9 +54,14 @@ slowmotion={
 
 [layer_names]
 
-3d_render/layer_3="NoCollision"
-3d_render/layer_4="Shot"
-3d_render/layer_5="Grab"
+3d_physics/layer_6="Grab"
+3d_physics/layer_7="Player"
+3d_physics/layer_8="Objects"
+3d_physics/layer_9="Shot"
+3d_physics/layer_10="NoCollision"
+3d_physics/layer_11="Enemy"
+3d_physics/layer_12="EnemyTrigger"
+3d_physics/layer_13="Death"
 
 [rendering]
 

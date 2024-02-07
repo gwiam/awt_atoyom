@@ -26,13 +26,14 @@
             - though texture placement is controlled by "strech_mode" and "expand_mode"
                 - inconsistent, you may need to reposition the anchor or the entire element for it to take effect 
                 - size cannot be adjusted unless strech_mode is set to "ignore size" (maybe move this section to porting_UI or something)
-                - keep size and set strech mode to keep centered
-                - manually calculate scale by <unity size>/<texture size>*<unity scale>
+                - pivot offset needs to be manually put in the middle of the node
 
 
 # Personal notes
 
     - canvas seems to have no "canvas render" equivalent, don't think it's needed
+        - most canvas tutorials suck
+        - centering stuff is a pain
     - effects like chromatic aberration have to be created by hand
     - slow motion causes the bullet force to be weaker
         - maybe set velocity instead?

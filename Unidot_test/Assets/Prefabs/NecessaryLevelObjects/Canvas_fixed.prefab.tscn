@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dgt7824vg88ai"]
+[gd_scene load_steps=3 format=3 uid="uid://dgt7824vg88ai"]
 
 [ext_resource type="Texture2D" uid="uid://dpo6l3lb25iko" path="res://Assets/Sprites/Symbols/crosshair.png" id="1_grs8s"]
+[ext_resource type="Texture2D" uid="uid://26khwmfvbvyv" path="res://Assets/Sprites/Symbols/halfCircle.png" id="2_x76w7"]
 
 [node name="Canvas" type="CanvasLayer"]
 
@@ -72,20 +73,23 @@ metadata/unidot_keys = {
 }
 
 [node name="Crosshair" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(5, 5)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -2.99994
-offset_top = -2.99997
-offset_right = 327.0
-offset_bottom = 327.0
+offset_left = -2.5
+offset_top = -2.5
+offset_right = 2.5
+offset_bottom = 2.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.018, 0.018)
+scale = Vector2(1.168, 1.168)
+pivot_offset = Vector2(2.5, 2.5)
 texture = ExtResource("1_grs8s")
-stretch_mode = 3
+expand_mode = 1
+stretch_mode = 5
 
 [node name="CanvasRenderer" type="Node" parent="Crosshair"]
 metadata/unidot_keys = {
@@ -130,95 +134,57 @@ metadata/unidot_keys = {
 "m_UseSpriteMesh": 0
 }
 
-[node name="GrabIndicator" type="Node3D" parent="Crosshair"]
+[node name="GrabIndicator" type="Control" parent="Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.02
+offset_top = -50.0
+offset_right = 49.98
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(50, 50)
 
-[node name="RawImage" type="Node3D" parent="Crosshair/GrabIndicator"]
-transform = Transform3D(-0.017, 1.48619e-09, 0, -1.48619e-09, -0.017, 0, 0, 0, 0.017, 0, 0, 0)
+[node name="RawImage" type="TextureRect" parent="Crosshair/GrabIndicator"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -7.5
+offset_right = 8.0
+offset_bottom = -2.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(8, 2.5)
+texture = ExtResource("2_x76w7")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="CanvasRenderer" type="Node" parent="Crosshair/GrabIndicator/RawImage"]
-metadata/unidot_keys = {
-"m_CorrespondingSourceObject": [null, 0, null, null],
-"m_CullTransparentMesh": 1,
-"m_GameObject": [null, 2730923468572369946, null, null],
-"m_ObjectHideFlags": 0,
-"m_PrefabAsset": [null, 0, null, null],
-"m_PrefabInstance": [null, 0, null, null]
-}
-
-[node name="MonoBehaviour" type="Node" parent="Crosshair/GrabIndicator/RawImage"]
-editor_description = "[MonoBehaviour 114::852fe6342126efc4f9a32958f706e5f9:5916913748742770185]"
-metadata/unidot_keys = {
-"m_Color": Color(1, 1, 1, 1),
-"m_CorrespondingSourceObject": [null, 0, null, null],
-"m_EditorHideFlags": 0,
-"m_Enabled": 1,
-"m_GameObject": [null, 2730923468572369946, null, null],
-"m_Maskable": 0,
-"m_Material": [null, 0, null, null],
-"m_ObjectHideFlags": 0,
-"m_OnCullStateChanged": {
-"m_PersistentCalls": {
-"m_Calls": []
-}
-},
-"m_PrefabAsset": [null, 0, null, null],
-"m_PrefabInstance": [null, 0, null, null],
-"m_RaycastPadding": Quaternion(0, 0, 0, 0),
-"m_RaycastTarget": 0,
-"m_Script": [null, 11500000, "1344c3c82d62a2a41a3576d8abb8e3ea", 3],
-"m_Texture": [null, 2800000, "6391c181a01e9c641bc57e30b8451891", 3],
-"m_UVRect": {
-"height": 1,
-"serializedVersion": 2,
-"width": 1,
-"x": 0,
-"y": 0
-}
-}
-
-[node name="RawImage2" type="Node3D" parent="Crosshair/GrabIndicator"]
-transform = Transform3D(0.017, 0, 0, 0, 0.017, 0, 0, 0, 0.017, 0, 0, 0)
-
-[node name="CanvasRenderer" type="Node" parent="Crosshair/GrabIndicator/RawImage2"]
-metadata/unidot_keys = {
-"m_CorrespondingSourceObject": [null, 0, null, null],
-"m_CullTransparentMesh": 1,
-"m_GameObject": [null, 1526026012306831143, null, null],
-"m_ObjectHideFlags": 0,
-"m_PrefabAsset": [null, 0, null, null],
-"m_PrefabInstance": [null, 0, null, null]
-}
-
-[node name="MonoBehaviour" type="Node" parent="Crosshair/GrabIndicator/RawImage2"]
-editor_description = "[MonoBehaviour 114::852fe6342126efc4f9a32958f706e5f9:2036590979476694178]"
-metadata/unidot_keys = {
-"m_Color": Color(1, 1, 1, 1),
-"m_CorrespondingSourceObject": [null, 0, null, null],
-"m_EditorHideFlags": 0,
-"m_Enabled": 1,
-"m_GameObject": [null, 1526026012306831143, null, null],
-"m_Maskable": 0,
-"m_Material": [null, 0, null, null],
-"m_ObjectHideFlags": 0,
-"m_OnCullStateChanged": {
-"m_PersistentCalls": {
-"m_Calls": []
-}
-},
-"m_PrefabAsset": [null, 0, null, null],
-"m_PrefabInstance": [null, 0, null, null],
-"m_RaycastPadding": Quaternion(0, 0, 0, 0),
-"m_RaycastTarget": 0,
-"m_Script": [null, 11500000, "1344c3c82d62a2a41a3576d8abb8e3ea", 3],
-"m_Texture": [null, 2800000, "6391c181a01e9c641bc57e30b8451891", 3],
-"m_UVRect": {
-"height": 1,
-"serializedVersion": 2,
-"width": 1,
-"x": 0,
-"y": 0
-}
-}
+[node name="RawImage2" type="TextureRect" parent="Crosshair/GrabIndicator"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = 2.5
+offset_right = 8.0
+offset_bottom = 7.5
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.14159
+pivot_offset = Vector2(8, 2.5)
+texture = ExtResource("2_x76w7")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="TimerText" type="Label" parent="."]
 anchors_preset = 8
@@ -233,7 +199,6 @@ offset_bottom = 59.16
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "test"
 horizontal_alignment = 1
 
 [node name="CanvasRenderer" type="Node" parent="TimerText"]

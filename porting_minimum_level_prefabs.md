@@ -38,4 +38,4 @@
         - maybe set velocity instead?
             - somehow doesn't work
         - force functions naming is inconsistant
-            - why is it add_constant_central_force for ridigbody3D!?
+            - why is it add_constant_central_force for ridigbody3D but apply_constant_central_force for rigidbody2D!?

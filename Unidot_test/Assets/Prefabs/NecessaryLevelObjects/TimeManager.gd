@@ -18,7 +18,6 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed("slowmotion") && !isPaused):
-		print("pressed slomotion")
 		if isSlowed:
 			EndSlowMotion()
 		elif canSlow:

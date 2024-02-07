@@ -11,6 +11,8 @@
     - enemy behavior is completely missing (as expected)
     - audio sources couldn't be imported
     - particles couldn't be imported
+    - physics are very different with different time scales
+        - causes the bullet to just drop on the floor
 
 # Solutions:
 
@@ -21,6 +23,7 @@
             - implement time delays for execution of StartWakeUp and TurnNavMeshAndGunOn
             - although _enter_tree is the true equivalent of Awake, _ready works better
         - more details under "porting_scripts"
+    - use a signal to enable the navigation and the gun
     - reimplement navigation
         - adding navigationsagend3d 
         - changing main legbot node to characterbody3d
@@ -33,8 +36,7 @@
         - implementing the isPlayerInSight function with raycasting (see porting_scripts)
             - important for "EnemyShootBullet"
             - imortant that the sight check works regardless of bullets or effects blocking the sight
-    - use a signal to enable the navigation and the gun
-    - to stop navigation created a global var "currentSpeed" and set that to 0 to stop and to const "speed" to the orginial speed
+        - to stop navigation created a global var "currentSpeed" and set that to 0 to stop and to const "speed" to the orginial speed
     - setting up expression based transitions
         - changing animation expression base node of animation tree to LegBot
         - creating enum to represent expressions (Walking, NotWalking)
@@ -45,10 +47,9 @@
         - recreate "EnemyShootBullet" of GunPivot
             - coroutines cannot be done like in Unity because they cannot be interrupted
             - instead done with a simple bool and if statement to abort coroutine indirectly
-            - use add_constant_central_force instead of apply_central_force
-                - physics are very different with different time scales
-                - causes the bullet to just drop on the floor
+            - use add_constant_central_force instead of apply_central_force to prevent the bullet from dropping on the floor during slowmo
         - recreate "DestroyOnImpact"
+        - put Legbot on another layer to prevent it from colliding with the bullet
     - recreate audio source, thankfully the sounds themselves have been imported
         - most audio can just be played through a script
         - step sounds are played by the legbotWalk2 animation
@@ -130,6 +131,9 @@
         - million dollar question: can godot do something similar?
             - yes and it works!
     - smooth turning works but the bot spawns facing the wrong direction
+    - bullet is always facing towards Z
+    - bullet disappears after shot
+        - probably because it is colliding with the bot itself
         
     
 

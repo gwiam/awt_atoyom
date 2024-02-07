@@ -2,6 +2,7 @@
 
     - the door prefab is somewhat fine, kinda like legbot
         - model, animations and stuff are there
+        - images for UI elements like the crosshair were also imported
 
 # Issues:
 

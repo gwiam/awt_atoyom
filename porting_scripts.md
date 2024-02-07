@@ -13,6 +13,7 @@
     - coroutines are not interruptable
     - no unscaled delta time
     - physics can behave radically different with different time scales
+    - physics interpolation doesn't seem to exist in 4.x (yet)
 
 # Solutions:
 
@@ -63,6 +64,9 @@
     - layers can be named in the project settings, just like in Unity
         - but there is no function to get a specific layer by name unlike Unity
             - you need to iterate over all layers from the project file until you find the layer with the specific name
+            - https://forum.godotengine.org/t/is-it-possible-get-collision-layer-mask-value-in-code-using-array-of-layer-names/10831/2
+    - instead of setting isKinematic you freeze rigid bodies
+        - there are two different kinds of freeze behaviours, see https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html#enumerations
 
 
         

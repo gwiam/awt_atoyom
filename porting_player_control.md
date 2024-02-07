@@ -19,7 +19,17 @@
         - saves time on implementing scripts like "CameraFollow"
 - recreate HoldAndShoot
     - setting NoCollision, Shot and Grad layers to unused layers for now
-        
+    - instead of implementing it like the original, casting a ray each update
+        - add a raycaster object to camera instead
+        - makes more sense that in "isPlayerInSight" since Ray is always facing forwards
+        - should save quite a bit of code
+        - makes second raycast superfluous
+        - the shoot raycast is also not necessary
+            - cast infinite ray forwards
+            - if it doesn't collide with anything the bala gets rotated forwards anyways
+        - to check for collision simply do is_colliding
+        - to get the collider do get_collider
+    - set bullet freeze behavior to static to prevent collision with the player
 
 # Notes
 
@@ -31,4 +41,4 @@
 - jumping feels too floaty, I could turn up the gravity but this feels wrong
 - camera movement was implemented in a different file
     - original implementation seems nonsensicle
-    - 
+- since physics interpolation doesn't exist in Godot 4 maybe I don't need to worry about it

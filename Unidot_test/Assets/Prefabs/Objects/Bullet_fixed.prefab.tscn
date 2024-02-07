@@ -13,8 +13,7 @@ radius = 0.18
 height = 0.599621
 
 [node name="Bullet" type="RigidBody3D"]
-collision_layer = 2
-freeze_mode = 1
+collision_layer = 34
 script = ExtResource("1_f7q4o")
 
 [node name="CapsuleCollider" type="CollisionShape3D" parent="."]

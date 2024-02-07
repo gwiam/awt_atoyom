@@ -17,6 +17,8 @@
     - rotate y of "player" instead of "orientation"
         - original implementation confusing
         - saves time on implementing scripts like "CameraFollow"
+- recreate HoldAndShoot
+    - setting NoCollision, Shot and Grad layers to unused layers for now
         
 
 # Notes

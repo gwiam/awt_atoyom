@@ -6,7 +6,7 @@
 # Issues:
 
     - most things are scripts and they all broke
-    - even the canvas element broke
+    - even the canvas element broke, though godot has a similar canvas system
     
 # Solutions:
 
@@ -21,11 +21,18 @@
         - this has the slowmo functionality (not part of player prefab)
         - more info in porting_scripts
     - recreate the canvas
+        - again, no need for textmesh pro, label2D does the job
+        - alignment is all handled similarly to Unity
+            - though texture placement is controlled by "strech_mode" and "expand_mode"
+                - inconsistent, you may need to reposition the anchor or the entire element for it to take effect 
+                - size cannot be adjusted unless strech_mode is set to "ignore size" (maybe move this section to porting_UI or something)
+                - keep size and set strech mode to keep centered
+                - manually calculate scale by <unity size>/<texture size>*<unity scale>
 
 
 # Personal notes
 
-    - canvas stuff is really confusing all tutorials so far suck
+    - canvas seems to have no "canvas render" equivalent, don't think it's needed
     - effects like chromatic aberration have to be created by hand
     - slow motion causes the bullet force to be weaker
         - maybe set velocity instead?

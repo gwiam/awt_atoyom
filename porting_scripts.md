@@ -11,7 +11,7 @@
     - animation state changes don't work anymore (dunno where to put this)
     - instatiating objects works differently
     - coroutines are not interruptable
-    - no unscaled time
+    - no unscaled delta time
     - physics can behave radically different with different time scales
 
 # Solutions:
@@ -60,6 +60,7 @@
     - scaling time works pretty much like unity
         - just set Engine.time_scale to whatever you want
     - rounding numbers can be done with snapped
+    - layers can be named in the project settings
 
         
 

@@ -52,6 +52,12 @@ slowmotion={
 ]
 }
 
+[layer_names]
+
+3d_render/layer_3="NoCollision"
+3d_render/layer_4="Shot"
+3d_render/layer_5="Grab"
+
 [rendering]
 
 renderer/rendering_method.mobile="gl_compatibility"

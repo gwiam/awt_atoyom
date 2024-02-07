@@ -4,7 +4,6 @@ extends CharacterBody3D
 @export var gravityAccel = 9.81
 @export var mouseSens = 0.2
 @export var jump_velocity = 1
-@onready var head = $CameraPivot
 
 var target_vel = Vector3.ZERO
 
@@ -34,10 +33,3 @@ func _physics_process(delta):
 
 	velocity = target_vel
 	move_and_slide()
-	
-#func _input(event):
-	#if event is InputEventMouseMotion:
-		#rotate_y(deg_to_rad(-event.relative.x * mouseSens))
-		#head.rotate_x(deg_to_rad(event.relative.y * mouseSens))
-		#head.rotation.x = clamp(head.rotation.x,deg_to_rad(-90),deg_to_rad(90))
-		

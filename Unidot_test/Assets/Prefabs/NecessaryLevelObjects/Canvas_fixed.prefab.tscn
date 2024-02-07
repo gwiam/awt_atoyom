@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dgt7824vg88ai"]
+[gd_scene load_steps=2 format=3 uid="uid://dgt7824vg88ai"]
+
+[ext_resource type="Texture2D" uid="uid://dpo6l3lb25iko" path="res://Assets/Sprites/Symbols/crosshair.png" id="1_grs8s"]
 
 [node name="Canvas" type="CanvasLayer"]
 
@@ -69,8 +71,21 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "dc42784cf147c0c48a680349fa168899", 3]
 }
 
-[node name="Crosshair" type="Node3D" parent="."]
-transform = Transform3D(1.1679, 0, 0, 0, 1.1679, 0, 0, 0, 1.1679, 0, 0, 0)
+[node name="Crosshair" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.99994
+offset_top = -2.99997
+offset_right = 327.0
+offset_bottom = 327.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.018, 0.018)
+texture = ExtResource("1_grs8s")
+stretch_mode = 3
 
 [node name="CanvasRenderer" type="Node" parent="Crosshair"]
 metadata/unidot_keys = {

@@ -45,6 +45,9 @@
         - recreate "EnemyShootBullet" of GunPivot
             - coroutines cannot be done like in Unity because they cannot be interrupted
             - instead done with a simple bool and if statement to abort coroutine indirectly
+            - use add_constant_central_force instead of apply_central_force
+                - physics are very different with different time scales
+                - causes the bullet to just drop on the floor
         - recreate "DestroyOnImpact"
     - recreate audio source, thankfully the sounds themselves have been imported
         - most audio can just be played through a script

@@ -12,6 +12,7 @@
     - instatiating objects works differently
     - coroutines are not interruptable
     - no unscaled time
+    - physics can behave radically different with different time scales
 
 # Solutions:
 

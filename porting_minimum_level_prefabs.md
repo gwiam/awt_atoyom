@@ -27,3 +27,8 @@
 
     - canvas stuff is really confusing all tutorials so far suck
     - effects like chromatic aberration have to be created by hand
+    - slow motion causes the bullet force to be weaker
+        - maybe set velocity instead?
+            - somehow doesn't work
+        - force functions naming is inconsistant
+            - why is it add_constant_central_force for ridigbody3D!?

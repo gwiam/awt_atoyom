@@ -70,9 +70,8 @@
         - there are two different kinds of freeze behaviours, see https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html#enumerations
     - when using look_at it is often needed to set use_model_front to true
         - this is due to Godots ridiculous descision to use negative Z as forward
+    - game can be paused with get_tree().paused = true, see https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html
 
-
-        
 
 # personal nodes
 
@@ -90,3 +89,4 @@
     - in unity the instantiation also receives some extra parameters "transform.position" and "Quaternion.LookRotation(-transform.up)"
         - presumably position and rotation
     - there is no true unscaled time
+    - "Find References in Scene" is a really helpful feature in Unity

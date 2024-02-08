@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bfxviiibs4iy7"]
+[gd_scene load_steps=15 format=3 uid="uid://bfxviiibs4iy7"]
 
 [ext_resource type="PackedScene" uid="uid://dgt7824vg88ai" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas_fixed.prefab.tscn" id="1_n2mvv"]
 [ext_resource type="PackedScene" uid="uid://d0suumn07rai5" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas_fixed.prefab.tscn" id="2_nwiov"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://drsdosbo4vqgy" path="res://Assets/Prefabs/NecessaryLevelObjects/HealthManager.prefab.tscn" id="7_tf0ki"]
 [ext_resource type="PackedScene" uid="uid://dbac0tmui8jsk" path="res://Assets/Prefabs/NecessaryLevelObjects/SceneChanger.prefab.tscn" id="8_7nece"]
 [ext_resource type="PackedScene" uid="uid://5wqhmq6x3vfm" path="res://Assets/Prefabs/NecessaryLevelObjects/Door_fixed.prefab.tscn" id="9_kuntq"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/HealthManager.gd" id="9_w685x"]
 [ext_resource type="PackedScene" uid="uid://yst5fvdj3nft" path="res://Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn" id="10_t4igf"]
 [ext_resource type="PackedScene" uid="uid://ben70gwyyjdtu" path="res://Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn" id="11_t0erb"]
 [ext_resource type="PackedScene" uid="uid://x3xs2egwe573" path="res://Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn" id="12_sj3ga"]
@@ -39,6 +40,7 @@ script = ExtResource("7_8aepd")
 
 [node name="HealthManager" parent="." instance=ExtResource("7_tf0ki")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("9_w685x")
 
 [node name="SceneChanger" parent="." instance=ExtResource("8_7nece")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)

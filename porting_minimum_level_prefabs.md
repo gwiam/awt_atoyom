@@ -22,6 +22,8 @@
     - reimplement "TimeManager"
         - this has the slowmo functionality (not part of player prefab)
         - more info in porting_scripts
+    - reimplement "HealthManager"
+    - no real need to change Manager prefabs since the only relevant thing is the script
     - recreate the canvas
     - recreate the GameOverCanvas
 

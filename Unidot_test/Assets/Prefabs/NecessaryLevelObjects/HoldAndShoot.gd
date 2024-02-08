@@ -44,11 +44,11 @@ func Grab():
 	SetHoldVariables()
 	# probably don't need to turn off physics interpolation since there is none
 	heldObject.freeze = true
-	heldObject.global_position = holdingPosition.global_position
-	heldObject.rotation = holdingPosition.rotation
 	print("caught " + heldObject.name)
 	heldObject.get_parent().remove_child(heldObject)
 	holdingPosition.add_child(heldObject)
+	heldObject.global_position = holdingPosition.global_position
+	heldObject.rotation = holdingPosition.rotation
 	# TODO disable trail
 	stateMachine.travel("Hold")
 	# TODO play grab sound

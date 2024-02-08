@@ -67,6 +67,8 @@
             - https://forum.godotengine.org/t/is-it-possible-get-collision-layer-mask-value-in-code-using-array-of-layer-names/10831/2
     - instead of setting isKinematic you freeze rigid bodies
         - there are two different kinds of freeze behaviours, see https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html#enumerations
+    - when using look_at it is often needed to set use_model_front to true
+        - this is due to Godots ridiculous descision to use negative Z as forward
 
 
         

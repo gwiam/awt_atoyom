@@ -6,7 +6,6 @@ var isPreparingShoot
 
 @onready var warningObject = $warning/Cube
 @onready var enemyNavMesh = $"../../../../.." as EnemyNavMesh
-# WTF does balas even mean? is that "bullets" in another language?
 # bala means bullet in Spanish lol
 var balas : PackedScene = preload("res://Assets/Prefabs/Objects/Bullet_fixed.prefab.tscn")
 @onready var shootOrigin = $ShootOrigin
@@ -27,9 +26,10 @@ func _on_legs_bot_enable_gun():
 	playerBodyTarget = get_node("/root/player/Body")
 	playerHeadTarget = get_node("/root/player/CameraPivot")
 
-func _process(delta):
+func _process(_delta):
 	# debug_label.text = "stop coroutines: " + str(stopCoroutine) # TODO remove
 	if is_instance_valid(playerBodyTarget):
+		# try transform.origin
 		look_at(playerBodyTarget.global_position, Vector3.UP, true)
 		
 	if(!isPreparingShoot && (enemyNavMesh.playerHeadInSight || enemyNavMesh.playerBodyInSight)):
@@ -58,14 +58,14 @@ func shootBullet():
 	bala.global_position = shootOrigin.global_position
 	bala.rotation = shootOrigin.rotation
 	
-	get_node("/root").add_child.call_deferred(bala) # adding bullet to the shootOrigin doesn't work
+	get_tree().get_root().add_child(bala) # adding bullet to the shootOrigin doesn't work
 	
 	if enemyNavMesh.playerBodyInSight:
-		bala.look_at(playerBodyTarget.global_position)
+		bala.look_at(playerBodyTarget.global_position, Vector3.UP, true)
 	elif enemyNavMesh.playerHeadInSight:
-		bala.look_at(playerHeadTarget.global_position)
+		bala.look_at(playerHeadTarget.global_position, Vector3.UP, true)
 	
-	bala.add_constant_central_force(global_transform.basis.z * 270)
+	bala.add_constant_central_force(global_transform.basis.z * 2700)
 	shoot.play()
 	isPreparingShoot = false
 	warningObject.visible = false

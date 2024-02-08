@@ -42,3 +42,4 @@
 - camera movement was implemented in a different file
     - original implementation seems nonsensicle
 - since physics interpolation doesn't exist in Godot 4 maybe I don't need to worry about it
+- flick animation doesn't play, maybe it needs some adjustment?

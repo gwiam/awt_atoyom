@@ -13,6 +13,7 @@
     - particles couldn't be imported
     - physics are very different with different time scales
         - causes the bullet to just drop on the floor
+    - animation crossfades aren't imported
 
 # Solutions:
 

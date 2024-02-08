@@ -11,6 +11,7 @@
     - the capsule colider is wrong, making you clip into the ground
     - all the skripts are of cause not there
     - audio sources couldn't be imported
+    - animation crossfades aren't imported
 
 # Solutions:
 

@@ -45,7 +45,7 @@ func Grab():
 	# probably don't need to turn off physics interpolation since there is none
 	heldObject.freeze = true
 	print("caught " + heldObject.name)
-	heldObject.global_position = holdingPosition.position
+	heldObject.position = holdingPosition.position
 	heldObject.rotation = holdingPosition.rotation
 	heldObject.get_parent().remove_child(heldObject)
 	holdingPosition.add_child(heldObject)
@@ -74,8 +74,8 @@ func Release():
 	ResetHoldVariables()
 	
 func Shoot():
-	# var locationToPoint = 
-	pass
+	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 2700)
+	# TODO play flick sound
 
 func ChangeObjectLayers():
 	pass

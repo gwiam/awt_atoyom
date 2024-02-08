@@ -58,7 +58,7 @@ func shootBullet():
 	bala.global_position = shootOrigin.global_position
 	bala.rotation = shootOrigin.rotation
 	
-	get_tree().get_root().add_child(bala) # adding bullet to the shootOrigin doesn't work
+	get_tree().get_root().add_child(bala)
 	
 	if enemyNavMesh.playerBodyInSight:
 		bala.look_at(playerBodyTarget.global_position, Vector3.UP, true)

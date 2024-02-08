@@ -50,6 +50,7 @@
         - setting force does remove the force but it still disappears
     - setting velocity to 0
         - still moving even thought I don't add any new forces
-- subsequent bullets aren't lethal when the player is not moving?
+- some bullets are not lethal
     - not sure when player is immortal
+    - maybe it is because of Z infighting with the collisionshape 3D
 - at certain angles the player can shoot themselves

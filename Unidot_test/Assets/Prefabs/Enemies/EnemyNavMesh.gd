@@ -28,7 +28,7 @@ func _on_legs_bot_enable_navmesh():
 		cam = get_node("/root/player/CameraPivot")
 
 func _physics_process(delta):
-	debugLabel.text = "currentSpeed " + str(currentSpeed)
+	# debugLabel.text = "currentSpeed " + str(currentSpeed)
 	if is_instance_valid(positionToGo) && is_instance_valid(cam):
 		isPlayerInSight()
 		nav.target_position = positionToGo.global_position
@@ -49,8 +49,6 @@ func _physics_process(delta):
 		
 		velocity = velocity.move_toward(new_velocity,accel) 
 		if currentSpeed != 0 && finishedWakeUp: 
-			# TODO turns smoothly but it spawns the wrong way around
-			# current_speed is set during physics process
 			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
 			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
 		

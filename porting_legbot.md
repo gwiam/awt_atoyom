@@ -141,6 +141,8 @@
     - set use_model_front to true
 - bullet disappears after shot
     - probably because it is colliding with the bot itself
+- audio stops playing as soon as the object is freed
+    - probably have to make the legbot invisible or else it's gonna stand there unit the audio finishes playing
         
     
 

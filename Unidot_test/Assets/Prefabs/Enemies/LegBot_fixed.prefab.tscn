@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://clnjtjssvuxe4"]
+[gd_scene load_steps=20 format=3 uid="uid://clnjtjssvuxe4"]
 
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/SetDelayToWakeUp.gd" id="1_6wuou"]
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyNavMesh.gd" id="1_ek2hd"]
 [ext_resource type="PackedScene" uid="uid://cdb41cfjgka8" path="res://Assets/Models/LegsBot.gltf" id="1_goes6"]
 [ext_resource type="Script" path="res://Assets/Models/WakeUpAndGo.gd" id="2_l2lnm"]
 [ext_resource type="Material" uid="uid://nh1hequkio64" path="res://Assets/Models/LegsBot.DefaultMaterial 1.material" id="2_os8jo"]
+[ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyHealth.gd" id="2_t5nsm"]
 [ext_resource type="AudioStream" uid="uid://dty4w6rt6im8o" path="res://Assets/Sounds/beeboobeepHigh.wav" id="3_0pktc"]
 [ext_resource type="Material" uid="uid://dmh6n6ualwuuj" path="res://Assets/Materials/ShinyBlack.mat.tres" id="3_qybnc"]
 [ext_resource type="AudioStream" uid="uid://bi3swwtas3lo1" path="res://Assets/Sounds/shoot.wav" id="3_y4qfw"]
@@ -16,13 +17,23 @@
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyShootBullet.gd" id="7_qjq3g"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://d1vcgysdwxlti" path="res://Assets/Animations/LegBot/LegBotAnimation.controller.tres" id="8_pkxmd"]
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/AnimationState.gd" id="12_tgny7"]
+[ext_resource type="AudioStream" uid="uid://dnj7hhpyqhy5k" path="res://Assets/Sounds/explodes.wav" id="17_opecm"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c4tp2"]
 height = 1.0
 
 [node name="LegBot" type="CharacterBody3D"]
-collision_layer = 2
+collision_layer = 4
 script = ExtResource("1_ek2hd")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 8
+script = ExtResource("2_t5nsm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96046e-08, -0.24, -8.9407e-08)
+shape = SubResource("CapsuleShape3D_c4tp2")
 
 [node name="MonoBehaviour" type="Node" parent="."]
 editor_description = "[MonoBehaviour 114::dfed05359ad80a1498531fb205e77966:3097231436176187216]"
@@ -116,18 +127,18 @@ metadata/unidot_keys = {
 
 [node name="Audio" type="Node3D" parent="."]
 
-[node name="wakeUpBeep" type="AudioStreamPlayer" parent="Audio"]
+[node name="wakeUpBeep" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("3_0pktc")
 
-[node name="shoot" type="AudioStreamPlayer" parent="Audio"]
+[node name="shoot" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("3_y4qfw")
 volume_db = -7.059
 
-[node name="alert" type="AudioStreamPlayer" parent="Audio"]
+[node name="alert" type="AudioStreamPlayer3D" parent="Audio"]
 stream = ExtResource("4_q55r0")
 volume_db = -7.529
 
-[node name="steps" type="AudioStreamPlayer" parent="Audio"]
+[node name="steps" type="AudioStreamPlayer3D" parent="Audio"]
 
 [node name="LegsBot" parent="." instance=ExtResource("1_goes6")]
 transform = Transform3D(0.198146, 0, 0, 0, 0.198146, 0, 0, 0, 0.198146, 0, 0.379, 0)
@@ -5779,7 +5790,8 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "591cd9924ee0a254380df5c671dfa1f5", 3]
 }
 
-[node name="AudioSource" type="Node" parent="DiesParticle"]
+[node name="explodes" type="AudioStreamPlayer3D" parent="DiesParticle"]
+stream = ExtResource("17_opecm")
 metadata/unidot_keys = {
 "BypassEffects": 0,
 "BypassListenerEffects": 0,
@@ -11345,6 +11357,7 @@ metadata/unidot_keys = {
 [node name="DebugLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22068, 0)
 
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="LegsBot" method="_on_timer_timeout"]
 [connection signal="enable_gun" from="LegsBot" to="LegsBot/Armature/Skeleton3D/Body/GunPivot" method="_on_legs_bot_enable_gun"]
 [connection signal="enable_navmesh" from="LegsBot" to="." method="_on_legs_bot_enable_navmesh"]

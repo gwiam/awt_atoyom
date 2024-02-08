@@ -50,6 +50,7 @@
         - set contact_monitor to true
         - set max_contacts_reported to a value greater than 0
         - connect the body_entered signal
+        - can also be set in the inspector
     - references can be drag'n'dropped into a file from the scene view
         - to automatically add the @onready press and hold CTRL
     - coroutines are done with await (in Godot 4, Godot 3 uses yield)

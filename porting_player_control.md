@@ -45,3 +45,8 @@
 - since physics interpolation doesn't exist in Godot 4 maybe I don't need to worry about it
 - flick animation doesn't play, maybe it needs some adjustment?
 - could be that heldObjectRigidBody is obsolete because the bullet IS the rigidbody in Godot and is not a property like in Unity
+- I have no idea where the bullet is after letting go
+    - I believe the previous force adds up and then sends the bullet into the ether
+        - setting force does remove the force but it still disappears
+    - setting velocity to 0
+        - still moving even thought I don't add any new forces

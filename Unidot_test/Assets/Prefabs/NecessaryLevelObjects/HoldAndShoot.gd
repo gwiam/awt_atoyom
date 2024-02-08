@@ -44,6 +44,8 @@ func Grab():
 	SetHoldVariables()
 	# probably don't need to turn off physics interpolation since there is none
 	heldObject.freeze = true
+	heldObject.constant_force = Vector3.ZERO
+	heldObject.linear_velocity = Vector3.ZERO
 	print("caught " + heldObject.name)
 	heldObject.position = holdingPosition.position
 	heldObject.rotation = holdingPosition.rotation
@@ -74,10 +76,12 @@ func Release():
 	ResetHoldVariables()
 	
 func Shoot():
+	heldObject.global_position = holdingPosition.global_position
 	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 2700)
 	# TODO play flick sound
 
 func ChangeObjectLayers():
+	# seems unnecessary
 	pass
 	
 func ResetHoldVariables():

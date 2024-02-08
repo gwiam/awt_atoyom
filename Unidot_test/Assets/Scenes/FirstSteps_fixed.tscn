@@ -1365,7 +1365,7 @@ transform = Transform3D(-0.00296346, 0.766151, 0.00121264, -0.722306, -0.0031434
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -91.634, -48.3934, 7.09339)
 
 [node name="LegBot" parent="Enemies" instance=ExtResource("10_6ubmf")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 91.6344, 48.9, 11.967)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 91.6205, 48.9, 11.967)
 
 [node name="Title" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 21.36)

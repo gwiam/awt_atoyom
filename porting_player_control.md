@@ -30,6 +30,7 @@
         - to check for collision simply do is_colliding
         - to get the collider do get_collider
     - set bullet freeze behavior to static to prevent collision with the player
+    - use position of the ObjectHolder in this case, not the global
 
 # Notes
 
@@ -43,3 +44,4 @@
     - original implementation seems nonsensicle
 - since physics interpolation doesn't exist in Godot 4 maybe I don't need to worry about it
 - flick animation doesn't play, maybe it needs some adjustment?
+- could be that heldObjectRigidBody is obsolete because the bullet IS the rigidbody in Godot and is not a property like in Unity

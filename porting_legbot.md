@@ -32,7 +32,8 @@
             - getting next and current position
             - calculating and setting velocity (built into CharacterBody3D)
             - implemting smooth turning with lerp_angle
-                - angular velocity had to be changed
+                - angular speed had to be changed
+                - turning is initially stopped and only enabled once "WakeUp" animation finished playing using _on_animation_tree_animation_finished signal
         - implementing the isPlayerInSight function with raycasting (see porting_scripts)
             - important for "EnemyShootBullet"
             - imortant that the sight check works regardless of bullets or effects blocking the sight

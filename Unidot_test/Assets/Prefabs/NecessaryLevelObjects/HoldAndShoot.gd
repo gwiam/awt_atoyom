@@ -45,10 +45,10 @@ func Grab():
 	# probably don't need to turn off physics interpolation since there is none
 	heldObject.freeze = true
 	print("caught " + heldObject.name)
+	heldObject.global_position = holdingPosition.position
+	heldObject.rotation = holdingPosition.rotation
 	heldObject.get_parent().remove_child(heldObject)
 	holdingPosition.add_child(heldObject)
-	heldObject.global_position = holdingPosition.global_position
-	heldObject.rotation = holdingPosition.rotation
 	# TODO disable trail
 	stateMachine.travel("Hold")
 	# TODO play grab sound
@@ -74,8 +74,8 @@ func Release():
 	ResetHoldVariables()
 	
 func Shoot():
+	# var locationToPoint = 
 	pass
-	# TODO
 
 func ChangeObjectLayers():
 	pass

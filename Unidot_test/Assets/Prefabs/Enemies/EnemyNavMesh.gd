@@ -15,6 +15,7 @@ var positionToGo
 var cam
 var playerHeadInSight
 var playerBodyInSight
+var finishedWakeUp = false
 
 func _ready():
 	StopNavigationAgent()
@@ -23,7 +24,6 @@ func _on_legs_bot_enable_navmesh():
 	print("turned on navmesh")
 	if is_instance_valid(nav):
 		animationTree.changeStateWalking()
-		currentSpeed = speed
 		positionToGo = get_node("/root/player")
 		cam = get_node("/root/player/CameraPivot")
 
@@ -38,11 +38,9 @@ func _physics_process(delta):
 		elif(!nav.is_target_reachable() && nav.distance_to_target() < 1):
 			StopNavigationAgent()
 		else:
-			animationTree.changeStateWalking()
-			currentSpeed = speed
+			ContinueNavigationAgent()
 	else:
-		animationTree.changeStateWalking()
-		currentSpeed = speed
+		ContinueNavigationAgent()
 		
 	if currentSpeed != 0:
 		var next = nav.get_next_path_position()
@@ -50,7 +48,9 @@ func _physics_process(delta):
 		var new_velocity = current.direction_to(next)*currentSpeed
 		
 		velocity = velocity.move_toward(new_velocity,accel) 
-		if currentSpeed != 0: # TODO turns smoothly but it spawns the wrong way around
+		if currentSpeed != 0 && finishedWakeUp: 
+			# TODO turns smoothly but it spawns the wrong way around
+			# current_speed is set during physics process
 			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
 			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
 		
@@ -63,6 +63,10 @@ func StopWithDelay():
 func StopNavigationAgent():
 	animationTree.changeStateNotWalking()
 	currentSpeed = 0
+	
+func ContinueNavigationAgent():
+	animationTree.changeStateWalking()
+	currentSpeed = speed
 
 func isPlayerInSight(): 
 	var space_state = get_world_3d().direct_space_state
@@ -81,4 +85,7 @@ func isPlayerInSight():
 		playerHeadInSight = false
 	#if resultBody && resultHead:
 	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
-	
+
+func _on_animation_tree_animation_finished(anim_name):
+	if anim_name == "WakeUp":
+		finishedWakeUp = true

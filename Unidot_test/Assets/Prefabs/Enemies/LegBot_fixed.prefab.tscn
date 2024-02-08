@@ -11351,6 +11351,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22068, 0)
 [connection signal="timeout" from="Timer" to="LegsBot" method="_on_timer_timeout"]
 [connection signal="enable_gun" from="LegsBot" to="LegsBot/Armature/Skeleton3D/Body/GunPivot" method="_on_legs_bot_enable_gun"]
 [connection signal="enable_navmesh" from="LegsBot" to="." method="_on_legs_bot_enable_navmesh"]
+[connection signal="animation_finished" from="LegsBot/AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 
 [editable path="LegsBot"]
 [editable path="LegsBot/Armature/Skeleton3D/Body/GunPivot/warning"]

@@ -30,7 +30,9 @@
         - to check for collision simply do is_colliding
         - to get the collider do get_collider
     - set bullet freeze behavior to static to prevent collision with the player
-    - use position of the ObjectHolder in this case, not the global
+    - when "attaching" the bullet to the ObjectHolder use position in this case, not the global
+    - when releasing the bullet the global position needs to be set, otherwise the bullet repositions to the local coordinates
+    - needed to set constant_force and linear_velocity of the bullet to zero
 
 # Notes
 

@@ -83,7 +83,7 @@ func Shoot():
 	# TODO play flick sound
 
 func ChangeObjectLayers():
-	# seems unnecessary
+	# TODO it is necessary, bc the player can still shoot themselves
 	pass
 	
 func ResetHoldVariables():

@@ -50,3 +50,6 @@
         - setting force does remove the force but it still disappears
     - setting velocity to 0
         - still moving even thought I don't add any new forces
+- subsequent bullets aren't lethal when the player is not moving?
+    - not sure when player is immortal
+- at certain angles the player can shoot themselves

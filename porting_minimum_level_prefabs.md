@@ -25,6 +25,7 @@
 - reimplement "HealthManager"
     - instead of setting time_scale to 0, pause the game (see porting scripts)
     - game needs to be unpaused before reload
+    - set time_scale to 1 just in case
     - player need to be freed, otherwise it would spawn a second player which causes issues
 - no real need to change Manager prefabs since the only relevant thing is the script
 - recreate the canvas

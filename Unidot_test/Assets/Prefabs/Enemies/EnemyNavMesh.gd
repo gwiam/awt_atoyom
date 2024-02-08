@@ -15,7 +15,6 @@ var positionToGo
 var cam
 var playerHeadInSight
 var playerBodyInSight
-var finishedWakeUp = false
 
 func _ready():
 	StopNavigationAgent()
@@ -48,8 +47,9 @@ func _physics_process(delta):
 		var new_velocity = current.direction_to(next)*currentSpeed
 		
 		velocity = velocity.move_toward(new_velocity,accel) 
-		if currentSpeed != 0 && finishedWakeUp: 
+		if velocity != Vector3.ZERO:
 			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
+			#debugLabel.text = "angle " + str(velocity_angle) + ";new_velocity " + str(new_velocity)
 			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
 		
 		move_and_slide()
@@ -84,6 +84,3 @@ func isPlayerInSight():
 	#if resultBody && resultHead:
 	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
 
-func _on_animation_tree_animation_finished(anim_name):
-	if anim_name == "WakeUp":
-		finishedWakeUp = true

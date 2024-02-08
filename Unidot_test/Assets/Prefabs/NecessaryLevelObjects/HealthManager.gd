@@ -16,6 +16,7 @@ func _process(_delta):
 	if gameOver && Input.is_action_just_pressed("restart"):
 		print("restarting")
 		get_node("/root/player").queue_free()
+		Engine.time_scale = 1
 		get_tree().paused = false
 		get_tree().reload_current_scene()
 

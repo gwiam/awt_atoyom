@@ -22,7 +22,7 @@ func _ready():
 	NoCollisionLayer = layers.find("NoCollision")
 	ShotLayer = layers.find("ShotLayer")
 	GrabLayer = layers.find("GrabLayer")
-	grabIndicator = get_node("/root/RootNode3D/LevelMinimumPrefabs/Canvas/Crosshair/GrabIndicator")
+	grabIndicator = $"/root/RootNode3D/LevelMinimumPrefabs/Canvas/Crosshair/GrabIndicator"
 	
 	stateMachine = animationTree.get("parameters/Base Layer/playback")
 	# TODO get grab sound
@@ -77,6 +77,8 @@ func Release():
 	
 func Shoot():
 	heldObject.global_position = holdingPosition.global_position
+	# TODO second raycast to compensate for height over bore
+	heldObject.look_at(holdingPosition.global_position+holdingPosition.global_transform.basis.z*500)  
 	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 2700)
 	# TODO play flick sound
 

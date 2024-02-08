@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc3mf7mfn8sr1"]
+[gd_scene load_steps=12 format=3 uid="uid://bc3mf7mfn8sr1"]
 
 [ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_i5hu8"]
 [ext_resource type="Script" path="res://Assets/Scripts/PlayerControl.gd" id="1_n67c6"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/CameraMovement.gd" id="2_15ifm"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/HoldAndShoot.gd" id="2_b24ht"]
 [ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_hvu37"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/GotHit.gd" id="2_pg30g"]
 [ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_m750x"]
 [ext_resource type="AnimationNodeBlendTree" uid="uid://baj8n6crkxen5" path="res://Assets/Animations/Hand/HandController.controller.tres" id="4_mxk43"]
 [ext_resource type="Script" path="res://addons/unidot/runtime/anim_tree.gd" id="5_rw3om"]
@@ -16,11 +17,17 @@ radius = 0.4
 resource_name = "Capsule"
 
 [node name="player" type="CharacterBody3D"]
-collision_mask = 3
 script = ExtResource("1_n67c6")
 movementSpeed = 6
 
 [node name="CapsuleCollider" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_unrh0")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
+script = ExtResource("2_pg30g")
+
+[node name="CapsuleCollider" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CapsuleShape3D_unrh0")
 
 [node name="AudioSource" type="Node" parent="."]
@@ -421,7 +428,7 @@ transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194
 transform = Transform3D(100, 0, 0, 0, 100, -4.37114e-06, 0, 4.37114e-06, 100, 0, 0, 0)
 
 [node name="Skeleton3D" parent="CameraPivot/HUDcamera/hand/Armature" index="0"]
-bones/0/position = Vector3(0, -0.000196042, -0.000403372)
+bones/0/position = Vector3(0, -0.000234053, -0.000403206)
 bones/0/rotation = Quaternion(0.702972, -1.03398e-25, -1.82013e-18, 0.711217)
 bones/1/position = Vector3(-2.10026e-28, 0.0109354, 4.65661e-12)
 bones/1/rotation = Quaternion(-0.30287, -1.12394e-07, -3.97303e-08, 0.953032)
@@ -544,5 +551,7 @@ metadata/unidot_keys = {
 
 [node name="CameraPositioner" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.51, 0)
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 
 [editable path="CameraPivot/HUDcamera/hand"]

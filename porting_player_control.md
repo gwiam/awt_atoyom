@@ -24,9 +24,7 @@
         - makes more sense that in "isPlayerInSight" since Ray is always facing forwards
         - should save quite a bit of code
         - makes second raycast superfluous
-        - the shoot raycast is also not necessary
-            - cast infinite ray forwards
-            - if it doesn't collide with anything the bala gets rotated forwards anyways
+        - second raycast used to adjust for height over bore
         - to check for collision simply do is_colliding
         - to get the collider do get_collider
     - set bullet freeze behavior to static to prevent collision with the player

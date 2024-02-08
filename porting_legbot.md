@@ -50,6 +50,7 @@
             - coroutines cannot be done like in Unity because they cannot be interrupted
             - instead done with a simple bool and if statement to abort coroutine indirectly
             - use add_constant_central_force instead of apply_central_force to prevent the bullet from dropping on the floor during slowmo
+            - force then needs to be manually removed
         - put Legbot on another layer to prevent it from colliding with the bullet
         - fix the bullet prefab (more in porting bullet)
     - recreate audio source, thankfully the sounds themselves have been imported

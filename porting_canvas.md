@@ -19,6 +19,7 @@
         - inconsistent, you may need to reposition the anchor or the entire element for it to take effect 
         - size cannot be adjusted unless strech_mode is set to "ignore size" (maybe move this section to porting_UI or something)
         - pivot offset needs to be manually put in the middle of the node
+- instead of setting the visibility canvases have hide() and show() methods
 
 # Personal notes:
 

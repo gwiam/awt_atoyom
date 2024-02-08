@@ -71,6 +71,10 @@
     - when using look_at it is often needed to set use_model_front to true
         - this is due to Godots ridiculous descision to use negative Z as forward
     - game can be paused with get_tree().paused = true, see https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html
+        - set node process mode to always for nodes that should still function after the pause
+    - to get the forward vector of a node do ".global_transform.basis.z"
+    - scene can be reloaded using get_tree().reload_current_scene()
+        - nodes added with a script might cause issues (like spawning the player)
 
 
 # personal nodes
@@ -90,3 +94,7 @@
         - presumably position and rotation
     - there is no true unscaled time
     - "Find References in Scene" is a really helpful feature in Unity
+    - restarting the game causes issues with previously freed elements
+        - it's probably because it is spawning another player
+        - problems only occour only in player scrips
+            - maybe free the player and let it spawn a new one on reload

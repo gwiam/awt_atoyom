@@ -7,12 +7,9 @@ extends CharacterBody3D
 
 var target_vel = Vector3.ZERO
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	
 	var movementDir = Vector3.ZERO

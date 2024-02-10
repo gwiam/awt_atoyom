@@ -32,3 +32,4 @@
 - bullet sometimes despawns on Character3D collider before hitting Area3D, causing shotty hit detection
     - either play around with layers to prevent bullet from colliding with the characterbody
     - make Area3D a little bigger than the CharacterBody
+    - maybe the bullet was also too fast, lol

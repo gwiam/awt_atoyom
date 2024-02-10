@@ -62,6 +62,11 @@
         - add keyframes for each step
         - add step sound to each keyframe
 - add an area3d for collision detection
+- reimplement EnemyHealth
+    - first stop the legbot physics process to prevent crashing
+    - then delete the gun pivot
+    - set only LegsBot to invisible
+    - after a timer delete LegBot
 
 
 # Personal notes:
@@ -143,7 +148,13 @@
     - probably because it is colliding with the bot itself
 - audio stops playing as soon as the object is freed
     - probably have to make the legbot invisible or else it's gonna stand there unit the audio finishes playing
-- porting the dies particles but not accurately
+        - but the bot can still shoot you in that time
+        - delete the "Legsbot"
+            - causes crash
+        - delete the gun?
+            - would probably also crash
+        - stop process?
+- porting the dies particles but not accurately, also without extra particles
         
     
 

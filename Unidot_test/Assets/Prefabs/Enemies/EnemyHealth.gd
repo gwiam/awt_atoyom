@@ -5,6 +5,7 @@ extends Area3D
 
 func _on_body_entered(body):
 	explodes.play()
+	leg_bot.visible = false
 	# TODO play particle effects
 	# TODO delete particles afterwards (can probably be done inside of the particle system)
 	# TODO tell enemy tracker that an enemy was killed

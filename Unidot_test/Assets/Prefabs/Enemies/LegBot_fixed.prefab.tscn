@@ -41,6 +41,7 @@ size = Vector3(0.25, 0.25, 0.25)
 
 [node name="LegBot" type="CharacterBody3D"]
 collision_layer = 4
+collision_mask = 65
 script = ExtResource("1_ek2hd")
 
 [node name="Area3D" type="Area3D" parent="."]

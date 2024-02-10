@@ -79,7 +79,7 @@ func Shoot():
 	heldObject.global_position = holdingPosition.global_position
 	# TODO second raycast to compensate for height over bore
 	heldObject.look_at(holdingPosition.global_position+holdingPosition.global_transform.basis.z*500)  
-	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 2700)
+	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 270)
 	# TODO play flick sound
 
 func ChangeObjectLayers():

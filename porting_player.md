@@ -29,3 +29,6 @@
 - seems like the radius of the colider was imported correctly but not the height?
 - it ported in 2 animation players, idk why...
 - maybe removing all the stuff that wont work anways improves the import quality?
+- bullet sometimes despawns on Character3D collider before hitting Area3D, causing shotty hit detection
+    - either play around with layers to prevent bullet from colliding with the characterbody
+    - make Area3D a little bigger than the CharacterBody

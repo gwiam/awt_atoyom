@@ -65,6 +65,7 @@ restart={
 [layer_names]
 
 3d_physics/layer_2="EnemyBullet"
+3d_physics/layer_3="Enemy"
 3d_physics/layer_6="Grab"
 3d_physics/layer_7="Player"
 3d_physics/layer_8="Objects"

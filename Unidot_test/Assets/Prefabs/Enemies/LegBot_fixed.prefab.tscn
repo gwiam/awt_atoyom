@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://clnjtjssvuxe4"]
+[gd_scene load_steps=22 format=3 uid="uid://clnjtjssvuxe4"]
 
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/SetDelayToWakeUp.gd" id="1_6wuou"]
 [ext_resource type="Script" path="res://Assets/Prefabs/Enemies/EnemyNavMesh.gd" id="1_ek2hd"]
@@ -21,6 +21,23 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c4tp2"]
 height = 1.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8we72"]
+particle_flag_rotate_y = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 0.15
+emission_ring_inner_radius = 0.0
+angle_max = 90.0
+velocity_pivot = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 4.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_usjd4"]
+material = ExtResource("3_qybnc")
+size = Vector3(0.25, 0.25, 0.25)
 
 [node name="LegBot" type="CharacterBody3D"]
 collision_layer = 4
@@ -330,8 +347,14 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "c67a2033fe354cd4cb06d382fcf01c8b", 3]
 }
 
-[node name="DiesParticle" type="Node3D" parent="."]
+[node name="DiesParticle" type="GPUParticles3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21, 0)
+emitting = false
+amount = 30
+one_shot = true
+explosiveness = 0.85
+process_material = SubResource("ParticleProcessMaterial_8we72")
+draw_pass_1 = SubResource("BoxMesh_usjd4")
 
 [node name="ParticleSystem" type="Node" parent="DiesParticle"]
 metadata/unidot_keys = {

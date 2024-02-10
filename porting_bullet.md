@@ -8,6 +8,7 @@
 - collider doesn't report any collisions by default
 - bullet trail not imported
 - particle effects not ported
+- trail effect not ported, not in base godot
 
 # Solutions:
 
@@ -18,4 +19,4 @@
 # Personal notes:
 
 - balas means bullets in spanish
-- I'm gonna leave effects for later
+- maybe trails could be done with particlesystem?

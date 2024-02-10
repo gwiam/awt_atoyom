@@ -43,7 +43,7 @@
 - setting up expression based transitions
     - changing animation expression base node of animation tree to LegBot
     - creating enum to represent expressions (Walking, NotWalking)
-    - also changing the expression conditions to be like "state = <state>"
+    - also changing the expression conditions to be like "state == <state>"
 - also make animation transition smoothly by setting a crossfade
     - transition times are taken from the original but there seems to be no way of saying when the fade should start
 - reimplement gun

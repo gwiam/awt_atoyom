@@ -13,8 +13,9 @@ func _on_body_entered(body):
 	legsBot.visible = false
 	gun_pivot.queue_free()
 	diesParticle.set_emitting(true)
-	# TODO delete particles afterwards (can probably be done inside of the particle system)
-	# TODO tell enemy tracker that an enemy was killed
+
+	var enemyTracker = $"/root/RootNode3D/LevelMinimumPrefabs/Door" as EnemyTracker
+	enemyTracker.EnemyKilled()
 	
 	# body is only the bullet
 	await get_tree().create_timer(1).timeout

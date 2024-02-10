@@ -19,6 +19,10 @@
         - append to root with "get_node("/root").add_child.call_deferred(playerInstance)"
     - reimplement enemy counter script that opens the door
     - reimplement pause menu
+    - reimplement EnemyTracker
+        - reimplement animation state like in LegBot
+            - create a dedicated animation state script
+            - correct expression for transition
 - reimplement "TimeManager"
     - this has the slowmo functionality (not part of player prefab)
     - more info in porting_scripts
@@ -40,3 +44,4 @@
         - somehow doesn't work
     - force functions naming is inconsistant
         - why is it add_constant_central_force for ridigbody3D but apply_constant_central_force for rigidbody2D!?
+- how do I carry exported variables to a higher level scene?

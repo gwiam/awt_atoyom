@@ -19,7 +19,7 @@ node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_adc00"]
 advance_mode = 2
-advance_expression = "Open"
+advance_expression = "state == Open"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5ugah"]
 advance_mode = 2
@@ -36,7 +36,7 @@ transitions = ["closed", "Open", SubResource("AnimationNodeStateMachineTransitio
 graph_offset = Vector2(0, 54.2746)
 
 [resource]
-graph_offset = Vector2(-25.0909, 108.496)
+graph_offset = Vector2(-78.7663, 105.52)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_exvyv")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

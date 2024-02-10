@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://5wqhmq6x3vfm"]
+[gd_scene load_steps=18 format=3 uid="uid://5wqhmq6x3vfm"]
 
 [ext_resource type="AnimationLibrary" uid="uid://d4g5whdswyjvx" path="res://Assets/Animations/door/Door.library.tres" id="1_6y25e"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/EnemyTracker.gd" id="1_js0wp"]
@@ -12,6 +12,7 @@
 [ext_resource type="ArrayMesh" uid="uid://bemvufkq0ccp3" path="res://Assets/Models/door.Cube_004.mesh" id="9_om4mh"]
 [ext_resource type="Material" uid="uid://n5v6n42xtmf3" path="res://Assets/Materials/DoorGlow.mat.tres" id="10_olmg4"]
 [ext_resource type="Script" path="res://Assets/Scenes/SpawnPlayer.gd" id="11_ayur6"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/WinGameCollider.gd" id="12_ogire"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xh6eu"]
 size = Vector3(0.02, 0.00482097, 0.04)
@@ -438,7 +439,9 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "b1bd256d66e52594aafef4be6b0c1e9b", 3]
 }
 
-[node name="BoxCollider" type="StaticBody3D" parent="Plane"]
+[node name="BoxCollider" type="Area3D" parent="Plane"]
+collision_mask = 64
+script = ExtResource("12_ogire")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Plane/BoxCollider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.76837e-07)
@@ -461,3 +464,5 @@ metadata/unidot_keys = {
 "m_Script": [null, 11500000, "df958aae3616b2c44a7ecc41d2b9e6a4", 3],
 "prefabPlayer": [null, 6639354054196359937, "f1e7643930efb1a47b87257cf0420617", 3]
 }
+
+[connection signal="body_entered" from="Plane/BoxCollider" to="Plane/BoxCollider" method="_on_body_entered"]

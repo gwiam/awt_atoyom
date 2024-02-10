@@ -9,6 +9,7 @@
 - most things are scripts and they all broke
 - even the canvas element broke, though godot has a similar canvas system
 - Godot doesn't have built in effects like chromatic abberation
+- StaticBody3D doesn't have a signal for collision either...
     
 # Solutions:
 
@@ -23,6 +24,8 @@
         - reimplement animation state like in LegBot
             - create a dedicated animation state script
             - correct expression for transition
+    - reimplement WinGameCollider
+        - change BoxCollider node type from StaticBody3D to Area3D
 - reimplement "TimeManager"
     - this has the slowmo functionality (not part of player prefab)
     - more info in porting_scripts

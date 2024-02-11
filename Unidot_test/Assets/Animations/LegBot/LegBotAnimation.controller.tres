@@ -92,7 +92,7 @@ transitions = ["Armature_Walking", "Armature_Idle", SubResource("AnimationNodeSt
 graph_offset = Vector2(0, 90.783)
 
 [resource]
-graph_offset = Vector2(-102.132, 138.377)
+graph_offset = Vector2(-124.874, 59.7222)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_8brbx")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

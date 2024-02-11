@@ -35,13 +35,14 @@
     - set time_scale to 1 just in case
     - player need to be freed, otherwise it would spawn a second player which causes issues
 - no real need to change Manager prefabs since the only relevant thing is the script
-- recreate the canvas
+- recreate the canvas (see porting canvas)
 - recreate the GameOverCanvas
 
 
 # Personal notes
 
 - effects like chromatic aberration have to be created by hand
+    - maybe try this https://godotshaders.com/shader/chromatic-abberation/
 - slow motion causes the bullet force to be weaker
     - maybe set velocity instead?
         - somehow doesn't work

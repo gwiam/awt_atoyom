@@ -20,3 +20,4 @@
 
 - balas means bullets in spanish
 - maybe trails could be done with particlesystem?
+    - not really working...

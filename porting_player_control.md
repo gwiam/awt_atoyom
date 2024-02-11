@@ -23,10 +23,10 @@
         - add a raycaster object to camera instead
         - makes more sense that in "isPlayerInSight" since Ray is always facing forwards
         - should save quite a bit of code
-        - makes second raycast superfluous
         - second raycast used to adjust for height over bore
         - to check for collision simply do is_colliding
         - to get the collider do get_collider
+        - TODO change the layers of the bullet so the player can't shoot themselves
     - set bullet freeze behavior to static to prevent collision with the player
     - when "attaching" the bullet to the ObjectHolder use position in this case, not the global
     - when releasing the bullet the global position needs to be set, otherwise the bullet repositions to the local coordinates
@@ -34,7 +34,6 @@
 
 # Notes
 
-- GDScript very straight forward, similar to Python
 - player movement and input capture is much more intuitive to implement in Godot than in Unity
 - how to stop the mouse from existing the screen?
     - with "Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)"

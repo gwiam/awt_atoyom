@@ -1,0 +1,5 @@
+- https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html contains tips on how to host game instance
+- inkl premade script
+- functional
+- lighting is absolute dogwater
+- particle effects cause lag

@@ -49,7 +49,6 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(new_velocity,accel) 
 		if velocity != Vector3.ZERO:
 			var velocity_angle = atan2(new_velocity.x,new_velocity.z)
-			#debugLabel.text = "angle " + str(velocity_angle) + ";new_velocity " + str(new_velocity)
 			rotation.y = lerp_angle(rotation.y,velocity_angle, delta * angularSpeed)
 		
 		move_and_slide()

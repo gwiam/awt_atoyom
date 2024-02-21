@@ -37,6 +37,7 @@
 - no real need to change Manager prefabs since the only relevant thing is the script
 - recreate the canvas (see porting canvas)
 - recreate the GameOverCanvas
+- recreate the PauseGameCanvas and PauseGameManager
 
 
 # Personal notes
@@ -49,3 +50,4 @@
     - force functions naming is inconsistant
         - why is it add_constant_central_force for ridigbody3D but apply_constant_central_force for rigidbody2D!?
 - how do I carry exported variables to a higher level scene?
+- pausing in Unity sets a bunch of variables to paused

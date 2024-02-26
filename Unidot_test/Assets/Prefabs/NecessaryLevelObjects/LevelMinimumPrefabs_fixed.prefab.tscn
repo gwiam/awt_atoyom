@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bfxviiibs4iy7"]
+[gd_scene load_steps=16 format=3 uid="uid://bfxviiibs4iy7"]
 
 [ext_resource type="PackedScene" uid="uid://dgt7824vg88ai" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas_fixed.prefab.tscn" id="1_n2mvv"]
 [ext_resource type="PackedScene" uid="uid://d0suumn07rai5" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas_fixed.prefab.tscn" id="2_nwiov"]
-[ext_resource type="PackedScene" uid="uid://cpyw0e6tgov5u" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.prefab.tscn" id="3_rdsn0"]
+[ext_resource type="PackedScene" uid="uid://c3ches4nah5i2" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas_fixed.prefab.tscn" id="3_rf8n2"]
 [ext_resource type="PackedScene" uid="uid://dwym3x6p6c6ou" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.prefab.tscn" id="4_qjbhr"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameManager.gd" id="5_8erje"]
 [ext_resource type="PackedScene" uid="uid://das5ekc4tbr3h" path="res://Assets/Prefabs/NecessaryLevelObjects/AudioSourcesManager.prefab.tscn" id="5_v4i6h"]
 [ext_resource type="PackedScene" uid="uid://dgopman7hy1bg" path="res://Assets/Prefabs/NecessaryLevelObjects/TimeManager.prefab.tscn" id="6_s67al"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/TimeManager.gd" id="7_8aepd"]
@@ -21,10 +22,12 @@
 
 [node name="GameOverCanvas" parent="." instance=ExtResource("2_nwiov")]
 
-[node name="PauseGameCanvas" parent="." instance=ExtResource("3_rdsn0")]
+[node name="PauseGameCanvas" parent="." instance=ExtResource("3_rf8n2")]
 
 [node name="PauseGameManager" parent="." instance=ExtResource("4_qjbhr")]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("5_8erje")
 
 [node name="AudioSourcesManager" parent="." instance=ExtResource("5_v4i6h")]
 
@@ -112,7 +115,6 @@ metadata/unidot_keys = {
 
 [node name="ConfigManager" parent="." instance=ExtResource("12_sj3ga")]
 
-[editable path="PauseGameCanvas"]
 [editable path="PauseGameManager"]
 [editable path="AudioSourcesManager"]
 [editable path="TimeManager"]

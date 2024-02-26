@@ -15,7 +15,10 @@ func _ready():
 func _process(_delta):
 	if gameOver && Input.is_action_just_pressed("restart"):
 		print("restarting")
-		get_node("/root/player").queue_free()
+		var children = get_node("/root").get_children()
+		for child in children:
+			if child.name != "RootNode3D":
+				child.queue_free()
 		Engine.time_scale = 1
 		get_tree().paused = false
 		get_tree().reload_current_scene()

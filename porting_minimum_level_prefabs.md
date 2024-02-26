@@ -34,6 +34,8 @@
     - game needs to be unpaused before reload
     - set time_scale to 1 just in case
     - player need to be freed, otherwise it would spawn a second player which causes issues
+    - bullet that killed player persists and needs to be removed too
+        - use get_children() on root and free them, EXCEPT FOR ROOTNODE3D or else the game crashes
 - no real need to change Manager prefabs since the only relevant thing is the script
 - recreate the canvas (see porting canvas)
 - recreate the GameOverCanvas
@@ -50,4 +52,7 @@
     - force functions naming is inconsistant
         - why is it add_constant_central_force for ridigbody3D but apply_constant_central_force for rigidbody2D!?
 - how do I carry exported variables to a higher level scene?
-- pausing in Unity sets a bunch of variables to paused
+- pausing in Unity sets a bunch of scripts to be paused
+    - just set the process mode
+- pausing doesn't pause the coroutine and the bot shoots immediately
+- get freeing all the child nodes causes the game to crash

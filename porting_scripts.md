@@ -75,15 +75,20 @@
     - to get the forward vector of a node do ".global_transform.basis.z"
     - scene can be reloaded using get_tree().reload_current_scene()
         - nodes added with a script might cause issues (like spawning the player)
+    - setting cursor visibility and defining mouse mode cannot be done independently
+        - set Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) to stick mouse to the center and make it invisible
+
 
 
 # personal nodes
 
-    - finding members or attributes is a pain
-    - so aparently $<node> is the same as get_node(<node>) but I haven't tested that yet
+    - finding members or attributes is a pain, intellisense is spotty at best
+    - so aparently $<node> is the same as get_node(<node>) 
     - Awake() and _enter_tree() seem to do the same in both engines
+        - that's a lie
     - Start() and _ready() are the same thing
     - how do I find objects in the game world when they are not inside they world yet?
+        - you cannot search for nodes, you need to know where they could be
     - on_enable doesn't exist in Godot? Am I supposed to poll if the bot is set to active?
         - this is where signals come in handy
     - seems like navmesh navigation in Unity is a lot easier since you don't need to write a physics process for it

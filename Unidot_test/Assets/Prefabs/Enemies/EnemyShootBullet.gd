@@ -74,10 +74,10 @@ func shootingProcedures():
 	# it keeps running more instances of this function
 	startPreparation()
 	# https://gdscript.com/solutions/coroutines-and-yield/
-	await get_tree().create_timer(reloadTime).timeout
+	await get_tree().create_timer(reloadTime,false).timeout
 	if !stopCoroutine:
 		showWarnings()
-		await get_tree().create_timer(alertTime).timeout
+		await get_tree().create_timer(alertTime,false).timeout
 		shootBullet()
 
 

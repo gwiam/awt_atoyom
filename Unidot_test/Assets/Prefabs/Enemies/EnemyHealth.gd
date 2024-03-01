@@ -18,6 +18,6 @@ func _on_body_entered(body):
 	enemyTracker.EnemyKilled()
 	
 	# body is only the bullet
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1,false).timeout
 	
 	legBot.queue_free()

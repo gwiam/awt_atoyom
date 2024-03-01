@@ -78,7 +78,7 @@ func Release():
 func Shoot():
 	heldObject.global_position = holdingPosition.global_position
 	# TODO second raycast to compensate for height over bore
-	heldObject.look_at(holdingPosition.global_position+holdingPosition.global_transform.basis.z*500)  
+	heldObject.look_at(holdingPosition.global_position+holdingPosition.global_transform.basis.z*500, Vector3.UP, true)  
 	heldObject.add_constant_central_force(holdingPosition.global_transform.basis.z * 270)
 	# TODO play flick sound
 

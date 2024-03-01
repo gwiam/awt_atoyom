@@ -72,6 +72,8 @@
         - this is due to Godots ridiculous descision to use negative Z as forward
     - game can be paused with get_tree().paused = true, see https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html
         - set node process mode to always for nodes that should still function after the pause
+        - timers created in code have their process mode set to always by default
+            - set pause_mode_process in create_timer() to false
     - to get the forward vector of a node do ".global_transform.basis.z"
     - scene can be reloaded using get_tree().reload_current_scene()
         - nodes added with a script might cause issues (like spawning the player)

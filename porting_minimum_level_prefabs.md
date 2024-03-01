@@ -55,4 +55,6 @@
 - pausing in Unity sets a bunch of scripts to be paused
     - just set the process mode
 - pausing doesn't pause the coroutine and the bot shoots immediately
+    - creating timers in code sets their process mode to always
 - get freeing all the child nodes causes the game to crash
+    - filter out the RootNode3D

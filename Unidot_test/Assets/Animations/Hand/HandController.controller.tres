@@ -34,6 +34,7 @@ node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_amubb"]
 animation = &"Indle"
+metadata/time = &""
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_6pgxa"]
 metadata/scale = 0.35

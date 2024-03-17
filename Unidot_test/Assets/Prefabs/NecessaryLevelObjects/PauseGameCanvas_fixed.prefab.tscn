@@ -10,6 +10,7 @@ bg_color = Color(1, 1, 1, 1)
 default_font = ExtResource("1_mgwby")
 default_font_size = 24
 Button/colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
+Button/fonts/font = ExtResource("1_mgwby")
 Button/styles/normal = SubResource("StyleBoxFlat_xthep")
 
 [node name="PauseGameCanvas" type="CanvasLayer"]

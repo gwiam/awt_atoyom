@@ -28,14 +28,17 @@
     - done partially in a seperate editor, and partially in the inspector
         - you add settings options in the theme editor and then change them in the inspector
     - you can also just use theme overrides
+- Buttons don't call functions, instead one must use signals to detect button presses
+    - creating an extra script file for all button events
+    - reference functions inside that scripts instead
 
 # Personal notes:
 
 - canvas layers are edited in 2D mode
 - you can use regular 2D but there are dedicated green "Control" elements for canvases
 - canvas seems to have no "canvas render" equivalent, don't think it's needed
-    - most canvas tutorials suck
-    - centering really small stuff is a pain
+- most canvas tutorials suck
+- centering really small stuff is a pain
 - the theme editor is hot garbage
     - when you close the theme editor once it doesn't open up again
     - restoring the editor layout to default doesn't reset this behavior

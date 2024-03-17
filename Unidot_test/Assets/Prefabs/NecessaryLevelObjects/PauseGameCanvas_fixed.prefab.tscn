@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3ches4nah5i2"]
 
 [ext_resource type="FontFile" uid="uid://cqlqfstid3l58" path="res://Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf" id="1_mgwby"]
-[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/ContinueButton.gd" id="2_54tmn"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.gd" id="1_vtqnm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xthep"]
 bg_color = Color(1, 1, 1, 1)
@@ -13,6 +13,7 @@ Button/colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_xthep")
 
 [node name="PauseGameCanvas" type="CanvasLayer"]
+script = ExtResource("1_vtqnm")
 
 [node name="Canvas" type="Node" parent="."]
 metadata/unidot_keys = {
@@ -219,7 +220,6 @@ custom_minimum_size = Vector2(240, 70)
 layout_mode = 2
 theme = SubResource("Theme_o3p3y")
 text = "continue"
-script = ExtResource("2_54tmn")
 
 [node name="CanvasRenderer" type="Node" parent="Image/Button"]
 metadata/unidot_keys = {
@@ -553,3 +553,7 @@ metadata/unidot_keys = {
 "m_TargetGraphic": [null, 7811833000317360155, null, null],
 "m_Transition": 1
 }
+
+[connection signal="pressed" from="Image/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Image/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Image/Button3" to="." method="_on_button_3_pressed"]

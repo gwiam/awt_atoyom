@@ -83,4 +83,5 @@ pause={
 
 [rendering]
 
-renderer/rendering_method.mobile="gl_compatibility"
+renderer/rendering_method="mobile"
+renderer/rendering_method.web="mobile"

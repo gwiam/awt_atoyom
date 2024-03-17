@@ -90,6 +90,7 @@ resource_name = "Cube"
 environment = SubResource("Environment_6ia7t")
 
 [node name="LightmapGI" type="LightmapGI" parent="."]
+visible = false
 quality = 2
 interior = true
 

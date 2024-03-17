@@ -6,6 +6,7 @@ var playerCurrentHealth
 var gameOver = false
 @export var playerMaxHealth = 100
 @onready var GameOverCanvas = $"../GameOverCanvas"
+@onready var sceneChanger = $"../SceneChanger" as SceneChanger
 
 func _ready():
 	GameOverCanvas.hide()
@@ -14,14 +15,7 @@ func _ready():
 
 func _process(_delta):
 	if gameOver && Input.is_action_just_pressed("restart"):
-		print("restarting")
-		var children = get_node("/root").get_children()
-		for child in children:
-			if child.name != "RootNode3D":
-				child.queue_free()
-		Engine.time_scale = 1
-		get_tree().paused = false
-		get_tree().reload_current_scene()
+		sceneChanger.RestartGame()
 
 func DamageToPlayer(damageQuantity):
 	playerCurrentHealth -= damageQuantity

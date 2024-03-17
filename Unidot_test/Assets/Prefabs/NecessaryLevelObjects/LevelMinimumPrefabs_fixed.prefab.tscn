@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bfxviiibs4iy7"]
+[gd_scene load_steps=17 format=3 uid="uid://bfxviiibs4iy7"]
 
 [ext_resource type="PackedScene" uid="uid://dgt7824vg88ai" path="res://Assets/Prefabs/NecessaryLevelObjects/Canvas_fixed.prefab.tscn" id="1_n2mvv"]
 [ext_resource type="PackedScene" uid="uid://d0suumn07rai5" path="res://Assets/Prefabs/NecessaryLevelObjects/GameOverCanvas_fixed.prefab.tscn" id="2_nwiov"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://yst5fvdj3nft" path="res://Assets/Prefabs/NecessaryLevelObjects/VolumeManager.prefab.tscn" id="10_t4igf"]
 [ext_resource type="PackedScene" uid="uid://ben70gwyyjdtu" path="res://Assets/Prefabs/NecessaryLevelObjects/SaveGame.prefab.tscn" id="11_t0erb"]
 [ext_resource type="PackedScene" uid="uid://x3xs2egwe573" path="res://Assets/Prefabs/NecessaryLevelObjects/ConfigManager.prefab.tscn" id="12_sj3ga"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/SceneChanger.gd" id="12_x7gsl"]
 
 [node name="LevelMinimumPrefabs" type="Node3D"]
 
@@ -23,6 +24,7 @@
 [node name="GameOverCanvas" parent="." instance=ExtResource("2_nwiov")]
 
 [node name="PauseGameCanvas" parent="." instance=ExtResource("3_rf8n2")]
+process_mode = 3
 
 [node name="PauseGameManager" parent="." instance=ExtResource("4_qjbhr")]
 process_mode = 3
@@ -47,7 +49,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("9_w685x")
 
 [node name="SceneChanger" parent="." instance=ExtResource("8_7nece")]
+process_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("12_x7gsl")
 
 [node name="Door" parent="." instance=ExtResource("9_kuntq")]
 

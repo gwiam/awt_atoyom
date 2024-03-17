@@ -30,7 +30,7 @@ def serve(root, port, run_browser):
     if run_browser:
         # Open the served page in the user's default browser.
         print("Opening the served URL in the default browser (use `--no-browser` or `-n` to disable this).")
-        shell_open(f"http://127.0.0.1:{port}")
+        shell_open(f"http://localhost:{port}")
 
     test(CORSRequestHandler, HTTPServer, port=port)
 

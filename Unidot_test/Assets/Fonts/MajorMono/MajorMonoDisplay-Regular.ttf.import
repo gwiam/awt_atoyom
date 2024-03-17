@@ -12,7 +12,6 @@ dest_files=["res://.godot/imported/MajorMonoDisplay-Regular.ttf-88c98b6f2707cb29
 
 [params]
 
-Rendering=null
 antialiasing=1
 generate_mipmaps=false
 multichannel_signed_distance_field=false
@@ -23,9 +22,7 @@ force_autohinter=false
 hinting=1
 subpixel_positioning=1
 oversampling=0.0
-Fallbacks=null
 fallbacks=[]
-Compress=null
 compress=true
 preload=[]
 language_support={}

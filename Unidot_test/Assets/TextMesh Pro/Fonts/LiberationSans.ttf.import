@@ -12,7 +12,6 @@ dest_files=["res://.godot/imported/LiberationSans.ttf-83c9802af2c573de8efb12418d
 
 [params]
 
-Rendering=null
 antialiasing=1
 generate_mipmaps=false
 multichannel_signed_distance_field=false
@@ -23,9 +22,7 @@ force_autohinter=false
 hinting=1
 subpixel_positioning=1
 oversampling=0.0
-Fallbacks=null
 fallbacks=[]
-Compress=null
 compress=true
 preload=[]
 language_support={}

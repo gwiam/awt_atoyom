@@ -18,9 +18,7 @@ func _process(delta):
 func TogglePause():
 	isPaused = !isPaused
 	
-	# TODO set camera movement to paused
-	# TODO set time manager to paused
-	# TODO set hold and shoot to paused
+	# skipping all the pausing things because the whole scene is paused anyway
 	
 	if isPaused:
 		# TODO stop all audio

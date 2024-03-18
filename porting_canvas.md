@@ -22,6 +22,9 @@
         - inconsistent, you may need to reposition the anchor or the entire element for it to take effect 
         - size cannot be adjusted unless strech_mode is set to "ignore size" (maybe move this section to porting_UI or something)
         - pivot offset needs to be manually put in the middle of the node
+- when using a box container to organize a row or column of elements
+    - you cannot set the dimensions of the container
+    - instead set the dimensioons of the elements by changing the "custom minimum size", but pixel values don't translate 1 to 1 from unity
 - instead of setting the visibility canvases have hide() and show() methods
 - Theming:
     - central theming system for the entire UI
@@ -43,3 +46,5 @@
     - when you close the theme editor once it doesn't open up again
     - restoring the editor layout to default doesn't reset this behavior
     - there are no docs for it
+- they say the canvas has no height but it's always "648 pixels" high
+    - don't use the pixel measurements

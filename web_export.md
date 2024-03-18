@@ -11,5 +11,7 @@
         - no SSAO
         - no LightmapGI (they say it will be implemented later)
         - no SDFGI
+        - no VoxelGI (they say it will be implemented later)
         - no particle trails
+    - only way to add GI is to fake it
 

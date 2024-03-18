@@ -17,7 +17,8 @@
     - reimplement the spawn script inside the spawn point of the door
         - instantiate player
         - give it the position of the spawn point
-        - append to root with "get_node("/root").add_child.call_deferred(playerInstance)"
+        - append to root with "get_node("/root/RootNode3D").add_child.call_deferred(playerInstance)"
+            - do not add it to root because that prevents the player from being removed when loading another level or reloading levels
     - reimplement enemy counter script that opens the door
     - reimplement pause menu
     - reimplement EnemyTracker

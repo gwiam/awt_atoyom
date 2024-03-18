@@ -70,6 +70,7 @@
         - there are two different kinds of freeze behaviours, see https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html#enumerations
     - when using look_at it is often needed to set use_model_front to true
         - this is due to Godots ridiculous descision to use negative Z as forward
+            - it's basically intended to be used with the camera
     - game can be paused with get_tree().paused = true, see https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html
         - set node process mode to always for nodes that should still function after the pause
         - timers created in code have their process mode set to always by default
@@ -105,3 +106,5 @@
         - it's probably because it is spawning another player
         - problems only occour only in player scrips
             - maybe free the player and let it spawn a new one on reload
+            - the easier solution is to put newly spawned nodes under the scene node (not the root node)
+        - bullets also cause this issue

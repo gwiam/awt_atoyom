@@ -1,11 +1,13 @@
-[gd_resource type="AnimationLibrary" load_steps=2 format=3 uid="uid://d4g5whdswyjvx"]
+[gd_resource type="AnimationLibrary" load_steps=3 format=3 uid="uid://d4g5whdswyjvx"]
 
 [ext_resource type="Animation" uid="uid://i2hqdvjwh7s7" path="res://Assets/Animations/door/open.anim.tres" id="1_h5133"]
+[ext_resource type="Animation" uid="uid://cy1aeche136ra" path="res://Assets/Animations/door/open.anim" id="2_ibg5h"]
 
 [resource]
 resource_name = "Door"
 _data = {
-"closed": ExtResource("1_h5133")
+"closed": ExtResource("1_h5133"),
+"open": ExtResource("2_ibg5h")
 }
 metadata/animation_guid_fileid_to_name = {
 "038fa36b0a94e0a4fa8cc0b61f834322:7400000": "closed"

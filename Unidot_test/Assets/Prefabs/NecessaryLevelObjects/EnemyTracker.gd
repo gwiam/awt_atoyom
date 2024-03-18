@@ -11,7 +11,6 @@ func _ready():
 	if kills >= enemyQuantity:
 		OpenDoor()
 
-
 func EnemyKilled():
 	kills += 1
 	if kills >= enemyQuantity:

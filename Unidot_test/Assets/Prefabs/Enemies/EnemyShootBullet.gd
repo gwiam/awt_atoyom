@@ -23,8 +23,8 @@ func _ready():
 	
 func _on_legs_bot_enable_gun():
 	print("turning on gun")
-	playerBodyTarget = get_node("/root/player/Body")
-	playerHeadTarget = get_node("/root/player/CameraPivot")
+	playerBodyTarget = get_node("/root/RootNode3D/player/Body")
+	playerHeadTarget = get_node("/root/RootNode3D/player/CameraPivot")
 
 func _process(_delta):
 	# debug_label.text = "stop coroutines: " + str(stopCoroutine) # TODO remove
@@ -58,8 +58,7 @@ func shootBullet():
 	bala.global_position = shootOrigin.global_position
 	bala.rotation = shootOrigin.rotation
 	
-	get_tree().get_root().add_child(bala)
-	
+	get_node("/root/RootNode3D").add_child(bala)	
 	if enemyNavMesh.playerBodyInSight:
 		bala.look_at(playerBodyTarget.global_position, Vector3.UP, true)
 	elif enemyNavMesh.playerHeadInSight:

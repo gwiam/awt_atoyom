@@ -1,15 +1,16 @@
 [gd_resource type="AnimationNodeBlendTree" load_steps=8 format=3 uid="uid://br17l5fmtp6n2"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yjw6c"]
-animation = &"closed"
+animation = &"Door.library/open"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_m2a5l"]
-animation = &"closed"
+animation = &"Door.library/closed"
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_c73y2"]
 metadata/scale = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_qql6i"]
+graph_offset = Vector2(111.791, 52.4628)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_m2a5l")
 nodes/Animation/position = Vector2(200, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_c73y2")
@@ -36,7 +37,7 @@ transitions = ["closed", "Open", SubResource("AnimationNodeStateMachineTransitio
 graph_offset = Vector2(0, 54.2746)
 
 [resource]
-graph_offset = Vector2(-78.7663, 105.52)
+graph_offset = Vector2(-706.921, 74.4801)
 "nodes/Base Layer/node" = SubResource("AnimationNodeStateMachine_exvyv")
 "nodes/Base Layer/position" = Vector2(100, 200)
 nodes/output/position = Vector2(600, 350)

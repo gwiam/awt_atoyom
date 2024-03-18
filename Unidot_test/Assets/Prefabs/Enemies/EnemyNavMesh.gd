@@ -23,8 +23,8 @@ func _on_legs_bot_enable_navmesh():
 	print("turned on navmesh")
 	if is_instance_valid(nav):
 		animationTree.changeStateWalking()
-		positionToGo = get_node("/root/player")
-		cam = get_node("/root/player/CameraPivot")
+		positionToGo = get_node("/root/RootNode3D/player")
+		cam = get_node("/root/RootNode3D/player/CameraPivot")
 
 func _physics_process(delta):
 	# debugLabel.text = "currentSpeed " + str(currentSpeed)
@@ -81,5 +81,5 @@ func isPlayerInSight():
 	else:
 		playerHeadInSight = false
 	#if resultBody && resultHead:
-	#	debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
+		#debugLabel.text = "head: " + str(resultHead.collider) + "; body: " + str(resultHead.collider)
 

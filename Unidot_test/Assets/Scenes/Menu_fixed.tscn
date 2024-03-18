@@ -200,6 +200,7 @@ omni_range = 30.0
 [node name="ConsoleCanvas" parent="." instance=ExtResource("3_pd6bi")]
 
 [node name="Canvas" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="AudioSource" type="AudioStreamPlayer" parent="Canvas"]
 stream = ExtResource("4_fd5tm")

@@ -66,7 +66,7 @@ func Release():
 	# TODO enable trails
 	heldObject.freeze = false
 	holdingPosition.remove_child(heldObject)
-	get_node("/root").add_child(heldObject) # instead of removing parent
+	get_node("/root/RootNode3D").add_child(heldObject) # instead of removing parent
 	stateMachine.travel("Flick")
 	
 	Shoot()

@@ -1522,3 +1522,12 @@ text = "FIRST STEPS"
 
 [editable path="NavigationRegion3D/Map/Lighting/Window"]
 [editable path="NavigationRegion3D/Map/Lighting/Window (1)"]
+[editable path="LevelMinimumPrefabs"]
+[editable path="LevelMinimumPrefabs/PauseGameManager"]
+[editable path="LevelMinimumPrefabs/AudioSourcesManager"]
+[editable path="LevelMinimumPrefabs/TimeManager"]
+[editable path="LevelMinimumPrefabs/HealthManager"]
+[editable path="LevelMinimumPrefabs/SceneChanger"]
+[editable path="LevelMinimumPrefabs/VolumeManager"]
+[editable path="LevelMinimumPrefabs/SaveGame"]
+[editable path="LevelMinimumPrefabs/ConfigManager"]

@@ -22,4 +22,4 @@ func _on_button_2_pressed():
 
 # Menu
 func _on_button_3_pressed():
-	pass # Replace with function body.
+	sceneChanger.ChangeScene("Menu")

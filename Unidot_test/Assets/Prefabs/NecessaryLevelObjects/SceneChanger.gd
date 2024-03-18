@@ -2,6 +2,10 @@ extends Node3D
 
 class_name SceneChanger
 
+const scenesPath = "res://Assets/Scenes/"
+
+const sceneSuffix = "_fixed.tscn"
+
 func RestartGame():
 	print("restarting")
 	# reloading current scene does not remove any newly spawned nodes
@@ -15,5 +19,11 @@ func RestartGame():
 	get_tree().reload_current_scene()
 	
 func ChangeScene(sceneName):
-	# TODO
-	pass
+	get_tree().change_scene_to_file(scenesPath+sceneName+sceneSuffix)
+	
+func StartSceneFromMenu():
+	# TODO hardcoded for now
+	get_tree().change_scene_to_file(scenesPath+"FirstSteps"+sceneSuffix)
+	
+func ExitGame():
+	get_tree().quit()

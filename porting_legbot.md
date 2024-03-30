@@ -9,7 +9,7 @@
 
 - the gun pivot is controlled by the "EnemyShootBullet" script to always look at the player
 - enemy behavior is completely missing (as expected)
-- audio sources couldn't be imported
+- audio sources couldn't be imported (new vesion of Unidot can handle that)
 - particles couldn't be imported
 - physics are very different with different time scales
     - causes the bullet to just drop on the floor

@@ -4,7 +4,7 @@
     - all of the point lights for the windows
     - the door was translated correctly
     - enemies are present
-    - reflection probe was translated correctly
+    - reflection probe, navigation region and environment were at least somewhat translated
 
 # Issue:
 
@@ -16,7 +16,6 @@
 
     - rebuild window prefab, along with the [particle system](porting_particle_system.md) idk why this link does not working a list
     - adding a "ProceduralSkyMaterial" to Environment
-    
     - this needs further tweaking but it's ok for now
     - for navigation to work the entire "map" needs to be a child of navigation region
 

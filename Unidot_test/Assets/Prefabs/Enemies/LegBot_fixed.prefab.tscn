@@ -24,14 +24,10 @@ height = 1.0
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8we72"]
 particle_flag_rotate_y = true
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 0.0
-emission_ring_radius = 0.15
-emission_ring_inner_radius = 0.0
 angle_max = 90.0
 velocity_pivot = Vector3(1, 1, 1)
 direction = Vector3(0, 1, 0)
+spread = 50.0
 initial_velocity_min = 1.0
 initial_velocity_max = 4.0
 
@@ -46,7 +42,7 @@ script = ExtResource("1_ek2hd")
 
 [node name="Area3D" type="Area3D" parent="."]
 collision_layer = 4
-collision_mask = 8
+collision_mask = 256
 script = ExtResource("2_t5nsm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
@@ -204,7 +200,7 @@ surface_material_override/0 = ExtResource("3_qybnc")
 surface_material_override/0 = ExtResource("3_qybnc")
 
 [node name="Body" type="BoneAttachment3D" parent="LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.000159498, -0.0209938)
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.0209938)
 bone_name = "Body"
 bone_idx = 0
 
@@ -354,7 +350,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21, 0)
 emitting = false
 amount = 30
 one_shot = true
-explosiveness = 0.85
+explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_8we72")
 draw_pass_1 = SubResource("BoxMesh_usjd4")
 

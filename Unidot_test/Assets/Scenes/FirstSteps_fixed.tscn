@@ -16,8 +16,6 @@ background_mode = 2
 sky = SubResource("Sky_8obg7")
 tonemap_mode = 3
 ssao_enabled = true
-ssao_power = 2.19613
-sdfgi_enabled = true
 glow_enabled = true
 fog_light_color = Color(0.5, 0.5, 0.5, 1)
 
@@ -1505,11 +1503,6 @@ metadata/unidot_keys = {
 "m_wordWrappingRatios": 0.4,
 "parentLinkedComponent": [null, 0, null, null]
 }
-
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 5.16648, 17.9594)
-visible = false
-text = "FIRST STEPS"
 
 [editable path="NavigationRegion3D/Map/Lighting/Window"]
 [editable path="NavigationRegion3D/Map/Lighting/Window (1)"]

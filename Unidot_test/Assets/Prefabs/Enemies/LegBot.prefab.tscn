@@ -649,6 +649,33 @@ transform = Transform3D(0.198146, 0, 0, 0, 0.198146, 0, 0, 0, 0.198146, 0, 0.379
 visible = false
 surface_material_override/0 = ExtResource("2_80oak")
 
+[node name="Skeleton3D" parent="LegsBot/Armature" index="0"]
+bones/0/position = Vector3(0, -0.000159498, -0.0209938)
+bones/0/rotation = Quaternion(0.707107, 0, 0, 0.707107)
+bones/1/position = Vector3(0.00455525, 0.0029719, -0.00309936)
+bones/1/rotation = Quaternion(0.13601, -0.693903, -0.13601, 0.693903)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/position = Vector3(6.67921e-10, 0.011241, 1.00349e-10)
+bones/2/rotation = Quaternion(1.46651e-07, -6.30356e-09, -0.966862, -0.255301)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/position = Vector3(1.08121e-09, 0.00958766, -1.09603e-10)
+bones/3/rotation = Quaternion(-1.46406e-07, -4.77281e-09, 0.747117, 0.664693)
+bones/5/position = Vector3(-0.00455525, 0.0029719, -0.00309936)
+bones/5/rotation = Quaternion(0.13601, 0.693903, 0.136011, 0.693903)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/position = Vector3(-7.4443e-10, 0.011241, 3.37186e-10)
+bones/6/rotation = Quaternion(1.46651e-07, 6.30353e-09, 0.966862, -0.255301)
+bones/7/position = Vector3(-1.85963e-09, 0.00958766, -5.77104e-10)
+bones/7/rotation = Quaternion(-1.46406e-07, 4.77282e-09, -0.747117, 0.664693)
+bones/9/position = Vector3(0.00455525, -0.0176868, -0.00484617)
+bones/9/rotation = Quaternion(0.707107, 0, -0.707107, 0)
+bones/11/position = Vector3(0.00455525, 3.82802e-05, -0.0197522)
+bones/11/rotation = Quaternion(0, -0.707107, 0, 0.707107)
+bones/14/position = Vector3(-0.00455525, -0.0176868, -0.00484617)
+bones/14/rotation = Quaternion(0.707107, 0, 0.707107, 0)
+bones/16/position = Vector3(-0.00455525, 3.82802e-05, -0.0197522)
+bones/16/rotation = Quaternion(0, 0.707107, 0, 0.707107)
+
 [node name="legs" parent="LegsBot/Armature/Skeleton3D" index="0"]
 surface_material_override/0 = ExtResource("3_7mgji")
 
@@ -656,7 +683,7 @@ surface_material_override/0 = ExtResource("3_7mgji")
 surface_material_override/0 = ExtResource("3_7mgji")
 
 [node name="Body" type="BoneAttachment3D" parent="LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, -0.172245, -0.985054, 0, 0.985054, -0.172245, 0, -0.000159498, -0.00277817)
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.0209938)
 bone_name = "Body"
 bone_idx = 0
 

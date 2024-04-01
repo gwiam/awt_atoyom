@@ -57,6 +57,7 @@
         - await waits for a signal
         - not way to interrupt unlike in Unity
             - the first major thing that is not possible under Godot
+            - tween seems to be a workaround
     - workaround for unscaled time: var unscaled = (Engine.TimeScale == 0) ? deltaTime : ((float)(deltaTime / Engine.TimeScale))
         - https://github.com/godotengine/godot-proposals/issues/7775
     - scaling time works pretty much like unity

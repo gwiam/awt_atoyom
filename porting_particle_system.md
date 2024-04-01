@@ -18,6 +18,8 @@
     - under Process Material create new ParticleProcessMaterial
     - under Draw Passes, under Pass 1 create new particle shape
     - most things need to be eyeballed
+    - set lifetime to 5 seconds like the original
+    - set amout to 75 since the original emission rate is 15 particles/s over a span of 5 seconds
 
 # Personal notes:
 

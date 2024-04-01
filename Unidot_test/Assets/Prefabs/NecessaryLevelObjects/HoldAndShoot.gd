@@ -20,11 +20,12 @@ func _ready():
 		layers.append(ProjectSettings.get_setting("layer_names/3d_physics/layer_" + str(i)))
 	
 	NoCollisionLayer = layers.find("NoCollision")
-	ShotLayer = layers.find("ShotLayer")
-	GrabLayer = layers.find("GrabLayer")
+	ShotLayer = layers.find("Shot")
+	GrabLayer = layers.find("Grab")
 	grabIndicator = $"/root/RootNode3D/LevelMinimumPrefabs/Canvas/Crosshair/GrabIndicator"
 	
 	stateMachine = animationTree.get("parameters/Base Layer/playback")
+
 	# TODO get grab sound
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,7 +55,8 @@ func Grab():
 	# TODO disable trail
 	stateMachine.travel("Hold")
 	# TODO play grab sound
-	heldObject.collision_layer = NoCollisionLayer
+	heldObject.collision_layer = 0 # reset collision layer
+	heldObject.set_collision_layer_value(NoCollisionLayer, true) 
 
 func SetHoldVariables():
 	isHolding = true
@@ -83,8 +85,8 @@ func Shoot():
 	# TODO play flick sound
 
 func ChangeObjectLayers():
-	# TODO it is necessary, bc the player can still shoot themselves
-	pass
+	heldObject.collision_layer = 0 # reset collision layer
+	heldObject.set_collision_layer_value(ShotLayer, true) 
 	
 func ResetHoldVariables():
 	# reset other heldObject variables

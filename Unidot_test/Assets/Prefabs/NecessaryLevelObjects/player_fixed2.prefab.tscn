@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d0wt26xodhu8a"]
+[gd_scene load_steps=8 format=3 uid="uid://caeq77bjpomr6"]
 
 [ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_vi6ep"]
 [ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_k84b2"]

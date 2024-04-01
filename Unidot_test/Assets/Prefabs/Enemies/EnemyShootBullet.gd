@@ -70,11 +70,10 @@ func shootBullet():
 	warningObject.visible = false
 		
 func shootingProcedures():
-	# it keeps running more instances of this function
 	startPreparation()
 	# https://gdscript.com/solutions/coroutines-and-yield/
 	await get_tree().create_timer(reloadTime,false).timeout
-	if !stopCoroutine:
+	if !stopCoroutine: #used to abort the coroutine
 		showWarnings()
 		await get_tree().create_timer(alertTime,false).timeout
 		shootBullet()

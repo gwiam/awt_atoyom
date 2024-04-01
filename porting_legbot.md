@@ -19,6 +19,7 @@
 # Solutions:
 
 - rebuild the particle effect
+    - simulate cone shape by the use of point shape and increasing the spread
 - rebuild the "Wake up and go" of child and "Set Delay To Wake Up" script of parent node
     - "SetDelayToWakeUp" can also wake up all the enemies after a certain time or using a trigger
     - "SetDelayToWakeUp" is part of LegBot (called AIbody in the level for some reason) 

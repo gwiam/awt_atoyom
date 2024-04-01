@@ -33,3 +33,4 @@
     - either play around with layers to prevent bullet from colliding with the characterbody
     - make Area3D a little bigger than the CharacterBody
     - maybe the bullet was also too fast, lol
+- for some reason the player is using the "ShinyWhite" material instead of the "ShinyBlack" material which obviously looks different in Godot but not in Unity????

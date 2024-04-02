@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dww81s5nnmsyh"]
 
-[ext_resource type="Script" path="res://Assets/Scripts/PlayerControl.gd" id="1_hk2d4"]
+[ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/player_controller_test.gd" id="1_llt65"]
 [ext_resource type="PackedScene" uid="uid://c02so0wo0cw56" path="res://Assets/Models/hand.gltf" id="1_xxma3"]
 [ext_resource type="Material" uid="uid://c78h6myotj1kj" path="res://Assets/Materials/ShinyWhite.mat.tres" id="2_5nx5q"]
 [ext_resource type="AnimationLibrary" uid="uid://cd0bdwynnmojr" path="res://Assets/Animations/Hand/HandController.library.tres" id="3_ybxmc"]
@@ -14,8 +14,7 @@ radius = 0.4
 resource_name = "Capsule"
 
 [node name="player" type="CharacterBody3D"]
-script = ExtResource("1_hk2d4")
-movementSpeed = 6
+script = ExtResource("1_llt65")
 
 [node name="CapsuleCollider" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_unrh0")

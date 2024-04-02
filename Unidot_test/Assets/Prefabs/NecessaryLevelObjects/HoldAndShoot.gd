@@ -16,7 +16,7 @@ var stateMachine
 
 func _ready():
 	var layers = [""] # for offset
-	for i in range(1, 21):
+	for i in range(1, 31):
 		layers.append(ProjectSettings.get_setting("layer_names/3d_physics/layer_" + str(i)))
 	
 	NoCollisionLayer = layers.find("NoCollision")

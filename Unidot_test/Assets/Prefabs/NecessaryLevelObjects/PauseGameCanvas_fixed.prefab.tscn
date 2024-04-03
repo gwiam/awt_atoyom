@@ -1,17 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3ches4nah5i2"]
+[gd_scene load_steps=3 format=3 uid="uid://c3ches4nah5i2"]
 
-[ext_resource type="FontFile" uid="uid://cqlqfstid3l58" path="res://Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf" id="1_mgwby"]
 [ext_resource type="Script" path="res://Assets/Prefabs/NecessaryLevelObjects/PauseGameCanvas.gd" id="1_vtqnm"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xthep"]
-bg_color = Color(1, 1, 1, 1)
-
-[sub_resource type="Theme" id="Theme_o3p3y"]
-default_font = ExtResource("1_mgwby")
-default_font_size = 24
-Button/colors/font_color = Color(0.505882, 0.505882, 0.505882, 1)
-Button/fonts/font = ExtResource("1_mgwby")
-Button/styles/normal = SubResource("StyleBoxFlat_xthep")
+[ext_resource type="Theme" uid="uid://di737uwsu4f5v" path="res://Assets/Scenes/Menu_fixed.tres" id="2_s57d5"]
 
 [node name="PauseGameCanvas" type="CanvasLayer"]
 script = ExtResource("1_vtqnm")
@@ -219,7 +209,7 @@ metadata/unidot_keys = {
 [node name="Button" type="Button" parent="Image"]
 custom_minimum_size = Vector2(240, 70)
 layout_mode = 2
-theme = SubResource("Theme_o3p3y")
+theme = ExtResource("2_s57d5")
 text = "continue"
 
 [node name="CanvasRenderer" type="Node" parent="Image/Button"]
@@ -332,7 +322,7 @@ metadata/unidot_keys = {
 [node name="Button2" type="Button" parent="Image"]
 custom_minimum_size = Vector2(240, 70)
 layout_mode = 2
-theme = SubResource("Theme_o3p3y")
+theme = ExtResource("2_s57d5")
 text = "restart"
 
 [node name="CanvasRenderer" type="Node" parent="Image/Button2"]
@@ -445,7 +435,7 @@ metadata/unidot_keys = {
 [node name="Button3" type="Button" parent="Image"]
 custom_minimum_size = Vector2(240, 70)
 layout_mode = 2
-theme = SubResource("Theme_o3p3y")
+theme = ExtResource("2_s57d5")
 text = "menu"
 
 [node name="CanvasRenderer" type="Node" parent="Image/Button3"]

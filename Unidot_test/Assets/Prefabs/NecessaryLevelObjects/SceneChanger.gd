@@ -14,6 +14,7 @@ func RestartGame():
 	
 func ChangeScene(sceneName):
 	get_tree().paused = false
+	Engine.time_scale = 1
 	get_tree().change_scene_to_file(scenesPath+sceneName+sceneSuffix)
 	if sceneName == "Menu":
 		Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)

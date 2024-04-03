@@ -17,6 +17,8 @@
 - for text use Label, no need for TextMeshPro
 - for images use "TextureRect2D"
 - for panel use "ColorRect2D"
+- for any organzational elements "BoxContainer" 
+    - the original code used all sorts of things and is not consistent
 - alignment is all handled similarly to Unity
     - though texture placement is controlled by "strech_mode" and "expand_mode"
         - inconsistent, you may need to reposition the anchor or the entire element for it to take effect 
@@ -30,6 +32,10 @@
     - central theming system for the entire UI
     - done partially in a seperate editor, and partially in the inspector
         - you add settings options in the theme editor and then change them in the inspector
+        - to use original font on Buttons
+            - chose Button type
+            - change to "T" and add font
+            - then set it to MajorMonoDisplay-Regular.ttf
     - you can also just use theme overrides
 - Buttons don't call functions, instead one must use signals to detect button presses
     - creating an extra script file for all button events

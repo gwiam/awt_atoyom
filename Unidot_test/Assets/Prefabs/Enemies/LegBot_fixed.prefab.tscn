@@ -200,7 +200,7 @@ surface_material_override/0 = ExtResource("3_qybnc")
 surface_material_override/0 = ExtResource("3_qybnc")
 
 [node name="Body" type="BoneAttachment3D" parent="LegsBot/Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 0, 0, 0, 5.96046e-08, -1, 0, 1, 5.96046e-08, 0, -0.000159498, -0.0209938)
+transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0, -0.000159498, -0.0209938)
 bone_name = "Body"
 bone_idx = 0
 

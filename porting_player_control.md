@@ -18,7 +18,7 @@
         - original implementation confusing
         - saves time on implementing scripts like "CameraFollow"
 - recreate HoldAndShoot
-    - setting NoCollision, Shot and Grad layers to unused layers for now
+    - setting NoCollision, Shot and Grad layers
     - instead of implementing it like the original, casting a ray each update
         - add a raycaster object to camera instead
         - makes more sense that in "isPlayerInSight" since Ray is always facing forwards
@@ -26,7 +26,7 @@
         - second raycast used to adjust for height over bore
         - to check for collision simply do is_colliding
         - to get the collider do get_collider
-        - TODO change the layers of the bullet so the player can't shoot themselves
+        - change the layers of the bullet so the player can't shoot themselves
     - set bullet freeze behavior to static to prevent collision with the player
     - when "attaching" the bullet to the ObjectHolder use position in this case, not the global
     - when releasing the bullet the global position needs to be set, otherwise the bullet repositions to the local coordinates

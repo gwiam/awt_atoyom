@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://di737uwsu4f5v"]
+
+[ext_resource type="FontFile" uid="uid://cqlqfstid3l58" path="res://Assets/Fonts/MajorMono/MajorMonoDisplay-Regular.ttf" id="1_q0l23"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyvx0"]
+bg_color = Color(0.960784, 0.960784, 0.960784, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xthep"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j3pcg"]
+bg_color = Color(0.784314, 0.784314, 0.784314, 1)
+
+[resource]
+default_font = ExtResource("1_q0l23")
+default_font_size = 24
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_q0l23")
+Button/styles/hover = SubResource("StyleBoxFlat_xyvx0")
+Button/styles/normal = SubResource("StyleBoxFlat_xthep")
+Button/styles/pressed = SubResource("StyleBoxFlat_j3pcg")

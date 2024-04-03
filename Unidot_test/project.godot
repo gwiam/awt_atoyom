@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Unidot Test"
-run/main_scene="res://Assets/Scenes/FirstSteps_fixed.tscn"
+run/main_scene="res://Assets/Scenes/Menu_fixed.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 

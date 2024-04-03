@@ -1,9 +1,9 @@
 extends Area3D
 
-var HealthManager
+@onready var HealthManager = $"/root/RootNode3D/LevelMinimumPrefabs/HealthManager" as HealthManager
 
 func _ready():
-	HealthManager = get_node("/root/RootNode3D/LevelMinimumPrefabs/HealthManager") as HealthManager
+	pass
 
 func _on_body_entered(body):
 	# TODO only take damage with bullet

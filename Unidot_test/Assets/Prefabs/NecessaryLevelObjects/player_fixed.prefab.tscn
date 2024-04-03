@@ -429,7 +429,7 @@ transform = Transform3D(0.998194, 0, -0.0600753, 0, 1, 0, 0.0600753, 0, 0.998194
 transform = Transform3D(100, 0, 0, 0, 100, -4.37114e-06, 0, 4.37114e-06, 100, 0, 0, 0)
 
 [node name="Skeleton3D" parent="CameraPivot/HUDcamera/hand/Armature" index="0"]
-bones/0/position = Vector3(0, -0.000208041, -0.00040332)
+bones/0/position = Vector3(0, -0.000294542, -0.000402905)
 bones/0/rotation = Quaternion(0.702972, -1.03398e-25, -1.82013e-18, 0.711217)
 bones/1/position = Vector3(-2.10026e-28, 0.0109354, 4.65661e-12)
 bones/1/rotation = Quaternion(-0.30287, -1.12394e-07, -3.97303e-08, 0.953032)

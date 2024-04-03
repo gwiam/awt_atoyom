@@ -12,6 +12,8 @@
 # Solutions
 
 - use the built in player physics provided by godot as much as possible
+    - add lerp to z and x velocity
+    - change actions
 - recreate CameraMovement
     - clamp x axis to -90 to 90 degrees or else the x rotation can loop
     - rotate y of "player" instead of "orientation"

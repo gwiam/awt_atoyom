@@ -8,5 +8,6 @@ Porting 'A taste of your own medicine' from Unity into Godot
 
 # How to build
 
-- open Godot and import project in the Unidot_test folder
--
+- clone this repository
+- launch Godot, import project in the Unidot_test folder and open it
+- 

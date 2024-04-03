@@ -675,7 +675,10 @@ cull_mask = 16777215
 
 [node name="Door" parent="." instance=ExtResource("27_8a4qr")]
 transform = Transform3D(-54.9375, 17.1135, -0.971046, -0.983191, 0.118577, 58.5515, 20.2528, 46.4277, 0.208392, 112.16, 102.74, -180.04)
-enemyQuantity = 0
+script = null
+
+[node name="BoxCollider" parent="Door/Plane" index="2"]
+script = null
 
 [node name="SpawnPoint" parent="Door" index="8"]
 script = null
